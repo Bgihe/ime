@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="MemberMenuCell">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="455" height="70.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B8R-ff-2dz">
+                        <rect key="frame" x="10" y="17.5" width="35.5" height="35.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="B8R-ff-2dz" secondAttribute="height" multiplier="1:1" id="XeD-P5-RQf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-9a-G8a">
+                        <rect key="frame" x="55.5" y="11" width="42" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xq-LJ-1TV">
+                        <rect key="frame" x="393" y="11" width="42" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mt-rO-mHk">
+                        <rect key="frame" x="348" y="17.5" width="35" height="35.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4mt-rO-mHk" secondAttribute="height" multiplier="1:1" id="aSa-Sy-BfD"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4mt-rO-mHk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8WG-wx-mKK"/>
+                    <constraint firstItem="B8R-ff-2dz" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="GYP-WU-9Tr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4xq-LJ-1TV" secondAttribute="bottom" id="Mtf-CX-GC1"/>
+                    <constraint firstItem="4xq-LJ-1TV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QBa-2N-1vi"/>
+                    <constraint firstItem="LEQ-9a-G8a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RQ5-5J-KL2"/>
+                    <constraint firstItem="B8R-ff-2dz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VcF-S0-YZY"/>
+                    <constraint firstItem="4xq-LJ-1TV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cET-A5-5tw"/>
+                    <constraint firstItem="4mt-rO-mHk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="ftx-te-Jd9"/>
+                    <constraint firstItem="LEQ-9a-G8a" firstAttribute="leading" secondItem="B8R-ff-2dz" secondAttribute="trailing" constant="10" id="gYr-2h-kXk"/>
+                    <constraint firstItem="4xq-LJ-1TV" firstAttribute="leading" secondItem="4mt-rO-mHk" secondAttribute="trailing" constant="10" id="joY-xU-Sr6"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LEQ-9a-G8a" secondAttribute="bottom" id="rli-MS-alp"/>
+                    <constraint firstItem="B8R-ff-2dz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tDe-qM-hud"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="21.600000000000001" y="132.68365817091455"/>
+        </tableViewCell>
+    </objects>
+</document>

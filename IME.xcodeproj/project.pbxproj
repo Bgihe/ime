@@ -20,6 +20,23 @@
 		180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB4721BA0904002D85DE /* SearchAnchorView.m */; };
 		180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180ADB4921BA090B002D85DE /* SearchAnchorView.xib */; };
 		180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB5521BA1DE6002D85DE /* CameraController.m */; };
+		1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837ADF321BA587500554879 /* CAPSPageMenu.m */; };
+		1837ADF821BA589C00554879 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837ADF521BA589B00554879 /* TestViewController.m */; };
+		1837ADF921BA589C00554879 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837ADF621BA589B00554879 /* TestViewController.xib */; };
+		1837AE1321BA715200554879 /* MemberBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1221BA715200554879 /* MemberBuyView.m */; };
+		1837AE1621BA716B00554879 /* MemberPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1521BA716B00554879 /* MemberPostView.m */; };
+		1837AE1921BA717F00554879 /* MemberMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1821BA717F00554879 /* MemberMenuView.m */; };
+		1837AE1C21BA71DC00554879 /* MemberFavoriteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1B21BA71DC00554879 /* MemberFavoriteView.m */; };
+		1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE1D21BA71FF00554879 /* MemberFavoriteView.xib */; };
+		1837AE2021BA720B00554879 /* MemberBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE1F21BA720B00554879 /* MemberBuyView.xib */; };
+		1837AE2221BA721D00554879 /* MemberPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE2121BA721D00554879 /* MemberPostView.xib */; };
+		1837AE2421BA722700554879 /* MemberMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE2321BA722700554879 /* MemberMenuView.xib */; };
+		1837AE2B21BA75BD00554879 /* MemberMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE2A21BA75BD00554879 /* MemberMenuController.m */; };
+		1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE2D21BA75CE00554879 /* MemberPostController.m */; };
+		1837AE3121BA75DE00554879 /* MemberBuyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3021BA75DE00554879 /* MemberBuyController.m */; };
+		1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3321BA75ED00554879 /* MemberFavoriteController.m */; };
+		1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3621BA7E3800554879 /* MemberMenuCell.m */; };
+		1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE3721BA7E3800554879 /* MemberMenuCell.xib */; };
 		1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857E99D21B8F841007ACC63 /* LoginVerifyView.m */; };
 		1857E9A021B8F84B007ACC63 /* LoginVerifyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1857E99F21B8F84B007ACC63 /* LoginVerifyView.xib */; };
 		1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857E9F621B9120F007ACC63 /* LoginMainController.m */; };
@@ -85,6 +102,34 @@
 		180ADB4921BA090B002D85DE /* SearchAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorView.xib; sourceTree = "<group>"; };
 		180ADB5421BA1DE6002D85DE /* CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		180ADB5521BA1DE6002D85DE /* CameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		1837ADF221BA587500554879 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		1837ADF321BA587500554879 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
+		1837ADF521BA589B00554879 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		1837ADF621BA589B00554879 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		1837ADF721BA589C00554879 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		1837AE1121BA715200554879 /* MemberBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberBuyView.h; sourceTree = "<group>"; };
+		1837AE1221BA715200554879 /* MemberBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberBuyView.m; sourceTree = "<group>"; };
+		1837AE1421BA716B00554879 /* MemberPostView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberPostView.h; sourceTree = "<group>"; };
+		1837AE1521BA716B00554879 /* MemberPostView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberPostView.m; sourceTree = "<group>"; };
+		1837AE1721BA717F00554879 /* MemberMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberMenuView.h; sourceTree = "<group>"; };
+		1837AE1821BA717F00554879 /* MemberMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberMenuView.m; sourceTree = "<group>"; };
+		1837AE1A21BA71DC00554879 /* MemberFavoriteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberFavoriteView.h; sourceTree = "<group>"; };
+		1837AE1B21BA71DC00554879 /* MemberFavoriteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberFavoriteView.m; sourceTree = "<group>"; };
+		1837AE1D21BA71FF00554879 /* MemberFavoriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberFavoriteView.xib; sourceTree = "<group>"; };
+		1837AE1F21BA720B00554879 /* MemberBuyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberBuyView.xib; sourceTree = "<group>"; };
+		1837AE2121BA721D00554879 /* MemberPostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberPostView.xib; sourceTree = "<group>"; };
+		1837AE2321BA722700554879 /* MemberMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberMenuView.xib; sourceTree = "<group>"; };
+		1837AE2921BA75BD00554879 /* MemberMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberMenuController.h; sourceTree = "<group>"; };
+		1837AE2A21BA75BD00554879 /* MemberMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberMenuController.m; sourceTree = "<group>"; };
+		1837AE2C21BA75CE00554879 /* MemberPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberPostController.h; sourceTree = "<group>"; };
+		1837AE2D21BA75CE00554879 /* MemberPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberPostController.m; sourceTree = "<group>"; };
+		1837AE2F21BA75DE00554879 /* MemberBuyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberBuyController.h; sourceTree = "<group>"; };
+		1837AE3021BA75DE00554879 /* MemberBuyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberBuyController.m; sourceTree = "<group>"; };
+		1837AE3221BA75ED00554879 /* MemberFavoriteController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberFavoriteController.h; sourceTree = "<group>"; };
+		1837AE3321BA75ED00554879 /* MemberFavoriteController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberFavoriteController.m; sourceTree = "<group>"; };
+		1837AE3521BA7E3800554879 /* MemberMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberMenuCell.h; sourceTree = "<group>"; };
+		1837AE3621BA7E3800554879 /* MemberMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberMenuCell.m; sourceTree = "<group>"; };
+		1837AE3721BA7E3800554879 /* MemberMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberMenuCell.xib; sourceTree = "<group>"; };
 		1857E99C21B8F841007ACC63 /* LoginVerifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVerifyView.h; sourceTree = "<group>"; };
 		1857E99D21B8F841007ACC63 /* LoginVerifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVerifyView.m; sourceTree = "<group>"; };
 		1857E99F21B8F84B007ACC63 /* LoginVerifyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVerifyView.xib; sourceTree = "<group>"; };
@@ -166,7 +211,7 @@
 		180ADB3021BA0761002D85DE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				180ADB3321BA0786002D85DE /* Modek */,
+				180ADB3321BA0786002D85DE /* Model */,
 				180ADB3221BA0783002D85DE /* View */,
 				180ADB3121BA0780002D85DE /* Controller */,
 			);
@@ -176,6 +221,11 @@
 		180ADB3121BA0780002D85DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1837ADF721BA589C00554879 /* TestViewController.h */,
+				1837ADF521BA589B00554879 /* TestViewController.m */,
+				1837ADF621BA589B00554879 /* TestViewController.xib */,
+				1837ADF221BA587500554879 /* CAPSPageMenu.h */,
+				1837ADF321BA587500554879 /* CAPSPageMenu.m */,
 				1857EA0121B92440007ACC63 /* MainController.h */,
 				1857EA0221B92440007ACC63 /* MainController.m */,
 				180ADB2021BA061F002D85DE /* MassMessageController.h */,
@@ -184,8 +234,6 @@
 				180ADB3D21BA087A002D85DE /* MessageController.m */,
 				180ADB2921BA0722002D85DE /* SearchAnchorController.h */,
 				180ADB2A21BA0722002D85DE /* SearchAnchorController.m */,
-				180ADB2621BA06D1002D85DE /* SettingController.h */,
-				180ADB2721BA06D1002D85DE /* SettingController.m */,
 				180ADB5421BA1DE6002D85DE /* CameraController.h */,
 				180ADB5521BA1DE6002D85DE /* CameraController.m */,
 			);
@@ -207,18 +255,82 @@
 				180ADB4621BA0904002D85DE /* SearchAnchorView.h */,
 				180ADB4721BA0904002D85DE /* SearchAnchorView.m */,
 				180ADB4921BA090B002D85DE /* SearchAnchorView.xib */,
-				180ADB3F21BA08B5002D85DE /* SettingView.h */,
-				180ADB4021BA08B5002D85DE /* SettingView.m */,
-				180ADB4221BA08C5002D85DE /* SettingView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		180ADB3321BA0786002D85DE /* Modek */ = {
+		180ADB3321BA0786002D85DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Modek;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1837AE2521BA755400554879 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				1837AE2821BA756600554879 /* Model */,
+				1837AE2721BA756400554879 /* View */,
+				1837AE2621BA756100554879 /* Controller */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		1837AE2621BA756100554879 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1837AE2921BA75BD00554879 /* MemberMenuController.h */,
+				1837AE2A21BA75BD00554879 /* MemberMenuController.m */,
+				1837AE2C21BA75CE00554879 /* MemberPostController.h */,
+				1837AE2D21BA75CE00554879 /* MemberPostController.m */,
+				1837AE2F21BA75DE00554879 /* MemberBuyController.h */,
+				1837AE3021BA75DE00554879 /* MemberBuyController.m */,
+				1837AE3221BA75ED00554879 /* MemberFavoriteController.h */,
+				1837AE3321BA75ED00554879 /* MemberFavoriteController.m */,
+				180ADB3F21BA08B5002D85DE /* SettingView.h */,
+				180ADB4021BA08B5002D85DE /* SettingView.m */,
+				180ADB4221BA08C5002D85DE /* SettingView.xib */,
+				180ADB2621BA06D1002D85DE /* SettingController.h */,
+				180ADB2721BA06D1002D85DE /* SettingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1837AE2721BA756400554879 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1837AE3A21BA7E3E00554879 /* Cell */,
+				1837AE1721BA717F00554879 /* MemberMenuView.h */,
+				1837AE1821BA717F00554879 /* MemberMenuView.m */,
+				1837AE2321BA722700554879 /* MemberMenuView.xib */,
+				1837AE1421BA716B00554879 /* MemberPostView.h */,
+				1837AE1521BA716B00554879 /* MemberPostView.m */,
+				1837AE2121BA721D00554879 /* MemberPostView.xib */,
+				1837AE1121BA715200554879 /* MemberBuyView.h */,
+				1837AE1221BA715200554879 /* MemberBuyView.m */,
+				1837AE1F21BA720B00554879 /* MemberBuyView.xib */,
+				1837AE1A21BA71DC00554879 /* MemberFavoriteView.h */,
+				1837AE1B21BA71DC00554879 /* MemberFavoriteView.m */,
+				1837AE1D21BA71FF00554879 /* MemberFavoriteView.xib */,
+				1837AE3521BA7E3800554879 /* MemberMenuCell.h */,
+				1837AE3621BA7E3800554879 /* MemberMenuCell.m */,
+				1837AE3721BA7E3800554879 /* MemberMenuCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1837AE2821BA756600554879 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1837AE3A21BA7E3E00554879 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		18CA498E21B8B67D0019650C = {
@@ -318,6 +430,7 @@
 		18CA4A7E21B8D3800019650C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1837AE2521BA755400554879 /* Member */,
 				180ADB3021BA0761002D85DE /* Main */,
 				180ADB2F21BA0757002D85DE /* Index */,
 				18CA4A9021B8D65D0019650C /* OtherApp */,
@@ -455,13 +568,19 @@
 			files = (
 				18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */,
 				1857E9A021B8F84B007ACC63 /* LoginVerifyView.xib in Resources */,
+				1837AE2021BA720B00554879 /* MemberBuyView.xib in Resources */,
 				180ADB4521BA08D7002D85DE /* MessageView.xib in Resources */,
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
+				1837ADF921BA589C00554879 /* TestViewController.xib in Resources */,
+				1837AE2421BA722700554879 /* MemberMenuView.xib in Resources */,
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
+				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
 				18CA49A421B8B67E0019650C /* Assets.xcassets in Resources */,
 				18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */,
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
+				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
 				18CA49A221B8B67D0019650C /* Main.storyboard in Resources */,
+				1837AE2221BA721D00554879 /* MemberPostView.xib in Resources */,
 				180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */,
 				18CA4A8B21B8D5160019650C /* LoginMainView.xib in Resources */,
 				180ADB3821BA083D002D85DE /* MassMessageView.xib in Resources */,
@@ -493,23 +612,34 @@
 				180ADB2821BA06D1002D85DE /* SettingController.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
+				1837AE1621BA716B00554879 /* MemberPostView.m in Sources */,
 				180ADB3E21BA087A002D85DE /* MessageController.m in Sources */,
 				18CA49AA21B8B67E0019650C /* main.m in Sources */,
+				1837ADF821BA589C00554879 /* TestViewController.m in Sources */,
 				180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
 				1857EA0621B92457007ACC63 /* MainView.m in Sources */,
 				1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */,
+				1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */,
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
 				18CA4A8321B8D47D0019650C /* LoginMainView.m in Sources */,
+				1837AE1321BA715200554879 /* MemberBuyView.m in Sources */,
+				1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */,
+				1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,
 				18CA4A8921B8D4DC0019650C /* LoginAccountView.m in Sources */,
 				180ADB3B21BA0859002D85DE /* MessageView.m in Sources */,
+				1837AE2B21BA75BD00554879 /* MemberMenuController.m in Sources */,
 				180ADB2221BA0620002D85DE /* MassMessageController.m in Sources */,
 				1857EA0021B917D9007ACC63 /* LoginVerifyController.m in Sources */,
+				1837AE1C21BA71DC00554879 /* MemberFavoriteView.m in Sources */,
 				1857E9FD21B917BF007ACC63 /* LoginAccountController.m in Sources */,
+				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,
+				1837AE1921BA717F00554879 /* MemberMenuView.m in Sources */,
+				1837AE3121BA75DE00554879 /* MemberBuyController.m in Sources */,
 				180ADB2B21BA0722002D85DE /* SearchAnchorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

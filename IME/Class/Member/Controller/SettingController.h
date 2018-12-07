@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "SettingView.h"
+
+#import "MemberMenuController.h"
+#import "MemberPostController.h"
+#import "MemberBuyController.h"
+#import "MemberFavoriteController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingController : UIViewController<SettingViewDelegate>{
+@interface SettingController : UIViewController{
     SettingView * _settingView;
+
 }
 
 @end
