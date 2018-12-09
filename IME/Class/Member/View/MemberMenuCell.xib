@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,13 +32,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xq-LJ-1TV">
-                        <rect key="frame" x="393" y="11" width="42" height="49"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="402" y="11" width="33" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mt-rO-mHk">
-                        <rect key="frame" x="348" y="17.5" width="35" height="35.5"/>
+                        <rect key="frame" x="371" y="24.5" width="21" height="21.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="4mt-rO-mHk" secondAttribute="height" multiplier="1:1" id="aSa-Sy-BfD"/>
                         </constraints>
@@ -52,7 +52,7 @@
                     <constraint firstItem="LEQ-9a-G8a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RQ5-5J-KL2"/>
                     <constraint firstItem="B8R-ff-2dz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="VcF-S0-YZY"/>
                     <constraint firstItem="4xq-LJ-1TV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cET-A5-5tw"/>
-                    <constraint firstItem="4mt-rO-mHk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="ftx-te-Jd9"/>
+                    <constraint firstItem="4mt-rO-mHk" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.3" id="ftx-te-Jd9"/>
                     <constraint firstItem="LEQ-9a-G8a" firstAttribute="leading" secondItem="B8R-ff-2dz" secondAttribute="trailing" constant="10" id="gYr-2h-kXk"/>
                     <constraint firstItem="4xq-LJ-1TV" firstAttribute="leading" secondItem="4mt-rO-mHk" secondAttribute="trailing" constant="10" id="joY-xU-Sr6"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LEQ-9a-G8a" secondAttribute="bottom" id="rli-MS-alp"/>
@@ -60,6 +60,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="leftIconImg" destination="B8R-ff-2dz" id="IRd-sf-oEw"/>
+                <outlet property="leftLabel" destination="LEQ-9a-G8a" id="1Qy-Qd-fDD"/>
+                <outlet property="rightIconImg" destination="4mt-rO-mHk" id="uwu-zO-oys"/>
+                <outlet property="rightLabel" destination="4xq-LJ-1TV" id="mDo-Qb-lRT"/>
+            </connections>
             <point key="canvasLocation" x="21.600000000000001" y="132.68365817091455"/>
         </tableViewCell>
     </objects>

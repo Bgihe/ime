@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol SearchAnchorViewDelegate
 
 @end
-@interface SearchAnchorView : UIView
+@interface SearchAnchorView : UIView<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (nonatomic, weak) id<SearchAnchorViewDelegate> delegate;
 @end

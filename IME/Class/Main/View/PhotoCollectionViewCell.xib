@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoCollectionViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_img" translatesAutoresizingMaskIntoConstraints="NO" id="pBP-Q4-buE">
+                        <rect key="frame" x="0.0" y="0.0" width="213" height="275"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VP-BA-Zwi">
+                        <rect key="frame" x="0.0" y="255" width="213" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YYLLs213" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODB-rk-pqc">
+                                <rect key="frame" x="10" y="0.0" width="65" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uy-xG-CSB">
+                                <rect key="frame" x="191" y="4" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6uy-xG-CSB" secondAttribute="height" multiplier="1:1" id="fOJ-ni-XU1"/>
+                                </constraints>
+                                <state key="normal" image="iconfavorite1"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22666778746552801" green="0.64052585659898476" blue="0.53993657623198843" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ODB-rk-pqc" secondAttribute="bottom" id="BjZ-MJ-uwI"/>
+                            <constraint firstItem="6uy-xG-CSB" firstAttribute="height" secondItem="1VP-BA-Zwi" secondAttribute="height" multiplier="0.6" id="Btp-I6-tM8"/>
+                            <constraint firstItem="ODB-rk-pqc" firstAttribute="top" secondItem="1VP-BA-Zwi" secondAttribute="top" id="N7a-yj-Fc9"/>
+                            <constraint firstItem="ODB-rk-pqc" firstAttribute="leading" secondItem="1VP-BA-Zwi" secondAttribute="leading" constant="10" id="emu-Qd-hf4"/>
+                            <constraint firstAttribute="height" constant="20" id="lYy-BC-iXw"/>
+                            <constraint firstItem="6uy-xG-CSB" firstAttribute="centerY" secondItem="1VP-BA-Zwi" secondAttribute="centerY" id="rm0-iT-DFB"/>
+                            <constraint firstAttribute="trailing" secondItem="6uy-xG-CSB" secondAttribute="trailing" constant="10" id="sTM-AV-AvK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="pBP-Q4-buE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0S3-BK-olJ"/>
+                <constraint firstAttribute="bottom" secondItem="pBP-Q4-buE" secondAttribute="bottom" id="IWW-aS-6ZZ"/>
+                <constraint firstAttribute="trailing" secondItem="pBP-Q4-buE" secondAttribute="trailing" id="Lmk-PW-UVy"/>
+                <constraint firstItem="pBP-Q4-buE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SnG-bA-2Iw"/>
+                <constraint firstAttribute="trailing" secondItem="1VP-BA-Zwi" secondAttribute="trailing" id="ZiF-de-bdQ"/>
+                <constraint firstItem="1VP-BA-Zwi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uTU-LD-E9G"/>
+                <constraint firstAttribute="bottom" secondItem="1VP-BA-Zwi" secondAttribute="bottom" id="zSw-JQ-akR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="213" height="275"/>
+            <point key="canvasLocation" x="260" y="212.74362818590706"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="iconfavorite1" width="5120" height="5120"/>
+        <image name="test_img" width="183" height="275"/>
+    </resources>
+</document>

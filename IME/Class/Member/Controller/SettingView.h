@@ -15,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface SettingView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *headBgImg;
+ @property (weak, nonatomic) IBOutlet UIImageView *headImg;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIButton *editBtn;
+
 @property (nonatomic, weak) id<SettingViewDelegate> delegate;
 @end
 

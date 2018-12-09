@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MemberMenuCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *leftIconImg;
+@property (weak, nonatomic) IBOutlet UIImageView *rightIconImg;
+@property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 
+//right
 @end
 
 NS_ASSUME_NONNULL_END

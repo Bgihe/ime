@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray   *dataArr;
+@property (nonatomic, strong) NSMutableArray   *iconArr;
 @property (nonatomic, weak) id<MemberMenuViewDelegate> delegate;
 @end
 
