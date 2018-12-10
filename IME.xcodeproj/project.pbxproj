@@ -24,6 +24,8 @@
 		180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB4721BA0904002D85DE /* SearchAnchorView.m */; };
 		180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180ADB4921BA090B002D85DE /* SearchAnchorView.xib */; };
 		180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB5521BA1DE6002D85DE /* CameraController.m */; };
+		181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */; };
+		181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */; };
 		1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837ADF321BA587500554879 /* CAPSPageMenu.m */; };
 		1837ADF821BA589C00554879 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837ADF521BA589B00554879 /* TestViewController.m */; };
 		1837ADF921BA589C00554879 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837ADF621BA589B00554879 /* TestViewController.xib */; };
@@ -112,6 +114,9 @@
 		180ADB4921BA090B002D85DE /* SearchAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorView.xib; sourceTree = "<group>"; };
 		180ADB5421BA1DE6002D85DE /* CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		180ADB5521BA1DE6002D85DE /* CameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		181D791921BE28EA00FE7E2C /* SearchAnchorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchAnchorCell.h; sourceTree = "<group>"; };
+		181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAnchorCell.m; sourceTree = "<group>"; };
+		181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorCell.xib; sourceTree = "<group>"; };
 		1837ADF221BA587500554879 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
 		1837ADF321BA587500554879 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
 		1837ADF521BA589B00554879 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
@@ -268,6 +273,9 @@
 				041DAF2321BD69330091424A /* PhotoCollectionViewCell.h */,
 				041DAF2421BD69330091424A /* PhotoCollectionViewCell.m */,
 				041DAF2521BD69330091424A /* PhotoCollectionViewCell.xib */,
+				181D791921BE28EA00FE7E2C /* SearchAnchorCell.h */,
+				181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */,
+				181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +599,7 @@
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
 				1837ADF921BA589C00554879 /* TestViewController.xib in Resources */,
 				1837AE2421BA722700554879 /* MemberMenuView.xib in Resources */,
+				181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */,
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
 				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
 				18CA49A421B8B67E0019650C /* Assets.xcassets in Resources */,
@@ -628,6 +637,7 @@
 			files = (
 				180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */,
 				180ADB2821BA06D1002D85DE /* SettingController.m in Sources */,
+				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
 				1837AE1621BA716B00554879 /* MemberPostView.m in Sources */,

@@ -7,16 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchAnchorCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class SearchAnchorView;
 
 @protocol SearchAnchorViewDelegate
-
+-(void) voidTestThis;
 @end
-@interface SearchAnchorView : UIView<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SearchAnchorView : UIView<UICollectionViewDataSource, UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource,SearchAnchorCellDelegate>{
+ 
+    
+}
+@property (nonatomic, strong) NSMutableArray   *dataArr;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<SearchAnchorViewDelegate> delegate;
 @end
 

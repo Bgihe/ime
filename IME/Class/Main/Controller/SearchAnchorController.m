@@ -29,4 +29,8 @@
     NSLog(@"SearchAnchorController");
 }
 
+
+-(void) voidTestThis{
+    NSLog(@"測試ok");
+}
 @end

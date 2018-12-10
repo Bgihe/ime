@@ -18,8 +18,65 @@
     self=[super initWithFrame:frame];
     if(self)
     {
+        
         [self commonInit];
-    
+        NSMutableArray * arrA = [[NSMutableArray alloc] init];
+        [arrA addObject:@"1"];
+        [arrA addObject:@"2"];
+        [arrA addObject:@"3"];
+        [arrA addObject:@"4"];
+        [arrA addObject:@"5"];
+        [arrA addObject:@"6"];
+        
+        NSMutableArray * arrB = [[NSMutableArray alloc] init];
+        [arrB addObject:@"1"];
+        [arrB addObject:@"2"];
+        [arrB addObject:@"3"];
+        [arrB addObject:@"4"];
+        NSMutableArray * arrC = [[NSMutableArray alloc] init];
+        [arrC addObject:@"1"];
+        [arrC addObject:@"2"];
+        [arrC addObject:@"3"];
+        [arrC addObject:@"4"];
+        [arrC addObject:@"5"];
+        NSMutableArray * arrD = [[NSMutableArray alloc] init];
+        [arrD addObject:@"1"];
+        [arrD addObject:@"2"];
+        
+        NSMutableArray * arrE = [[NSMutableArray alloc] init];
+        [arrE addObject:@"3"];
+        [arrE addObject:@"4"];
+        [arrE addObject:@"5"];
+        [arrE addObject:@"6"];
+        [arrE addObject:@"7"];
+      
+        NSMutableArray * arrF = [[NSMutableArray alloc] init];
+        [arrF addObject:@"3"];
+        [arrF addObject:@"4"];
+        [arrF addObject:@"5"];
+        [arrF addObject:@"6"];
+        [arrF addObject:@"7"];
+        [arrF addObject:@"3"];
+        [arrF addObject:@"4"];
+        [arrF addObject:@"5"];
+        [arrF addObject:@"6"];
+        [arrF addObject:@"7"];
+        [arrF addObject:@"3"];
+        [arrF addObject:@"4"];
+        [arrF addObject:@"5"];
+        [arrF addObject:@"6"];
+        [arrF addObject:@"7"];
+        
+        _dataArr = [[NSMutableArray alloc] init];
+        [_dataArr addObject:arrA];
+        [_dataArr addObject:arrB];
+        [_dataArr addObject:arrC];
+        [_dataArr addObject:arrD];
+        [_dataArr addObject:arrE];
+        [_dataArr addObject:arrF];
+ 
+        
+  
 //        CGRect collectionViewFrame= CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, VIEW_HEIGHT*0.3);
 //
 //        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -128,29 +185,147 @@
 //    return cell;
 //}
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
-    return 2;
-}
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    return CGSizeMake(VIEW_WIDTH*0.4, VIEW_HEIGHT*0.3-20);      // 让每个cell尺寸都不一样
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [_dataArr count];
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 20;
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.bounds.size.width, 30)];
+    //headerView.layer.cornerRadius = 8;
+    [headerView setBackgroundColor:[UIColor whiteColor]];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30*0.6+15, 5, tableView.bounds.size.width - 10, 18)] ;
+    NSString *header = [[NSString alloc] init];
+    
+    UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 30*0.4/2, 30*0.6, 30*0.6)];
+    
+    
+    
+    switch (section) {
+        case 0:
+            header = @"紅人";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_hot2"];
+            break;
+        case 1:
+            header = @"新星";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_choice2"];
+            break;
+        case 2:
+            header = @"精選";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_hot2"];
+            break;
+        case 3:
+            header = @"新人";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_choice2"];
+            break;
+        case 4:
+            header = @"熱門";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_hot2"];
+            break;
+            
+        default:
+            header = @"更多";
+            imageView.image = [UIImage imageNamed:@"streamer_tag_more2"];
+            break;
+    }
+    [headerView addSubview:imageView];
+    
+    label.text = header;
+    //label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
+    label.backgroundColor = [UIColor colorWithRed:(22/255.0) green:(73/255.0) blue:(77/255.0) alpha:0];
+    [headerView addSubview:label];
+    return headerView;
+    
+    
 }
 
-- (PhotoCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollectionViewCell" forIndexPath:indexPath];
-   
+
+
+// tableview cell 高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    CGFloat screenHeight = screenSize.height;
+    
+    
+    
+    if (indexPath.section == 5) {
+        
+        int intTest = ceil([[_dataArr objectAtIndex:indexPath.section] count]);
+        
+        
+        float floatTest = [[_dataArr objectAtIndex:indexPath.section] count];
+        NSLog(@"%f", ceil(floatTest/2));
+     
+        return (VIEW_HEIGHT/3+10)*ceil(floatTest/2);
+    }else{
+        return VIEW_HEIGHT/3;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //return 10;
+    return 1;
+}
+-(void) voidTestThis{
+    NSLog(@"NO");
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_delegate voidTestThis];
+    static NSString *CellIdentifier = @"Cell";
+    //----Setting_soundslider_TableViewCell
+    SearchAnchorCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell ==nil) {
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"SearchAnchorCell" owner:nil options:nil];
+        for (UIView *view in views ) {
+            if ([view isKindOfClass:[SearchAnchorCell class]]) {
+                cell = (SearchAnchorCell *)view;
+            }
+        }
+    }
+  
+    cell.backgroundColor =[UIColor blueColor];
+
+    NSLog(@"測試4544646:%ld",(long)indexPath.row);
+    if (indexPath.row == 0) {
+        if (indexPath.section == 5) {
+            [cell setColletionData:[_dataArr objectAtIndex:indexPath.section] :YES];
+        }else{
+            [cell setColletionData:[_dataArr objectAtIndex:indexPath.section] :NO];
+        }
+    }
+    
+    
     return cell;
 }
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    PhotoCollectionViewCell *cell = (PhotoCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
-    NSArray *views = [cell.contentView subviews];
-    UILabel *label = [views objectAtIndex:0];
-    NSLog(@"Select %@",label.text);
-}
+//----
+//
+//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+//
+//    return 2;
+//}
+//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    return CGSizeMake(VIEW_WIDTH*0.4, VIEW_HEIGHT*0.3-20);      // 让每个cell尺寸都不一样
+//}
+//
+//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+//    return 20;
+//}
+//
+//- (PhotoCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+//    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollectionViewCell" forIndexPath:indexPath];
+//   
+//    return cell;
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    PhotoCollectionViewCell *cell = (PhotoCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+//    NSArray *views = [cell.contentView subviews];
+//    UILabel *label = [views objectAtIndex:0];
+//    NSLog(@"Select %@",label.text);
+//}
 @end
