@@ -8,7 +8,7 @@
 
 #import "SettingController.h"
 #import "CAPSPageMenu.h"
-#import "TestViewController.h"
+
 
 @interface SettingController ()
 @property (nonatomic) CAPSPageMenu *pageMenu;
@@ -29,7 +29,7 @@
     NSArray *controllerArray = @[memberMenuController, memberPostController, memberBuyController, memberFavoriteController];
     NSDictionary *parameters = @{
                                  CAPSPageMenuOptionScrollMenuBackgroundColor: [UIColor whiteColor],//標題底色
-                                 CAPSPageMenuOptionViewBackgroundColor: [UIColor redColor],
+                                 CAPSPageMenuOptionViewBackgroundColor: [UIColor whiteColor],
                                  CAPSPageMenuOptionSelectionIndicatorColor: [UIColor redColor],
                                  CAPSPageMenuOptionBottomMenuHairlineColor: [UIColor blackColor],
                                  CAPSPageMenuOptionMenuItemFont: [UIFont fontWithName:@"HelveticaNeue" size:13.0],

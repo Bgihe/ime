@@ -7,7 +7,7 @@
 //
 
 #import "SearchAnchorCell.h"
-#import "PhotoCollectionViewCell.h"
+
 #define     VIEW_WIDTH      [UIScreen mainScreen].bounds.size.width
 #define     VIEW_HEIGHT     [UIScreen mainScreen].bounds.size.height
 @implementation SearchAnchorCell
@@ -18,7 +18,7 @@
     // These two are very important.
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-
+    _nameStr = [[NSString alloc] init];
     // Initialization code
     [self.collectionView registerNib:[UINib nibWithNibName:@"PhotoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PhotoCollectionViewCell"];
 }
@@ -72,6 +72,8 @@
 //    return ccell;
   
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollectionViewCell" forIndexPath:indexPath];
+    cell.delegate = self;
+  
     return cell;
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
@@ -79,10 +81,8 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%ld",(long)indexPath.row);
-    [_delegate presentSpotLight];
-    
-    
- 
+    [_delegate presentSpotLight:_dataArr :indexPath.row];
+
 }
 
 @end

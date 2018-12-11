@@ -23,11 +23,11 @@
     _loginPhoneView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_loginPhoneView.view];
     
-    [_loginPhoneView.backBtn addTarget:self action:@selector(clickBackBtnBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_loginPhoneView.backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_loginPhoneView.nextBtn addTarget:self action:@selector(clickNextBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (IBAction)clickBackBtnBtn:(id)sender {
+- (IBAction)clickBackBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)clickNextBtn:(id)sender {

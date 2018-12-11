@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +19,7 @@
                 <outlet property="idLabel" destination="c1D-mb-iDB" id="ojU-uQ-jzW"/>
                 <outlet property="moreBtn" destination="Eib-bI-LP1" id="cLD-3x-Vht"/>
                 <outlet property="postBtn" destination="uCz-lQ-sYB" id="IlF-9N-Kxg"/>
+                <outlet property="statusView" destination="ptX-J4-P9Y" id="pyq-dv-OCl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZeW-W7-TRA"/>
             </connections>
         </placeholder>
@@ -84,14 +85,44 @@
                         </button>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-J4-P9Y">
+                    <rect key="frame" x="10" y="489.5" width="75" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="streamer_tag_hot2" translatesAutoresizingMaskIntoConstraints="NO" id="dBU-kd-6Yk">
+                            <rect key="frame" x="5" y="3" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dBU-kd-6Yk" secondAttribute="height" multiplier="1:1" id="dMP-07-MJ1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="紅人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lko-tT-4Zn">
+                            <rect key="frame" x="34" y="4.5" width="36" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.082678918389999995" green="0.082678918389999995" blue="0.082678918389999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="lko-tT-4Zn" firstAttribute="leading" secondItem="dBU-kd-6Yk" secondAttribute="trailing" constant="5" id="6t9-h8-CHt"/>
+                        <constraint firstAttribute="height" constant="30" id="BIG-qm-18A"/>
+                        <constraint firstItem="dBU-kd-6Yk" firstAttribute="height" secondItem="ptX-J4-P9Y" secondAttribute="height" multiplier="0.8" id="Nqf-dS-3ar"/>
+                        <constraint firstAttribute="trailing" secondItem="lko-tT-4Zn" secondAttribute="trailing" constant="5" id="Rvl-GR-E2w"/>
+                        <constraint firstItem="dBU-kd-6Yk" firstAttribute="centerY" secondItem="ptX-J4-P9Y" secondAttribute="centerY" id="Uev-nS-IZC"/>
+                        <constraint firstItem="lko-tT-4Zn" firstAttribute="centerY" secondItem="ptX-J4-P9Y" secondAttribute="centerY" id="XGj-1D-gRH"/>
+                        <constraint firstItem="dBU-kd-6Yk" firstAttribute="leading" secondItem="ptX-J4-P9Y" secondAttribute="leading" constant="5" id="aue-kD-SvT"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SOI-Xq-dT6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0bV-S3-uT1"/>
+                <constraint firstItem="ptX-J4-P9Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="1oP-NJ-mDh"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="height" secondItem="SOI-Xq-dT6" secondAttribute="height" multiplier="0.06" id="4Dp-YL-dGO"/>
                 <constraint firstItem="61k-32-oMp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="NCc-nn-w7b"/>
+                <constraint firstItem="61k-32-oMp" firstAttribute="top" secondItem="ptX-J4-P9Y" secondAttribute="bottom" constant="10" id="NDn-uh-SQW"/>
                 <constraint firstItem="5J3-aZ-bcg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="QuH-it-jur"/>
                 <constraint firstItem="61k-32-oMp" firstAttribute="width" secondItem="SOI-Xq-dT6" secondAttribute="width" multiplier="0.13" id="R3D-3h-Ocd"/>
+                <constraint firstItem="ptX-J4-P9Y" firstAttribute="width" secondItem="SOI-Xq-dT6" secondAttribute="width" multiplier="0.2" id="WKC-0E-bYi"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="top" secondItem="c1D-mb-iDB" secondAttribute="bottom" constant="20" id="WU8-cw-aJu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uqo-0a-Mwm" secondAttribute="trailing" id="XPV-HM-POS"/>
                 <constraint firstItem="c1D-mb-iDB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="aBN-67-RsN"/>
@@ -114,6 +145,7 @@
         <image name="message_close" width="250" height="220"/>
         <image name="streamer_chat2" width="60" height="56"/>
         <image name="streamer_post2" width="53" height="53"/>
+        <image name="streamer_tag_hot2" width="39" height="39"/>
         <image name="test_img" width="183" height="275"/>
     </resources>
 </document>

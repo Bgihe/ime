@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
     NSArray * _controllerList;
 }
 @property (nonatomic, strong)UIPageViewController *pageViewController;// 页面试图控制器
+@property int pageNumber;// 页面试图控制器
 @end
 
 NS_ASSUME_NONNULL_END

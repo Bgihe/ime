@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol SpotLightViewDelegate
 
 @end
-@interface SpotLightView : UIView
+@interface SpotLightView : UIView<UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIButton *moreBtn;
@@ -23,7 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *chatBtn;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UIButton *postBtn;
+@property (weak, nonatomic) IBOutlet UIView *statusView; //紅人, 新星, 精選..
+// 滑动手势
+@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRec;
 @property (nonatomic, weak) id<SpotLightViewDelegate> delegate;
+- (void)updateIdLabel :(NSString *) name;
 @end
 
 NS_ASSUME_NONNULL_END

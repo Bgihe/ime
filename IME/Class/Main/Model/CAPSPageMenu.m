@@ -181,8 +181,8 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
     _mutableMenuItems       = [NSMutableArray array];
     _mutableMenuItemWidths  = [NSMutableArray array];
     
-    _menuHeight                           = 34.0;
-    _menuMargin                           = 15.0;
+    _menuHeight                           = 34.0;//34.0
+    _menuMargin                           = 15.0;//15.0
     _menuItemWidth                        = 111.0;
     _selectionIndicatorHeight             = 3.0;
     _totalMenuItemWidthIfDifferentWidths  = 0.0;
@@ -433,6 +433,8 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
 #pragma mark - Scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    NSLog(@"%f",scrollView.contentOffset.x);
+    NSLog(@"%f",scrollView.contentOffset.y);
     if (!_didLayoutSubviewsAfterRotation) {
         if ([scrollView isEqual:_controllerScrollView]) {
             if (scrollView.contentOffset.x >= 0.0 && scrollView.contentOffset.x <= ((CGFloat)(_controllerArray.count - 1) * self.view.frame.size.width)) {

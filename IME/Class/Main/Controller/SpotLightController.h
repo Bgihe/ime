@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SpotLightView.h"
+#import "ReportView.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SpotLightController : UIViewController<SpotLightViewDelegate>{
+@interface SpotLightController : UIViewController<SpotLightViewDelegate,ReportViewDelegate>{
     SpotLightView * _spotLightView;
+    ReportView * _reportView;
 }
-
+@property (strong, nonatomic) NSString * nameStr;
 @end
 
 NS_ASSUME_NONNULL_END

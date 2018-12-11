@@ -17,65 +17,9 @@
     self=[super initWithFrame:frame];
     if(self)
     {
-        
         [self commonInit];
-        NSMutableArray * arrA = [[NSMutableArray alloc] init];
-        [arrA addObject:@"1"];
-        [arrA addObject:@"2"];
-        [arrA addObject:@"3"];
-        [arrA addObject:@"4"];
-        [arrA addObject:@"5"];
-        [arrA addObject:@"6"];
         
-        NSMutableArray * arrB = [[NSMutableArray alloc] init];
-        [arrB addObject:@"1"];
-        [arrB addObject:@"2"];
-        [arrB addObject:@"3"];
-        [arrB addObject:@"4"];
-        NSMutableArray * arrC = [[NSMutableArray alloc] init];
-        [arrC addObject:@"1"];
-        [arrC addObject:@"2"];
-        [arrC addObject:@"3"];
-        [arrC addObject:@"4"];
-        [arrC addObject:@"5"];
-        NSMutableArray * arrD = [[NSMutableArray alloc] init];
-        [arrD addObject:@"1"];
-        [arrD addObject:@"2"];
-        
-        NSMutableArray * arrE = [[NSMutableArray alloc] init];
-        [arrE addObject:@"3"];
-        [arrE addObject:@"4"];
-        [arrE addObject:@"5"];
-        [arrE addObject:@"6"];
-        [arrE addObject:@"7"];
-      
-        NSMutableArray * arrF = [[NSMutableArray alloc] init];
-        [arrF addObject:@"3"];
-        [arrF addObject:@"4"];
-        [arrF addObject:@"5"];
-        [arrF addObject:@"6"];
-        [arrF addObject:@"7"];
-        [arrF addObject:@"3"];
-        [arrF addObject:@"4"];
-        [arrF addObject:@"5"];
-        [arrF addObject:@"6"];
-        [arrF addObject:@"7"];
-        [arrF addObject:@"3"];
-        [arrF addObject:@"4"];
-        [arrF addObject:@"5"];
-        [arrF addObject:@"6"];
-        [arrF addObject:@"7"];
-        
-        _dataArr = [[NSMutableArray alloc] init];
-        [_dataArr addObject:arrA];
-        [_dataArr addObject:arrB];
-        [_dataArr addObject:arrC];
-        [_dataArr addObject:arrD];
-        [_dataArr addObject:arrE];
-        [_dataArr addObject:arrF];
- 
-        
-  
+
 //        CGRect collectionViewFrame= CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, VIEW_HEIGHT*0.3);
 //
 //        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -113,8 +57,8 @@
     self.view.frame=self.bounds;
 }
 
--(void) presentSpotLight{
-    [_delegate presentSpotLight];
+-(void) presentSpotLight :(NSMutableArray*) spotLightList :(int) row{
+    [_delegate presentSpotLight:spotLightList :row];
 }
 //// 返回cell的尺寸大小
 //-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -280,7 +224,7 @@
     //----Setting_soundslider_TableViewCell
     
     SearchAnchorCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.delegate = self;
+    
     if (cell ==nil) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"SearchAnchorCell" owner:nil options:nil];
         for (UIView *view in views ) {
@@ -290,8 +234,8 @@
         }
     }
     cell.delegate = self;
-    cell.backgroundColor =[UIColor blueColor];
-
+    cell.nameStr = [[_dataArr objectAtIndex:indexPath.section]objectAtIndex: indexPath.row ];
+    cell.dataArr = [_dataArr objectAtIndex:indexPath.section];
     NSLog(@"測試4544646:%ld",(long)indexPath.row);
     if (indexPath.row == 0) {
         if (indexPath.section == 5) {

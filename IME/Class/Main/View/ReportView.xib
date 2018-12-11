@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportView">
+            <connections>
+                <outlet property="btnStack" destination="j7x-0h-Jsm" id="HEt-MM-iQb"/>
+                <outlet property="cancelBtn" destination="MSz-ED-ZrO" id="ig1-La-nL9"/>
+                <outlet property="reportBtn" destination="ABZ-mj-YWP" id="rIn-yl-WDI"/>
+                <outlet property="unfollowBtn" destination="lU4-a3-YRW" id="aOg-Yn-YFm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="oCb-ll-wi6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j7x-0h-Jsm">
+                    <rect key="frame" x="10" y="528.5" width="355" height="133.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-a3-YRW">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="38"/>
+                            <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="取消追蹤">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-mj-YWP">
+                            <rect key="frame" x="0.0" y="48" width="355" height="37.5"/>
+                            <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="檢舉">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSz-ED-ZrO">
+                            <rect key="frame" x="0.0" y="95.5" width="355" height="38"/>
+                            <color key="backgroundColor" red="1" green="0.55313111827386707" blue="0.49258229627105632" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.082678918389999995" green="0.082678918389999995" blue="0.082678918389999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j7x-0h-Jsm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="8xS-fG-WIz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j7x-0h-Jsm" secondAttribute="bottom" constant="5" id="GqD-hG-tfE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j7x-0h-Jsm" secondAttribute="trailing" constant="10" id="n99-gO-1dL"/>
+                <constraint firstItem="j7x-0h-Jsm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="zcG-zm-4bp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

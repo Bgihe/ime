@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class SearchAnchorView;
 
 @protocol SearchAnchorViewDelegate
--(void) presentSpotLight;
+-(void) presentSpotLight :(NSMutableArray*) spotLightList :(int) row;
 @end
-@interface SearchAnchorView : UIView<UITableViewDataSource,SearchAnchorCellDelegate>{
+@interface SearchAnchorView : UIView<UITableViewDataSource,SearchAnchorCellDelegate>{ 
  
     
 }

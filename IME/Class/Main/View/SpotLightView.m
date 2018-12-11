@@ -16,7 +16,6 @@
     if(self)
     {
         [self commonInit];
- 
         dispatch_async(dispatch_get_main_queue(), ^{
             [self->_headImg.imageView setContentMode:UIViewContentModeScaleAspectFill];
             self->_headImg.backgroundColor = [UIColor whiteColor];
@@ -30,20 +29,35 @@
             self->_headImg.layer.masksToBounds = YES;
         });
 
-        
+        _statusView.layer.cornerRadius = 5;
         [_backBtn.imageView setContentMode:UIViewContentModeScaleAspectFit];
         [_moreBtn.imageView setContentMode:UIViewContentModeScaleAspectFit];
         [_postBtn.imageView setContentMode:UIViewContentModeScaleAspectFit];
         [_chatBtn.imageView setContentMode:UIViewContentModeScaleAspectFit];
         //_editBtn.layer.cornerRadius = CGRectGetHeight(_editBtn.frame)/2;
+  
+
     }
     return self;
 }
+
+
+- (void)onTapBlank:(UITapGestureRecognizer *)tap
+{
+    NSLog(@"Success!!");
+    if (tap.state == UIGestureRecognizerStateEnded)
+    {
+        
+    }
+}
+
 - (void)commonInit
 {
     [[NSBundle mainBundle] loadNibNamed:@"SpotLightView" owner:self options:nil];
     [self addSubview:self.view];
     self.view.frame=self.bounds;
 }
-
+- (void)updateIdLabel :(NSString *) name{
+    _idLabel.text = name;
+}
 @end

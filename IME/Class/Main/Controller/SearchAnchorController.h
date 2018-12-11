@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchAnchorController : UIViewController<SearchAnchorViewDelegate>{
     SearchAnchorView * _searchAnchorView;
+    NSMutableArray * _dataArr;
 }
 
 @end

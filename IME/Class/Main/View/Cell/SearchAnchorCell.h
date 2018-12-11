@@ -7,22 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PhotoCollectionViewCell.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @class SearchAnchorCell;
 
 @protocol SearchAnchorCellDelegate<NSObject>
--(void) presentSpotLight;
+-(void) presentSpotLight :(NSMutableArray*) spotLightList :(int) row;
 @end
 
 
-@interface SearchAnchorCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface SearchAnchorCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,PhotoCollectionViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonnull,nonatomic) NSArray *mycollectionData;
 @property CGSize cellHeight;
 @property (nonatomic, weak) id<SearchAnchorCellDelegate> delegate;
+@property (strong, nonatomic) NSString * nameStr;
 
+@property (strong, nonatomic) NSMutableArray * dataArr;
 //CGSize c=CGSizeMake(width, height);
 
 //- (void)setColletionData :(nonnull NSArray *)collectionData;

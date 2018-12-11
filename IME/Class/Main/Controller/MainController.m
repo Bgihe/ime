@@ -14,6 +14,11 @@
 
 @implementation MainController
 
+- (void)viewWillAppear:(BOOL)animated{
+    if (_pageNumber) {
+        [self gotoPage:_pageNumber];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
