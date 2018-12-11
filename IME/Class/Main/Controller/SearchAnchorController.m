@@ -7,7 +7,7 @@
 //
 
 #import "SearchAnchorController.h"
-
+#import "SpotLightController.h"
 @interface SearchAnchorController ()
 
 @end
@@ -28,9 +28,11 @@
     [super viewWillAppear:animated];
     NSLog(@"SearchAnchorController");
 }
-
-
--(void) voidTestThis{
-    NSLog(@"測試ok");
+-(void)presentSpotLight{
+    
+    SpotLightController * spotLightController = [[SpotLightController alloc] init];
+    [self presentViewController:spotLightController animated:YES completion:NULL];
+    
 }
+ 
 @end

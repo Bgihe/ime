@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class SearchAnchorCell;
 
 @protocol SearchAnchorCellDelegate<NSObject>
--(void) voidTestThis;
+-(void) presentSpotLight;
 @end
 
 

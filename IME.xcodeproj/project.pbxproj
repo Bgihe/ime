@@ -11,6 +11,9 @@
 		041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAEE321BC227A0091424A /* MemberPostCell.xib */; };
 		041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF2421BD69330091424A /* PhotoCollectionViewCell.m */; };
 		041DAF2721BD69330091424A /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAF2521BD69330091424A /* PhotoCollectionViewCell.xib */; };
+		041DAF5721BEC2120091424A /* SpotLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5621BEC2120091424A /* SpotLightView.m */; };
+		041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5921BEC2630091424A /* SpotLightController.m */; };
+		041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAF5B21BEC2730091424A /* SpotLightView.xib */; };
 		180ADB2221BA0620002D85DE /* MassMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2121BA061F002D85DE /* MassMessageController.m */; };
 		180ADB2821BA06D1002D85DE /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2721BA06D1002D85DE /* SettingController.m */; };
 		180ADB2B21BA0722002D85DE /* SearchAnchorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2A21BA0722002D85DE /* SearchAnchorController.m */; };
@@ -92,6 +95,11 @@
 		041DAF2321BD69330091424A /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		041DAF2421BD69330091424A /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		041DAF2521BD69330091424A /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		041DAF5521BEC2120091424A /* SpotLightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightView.h; sourceTree = "<group>"; };
+		041DAF5621BEC2120091424A /* SpotLightView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightView.m; sourceTree = "<group>"; };
+		041DAF5821BEC2630091424A /* SpotLightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightController.h; sourceTree = "<group>"; };
+		041DAF5921BEC2630091424A /* SpotLightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightController.m; sourceTree = "<group>"; };
+		041DAF5B21BEC2730091424A /* SpotLightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotLightView.xib; sourceTree = "<group>"; };
 		180ADB2021BA061F002D85DE /* MassMessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MassMessageController.h; sourceTree = "<group>"; };
 		180ADB2121BA061F002D85DE /* MassMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MassMessageController.m; sourceTree = "<group>"; };
 		180ADB2621BA06D1002D85DE /* SettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
@@ -236,9 +244,6 @@
 		180ADB3121BA0780002D85DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1837ADF721BA589C00554879 /* TestViewController.h */,
-				1837ADF521BA589B00554879 /* TestViewController.m */,
-				1837ADF621BA589B00554879 /* TestViewController.xib */,
 				1837ADF221BA587500554879 /* CAPSPageMenu.h */,
 				1837ADF321BA587500554879 /* CAPSPageMenu.m */,
 				1857EA0121B92440007ACC63 /* MainController.h */,
@@ -276,6 +281,14 @@
 				181D791921BE28EA00FE7E2C /* SearchAnchorCell.h */,
 				181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */,
 				181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */,
+				041DAF5521BEC2120091424A /* SpotLightView.h */,
+				041DAF5621BEC2120091424A /* SpotLightView.m */,
+				041DAF5B21BEC2730091424A /* SpotLightView.xib */,
+				041DAF5821BEC2630091424A /* SpotLightController.h */,
+				041DAF5921BEC2630091424A /* SpotLightController.m */,
+				1837ADF721BA589C00554879 /* TestViewController.h */,
+				1837ADF521BA589B00554879 /* TestViewController.m */,
+				1837ADF621BA589B00554879 /* TestViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,9 +321,6 @@
 				1837AE3021BA75DE00554879 /* MemberBuyController.m */,
 				1837AE3221BA75ED00554879 /* MemberFavoriteController.h */,
 				1837AE3321BA75ED00554879 /* MemberFavoriteController.m */,
-				180ADB3F21BA08B5002D85DE /* SettingView.h */,
-				180ADB4021BA08B5002D85DE /* SettingView.m */,
-				180ADB4221BA08C5002D85DE /* SettingView.xib */,
 				180ADB2621BA06D1002D85DE /* SettingController.h */,
 				180ADB2721BA06D1002D85DE /* SettingController.m */,
 			);
@@ -339,6 +349,9 @@
 				1837AE3521BA7E3800554879 /* MemberMenuCell.h */,
 				1837AE3621BA7E3800554879 /* MemberMenuCell.m */,
 				1837AE3721BA7E3800554879 /* MemberMenuCell.xib */,
+				180ADB3F21BA08B5002D85DE /* SettingView.h */,
+				180ADB4021BA08B5002D85DE /* SettingView.m */,
+				180ADB4221BA08C5002D85DE /* SettingView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */,
+				041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */,
 				041DAF2721BD69330091424A /* PhotoCollectionViewCell.xib in Resources */,
 				1857E9A021B8F84B007ACC63 /* LoginVerifyView.xib in Resources */,
 				1837AE2021BA720B00554879 /* MemberBuyView.xib in Resources */,
@@ -645,6 +659,7 @@
 				18CA49AA21B8B67E0019650C /* main.m in Sources */,
 				1837ADF821BA589C00554879 /* TestViewController.m in Sources */,
 				180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */,
+				041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
 				1857EA0621B92457007ACC63 /* MainView.m in Sources */,
@@ -665,6 +680,7 @@
 				1837AE1C21BA71DC00554879 /* MemberFavoriteView.m in Sources */,
 				1857E9FD21B917BF007ACC63 /* LoginAccountController.m in Sources */,
 				041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */,
+				041DAF5721BEC2120091424A /* SpotLightView.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,

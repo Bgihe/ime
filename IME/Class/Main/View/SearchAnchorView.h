@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class SearchAnchorView;
 
 @protocol SearchAnchorViewDelegate
--(void) voidTestThis;
+-(void) presentSpotLight;
 @end
-@interface SearchAnchorView : UIView<UICollectionViewDataSource, UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource,SearchAnchorCellDelegate>{
+@interface SearchAnchorView : UIView<UITableViewDataSource,SearchAnchorCellDelegate>{
  
     
 }
@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<SearchAnchorViewDelegate> delegate;
+
+-(void) voidTestThisA;
 @end
 
 NS_ASSUME_NONNULL_END

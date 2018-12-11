@@ -7,7 +7,6 @@
 //
 
 #import "SearchAnchorView.h"
-#import "PhotoCollectionViewCell.h"
 
 #define     VIEW_WIDTH      [UIScreen mainScreen].bounds.size.width
 #define     VIEW_HEIGHT     [UIScreen mainScreen].bounds.size.height
@@ -112,6 +111,10 @@
     [[NSBundle mainBundle] loadNibNamed:@"SearchAnchorView" owner:self options:nil];
     [self addSubview:self.view];
     self.view.frame=self.bounds;
+}
+
+-(void) presentSpotLight{
+    [_delegate presentSpotLight];
 }
 //// 返回cell的尺寸大小
 //-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -268,16 +271,16 @@
     //return 10;
     return 1;
 }
--(void) voidTestThis{
-    NSLog(@"NO");
-}
+ 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [_delegate voidTestThis];
+    
     static NSString *CellIdentifier = @"Cell";
     //----Setting_soundslider_TableViewCell
-    SearchAnchorCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    SearchAnchorCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.delegate = self;
     if (cell ==nil) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"SearchAnchorCell" owner:nil options:nil];
         for (UIView *view in views ) {
@@ -286,7 +289,7 @@
             }
         }
     }
-  
+    cell.delegate = self;
     cell.backgroundColor =[UIColor blueColor];
 
     NSLog(@"測試4544646:%ld",(long)indexPath.row);

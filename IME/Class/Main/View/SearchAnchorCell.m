@@ -79,7 +79,10 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%ld",(long)indexPath.row);
-    [_delegate voidTestThis];
+    [_delegate presentSpotLight];
+    
+    
+ 
 }
 
 @end
