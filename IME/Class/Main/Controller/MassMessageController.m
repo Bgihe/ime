@@ -7,7 +7,7 @@
 //
 
 #import "MassMessageController.h"
-
+#import "PostController.h"
 @interface MassMessageController ()
 
 @end
@@ -28,4 +28,15 @@
     NSLog(@"MassMessageController");
 }
 
+-(void)addChild{
+    PostController * postController = [[PostController alloc] init];
+//    [self.view addSubview:postController.view];
+//     postController.view.frame = self.view.bounds;
+//    [self addChildViewController:postController];
+//
+//    [self.view bringSubviewToFront:postController.view];
+    
+    [_delegate addChild:postController inRect:[UIScreen mainScreen].bounds];
+ 
+}
 @end

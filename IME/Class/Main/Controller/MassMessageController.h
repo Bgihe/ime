@@ -10,10 +10,15 @@
 #import "MassMessageView.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class MassMessageController;
+
+@protocol MassMessageControllerDelegate
+-(void)addChild:(UIViewController *)vc inRect:(CGRect)rect;
+@end
 @interface MassMessageController : UIViewController<MassMessageViewDelegate>{
     MassMessageView * _massMessageView;
 }
-
+@property (nonatomic, weak) id<MassMessageControllerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

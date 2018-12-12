@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MassMessageCell.h"
 NS_ASSUME_NONNULL_BEGIN
 @class MassMessageView;
 
 @protocol MassMessageViewDelegate
-
+-(void)addChild;
 @end
 
-@interface MassMessageView : UIView
+@interface MassMessageView : UIView<MassMessageCellDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (nonatomic, strong) NSMutableArray   *dataArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIStackView *nothingStack;
 @property (nonatomic, weak) id<MassMessageViewDelegate> delegate;
 @end
 

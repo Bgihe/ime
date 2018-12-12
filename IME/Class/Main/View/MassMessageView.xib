@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MassMessageView">
             <connections>
+                <outlet property="nothingStack" destination="knm-sv-bxR" id="lL7-6d-1Kd"/>
+                <outlet property="tableView" destination="zpf-Lj-N4e" id="Whl-Dm-Lga"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9Op-0P-Jbh"/>
             </connections>
         </placeholder>
@@ -20,7 +22,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="knm-sv-bxR">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zpf-Lj-N4e">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="JCr-5V-Pp7"/>
+                        <outlet property="delegate" destination="-1" id="sl1-zv-YCu"/>
+                    </connections>
+                </tableView>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="knm-sv-bxR">
                     <rect key="frame" x="77.5" y="70" width="220" height="133.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pWH-3r-fD9">
@@ -40,11 +50,16 @@
             </subviews>
             <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="zpf-Lj-N4e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="K5o-kN-43I"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zpf-Lj-N4e" secondAttribute="trailing" id="Mct-Ja-5RU"/>
                 <constraint firstItem="knm-sv-bxR" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="Q8o-ew-G2l"/>
                 <constraint firstItem="knm-sv-bxR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="R1c-Wx-ON6"/>
+                <constraint firstItem="zpf-Lj-N4e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S0j-gC-FyP"/>
                 <constraint firstItem="knm-sv-bxR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qls-tH-8C0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zpf-Lj-N4e" secondAttribute="bottom" id="ua2-iY-feO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="90.400000000000006" y="76.911544227886068"/>
         </view>
     </objects>
     <resources>

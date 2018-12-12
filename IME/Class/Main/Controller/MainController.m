@@ -36,12 +36,23 @@
 
     _pageViewController.view.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height*0.08+34, [[UIScreen mainScreen] bounds].size.width,  ([[UIScreen mainScreen] bounds].size.height - [[UIScreen mainScreen] bounds].size.height * 0.13)-34);
     [self pageViewController];
+    MassMessageController * massMessageController = [[MassMessageController alloc] init];
+    massMessageController.delegate = self;
     
     _controllerList = [[NSArray alloc] init];
-    _controllerList = @[[[MassMessageController alloc] init], [[MessageController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
+    _controllerList = @[massMessageController, [[MessageController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
+    
+    
     [self performSelector:@selector(refreshRect) withObject:nil afterDelay:0.05];
     [self gotoPage:1];
 }
+- (void)addChild:(UIViewController *)vc inRect:(CGRect)rect
+{
+    [self.view addSubview:vc.view];
+    vc.view.frame = rect;
+    [self addChildViewController:vc];
+}
+
 - (void)refreshRect{
     if (@available(iOS 11.0, *)) {
         //NSLog(@"%@",self.view.safeAreaInsets);

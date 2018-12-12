@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406679B21C00943003FB675 /* MassMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406679921C00943003FB675 /* MassMessageCell.m */; };
+		0406679C21C00943003FB675 /* MassMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0406679A21C00943003FB675 /* MassMessageCell.xib */; };
+		0406679F21C01D97003FB675 /* PostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0406679E21C01D97003FB675 /* PostController.m */; };
+		040667A221C01DAA003FB675 /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040667A121C01DAA003FB675 /* PostView.m */; };
+		040667A421C01DBC003FB675 /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040667A321C01DBC003FB675 /* PostView.xib */; };
 		041DAEE421BC227A0091424A /* MemberPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAEE221BC227A0091424A /* MemberPostCell.m */; };
 		041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAEE321BC227A0091424A /* MemberPostCell.xib */; };
 		041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF2421BD69330091424A /* PhotoCollectionViewCell.m */; };
@@ -90,6 +95,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0406679821C00943003FB675 /* MassMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MassMessageCell.h; sourceTree = "<group>"; };
+		0406679921C00943003FB675 /* MassMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MassMessageCell.m; sourceTree = "<group>"; };
+		0406679A21C00943003FB675 /* MassMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MassMessageCell.xib; sourceTree = "<group>"; };
+		0406679D21C01D97003FB675 /* PostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostController.h; sourceTree = "<group>"; };
+		0406679E21C01D97003FB675 /* PostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostController.m; sourceTree = "<group>"; };
+		040667A021C01DAA003FB675 /* PostView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
+		040667A121C01DAA003FB675 /* PostView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		040667A321C01DBC003FB675 /* PostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 		041DAEE121BC227A0091424A /* MemberPostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberPostCell.h; sourceTree = "<group>"; };
 		041DAEE221BC227A0091424A /* MemberPostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberPostCell.m; sourceTree = "<group>"; };
 		041DAEE321BC227A0091424A /* MemberPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberPostCell.xib; sourceTree = "<group>"; };
@@ -287,6 +300,11 @@
 				041DAF5521BEC2120091424A /* SpotLightView.h */,
 				041DAF5621BEC2120091424A /* SpotLightView.m */,
 				041DAF5B21BEC2730091424A /* SpotLightView.xib */,
+				040667A021C01DAA003FB675 /* PostView.h */,
+				040667A121C01DAA003FB675 /* PostView.m */,
+				040667A321C01DBC003FB675 /* PostView.xib */,
+				0406679D21C01D97003FB675 /* PostController.h */,
+				0406679E21C01D97003FB675 /* PostController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +327,9 @@
 				181D791921BE28EA00FE7E2C /* SearchAnchorCell.h */,
 				181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */,
 				181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */,
+				0406679821C00943003FB675 /* MassMessageCell.h */,
+				0406679921C00943003FB675 /* MassMessageCell.m */,
+				0406679A21C00943003FB675 /* MassMessageCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -628,7 +649,9 @@
 				181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */,
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
 				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
+				0406679C21C00943003FB675 /* MassMessageCell.xib in Resources */,
 				18CA49A421B8B67E0019650C /* Assets.xcassets in Resources */,
+				040667A421C01DBC003FB675 /* PostView.xib in Resources */,
 				18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */,
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
 				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
@@ -664,6 +687,7 @@
 			files = (
 				180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */,
 				180ADB2821BA06D1002D85DE /* SettingController.m in Sources */,
+				040667A221C01DAA003FB675 /* PostView.m in Sources */,
 				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
@@ -683,6 +707,7 @@
 				1837AE1321BA715200554879 /* MemberBuyView.m in Sources */,
 				1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */,
 				1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */,
+				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,
 				18CA4A8921B8D4DC0019650C /* LoginAccountView.m in Sources */,
 				180ADB3B21BA0859002D85DE /* MessageView.m in Sources */,
@@ -696,6 +721,7 @@
 				041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */,
 				041DAF5721BEC2120091424A /* SpotLightView.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
+				0406679F21C01D97003FB675 /* PostController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,
 				1837AE1921BA717F00554879 /* MemberMenuView.m in Sources */,
