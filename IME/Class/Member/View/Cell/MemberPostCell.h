@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MemberPostCell;
+
+@protocol MemberPostCellDelegate
+
+@end
+
 @interface MemberPostCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *headImg;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -18,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lockLabel;
 @property (weak, nonatomic) IBOutlet UILabel *daimondLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) id<MemberPostCellDelegate> delegate;
 
 @end
 

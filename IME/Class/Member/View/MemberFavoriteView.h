@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface MemberFavoriteView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (nonatomic, strong) NSMutableArray   *dataArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<MemberFavoriteViewDelegate> delegate;
 @end
 

@@ -44,9 +44,7 @@
     
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     CGFloat screenHeight = screenSize.height;
-    
-    
-    
+
     return VIEW_HEIGHT/8;
 }
 

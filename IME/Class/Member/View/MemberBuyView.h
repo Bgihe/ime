@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface MemberBuyView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *selectTimeBtn;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (nonatomic, strong) NSMutableArray   *dataArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) id<MemberBuyViewDelegate> delegate;
 @end
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MassMessageView.h"
+ 
 NS_ASSUME_NONNULL_BEGIN
 
 @class MassMessageController;

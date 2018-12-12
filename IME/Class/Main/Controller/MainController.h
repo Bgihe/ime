@@ -10,13 +10,15 @@
 #import "MainView.h"
 #import "MassMessageController.h"
 #import "MessageController.h"
+#import "CameraController.h"
 #import "SearchAnchorController.h"
 #import "SettingController.h"
 
-
+//#import "PostController.h"
+#import "IMEBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainController : UIViewController<MainViewDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
+@interface MainController : IMEBaseViewController<MainViewDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>{
     MainView * _mainView;
     NSArray * _controllerList;
 }

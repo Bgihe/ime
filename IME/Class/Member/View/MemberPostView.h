@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface MemberPostView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *selectTimeBtn;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray   *dataArr;
 @property (strong, nonatomic) IBOutlet UIView *view;

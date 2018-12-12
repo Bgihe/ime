@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MessageView.h"
+#import "MainController.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MessageController : UIViewController<MessageViewDelegate>{

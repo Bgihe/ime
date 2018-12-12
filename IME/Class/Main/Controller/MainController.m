@@ -40,17 +40,28 @@
     massMessageController.delegate = self;
     
     _controllerList = [[NSArray alloc] init];
-    _controllerList = @[massMessageController, [[MessageController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
+    
+    
+    _controllerList = @[massMessageController, [[MessageController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
     
     
     [self performSelector:@selector(refreshRect) withObject:nil afterDelay:0.05];
     [self gotoPage:1];
+    
+    
 }
 - (void)addChild:(UIViewController *)vc inRect:(CGRect)rect
 {
     [self.view addSubview:vc.view];
     vc.view.frame = rect;
     [self addChildViewController:vc];
+}
+
+- (void)removeChild:(UIViewController *)child inContainer:(UIView *)view
+{
+    [child.view removeFromSuperview];
+    [child willMoveToParentViewController:nil];
+    [child removeFromParentViewController];
 }
 
 - (void)refreshRect{
@@ -91,7 +102,11 @@
                                   direction:direction
                                    animated:NO
                                  completion:nil];
+    
+    //[_mainView.view bringSubviewToFront:_mainView.bottomView];
+ 
 }
+
 - (IBAction)clickMassMsgBtn:(id)sender {
     [self gotoPage:0];
 }

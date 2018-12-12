@@ -35,6 +35,16 @@
 		181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */; };
 		181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */; };
 		181D795B21BF59BD00FE7E2C /* ReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D795A21BF59BD00FE7E2C /* ReportView.m */; };
+		1821545F21C11142003DE6A4 /* FansController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821545E21C11142003DE6A4 /* FansController.m */; };
+		1821546221C1115D003DE6A4 /* FansView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821546121C1115D003DE6A4 /* FansView.m */; };
+		1821546421C1116C003DE6A4 /* FansView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821546321C1116C003DE6A4 /* FansView.xib */; };
+		1821546821C11212003DE6A4 /* FansCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821546621C11212003DE6A4 /* FansCell.m */; };
+		1821546921C11212003DE6A4 /* FansCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821546721C11212003DE6A4 /* FansCell.xib */; };
+		183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */; };
+		183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F121C0AB360052F255 /* IMEBaseViewController.m */; };
+		183520F521C0B5CC0052F255 /* PostListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F421C0B5CC0052F255 /* PostListView.m */; };
+		183520F721C0B5EE0052F255 /* PostListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183520F621C0B5EE0052F255 /* PostListView.xib */; };
+		183520FA21C0B8330052F255 /* PostListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F921C0B8330052F255 /* PostListController.m */; };
 		1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837ADF321BA587500554879 /* CAPSPageMenu.m */; };
 		1837AE1321BA715200554879 /* MemberBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1221BA715200554879 /* MemberBuyView.m */; };
 		1837AE1621BA716B00554879 /* MemberPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE1521BA716B00554879 /* MemberPostView.m */; };
@@ -141,6 +151,23 @@
 		181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorCell.xib; sourceTree = "<group>"; };
 		181D795921BF59BD00FE7E2C /* ReportView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportView.h; sourceTree = "<group>"; };
 		181D795A21BF59BD00FE7E2C /* ReportView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportView.m; sourceTree = "<group>"; };
+		1821545D21C11142003DE6A4 /* FansController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FansController.h; sourceTree = "<group>"; };
+		1821545E21C11142003DE6A4 /* FansController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FansController.m; sourceTree = "<group>"; };
+		1821546021C1115D003DE6A4 /* FansView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FansView.h; sourceTree = "<group>"; };
+		1821546121C1115D003DE6A4 /* FansView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FansView.m; sourceTree = "<group>"; };
+		1821546321C1116C003DE6A4 /* FansView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FansView.xib; sourceTree = "<group>"; };
+		1821546521C11212003DE6A4 /* FansCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FansCell.h; sourceTree = "<group>"; };
+		1821546621C11212003DE6A4 /* FansCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FansCell.m; sourceTree = "<group>"; };
+		1821546721C11212003DE6A4 /* FansCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FansCell.xib; sourceTree = "<group>"; };
+		183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChildViewController.h"; sourceTree = "<group>"; };
+		183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChildViewController.m"; sourceTree = "<group>"; };
+		183520F021C0AB360052F255 /* IMEBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMEBaseViewController.h; sourceTree = "<group>"; };
+		183520F121C0AB360052F255 /* IMEBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMEBaseViewController.m; sourceTree = "<group>"; };
+		183520F321C0B5CC0052F255 /* PostListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListView.h; sourceTree = "<group>"; };
+		183520F421C0B5CC0052F255 /* PostListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListView.m; sourceTree = "<group>"; };
+		183520F621C0B5EE0052F255 /* PostListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListView.xib; sourceTree = "<group>"; };
+		183520F821C0B8330052F255 /* PostListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListController.h; sourceTree = "<group>"; };
+		183520F921C0B8330052F255 /* PostListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListController.m; sourceTree = "<group>"; };
 		1837ADF221BA587500554879 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
 		1837ADF321BA587500554879 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
 		1837AE1121BA715200554879 /* MemberBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberBuyView.h; sourceTree = "<group>"; };
@@ -260,12 +287,20 @@
 		180ADB3121BA0780002D85DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				183520F821C0B8330052F255 /* PostListController.h */,
+				183520F921C0B8330052F255 /* PostListController.m */,
+				0406679D21C01D97003FB675 /* PostController.h */,
+				0406679E21C01D97003FB675 /* PostController.m */,
+				183520F021C0AB360052F255 /* IMEBaseViewController.h */,
+				183520F121C0AB360052F255 /* IMEBaseViewController.m */,
 				1857EA0121B92440007ACC63 /* MainController.h */,
 				1857EA0221B92440007ACC63 /* MainController.m */,
 				180ADB2021BA061F002D85DE /* MassMessageController.h */,
 				180ADB2121BA061F002D85DE /* MassMessageController.m */,
 				180ADB3C21BA087A002D85DE /* MessageController.h */,
 				180ADB3D21BA087A002D85DE /* MessageController.m */,
+				183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */,
+				183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */,
 				180ADB2921BA0722002D85DE /* SearchAnchorController.h */,
 				180ADB2A21BA0722002D85DE /* SearchAnchorController.m */,
 				180ADB5421BA1DE6002D85DE /* CameraController.h */,
@@ -300,11 +335,12 @@
 				041DAF5521BEC2120091424A /* SpotLightView.h */,
 				041DAF5621BEC2120091424A /* SpotLightView.m */,
 				041DAF5B21BEC2730091424A /* SpotLightView.xib */,
+				183520F321C0B5CC0052F255 /* PostListView.h */,
+				183520F421C0B5CC0052F255 /* PostListView.m */,
+				183520F621C0B5EE0052F255 /* PostListView.xib */,
 				040667A021C01DAA003FB675 /* PostView.h */,
 				040667A121C01DAA003FB675 /* PostView.m */,
 				040667A321C01DBC003FB675 /* PostView.xib */,
-				0406679D21C01D97003FB675 /* PostController.h */,
-				0406679E21C01D97003FB675 /* PostController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +393,8 @@
 				1837AE3321BA75ED00554879 /* MemberFavoriteController.m */,
 				180ADB2621BA06D1002D85DE /* SettingController.h */,
 				180ADB2721BA06D1002D85DE /* SettingController.m */,
+				1821545D21C11142003DE6A4 /* FansController.h */,
+				1821545E21C11142003DE6A4 /* FansController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,15 +415,12 @@
 				1837AE1A21BA71DC00554879 /* MemberFavoriteView.h */,
 				1837AE1B21BA71DC00554879 /* MemberFavoriteView.m */,
 				1837AE1D21BA71FF00554879 /* MemberFavoriteView.xib */,
-				041DAEE121BC227A0091424A /* MemberPostCell.h */,
-				041DAEE221BC227A0091424A /* MemberPostCell.m */,
-				041DAEE321BC227A0091424A /* MemberPostCell.xib */,
-				1837AE3521BA7E3800554879 /* MemberMenuCell.h */,
-				1837AE3621BA7E3800554879 /* MemberMenuCell.m */,
-				1837AE3721BA7E3800554879 /* MemberMenuCell.xib */,
 				180ADB3F21BA08B5002D85DE /* SettingView.h */,
 				180ADB4021BA08B5002D85DE /* SettingView.m */,
 				180ADB4221BA08C5002D85DE /* SettingView.xib */,
+				1821546021C1115D003DE6A4 /* FansView.h */,
+				1821546121C1115D003DE6A4 /* FansView.m */,
+				1821546321C1116C003DE6A4 /* FansView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +435,15 @@
 		1837AE3A21BA7E3E00554879 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				041DAEE121BC227A0091424A /* MemberPostCell.h */,
+				041DAEE221BC227A0091424A /* MemberPostCell.m */,
+				041DAEE321BC227A0091424A /* MemberPostCell.xib */,
+				1837AE3521BA7E3800554879 /* MemberMenuCell.h */,
+				1837AE3621BA7E3800554879 /* MemberMenuCell.m */,
+				1837AE3721BA7E3800554879 /* MemberMenuCell.xib */,
+				1821546521C11212003DE6A4 /* FansCell.h */,
+				1821546621C11212003DE6A4 /* FansCell.m */,
+				1821546721C11212003DE6A4 /* FansCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -655,12 +699,15 @@
 				18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */,
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
 				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
+				1821546421C1116C003DE6A4 /* FansView.xib in Resources */,
 				18CA49A221B8B67D0019650C /* Main.storyboard in Resources */,
 				1837AE2221BA721D00554879 /* MemberPostView.xib in Resources */,
 				1851261E21BF59F00059E473 /* ReportView.xib in Resources */,
 				180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */,
 				18CA4A8B21B8D5160019650C /* LoginMainView.xib in Resources */,
 				180ADB3821BA083D002D85DE /* MassMessageView.xib in Resources */,
+				183520F721C0B5EE0052F255 /* PostListView.xib in Resources */,
+				1821546921C11212003DE6A4 /* FansCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,8 +736,11 @@
 				180ADB2821BA06D1002D85DE /* SettingController.m in Sources */,
 				040667A221C01DAA003FB675 /* PostView.m in Sources */,
 				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
+				183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
+				183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */,
+				1821546221C1115D003DE6A4 /* FansView.m in Sources */,
 				1837AE1621BA716B00554879 /* MemberPostView.m in Sources */,
 				180ADB3E21BA087A002D85DE /* MessageController.m in Sources */,
 				18CA49AA21B8B67E0019650C /* main.m in Sources */,
@@ -704,11 +754,13 @@
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
 				181D795B21BF59BD00FE7E2C /* ReportView.m in Sources */,
 				18CA4A8321B8D47D0019650C /* LoginMainView.m in Sources */,
+				183520F521C0B5CC0052F255 /* PostListView.m in Sources */,
 				1837AE1321BA715200554879 /* MemberBuyView.m in Sources */,
 				1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */,
 				1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */,
 				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,
+				1821546821C11212003DE6A4 /* FansCell.m in Sources */,
 				18CA4A8921B8D4DC0019650C /* LoginAccountView.m in Sources */,
 				180ADB3B21BA0859002D85DE /* MessageView.m in Sources */,
 				1837AE2B21BA75BD00554879 /* MemberMenuController.m in Sources */,
@@ -717,10 +769,12 @@
 				180ADB2221BA0620002D85DE /* MassMessageController.m in Sources */,
 				1857EA0021B917D9007ACC63 /* LoginVerifyController.m in Sources */,
 				1837AE1C21BA71DC00554879 /* MemberFavoriteView.m in Sources */,
+				1821545F21C11142003DE6A4 /* FansController.m in Sources */,
 				1857E9FD21B917BF007ACC63 /* LoginAccountController.m in Sources */,
 				041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */,
 				041DAF5721BEC2120091424A /* SpotLightView.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
+				183520FA21C0B8330052F255 /* PostListController.m in Sources */,
 				0406679F21C01D97003FB675 /* PostController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,

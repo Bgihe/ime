@@ -1,14 +1,15 @@
 //
-//  MainView.m
+//  FansView.m
 //  IME
 //
-//  Created by apple on 2018/12/6.
+//  Created by apple on 2018/12/12.
 //  Copyright © 2018 apple. All rights reserved.
 //
 
-#import "MainView.h"
+#import "FansView.h"
 
-@implementation MainView
+@implementation FansView
+
 - (id)initWithFrame:(CGRect)frame
 {
     self=[super initWithFrame:frame];
@@ -20,11 +21,10 @@
 }
 - (void)commonInit
 {
-    [[NSBundle mainBundle] loadNibNamed:@"MainView" owner:self options:nil];
+    [[NSBundle mainBundle] loadNibNamed:@"FansView" owner:self options:nil];
     [self addSubview:self.view];
     self.view.frame=self.bounds;
     
 }
-
 
 @end

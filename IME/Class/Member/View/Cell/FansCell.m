@@ -1,14 +1,14 @@
 //
-//  MemberPostCell.m
+//  FansCell.m
 //  IME
 //
-//  Created by MAC on 2018/12/9.
-//  Copyright © 2018年 apple. All rights reserved.
+//  Created by apple on 2018/12/12.
+//  Copyright © 2018 apple. All rights reserved.
 //
 
-#import "MemberPostCell.h"
+#import "FansCell.h"
 
-@implementation MemberPostCell
+@implementation FansCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

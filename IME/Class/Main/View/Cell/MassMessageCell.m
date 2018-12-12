@@ -24,7 +24,7 @@
         self->_postStatusImg.layer.cornerRadius = CGRectGetHeight(self->_postStatusImg.frame)/2;
         self->_postStatusImg.clipsToBounds = YES;
         //self->_postStatusImg.backgroundColor = [UIColor whiteColor];
-        self->_postStatusImg.layer.borderWidth = 1;
+        self->_postStatusImg.layer.borderWidth = 3;
         self->_postStatusImg.layer.borderColor = [UIColor whiteColor].CGColor;
         self->_postStatusImg.contentMode=UIViewContentModeScaleAspectFill;
         self->_postStatusImg.layer.masksToBounds = YES;

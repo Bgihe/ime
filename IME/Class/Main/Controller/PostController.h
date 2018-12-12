@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainController.h"
 #import "PostView.h"
-NS_ASSUME_NONNULL_BEGIN
 
-@interface PostController : UIViewController<PostViewDelegate>{
+NS_ASSUME_NONNULL_BEGIN
+@class PostController;
+
+@protocol PostControllerDelegate
+
+@end
+@interface PostController : MainController<PostViewDelegate>{
     PostView * _postView;
 }
- 
+@property (nonatomic, weak) id<PostControllerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END
