@@ -60,7 +60,6 @@
         }];
     }
 }
-
 - (void)removeChild:(UIViewController *)vc
 {
     [vc.view removeFromSuperview];

@@ -22,6 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (nonatomic, weak) id<LoginVerifyViewDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UITextField *verify1Label;
+@property (weak, nonatomic) IBOutlet UITextField *verify2Label;
+@property (weak, nonatomic) IBOutlet UITextField *verify3Label;
+@property (weak, nonatomic) IBOutlet UITextField *verify4Label;
+@property (weak, nonatomic) IBOutlet UITextField *verify5Label;
+@property (weak, nonatomic) IBOutlet UITextField *verify6Label;
 @end
 
 NS_ASSUME_NONNULL_END

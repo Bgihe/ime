@@ -15,6 +15,17 @@
     if(self)
     {
         [self commonInit];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->_verify1Label.layer.cornerRadius = 5;
+            self->_verify2Label.layer.cornerRadius = 5;
+            self->_verify3Label.layer.cornerRadius = 5;
+            self->_verify4Label.layer.cornerRadius = 5;
+            self->_verify5Label.layer.cornerRadius = 5;
+            self->_verify6Label.layer.cornerRadius = 5;
+            
+            self->_nextBtn.layer.cornerRadius = 5;
+        });
+        
     }
     return self;
 }

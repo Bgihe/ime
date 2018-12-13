@@ -13,7 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginMainView">
             <connections>
                 <outlet property="accountBtn" destination="eiy-0K-FAK" id="Ubf-w9-Rgo"/>
+                <outlet property="loginView" destination="ehU-LQ-Ns9" id="h3q-6d-snp"/>
+                <outlet property="memberView" destination="ehU-LQ-Ns9" id="Zha-hi-eiH"/>
                 <outlet property="phoneBtn" destination="Mga-9V-G6O" id="xkx-fL-wuK"/>
+                <outlet property="phoneView" destination="sKI-0P-vYE" id="Hp5-mC-hwr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Bz3-pH-bNw"/>
             </connections>
         </placeholder>

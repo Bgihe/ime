@@ -27,6 +27,7 @@
     _mainView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_mainView.view];
  
+    
     [_mainView.massMsgBtn addTarget:self action:@selector(clickMassMsgBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_mainView.msgBtn addTarget:self action:@selector(clickMsgBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_mainView.cameraBtn addTarget:self action:@selector(clickCameraBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,7 +44,6 @@
     
     
     _controllerList = @[massMessageController, [[MessageController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
-    
     
     [self performSelector:@selector(refreshRect) withObject:nil afterDelay:0.05];
     [self gotoPage:1];

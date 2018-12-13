@@ -13,7 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVerifyView">
             <connections>
                 <outlet property="backBtn" destination="xdf-x4-6op" id="pfG-1e-Lty"/>
-                <outlet property="nextBtn" destination="B7E-RU-nn9" id="U06-3z-sZB"/>
+                <outlet property="nextBtn" destination="B7E-RU-nn9" id="ex3-AA-tQQ"/>
+                <outlet property="verify1Label" destination="YGM-Co-n53" id="X6N-Ep-U9Z"/>
+                <outlet property="verify2Label" destination="f5M-Sy-XZg" id="rJC-G0-CKs"/>
+                <outlet property="verify3Label" destination="1cf-j0-TGx" id="ag1-tV-du6"/>
+                <outlet property="verify4Label" destination="i5A-Be-cVj" id="0aO-vB-0gP"/>
+                <outlet property="verify5Label" destination="ZtJ-FV-VgA" id="Dhn-Br-w8x"/>
+                <outlet property="verify6Label" destination="uSl-FZ-AaU" id="W8f-WA-B9U"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6oJ-2y-4tG"/>
             </connections>
         </placeholder>

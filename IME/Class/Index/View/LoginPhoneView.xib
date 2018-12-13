@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="backBtn" destination="g2u-pV-6AY" id="SRq-3e-fUA"/>
                 <outlet property="nextBtn" destination="3vv-UY-XUe" id="bDy-Da-oAd"/>
+                <outlet property="phoneView" destination="Ldw-a5-3s5" id="8e6-qC-MKD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KpP-iU-hU2"/>
             </connections>
         </placeholder>

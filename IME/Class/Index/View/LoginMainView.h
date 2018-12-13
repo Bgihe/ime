@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *accountBtn;
 @property (strong, nonatomic) IBOutlet UIView *view;
 
+@property (weak, nonatomic) IBOutlet UIView *phoneView;
+@property (weak, nonatomic) IBOutlet UIView *memberView;
+@property (weak, nonatomic) IBOutlet UIView *loginView;
 
 @property (nonatomic, weak) id<LoginMainViewDelegate> delegate;
 
