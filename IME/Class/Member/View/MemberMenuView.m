@@ -73,21 +73,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-  
-//    static NSString *cellID = @"cell";
-//    //通过标识符，在tableView的重用池中找到可用的Cell（在重用池内部其实是一个可变的集合）
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-//    //如果重用池中没有这个标识符对应的cell，则创建一个新的，并且设置标识符
-//    if (!cell) {
-//        //代码块内只做Cell样式的处理，不做数据设置
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellID];
-//    }
-//    //对Cell做数据设置
-//    //[cell.textLabel setText:[_dataArr objectAtIndex:indexPath.row]];
-//    [cell.detailTextLabel setText:[_dataArr objectAtIndex:indexPath.row]];
-//    return cell;
-    
-    
     static NSString *CellIdentifier = @"Cell";
     //----Setting_soundslider_TableViewCell
     MemberMenuCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -116,6 +101,8 @@
     }
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    [_delegate presentController:indexPath.row];
+}
 
 @end

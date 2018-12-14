@@ -23,7 +23,6 @@
     [[NSBundle mainBundle] loadNibNamed:@"MainView" owner:self options:nil];
     [self addSubview:self.view];
     self.view.frame=self.bounds;
-    
 }
 
 

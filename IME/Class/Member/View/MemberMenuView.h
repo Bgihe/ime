@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class MemberMenuView;
 
 @protocol MemberMenuViewDelegate
-
+- (void)presentController :(long)indexRow ;
 @end
 @interface MemberMenuView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;

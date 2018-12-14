@@ -15,6 +15,9 @@
 @implementation MainController
 
 - (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"viewWillAppear");
+    
+    
     if (_pageNumber) {
         [self gotoPage:_pageNumber];
     }
@@ -35,7 +38,7 @@
     [_mainView.settingBtn addTarget:self action:@selector(clickSettingBtn:) forControlEvents:UIControlEventTouchUpInside];
 
 
-    _pageViewController.view.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height*0.08+34, [[UIScreen mainScreen] bounds].size.width,  ([[UIScreen mainScreen] bounds].size.height - [[UIScreen mainScreen] bounds].size.height * 0.13)-34);
+    _pageViewController.view.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width,  ([[UIScreen mainScreen] bounds].size.height - [[UIScreen mainScreen] bounds].size.height * 0.13)-34);
     [self pageViewController];
     MassMessageController * massMessageController = [[MassMessageController alloc] init];
     massMessageController.delegate = self;
@@ -43,7 +46,7 @@
     _controllerList = [[NSArray alloc] init];
     
     
-    _controllerList = @[massMessageController, [[MessageController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[SettingController alloc]init]];
+    _controllerList = @[massMessageController, [[MessageController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[MemberController alloc]init]];
     
     [self performSelector:@selector(refreshRect) withObject:nil afterDelay:0.05];
     [self gotoPage:1];
@@ -75,7 +78,7 @@
         float safeHeight = self.view.safeAreaLayoutGuide.layoutFrame.size.height;
         float safeY = self.view.safeAreaLayoutGuide.layoutFrame.origin.y;
         
-        _pageViewController.view.frame = CGRectMake(0, safeHeight *0.08 + safeY, self.view.safeAreaLayoutGuide.layoutFrame.size.width, safeHeight - safeHeight* 0.13);
+        _pageViewController.view.frame = CGRectMake(0, 0, self.view.safeAreaLayoutGuide.layoutFrame.size.width, safeHeight - safeHeight* 0.13);
     } else {
         
     }
@@ -89,7 +92,7 @@
                                options:nil];
         _pageViewController.delegate = self;
         _pageViewController.dataSource = self;
-        [self.view addSubview:_pageViewController.view];
+        [_mainView.subView addSubview:_pageViewController.view];
     }
     return _pageViewController;
 }

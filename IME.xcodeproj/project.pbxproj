@@ -40,6 +40,13 @@
 		1821546421C1116C003DE6A4 /* FansView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821546321C1116C003DE6A4 /* FansView.xib */; };
 		1821546821C11212003DE6A4 /* FansCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821546621C11212003DE6A4 /* FansCell.m */; };
 		1821546921C11212003DE6A4 /* FansCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821546721C11212003DE6A4 /* FansCell.xib */; };
+		182155A621C3856C003DE6A4 /* MemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155A521C3856C003DE6A4 /* MemberController.m */; };
+		182155A921C38581003DE6A4 /* MemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155A821C38581003DE6A4 /* MemberView.m */; };
+		182155AB21C38590003DE6A4 /* MemberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155AA21C38590003DE6A4 /* MemberView.xib */; };
+		182155AF21C389B4003DE6A4 /* SingleButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155AD21C389B4003DE6A4 /* SingleButtonCell.m */; };
+		182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */; };
+		182155B421C39027003DE6A4 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155B221C39027003DE6A4 /* SwitchCell.m */; };
+		182155B521C39027003DE6A4 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155B321C39027003DE6A4 /* SwitchCell.xib */; };
 		183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */; };
 		183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F121C0AB360052F255 /* IMEBaseViewController.m */; };
 		183520F521C0B5CC0052F255 /* PostListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F421C0B5CC0052F255 /* PostListView.m */; };
@@ -159,6 +166,17 @@
 		1821546521C11212003DE6A4 /* FansCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FansCell.h; sourceTree = "<group>"; };
 		1821546621C11212003DE6A4 /* FansCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FansCell.m; sourceTree = "<group>"; };
 		1821546721C11212003DE6A4 /* FansCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FansCell.xib; sourceTree = "<group>"; };
+		182155A421C3856C003DE6A4 /* MemberController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberController.h; sourceTree = "<group>"; };
+		182155A521C3856C003DE6A4 /* MemberController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberController.m; sourceTree = "<group>"; };
+		182155A721C38581003DE6A4 /* MemberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberView.h; sourceTree = "<group>"; };
+		182155A821C38581003DE6A4 /* MemberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberView.m; sourceTree = "<group>"; };
+		182155AA21C38590003DE6A4 /* MemberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberView.xib; sourceTree = "<group>"; };
+		182155AC21C389B4003DE6A4 /* SingleButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleButtonCell.h; sourceTree = "<group>"; };
+		182155AD21C389B4003DE6A4 /* SingleButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleButtonCell.m; sourceTree = "<group>"; };
+		182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleButtonCell.xib; sourceTree = "<group>"; };
+		182155B121C39027003DE6A4 /* SwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		182155B221C39027003DE6A4 /* SwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		182155B321C39027003DE6A4 /* SwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
 		183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChildViewController.h"; sourceTree = "<group>"; };
 		183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChildViewController.m"; sourceTree = "<group>"; };
 		183520F021C0AB360052F255 /* IMEBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMEBaseViewController.h; sourceTree = "<group>"; };
@@ -287,10 +305,6 @@
 		180ADB3121BA0780002D85DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				183520F821C0B8330052F255 /* PostListController.h */,
-				183520F921C0B8330052F255 /* PostListController.m */,
-				0406679D21C01D97003FB675 /* PostController.h */,
-				0406679E21C01D97003FB675 /* PostController.m */,
 				183520F021C0AB360052F255 /* IMEBaseViewController.h */,
 				183520F121C0AB360052F255 /* IMEBaseViewController.m */,
 				1857EA0121B92440007ACC63 /* MainController.h */,
@@ -309,6 +323,10 @@
 				041DAF5921BEC2630091424A /* SpotLightController.m */,
 				1851268321BF9D7D0059E473 /* SpotLightMainController.h */,
 				1851268421BF9D7D0059E473 /* SpotLightMainController.m */,
+				183520F821C0B8330052F255 /* PostListController.h */,
+				183520F921C0B8330052F255 /* PostListController.m */,
+				0406679D21C01D97003FB675 /* PostController.h */,
+				0406679E21C01D97003FB675 /* PostController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +401,8 @@
 		1837AE2621BA756100554879 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				182155A421C3856C003DE6A4 /* MemberController.h */,
+				182155A521C3856C003DE6A4 /* MemberController.m */,
 				1837AE2921BA75BD00554879 /* MemberMenuController.h */,
 				1837AE2A21BA75BD00554879 /* MemberMenuController.m */,
 				1837AE2C21BA75CE00554879 /* MemberPostController.h */,
@@ -403,6 +423,9 @@
 			isa = PBXGroup;
 			children = (
 				1837AE3A21BA7E3E00554879 /* Cell */,
+				182155A721C38581003DE6A4 /* MemberView.h */,
+				182155A821C38581003DE6A4 /* MemberView.m */,
+				182155AA21C38590003DE6A4 /* MemberView.xib */,
 				1837AE1721BA717F00554879 /* MemberMenuView.h */,
 				1837AE1821BA717F00554879 /* MemberMenuView.m */,
 				1837AE2321BA722700554879 /* MemberMenuView.xib */,
@@ -444,6 +467,12 @@
 				1821546521C11212003DE6A4 /* FansCell.h */,
 				1821546621C11212003DE6A4 /* FansCell.m */,
 				1821546721C11212003DE6A4 /* FansCell.xib */,
+				182155AC21C389B4003DE6A4 /* SingleButtonCell.h */,
+				182155AD21C389B4003DE6A4 /* SingleButtonCell.m */,
+				182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */,
+				182155B121C39027003DE6A4 /* SwitchCell.h */,
+				182155B221C39027003DE6A4 /* SwitchCell.m */,
+				182155B321C39027003DE6A4 /* SwitchCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -688,9 +717,11 @@
 				1837AE2021BA720B00554879 /* MemberBuyView.xib in Resources */,
 				180ADB4521BA08D7002D85DE /* MessageView.xib in Resources */,
 				041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */,
+				182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */,
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
 				1837AE2421BA722700554879 /* MemberMenuView.xib in Resources */,
 				181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */,
+				182155AB21C38590003DE6A4 /* MemberView.xib in Resources */,
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
 				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
 				0406679C21C00943003FB675 /* MassMessageCell.xib in Resources */,
@@ -708,6 +739,7 @@
 				180ADB3821BA083D002D85DE /* MassMessageView.xib in Resources */,
 				183520F721C0B5EE0052F255 /* PostListView.xib in Resources */,
 				1821546921C11212003DE6A4 /* FansCell.xib in Resources */,
+				182155B521C39027003DE6A4 /* SwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +770,9 @@
 				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
 				183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
+				182155B421C39027003DE6A4 /* SwitchCell.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
+				182155A921C38581003DE6A4 /* MemberView.m in Sources */,
 				183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */,
 				1821546221C1115D003DE6A4 /* FansView.m in Sources */,
 				1837AE1621BA716B00554879 /* MemberPostView.m in Sources */,
@@ -746,11 +780,13 @@
 				18CA49AA21B8B67E0019650C /* main.m in Sources */,
 				180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */,
 				041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */,
+				182155AF21C389B4003DE6A4 /* SingleButtonCell.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
 				1857EA0621B92457007ACC63 /* MainView.m in Sources */,
 				1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */,
 				1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */,
+				182155A621C3856C003DE6A4 /* MemberController.m in Sources */,
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
 				181D795B21BF59BD00FE7E2C /* ReportView.m in Sources */,
 				18CA4A8321B8D47D0019650C /* LoginMainView.m in Sources */,

@@ -12,8 +12,8 @@
 #import "MessageController.h"
 #import "CameraController.h"
 #import "SearchAnchorController.h"
-#import "SettingController.h"
-
+//#import "SettingController.h"
+#import "MemberController.h"
 //#import "PostController.h"
 #import "IMEBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN

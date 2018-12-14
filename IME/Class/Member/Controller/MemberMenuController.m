@@ -7,7 +7,7 @@
 //
 
 #import "MemberMenuController.h"
-
+#import "SettingController.h"
 @interface MemberMenuController ()
 
 @end
@@ -20,6 +20,22 @@
     _memberMenuView.delegate = self;
     _memberMenuView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_memberMenuView.view];
+   
+}
+
+- (void)presentController :(long)indexRow {
+    
+    if (indexRow == 5) {
+        
+        
+        
+        SettingController * settingController = [[SettingController alloc] init];
+        //[self addChildViewController:settingController];
+    
+        /*
+        [self presentViewController:settingController animated:YES completion:NULL];*/
+    }
+    
 }
 
 @end

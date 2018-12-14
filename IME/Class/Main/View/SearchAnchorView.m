@@ -182,8 +182,7 @@
     label.backgroundColor = [UIColor colorWithRed:(22/255.0) green:(73/255.0) blue:(77/255.0) alpha:0];
     [headerView addSubview:label];
     return headerView;
-    
-    
+
 }
 
 
@@ -193,18 +192,10 @@
     
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     CGFloat screenHeight = screenSize.height;
-    
-    
-    
+
     if (indexPath.section == 5) {
-        
-        int intTest = ceil([[_dataArr objectAtIndex:indexPath.section] count]);
-        
-        
-        float floatTest = [[_dataArr objectAtIndex:indexPath.section] count];
-        NSLog(@"%f", ceil(floatTest/2));
-     
-        return (VIEW_HEIGHT/3+10)*ceil(floatTest/2);
+        float collectHeight = [[_dataArr objectAtIndex:indexPath.section] count];
+        return (VIEW_HEIGHT/3+10)*ceil(collectHeight/2);
     }else{
         return VIEW_HEIGHT/3;
     }
@@ -236,7 +227,7 @@
     cell.delegate = self;
     cell.nameStr = [[_dataArr objectAtIndex:indexPath.section]objectAtIndex: indexPath.row ];
     cell.dataArr = [_dataArr objectAtIndex:indexPath.section];
-    NSLog(@"測試4544646:%ld",(long)indexPath.row);
+
     if (indexPath.row == 0) {
         if (indexPath.section == 5) {
             [cell setColletionData:[_dataArr objectAtIndex:indexPath.section] :YES];
