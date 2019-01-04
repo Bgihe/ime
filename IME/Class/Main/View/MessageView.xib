@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageView">
             <connections>
+                <outlet property="msgTextView" destination="7e5-yI-n1l" id="joO-7z-0vM"/>
+                <outlet property="sendBtn" destination="hbl-TB-y2Y" id="bmq-Oy-mEX"/>
+                <outlet property="sendView" destination="ybd-78-fx1" id="DT2-8c-QtL"/>
+                <outlet property="tableView" destination="GKn-nw-f5E" id="DEJ-9j-Spm"/>
+                <outlet property="takePhotoBtn" destination="6of-id-EYn" id="UqR-mD-Awg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="crz-oV-1sq"/>
             </connections>
         </placeholder>
@@ -20,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-Ta-ckC">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-Ta-ckC">
                     <rect key="frame" x="77.5" y="70" width="220" height="133.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-gH-H2m">
@@ -37,17 +42,75 @@
                         </label>
                     </subviews>
                 </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GKn-nw-f5E">
+                    <rect key="frame" x="0.0" y="20" width="375" height="600.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="DIh-qx-osN"/>
+                        <outlet property="delegate" destination="-1" id="itg-yC-2pd"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-78-fx1">
+                    <rect key="frame" x="0.0" y="620.5" width="375" height="46.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-Vh-fe6">
+                            <rect key="frame" x="10" y="9" width="355" height="28"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6of-id-EYn">
+                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="28"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="6of-id-EYn" secondAttribute="height" multiplier="64:48" id="2aK-cG-h7N"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                    <state key="normal" image="dialog_camera"/>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Test" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7e5-yI-n1l">
+                                    <rect key="frame" x="47.5" y="0.0" width="269.5" height="28"/>
+                                    <color key="textColor" red="0.1251685619354248" green="0.4910508394241333" blue="0.62881690263748169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbl-TB-y2Y">
+                                    <rect key="frame" x="327" y="0.0" width="28" height="28"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="hbl-TB-y2Y" secondAttribute="height" multiplier="1:1" id="vth-HZ-3nU"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                                    <state key="normal" image="dialog_send"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.63245266680000001" green="0.76390606159999996" blue="0.79574424030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="o9c-Vh-fe6" firstAttribute="centerY" secondItem="ybd-78-fx1" secondAttribute="centerY" id="52M-g3-314"/>
+                        <constraint firstAttribute="trailing" secondItem="o9c-Vh-fe6" secondAttribute="trailing" constant="10" id="eNe-T2-Awv"/>
+                        <constraint firstItem="o9c-Vh-fe6" firstAttribute="leading" secondItem="ybd-78-fx1" secondAttribute="leading" constant="10" id="rnf-S2-VMB"/>
+                        <constraint firstItem="o9c-Vh-fe6" firstAttribute="height" secondItem="ybd-78-fx1" secondAttribute="height" multiplier="0.6" id="s8U-bv-xFH"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ybd-78-fx1" firstAttribute="top" secondItem="GKn-nw-f5E" secondAttribute="bottom" id="0f8-4M-mMT"/>
+                <constraint firstItem="ybd-78-fx1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3so-zS-DgR"/>
                 <constraint firstItem="VGr-Ta-ckC" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="DaB-Qe-B6C"/>
                 <constraint firstItem="VGr-Ta-ckC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KQe-2C-cmN"/>
+                <constraint firstItem="GKn-nw-f5E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QpC-7y-zRc"/>
+                <constraint firstItem="ybd-78-fx1" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.07" id="REH-g3-OCF"/>
                 <constraint firstItem="VGr-Ta-ckC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="Ruu-PE-rlJ"/>
+                <constraint firstItem="GKn-nw-f5E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Sx7-6T-wYJ"/>
+                <constraint firstItem="ybd-78-fx1" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cXX-zc-fD0"/>
+                <constraint firstItem="ybd-78-fx1" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kZc-1h-ENJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GKn-nw-f5E" secondAttribute="trailing" id="tNx-fM-zrm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="130.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
     <resources>
+        <image name="dialog_camera" width="64" height="48"/>
+        <image name="dialog_send" width="50" height="44"/>
         <image name="nodata_icon" width="220" height="200"/>
     </resources>
 </document>

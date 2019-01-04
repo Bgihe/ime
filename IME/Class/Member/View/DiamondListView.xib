@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiamondListView">
+            <connections>
+                <outlet property="selectBtn" destination="Ont-hD-PA8" id="KPs-A3-nFd"/>
+                <outlet property="tableView" destination="JRK-z4-5Gw" id="W49-H1-Xro"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rKD-sw-IAL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ont-hD-PA8">
+                    <rect key="frame" x="15" y="25" width="31" height="30"/>
+                    <state key="normal" title="今日">
+                        <color key="titleColor" red="0.2085655961" green="0.4918869944" blue="0.53938633420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-z4-5Gw">
+                    <rect key="frame" x="0.0" y="60" width="375" height="597"/>
+                    <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yv8-1Y-1BA"/>
+                        <outlet property="delegate" destination="-1" id="p8T-yR-8gX"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ont-hD-PA8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="3ym-DI-1OS"/>
+                <constraint firstItem="JRK-z4-5Gw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LLE-4N-t8i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JRK-z4-5Gw" secondAttribute="bottom" constant="10" id="TBx-d1-Ll4"/>
+                <constraint firstItem="Ont-hD-PA8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Zxy-fp-FRZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JRK-z4-5Gw" secondAttribute="trailing" id="jWI-h3-8Ap"/>
+                <constraint firstItem="JRK-z4-5Gw" firstAttribute="top" secondItem="Ont-hD-PA8" secondAttribute="bottom" constant="5" id="jui-aI-MCR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52" y="60.719640179910051"/>
+        </view>
+    </objects>
+</document>

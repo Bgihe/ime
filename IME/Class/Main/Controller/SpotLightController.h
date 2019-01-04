@@ -11,11 +11,19 @@
 #import "ReportView.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class SpotLightController;
+
+@protocol SpotLightControllerDelegate
+-(void)removeController;
+@end
+
 @interface SpotLightController : UIViewController<SpotLightViewDelegate,ReportViewDelegate>{
     SpotLightView * _spotLightView;
     ReportView * _reportView;
 }
 @property (strong, nonatomic) NSString * nameStr;
+@property BOOL isPageView;
+@property (nonatomic, weak) id<SpotLightControllerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

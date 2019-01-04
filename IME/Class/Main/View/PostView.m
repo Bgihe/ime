@@ -22,15 +22,15 @@
         [_lockView addSubview:lightView];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self->_headImg.imageView setContentMode:UIViewContentModeScaleAspectFill];
-            self->_headImg.backgroundColor = [UIColor whiteColor];
-            self->_headImg.contentMode=UIViewContentModeScaleAspectFill;
-            self->_headImg.layer.cornerRadius = CGRectGetHeight(self->_headImg.frame)/2;
-            self->_headImg.clipsToBounds = YES;
-            self->_headImg.backgroundColor = [UIColor whiteColor];
-            self->_headImg.layer.borderWidth = 1;
-            self->_headImg.layer.borderColor = [UIColor whiteColor].CGColor;
-            self->_headImg.layer.masksToBounds = YES;
+            [self->_headBtn.imageView setContentMode:UIViewContentModeScaleAspectFill];
+            self->_headBtn.backgroundColor = [UIColor whiteColor];
+            self->_headBtn.contentMode=UIViewContentModeScaleAspectFill;
+            self->_headBtn.layer.cornerRadius = CGRectGetHeight(self->_headBtn.frame)/2;
+            self->_headBtn.clipsToBounds = YES;
+            self->_headBtn.backgroundColor = [UIColor whiteColor];
+            self->_headBtn.layer.borderWidth = 1;
+            self->_headBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+            self->_headBtn.layer.masksToBounds = YES;
 
             self->_unlockView.contentMode=UIViewContentModeScaleAspectFill;
             self->_unlockView.layer.cornerRadius = CGRectGetHeight(self->_unlockView.frame)/2;

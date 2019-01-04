@@ -14,14 +14,26 @@
 
 @implementation MenuItemView
 
-- (void)setUpMenuItemView:(CGFloat)menuItemWidth menuScrollViewHeight:(CGFloat)menuScrollViewHeight indicatorHeight:(CGFloat)indicatorHeight separatorPercentageHeight:(CGFloat)separatorPercentageHeight separatorWidth:(CGFloat)separatorWidth separatorRoundEdges:(BOOL)separatorRoundEdges menuItemSeparatorColor:(UIColor *)menuItemSeparatorColor
+- (void)setUpMenuItemView:(CGFloat)menuItemWidth menuScrollViewHeight:(CGFloat)menuScrollViewHeight indicatorHeight:(CGFloat)indicatorHeight separatorPercentageHeight:(CGFloat)separatorPercentageHeight separatorWidth:(CGFloat)separatorWidth separatorRoundEdges:(BOOL)separatorRoundEdges menuItemSeparatorColor:(UIColor *)menuItemSeparatorColor :(BOOL)hideImg
 {
     
-    _titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, menuScrollViewHeight * 0.5/2, (menuScrollViewHeight * 0.5), (menuScrollViewHeight * 0.5))];
-    _titleImage.image = [UIImage imageNamed:@"person_navi_shop_active"];
+    if (hideImg) {
+        /*
+        _titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(menuItemWidth/4 - ((menuScrollViewHeight * 0.5)/2), menuScrollViewHeight * 0.5/2, (menuScrollViewHeight * 0.5), (menuScrollViewHeight * 0.5))];
+        _titleImage.image = [UIImage imageNamed:@"person_navi_shop_active"];
+         */
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, menuItemWidth, menuScrollViewHeight - indicatorHeight)];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        //_titleLabel.backgroundColor =[UIColor lightGrayColor];
+    }else{
+        _titleImage = [[UIImageView alloc] initWithFrame:CGRectMake(menuItemWidth/4 - ((menuScrollViewHeight * 0.5)/2), menuScrollViewHeight * 0.5/2, (menuScrollViewHeight * 0.5), (menuScrollViewHeight * 0.5))];
+        _titleImage.image = [UIImage imageNamed:@"person_navi_shop_active"];
+
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(menuItemWidth/2, 0.0, menuItemWidth/2, menuScrollViewHeight - indicatorHeight)];
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
+    }
     
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, menuItemWidth, menuScrollViewHeight - indicatorHeight)];
     _menuItemSeparator = [[UIView alloc] initWithFrame:CGRectMake(menuItemWidth - (separatorWidth / 2), floor(menuScrollViewHeight * ((1.0 - separatorPercentageHeight) / 2.0)), separatorWidth, floor(menuScrollViewHeight * separatorPercentageHeight))];
     
     if (separatorRoundEdges) {
@@ -100,6 +112,8 @@ NSString * const CAPSPageMenuOptionScrollAnimationDurationOnMenuItemTap = @"scro
 NSString * const CAPSPageMenuOptionCenterMenuItems                      = @"centerMenuItems";
 NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hideTopMenuBar";
 
+NSString * const CAPSPageMenuOptionHideTopMenuImg                       = @"hideTopMenuImg";
+
 - (instancetype)initWithViewControllers:(NSArray *)viewControllers frame:(CGRect)frame options:(NSDictionary *)options
 {
     self = [super initWithNibName:nil bundle:nil];
@@ -157,6 +171,8 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                 _centerMenuItems = [options[key] boolValue];
             } else if ([key isEqualToString:CAPSPageMenuOptionHideTopMenuBar]) {
                 _hideTopMenuBar = [options[key] boolValue];
+            } else if ([key isEqualToString:CAPSPageMenuOptionHideTopMenuImg]) {
+                _hideTopMenuImg = [options[key] boolValue];
             }
         }
         
@@ -194,12 +210,12 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
     _currentPageIndex = 0;
     _lastPageIndex    = 0;
     
-    _selectionIndicatorColor      = [UIColor whiteColor];
+    _selectionIndicatorColor      = [UIColor whiteColor];//[UIColor whiteColor]
     _selectedMenuItemLabelColor   = [UIColor redColor]; //字體顏色
     _unselectedMenuItemLabelColor = [UIColor lightGrayColor];
     _scrollMenuBackgroundColor    = [UIColor blackColor];
-    _viewBackgroundColor          = [UIColor whiteColor];
-    _bottomMenuHairlineColor      = [UIColor whiteColor];
+    _viewBackgroundColor          = [UIColor whiteColor];//[UIColor whiteColor]
+    _bottomMenuHairlineColor      = [UIColor whiteColor];//[UIColor whiteColor]
     _menuItemSeparatorColor       = [UIColor lightGrayColor];
     
     _menuItemFont = [UIFont systemFontOfSize:15.0];
@@ -213,6 +229,8 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
     _centerMenuItems                    = NO;
     _enableHorizontalBounce             = YES;
     _hideTopMenuBar                     = NO;
+    _hideTopMenuImg                     = NO; 
+    
     
     _currentOrientationIsPortrait   = YES;
     _pageIndexForOrientationChange  = 0;
@@ -362,15 +380,19 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
         
         MenuItemView *menuItemView = [[MenuItemView alloc] initWithFrame:menuItemFrame];
         if (_useMenuLikeSegmentedControl) {
-            [menuItemView setUpMenuItemView:(CGFloat)self.view.frame.size.width / (CGFloat)_controllerArray.count menuScrollViewHeight:_menuHeight indicatorHeight:_selectionIndicatorHeight separatorPercentageHeight:_menuItemSeparatorPercentageHeight separatorWidth:_menuItemSeparatorWidth separatorRoundEdges:_menuItemSeparatorRoundEdges menuItemSeparatorColor:_menuItemSeparatorColor];
+            [menuItemView setUpMenuItemView:(CGFloat)self.view.frame.size.width / (CGFloat)_controllerArray.count menuScrollViewHeight:_menuHeight indicatorHeight:_selectionIndicatorHeight separatorPercentageHeight:_menuItemSeparatorPercentageHeight separatorWidth:_menuItemSeparatorWidth separatorRoundEdges:_menuItemSeparatorRoundEdges menuItemSeparatorColor:_menuItemSeparatorColor:true];
             
         } else {
-            [menuItemView setUpMenuItemView:_menuItemWidth menuScrollViewHeight:_menuHeight indicatorHeight:_selectionIndicatorHeight separatorPercentageHeight:_menuItemSeparatorPercentageHeight separatorWidth:_menuItemSeparatorWidth separatorRoundEdges:_menuItemSeparatorRoundEdges menuItemSeparatorColor:_menuItemSeparatorColor];
+            if (_hideTopMenuImg) {
+                [menuItemView setUpMenuItemView:_menuItemWidth menuScrollViewHeight:_menuHeight indicatorHeight:_selectionIndicatorHeight separatorPercentageHeight:_menuItemSeparatorPercentageHeight separatorWidth:_menuItemSeparatorWidth separatorRoundEdges:_menuItemSeparatorRoundEdges menuItemSeparatorColor:_menuItemSeparatorColor:true];
+            }else{
+                [menuItemView setUpMenuItemView:_menuItemWidth menuScrollViewHeight:_menuHeight indicatorHeight:_selectionIndicatorHeight separatorPercentageHeight:_menuItemSeparatorPercentageHeight separatorWidth:_menuItemSeparatorWidth separatorRoundEdges:_menuItemSeparatorRoundEdges menuItemSeparatorColor:_menuItemSeparatorColor:false];
+            }
+            
         }
         
         // Configure menu item label font if font is set by user
         menuItemView.titleLabel.font = _menuItemFont;
-        
         menuItemView.titleLabel.textAlignment = NSTextAlignmentCenter;
         menuItemView.titleLabel.textColor = _unselectedMenuItemLabelColor;
         

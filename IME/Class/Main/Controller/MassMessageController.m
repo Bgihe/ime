@@ -13,6 +13,13 @@
 @end
 
 @implementation MassMessageController
+//改狀態bar 顏色
+- (void) setStatuBar :(UIColor *)color {
+    UIView * statusBarView =[[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"]  valueForKey:@"statusBar"];
+    if ([statusBarView respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBarView.backgroundColor = color;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,11 +32,15 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"MassMessageController");
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
 }
 
--(void)addChild{
+
+-(void)pushPostListController{
     PostListController * postListController = [[PostListController alloc] init];
-    [_delegate addChild:postListController inRect:[UIScreen mainScreen].bounds];
+    self.navigationController.navigationBarHidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController: postListController animated:YES];
 }
 @end

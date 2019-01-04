@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "MemberMenuView.h"
-NS_ASSUME_NONNULL_BEGIN
 
+@class MemberMenuController;
+
+@protocol MemberMenuControllerDelegate<MemberMenuViewDelegate>
+//-(void)addController;
+- (void)presentController :(long)indexRow;
+@end
 @interface MemberMenuController : UIViewController<MemberMenuViewDelegate>{
     MemberMenuView * _memberMenuView;
 }
-
+@property (nonatomic, weak) id<MemberMenuControllerDelegate> delegate;
 @end
 
-NS_ASSUME_NONNULL_END
+

@@ -20,7 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *postStatusImg;
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *daimondLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *countdownImg;
+@property (weak, nonatomic) IBOutlet UIImageView *daimondImg;
+@property (weak, nonatomic) IBOutlet UIButton *msgBtn;
 @property (nonatomic, weak) id<MassMessageCellDelegate> delegate;
 @end
 

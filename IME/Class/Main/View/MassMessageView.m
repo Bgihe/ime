@@ -36,7 +36,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_dataArr count];
+    return 1;
 }
 
 // tableview cell 高度
@@ -45,13 +45,12 @@
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     CGFloat screenHeight = screenSize.height;
 
-    return VIEW_HEIGHT/8;
+    return tableView.frame.size.height/8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return 10;
-    return 1;
+    return [_dataArr count];
 }
 
 
@@ -72,12 +71,12 @@
         }
     }
     cell.delegate = self;
- 
+
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     
-    [_delegate addChild];
+    [_delegate pushPostListController];
 }
 
 @end

@@ -28,15 +28,14 @@
 }
 
 - (IBAction)clickBackBtn:(id)sender {
-    
-    
-    MainController * mainController = [[MainController alloc] init];
-    [self addChild:mainController inRect:self.view.bounds];
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
+    [self.navigationController popViewControllerAnimated:YES];
+
     /*
-    [mainController dismissViewControllerAnimated:YES completion:nil];
-    
-    mainController.pageNumber = 2;
-    [self presentViewController:mainController animated:YES completion:NULL];*/
+    MainController * mainController = [[MainController alloc] init];
+    self.navigationController.navigationBarHidden=YES;
+    [self.navigationController pushViewController: mainController animated:YES];*/
 }
 - (IBAction)clickSaveBtn:(id)sender {
    

@@ -84,8 +84,10 @@
     SpotLightMainController * spotLightMainController = [[SpotLightMainController alloc] init];
     spotLightMainController.dataArr = spotLightList;
     spotLightMainController.pageRow = row;
-    [self presentViewController:spotLightMainController animated:YES completion:NULL];
     
+    self.navigationController.navigationBarHidden=YES;
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController: spotLightMainController animated:YES];
 }
  
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MainController.h"
 #import "PostView.h"
-
+#import "SpotLightController.h"
 NS_ASSUME_NONNULL_BEGIN
 @class PostController;
 

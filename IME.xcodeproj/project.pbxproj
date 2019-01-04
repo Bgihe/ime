@@ -19,6 +19,10 @@
 		041DAF5721BEC2120091424A /* SpotLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5621BEC2120091424A /* SpotLightView.m */; };
 		041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5921BEC2630091424A /* SpotLightController.m */; };
 		041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAF5B21BEC2730091424A /* SpotLightView.xib */; };
+		18093E1921C8D27D00F6A5DA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18093E1821C8D27D00F6A5DA /* libsqlite3.tbd */; };
+		18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1B21C8E8F600F6A5DA /* ReplyPriceController.m */; };
+		18093E1F21C8E90C00F6A5DA /* ReplyPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1E21C8E90C00F6A5DA /* ReplyPriceView.m */; };
+		18093E2121C8E91B00F6A5DA /* ReplyPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18093E2021C8E91B00F6A5DA /* ReplyPriceView.xib */; };
 		180ADB2221BA0620002D85DE /* MassMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2121BA061F002D85DE /* MassMessageController.m */; };
 		180ADB2821BA06D1002D85DE /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2721BA06D1002D85DE /* SettingController.m */; };
 		180ADB2B21BA0722002D85DE /* SearchAnchorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB2A21BA0722002D85DE /* SearchAnchorController.m */; };
@@ -32,6 +36,28 @@
 		180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB4721BA0904002D85DE /* SearchAnchorView.m */; };
 		180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180ADB4921BA090B002D85DE /* SearchAnchorView.xib */; };
 		180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB5521BA1DE6002D85DE /* CameraController.m */; };
+		181B156821CA09B900449B5D /* MyIncomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156721CA09B900449B5D /* MyIncomeView.m */; };
+		181B156A21CA09C800449B5D /* MyIncomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B156921CA09C800449B5D /* MyIncomeView.xib */; };
+		181B156E21CA0B6A00449B5D /* IncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156C21CA0B6A00449B5D /* IncomeCell.m */; };
+		181B156F21CA0B6A00449B5D /* IncomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B156D21CA0B6A00449B5D /* IncomeCell.xib */; };
+		181B157221CA121B00449B5D /* IncomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B157121CA121B00449B5D /* IncomeHeader.m */; };
+		181B157421CA122F00449B5D /* IncomeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B157321CA122F00449B5D /* IncomeHeader.xib */; };
+		181B157A21CA21B600449B5D /* IncomeRankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B157921CA21B600449B5D /* IncomeRankView.m */; };
+		181B159721CA26A500449B5D /* IncomeMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B159621CA26A500449B5D /* IncomeMainController.m */; };
+		181B159A21CA27B500449B5D /* IncomeRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B159921CA27B500449B5D /* IncomeRankController.m */; };
+		181B159D21CA374100449B5D /* IncomeRankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B159C21CA374100449B5D /* IncomeRankView.xib */; };
+		181B15A121CA3BA300449B5D /* IncomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15A021CA3BA300449B5D /* IncomeController.m */; };
+		181B15A421CA3BBA00449B5D /* IncomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15A321CA3BBA00449B5D /* IncomeView.m */; };
+		181B15A721CA3EFA00449B5D /* IncomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B15A621CA3EFA00449B5D /* IncomeView.xib */; };
+		181B15B421CA46D100449B5D /* DiamondMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15B321CA46D100449B5D /* DiamondMainController.m */; };
+		181B15B721CA471600449B5D /* DiamondRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15B621CA471600449B5D /* DiamondRankController.m */; };
+		181B15BA21CB2F4C00449B5D /* DiamondListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15B921CB2F4C00449B5D /* DiamondListController.m */; };
+		181B15BD21CB2F8100449B5D /* DiamondListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15BC21CB2F8100449B5D /* DiamondListView.m */; };
+		181B15BF21CB2F9100449B5D /* DiamondListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B15BE21CB2F9100449B5D /* DiamondListView.xib */; };
+		181B15C321CB317000449B5D /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15C121CB317000449B5D /* RankCell.m */; };
+		181B15C421CB317000449B5D /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B15C221CB317000449B5D /* RankCell.xib */; };
+		181B15C721CB4CD200449B5D /* DepositView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B15C621CB4CD100449B5D /* DepositView.m */; };
+		181B15C921CB4CE200449B5D /* DepositView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B15C821CB4CE200449B5D /* DepositView.xib */; };
 		181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */; };
 		181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */; };
 		181D795B21BF59BD00FE7E2C /* ReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D795A21BF59BD00FE7E2C /* ReportView.m */; };
@@ -47,6 +73,19 @@
 		182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */; };
 		182155B421C39027003DE6A4 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155B221C39027003DE6A4 /* SwitchCell.m */; };
 		182155B521C39027003DE6A4 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155B321C39027003DE6A4 /* SwitchCell.xib */; };
+		18282E7221D4612E0091A77D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E7021D4612E0091A77D /* MessageCell.m */; };
+		18282E7321D4612E0091A77D /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18282E7121D4612E0091A77D /* MessageCell.xib */; };
+		18282E7621D4C6350091A77D /* MessageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E7521D4C6350091A77D /* MessageListView.m */; };
+		18282E7821D4C6420091A77D /* MessageListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18282E7721D4C6420091A77D /* MessageListView.xib */; };
+		18282E7B21D4CBF10091A77D /* MessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E7A21D4CBF10091A77D /* MessageListController.m */; };
+		18282E8721D624D40091A77D /* MediaPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E8621D624D40091A77D /* MediaPlayerView.m */; };
+		18282E9421DC4C540091A77D /* MediaPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E9321DC4C540091A77D /* MediaPlayerController.m */; };
+		18282EA321DDD29E0091A77D /* IMG_6308.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282E9B21DDD29B0091A77D /* IMG_6308.PNG */; };
+		18282EA421DDD29E0091A77D /* IMG_6313.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282E9C21DDD29C0091A77D /* IMG_6313.PNG */; };
+		18282EA521DDD29E0091A77D /* IMG_6314.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282E9D21DDD29C0091A77D /* IMG_6314.PNG */; };
+		18282EA721DDD29E0091A77D /* IMG_6309.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282E9F21DDD29D0091A77D /* IMG_6309.PNG */; };
+		18282EA821DDD29E0091A77D /* IMG_6310.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282EA021DDD29D0091A77D /* IMG_6310.PNG */; };
+		18282EA921DDD29E0091A77D /* IMG_6307.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18282EA121DDD29D0091A77D /* IMG_6307.PNG */; };
 		183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */; };
 		183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F121C0AB360052F255 /* IMEBaseViewController.m */; };
 		183520F521C0B5CC0052F255 /* PostListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183520F421C0B5CC0052F255 /* PostListView.m */; };
@@ -78,6 +117,23 @@
 		1857EA0321B92440007ACC63 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857EA0221B92440007ACC63 /* MainController.m */; };
 		1857EA0621B92457007ACC63 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857EA0521B92457007ACC63 /* MainView.m */; };
 		1857EA0821B92470007ACC63 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1857EA0721B92470007ACC63 /* MainView.xib */; };
+		1867957F21CC82BE00F3BA84 /* DepositDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867957E21CC82BE00F3BA84 /* DepositDetailView.m */; };
+		1867958121CC82CA00F3BA84 /* DepositDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867958021CC82CA00F3BA84 /* DepositDetailView.xib */; };
+		1867958421CC888400F3BA84 /* DepositLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867958321CC888400F3BA84 /* DepositLogView.m */; };
+		1867958621CC888F00F3BA84 /* DepositLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867958521CC888F00F3BA84 /* DepositLogView.xib */; };
+		1867958A21CC8B1C00F3BA84 /* DepositCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867958821CC8B1C00F3BA84 /* DepositCell.m */; };
+		1867958B21CC8B1C00F3BA84 /* DepositCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867958921CC8B1C00F3BA84 /* DepositCell.xib */; };
+		1867958F21CC8CFC00F3BA84 /* DepositLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867958D21CC8CFC00F3BA84 /* DepositLogCell.m */; };
+		1867959021CC8CFC00F3BA84 /* DepositLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867958E21CC8CFC00F3BA84 /* DepositLogCell.xib */; };
+		1867959321CC930E00F3BA84 /* DepositController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959221CC930E00F3BA84 /* DepositController.m */; };
+		1867959621CCB70C00F3BA84 /* DepositDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959521CCB70C00F3BA84 /* DepositDetailController.m */; };
+		1867959921CCB81E00F3BA84 /* DepositModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959821CCB81E00F3BA84 /* DepositModel.m */; };
+		18994D2321CCE76B00811893 /* DepositDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2121CCE76B00811893 /* DepositDetailCell.m */; };
+		18994D2421CCE76B00811893 /* DepositDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18994D2221CCE76B00811893 /* DepositDetailCell.xib */; };
+		18994D2A21CDFEF500811893 /* DepositLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2921CDFEF500811893 /* DepositLogController.m */; };
+		18994D2D21CE10F300811893 /* LogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2C21CE10F300811893 /* LogView.m */; };
+		18994D3021CE110700811893 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2F21CE110700811893 /* LogController.m */; };
+		18994D3221CE119100811893 /* LogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18994D3121CE119100811893 /* LogView.xib */; };
 		18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA499B21B8B67D0019650C /* AppDelegate.m */; };
 		18CA499F21B8B67D0019650C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA499E21B8B67D0019650C /* ViewController.m */; };
 		18CA49A221B8B67D0019650C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CA49A021B8B67D0019650C /* Main.storyboard */; };
@@ -92,6 +148,9 @@
 		18CA4A8B21B8D5160019650C /* LoginMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CA4A8A21B8D5160019650C /* LoginMainView.xib */; };
 		18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CA4A8C21B8D5240019650C /* LoginPhoneView.xib */; };
 		18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CA4A8E21B8D5370019650C /* LoginAccountView.xib */; };
+		21C7BB22ACF5B23BEC38B4AD /* libPods-IMEUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF885FECB24FB85915BA6428 /* libPods-IMEUITests.a */; };
+		8EB778C486B17917B50E8A5A /* libPods-IME.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0B5CDF3DB17DBDEF83E4AB /* libPods-IME.a */; };
+		F94442E142931F69CED4F10F /* libPods-IMETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8603886132B9E436608D8C /* libPods-IMETests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +190,18 @@
 		041DAF5821BEC2630091424A /* SpotLightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightController.h; sourceTree = "<group>"; };
 		041DAF5921BEC2630091424A /* SpotLightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightController.m; sourceTree = "<group>"; };
 		041DAF5B21BEC2730091424A /* SpotLightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotLightView.xib; sourceTree = "<group>"; };
+		18093E1021C8D10600F6A5DA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18093E1221C8D18D00F6A5DA /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		18093E1321C8D18D00F6A5DA /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		18093E1421C8D18D00F6A5DA /* ThirdMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdMacros.h; sourceTree = "<group>"; };
+		18093E1521C8D18D00F6A5DA /* FontAndColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacros.h; sourceTree = "<group>"; };
+		18093E1621C8D18D00F6A5DA /* URLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
+		18093E1821C8D27D00F6A5DA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		18093E1A21C8E8F600F6A5DA /* ReplyPriceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyPriceController.h; sourceTree = "<group>"; };
+		18093E1B21C8E8F600F6A5DA /* ReplyPriceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplyPriceController.m; sourceTree = "<group>"; };
+		18093E1D21C8E90C00F6A5DA /* ReplyPriceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyPriceView.h; sourceTree = "<group>"; };
+		18093E1E21C8E90C00F6A5DA /* ReplyPriceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplyPriceView.m; sourceTree = "<group>"; };
+		18093E2021C8E91B00F6A5DA /* ReplyPriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplyPriceView.xib; sourceTree = "<group>"; };
 		180ADB2021BA061F002D85DE /* MassMessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MassMessageController.h; sourceTree = "<group>"; };
 		180ADB2121BA061F002D85DE /* MassMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MassMessageController.m; sourceTree = "<group>"; };
 		180ADB2621BA06D1002D85DE /* SettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
@@ -153,6 +224,42 @@
 		180ADB4921BA090B002D85DE /* SearchAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorView.xib; sourceTree = "<group>"; };
 		180ADB5421BA1DE6002D85DE /* CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		180ADB5521BA1DE6002D85DE /* CameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		181B156621CA09B900449B5D /* MyIncomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyIncomeView.h; sourceTree = "<group>"; };
+		181B156721CA09B900449B5D /* MyIncomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyIncomeView.m; sourceTree = "<group>"; };
+		181B156921CA09C800449B5D /* MyIncomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIncomeView.xib; sourceTree = "<group>"; };
+		181B156B21CA0B6A00449B5D /* IncomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeCell.h; sourceTree = "<group>"; };
+		181B156C21CA0B6A00449B5D /* IncomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeCell.m; sourceTree = "<group>"; };
+		181B156D21CA0B6A00449B5D /* IncomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeCell.xib; sourceTree = "<group>"; };
+		181B157021CA121B00449B5D /* IncomeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeHeader.h; sourceTree = "<group>"; };
+		181B157121CA121B00449B5D /* IncomeHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeHeader.m; sourceTree = "<group>"; };
+		181B157321CA122F00449B5D /* IncomeHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeHeader.xib; sourceTree = "<group>"; };
+		181B157821CA21B600449B5D /* IncomeRankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeRankView.h; sourceTree = "<group>"; };
+		181B157921CA21B600449B5D /* IncomeRankView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeRankView.m; sourceTree = "<group>"; };
+		181B159521CA26A500449B5D /* IncomeMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeMainController.h; sourceTree = "<group>"; };
+		181B159621CA26A500449B5D /* IncomeMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeMainController.m; sourceTree = "<group>"; };
+		181B159821CA27B500449B5D /* IncomeRankController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeRankController.h; sourceTree = "<group>"; };
+		181B159921CA27B500449B5D /* IncomeRankController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeRankController.m; sourceTree = "<group>"; };
+		181B159C21CA374100449B5D /* IncomeRankView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeRankView.xib; sourceTree = "<group>"; };
+		181B159F21CA3BA300449B5D /* IncomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeController.h; sourceTree = "<group>"; };
+		181B15A021CA3BA300449B5D /* IncomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeController.m; sourceTree = "<group>"; };
+		181B15A221CA3BBA00449B5D /* IncomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeView.h; sourceTree = "<group>"; };
+		181B15A321CA3BBA00449B5D /* IncomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeView.m; sourceTree = "<group>"; };
+		181B15A621CA3EFA00449B5D /* IncomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeView.xib; sourceTree = "<group>"; };
+		181B15B221CA46D100449B5D /* DiamondMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondMainController.h; sourceTree = "<group>"; };
+		181B15B321CA46D100449B5D /* DiamondMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondMainController.m; sourceTree = "<group>"; };
+		181B15B521CA471600449B5D /* DiamondRankController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondRankController.h; sourceTree = "<group>"; };
+		181B15B621CA471600449B5D /* DiamondRankController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondRankController.m; sourceTree = "<group>"; };
+		181B15B821CB2F4C00449B5D /* DiamondListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondListController.h; sourceTree = "<group>"; };
+		181B15B921CB2F4C00449B5D /* DiamondListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondListController.m; sourceTree = "<group>"; };
+		181B15BB21CB2F8100449B5D /* DiamondListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondListView.h; sourceTree = "<group>"; };
+		181B15BC21CB2F8100449B5D /* DiamondListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondListView.m; sourceTree = "<group>"; };
+		181B15BE21CB2F9100449B5D /* DiamondListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiamondListView.xib; sourceTree = "<group>"; };
+		181B15C021CB317000449B5D /* RankCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankCell.h; sourceTree = "<group>"; };
+		181B15C121CB317000449B5D /* RankCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankCell.m; sourceTree = "<group>"; };
+		181B15C221CB317000449B5D /* RankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankCell.xib; sourceTree = "<group>"; };
+		181B15C521CB4CD100449B5D /* DepositView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositView.h; sourceTree = "<group>"; };
+		181B15C621CB4CD100449B5D /* DepositView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositView.m; sourceTree = "<group>"; };
+		181B15C821CB4CE200449B5D /* DepositView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositView.xib; sourceTree = "<group>"; };
 		181D791921BE28EA00FE7E2C /* SearchAnchorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchAnchorCell.h; sourceTree = "<group>"; };
 		181D791A21BE28EA00FE7E2C /* SearchAnchorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchAnchorCell.m; sourceTree = "<group>"; };
 		181D791B21BE28EA00FE7E2C /* SearchAnchorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorCell.xib; sourceTree = "<group>"; };
@@ -177,6 +284,24 @@
 		182155B121C39027003DE6A4 /* SwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
 		182155B221C39027003DE6A4 /* SwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
 		182155B321C39027003DE6A4 /* SwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		18282E6F21D4612E0091A77D /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		18282E7021D4612E0091A77D /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		18282E7121D4612E0091A77D /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		18282E7421D4C6350091A77D /* MessageListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListView.h; sourceTree = "<group>"; };
+		18282E7521D4C6350091A77D /* MessageListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListView.m; sourceTree = "<group>"; };
+		18282E7721D4C6420091A77D /* MessageListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListView.xib; sourceTree = "<group>"; };
+		18282E7921D4CBF10091A77D /* MessageListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageListController.h; sourceTree = "<group>"; };
+		18282E7A21D4CBF10091A77D /* MessageListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageListController.m; sourceTree = "<group>"; };
+		18282E8521D624D40091A77D /* MediaPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPlayerView.h; sourceTree = "<group>"; };
+		18282E8621D624D40091A77D /* MediaPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerView.m; sourceTree = "<group>"; };
+		18282E9221DC4C540091A77D /* MediaPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaPlayerController.h; sourceTree = "<group>"; };
+		18282E9321DC4C540091A77D /* MediaPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerController.m; sourceTree = "<group>"; };
+		18282E9B21DDD29B0091A77D /* IMG_6308.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6308.PNG; sourceTree = "<group>"; };
+		18282E9C21DDD29C0091A77D /* IMG_6313.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6313.PNG; sourceTree = "<group>"; };
+		18282E9D21DDD29C0091A77D /* IMG_6314.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6314.PNG; sourceTree = "<group>"; };
+		18282E9F21DDD29D0091A77D /* IMG_6309.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6309.PNG; sourceTree = "<group>"; };
+		18282EA021DDD29D0091A77D /* IMG_6310.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6310.PNG; sourceTree = "<group>"; };
+		18282EA121DDD29D0091A77D /* IMG_6307.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6307.PNG; sourceTree = "<group>"; };
 		183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ChildViewController.h"; sourceTree = "<group>"; };
 		183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ChildViewController.m"; sourceTree = "<group>"; };
 		183520F021C0AB360052F255 /* IMEBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMEBaseViewController.h; sourceTree = "<group>"; };
@@ -230,6 +355,34 @@
 		1857EA0421B92457007ACC63 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		1857EA0521B92457007ACC63 /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		1857EA0721B92470007ACC63 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		1867957D21CC82BD00F3BA84 /* DepositDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositDetailView.h; sourceTree = "<group>"; };
+		1867957E21CC82BE00F3BA84 /* DepositDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositDetailView.m; sourceTree = "<group>"; };
+		1867958021CC82CA00F3BA84 /* DepositDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositDetailView.xib; sourceTree = "<group>"; };
+		1867958221CC888400F3BA84 /* DepositLogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositLogView.h; sourceTree = "<group>"; };
+		1867958321CC888400F3BA84 /* DepositLogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositLogView.m; sourceTree = "<group>"; };
+		1867958521CC888F00F3BA84 /* DepositLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositLogView.xib; sourceTree = "<group>"; };
+		1867958721CC8B1C00F3BA84 /* DepositCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositCell.h; sourceTree = "<group>"; };
+		1867958821CC8B1C00F3BA84 /* DepositCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositCell.m; sourceTree = "<group>"; };
+		1867958921CC8B1C00F3BA84 /* DepositCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositCell.xib; sourceTree = "<group>"; };
+		1867958C21CC8CFC00F3BA84 /* DepositLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositLogCell.h; sourceTree = "<group>"; };
+		1867958D21CC8CFC00F3BA84 /* DepositLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositLogCell.m; sourceTree = "<group>"; };
+		1867958E21CC8CFC00F3BA84 /* DepositLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositLogCell.xib; sourceTree = "<group>"; };
+		1867959121CC930E00F3BA84 /* DepositController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositController.h; sourceTree = "<group>"; };
+		1867959221CC930E00F3BA84 /* DepositController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositController.m; sourceTree = "<group>"; };
+		1867959421CCB70C00F3BA84 /* DepositDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositDetailController.h; sourceTree = "<group>"; };
+		1867959521CCB70C00F3BA84 /* DepositDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositDetailController.m; sourceTree = "<group>"; };
+		1867959721CCB81E00F3BA84 /* DepositModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositModel.h; sourceTree = "<group>"; };
+		1867959821CCB81E00F3BA84 /* DepositModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositModel.m; sourceTree = "<group>"; };
+		18994D2021CCE76B00811893 /* DepositDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositDetailCell.h; sourceTree = "<group>"; };
+		18994D2121CCE76B00811893 /* DepositDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositDetailCell.m; sourceTree = "<group>"; };
+		18994D2221CCE76B00811893 /* DepositDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositDetailCell.xib; sourceTree = "<group>"; };
+		18994D2821CDFEF500811893 /* DepositLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositLogController.h; sourceTree = "<group>"; };
+		18994D2921CDFEF500811893 /* DepositLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositLogController.m; sourceTree = "<group>"; };
+		18994D2B21CE10F300811893 /* LogView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogView.h; sourceTree = "<group>"; };
+		18994D2C21CE10F300811893 /* LogView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogView.m; sourceTree = "<group>"; };
+		18994D2E21CE110700811893 /* LogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
+		18994D2F21CE110700811893 /* LogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
+		18994D3121CE119100811893 /* LogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogView.xib; sourceTree = "<group>"; };
 		18CA499721B8B67D0019650C /* IME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA499A21B8B67D0019650C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CA499B21B8B67D0019650C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -255,6 +408,15 @@
 		18CA4A8A21B8D5160019650C /* LoginMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginMainView.xib; sourceTree = "<group>"; };
 		18CA4A8C21B8D5240019650C /* LoginPhoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPhoneView.xib; sourceTree = "<group>"; };
 		18CA4A8E21B8D5370019650C /* LoginAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAccountView.xib; sourceTree = "<group>"; };
+		2B8603886132B9E436608D8C /* libPods-IMETests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMETests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		420711A9D2CED4D9A36023B6 /* Pods-IMEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMEUITests/Pods-IMEUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45DDC2709D3CAADE72908ABA /* Pods-IMEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMEUITests/Pods-IMEUITests.release.xcconfig"; sourceTree = "<group>"; };
+		885EE917D0861165EB8D06D4 /* Pods-IME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IME/Pods-IME.debug.xcconfig"; sourceTree = "<group>"; };
+		A85081179AE8119BD5EEDBB7 /* Pods-IMETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMETests/Pods-IMETests.release.xcconfig"; sourceTree = "<group>"; };
+		AA813167F918F6865A441A71 /* Pods-IME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IME.release.xcconfig"; path = "Pods/Target Support Files/Pods-IME/Pods-IME.release.xcconfig"; sourceTree = "<group>"; };
+		CE0B5CDF3DB17DBDEF83E4AB /* libPods-IME.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IME.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF885FECB24FB85915BA6428 /* libPods-IMEUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMEUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDBAD6951710008C54F4DBB4 /* Pods-IMETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMETests/Pods-IMETests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +424,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18093E1921C8D27D00F6A5DA /* libsqlite3.tbd in Frameworks */,
+				8EB778C486B17917B50E8A5A /* libPods-IME.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94442E142931F69CED4F10F /* libPods-IMETests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +441,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C7BB22ACF5B23BEC38B4AD /* libPods-IMEUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B71D113F5A360B4D6139A28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				885EE917D0861165EB8D06D4 /* Pods-IME.debug.xcconfig */,
+				AA813167F918F6865A441A71 /* Pods-IME.release.xcconfig */,
+				EDBAD6951710008C54F4DBB4 /* Pods-IMETests.debug.xcconfig */,
+				A85081179AE8119BD5EEDBB7 /* Pods-IMETests.release.xcconfig */,
+				420711A9D2CED4D9A36023B6 /* Pods-IMEUITests.debug.xcconfig */,
+				45DDC2709D3CAADE72908ABA /* Pods-IMEUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		18093E1121C8D18D00F6A5DA /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				18093E1221C8D18D00F6A5DA /* UtilsMacros.h */,
+				18093E1321C8D18D00F6A5DA /* CommonMacros.h */,
+				18093E1421C8D18D00F6A5DA /* ThirdMacros.h */,
+				18093E1621C8D18D00F6A5DA /* URLMacros.h */,
+				18093E1521C8D18D00F6A5DA /* FontAndColorMacros.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		18093E1721C8D27D00F6A5DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18093E1821C8D27D00F6A5DA /* libsqlite3.tbd */,
+				CE0B5CDF3DB17DBDEF83E4AB /* libPods-IME.a */,
+				2B8603886132B9E436608D8C /* libPods-IMETests.a */,
+				DF885FECB24FB85915BA6428 /* libPods-IMEUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		180ADB2F21BA0757002D85DE /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,16 +507,16 @@
 		180ADB3121BA0780002D85DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				183520F021C0AB360052F255 /* IMEBaseViewController.h */,
-				183520F121C0AB360052F255 /* IMEBaseViewController.m */,
 				1857EA0121B92440007ACC63 /* MainController.h */,
 				1857EA0221B92440007ACC63 /* MainController.m */,
 				180ADB2021BA061F002D85DE /* MassMessageController.h */,
 				180ADB2121BA061F002D85DE /* MassMessageController.m */,
+				18282E7921D4CBF10091A77D /* MessageListController.h */,
+				18282E7A21D4CBF10091A77D /* MessageListController.m */,
 				180ADB3C21BA087A002D85DE /* MessageController.h */,
 				180ADB3D21BA087A002D85DE /* MessageController.m */,
-				183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */,
-				183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */,
+				18282E9221DC4C540091A77D /* MediaPlayerController.h */,
+				18282E9321DC4C540091A77D /* MediaPlayerController.m */,
 				180ADB2921BA0722002D85DE /* SearchAnchorController.h */,
 				180ADB2A21BA0722002D85DE /* SearchAnchorController.m */,
 				180ADB5421BA1DE6002D85DE /* CameraController.h */,
@@ -327,6 +529,10 @@
 				183520F921C0B8330052F255 /* PostListController.m */,
 				0406679D21C01D97003FB675 /* PostController.h */,
 				0406679E21C01D97003FB675 /* PostController.m */,
+				183520ED21C0A7F80052F255 /* UIViewController+ChildViewController.h */,
+				183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */,
+				183520F021C0AB360052F255 /* IMEBaseViewController.h */,
+				183520F121C0AB360052F255 /* IMEBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,9 +547,14 @@
 				180ADB3421BA0835002D85DE /* MassMessageView.h */,
 				180ADB3521BA0835002D85DE /* MassMessageView.m */,
 				180ADB3721BA083D002D85DE /* MassMessageView.xib */,
+				18282E7421D4C6350091A77D /* MessageListView.h */,
+				18282E7521D4C6350091A77D /* MessageListView.m */,
+				18282E7721D4C6420091A77D /* MessageListView.xib */,
 				180ADB3921BA0859002D85DE /* MessageView.h */,
 				180ADB3A21BA0859002D85DE /* MessageView.m */,
 				180ADB4421BA08D7002D85DE /* MessageView.xib */,
+				18282E8521D624D40091A77D /* MediaPlayerView.h */,
+				18282E8621D624D40091A77D /* MediaPlayerView.m */,
 				180ADB4621BA0904002D85DE /* SearchAnchorView.h */,
 				180ADB4721BA0904002D85DE /* SearchAnchorView.m */,
 				180ADB4921BA090B002D85DE /* SearchAnchorView.xib */,
@@ -384,8 +595,24 @@
 				0406679821C00943003FB675 /* MassMessageCell.h */,
 				0406679921C00943003FB675 /* MassMessageCell.m */,
 				0406679A21C00943003FB675 /* MassMessageCell.xib */,
+				18282E6F21D4612E0091A77D /* MessageCell.h */,
+				18282E7021D4612E0091A77D /* MessageCell.m */,
+				18282E7121D4612E0091A77D /* MessageCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		18282E9A21DDD28A0091A77D /* testImg */ = {
+			isa = PBXGroup;
+			children = (
+				18282EA121DDD29D0091A77D /* IMG_6307.PNG */,
+				18282E9B21DDD29B0091A77D /* IMG_6308.PNG */,
+				18282E9F21DDD29D0091A77D /* IMG_6309.PNG */,
+				18282EA021DDD29D0091A77D /* IMG_6310.PNG */,
+				18282E9C21DDD29C0091A77D /* IMG_6313.PNG */,
+				18282E9D21DDD29C0091A77D /* IMG_6314.PNG */,
+			);
+			path = testImg;
 			sourceTree = "<group>";
 		};
 		1837AE2521BA755400554879 /* Member */ = {
@@ -415,6 +642,28 @@
 				180ADB2721BA06D1002D85DE /* SettingController.m */,
 				1821545D21C11142003DE6A4 /* FansController.h */,
 				1821545E21C11142003DE6A4 /* FansController.m */,
+				18093E1A21C8E8F600F6A5DA /* ReplyPriceController.h */,
+				18093E1B21C8E8F600F6A5DA /* ReplyPriceController.m */,
+				181B159521CA26A500449B5D /* IncomeMainController.h */,
+				181B159621CA26A500449B5D /* IncomeMainController.m */,
+				181B159F21CA3BA300449B5D /* IncomeController.h */,
+				181B15A021CA3BA300449B5D /* IncomeController.m */,
+				181B159821CA27B500449B5D /* IncomeRankController.h */,
+				181B159921CA27B500449B5D /* IncomeRankController.m */,
+				181B15B521CA471600449B5D /* DiamondRankController.h */,
+				181B15B621CA471600449B5D /* DiamondRankController.m */,
+				181B15B221CA46D100449B5D /* DiamondMainController.h */,
+				181B15B321CA46D100449B5D /* DiamondMainController.m */,
+				181B15B821CB2F4C00449B5D /* DiamondListController.h */,
+				181B15B921CB2F4C00449B5D /* DiamondListController.m */,
+				1867959121CC930E00F3BA84 /* DepositController.h */,
+				1867959221CC930E00F3BA84 /* DepositController.m */,
+				1867959421CCB70C00F3BA84 /* DepositDetailController.h */,
+				1867959521CCB70C00F3BA84 /* DepositDetailController.m */,
+				18994D2821CDFEF500811893 /* DepositLogController.h */,
+				18994D2921CDFEF500811893 /* DepositLogController.m */,
+				18994D2E21CE110700811893 /* LogController.h */,
+				18994D2F21CE110700811893 /* LogController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,6 +693,36 @@
 				1821546021C1115D003DE6A4 /* FansView.h */,
 				1821546121C1115D003DE6A4 /* FansView.m */,
 				1821546321C1116C003DE6A4 /* FansView.xib */,
+				18093E1D21C8E90C00F6A5DA /* ReplyPriceView.h */,
+				18093E1E21C8E90C00F6A5DA /* ReplyPriceView.m */,
+				18093E2021C8E91B00F6A5DA /* ReplyPriceView.xib */,
+				181B156621CA09B900449B5D /* MyIncomeView.h */,
+				181B156721CA09B900449B5D /* MyIncomeView.m */,
+				181B156921CA09C800449B5D /* MyIncomeView.xib */,
+				181B15A221CA3BBA00449B5D /* IncomeView.h */,
+				181B15A321CA3BBA00449B5D /* IncomeView.m */,
+				181B15A621CA3EFA00449B5D /* IncomeView.xib */,
+				181B157021CA121B00449B5D /* IncomeHeader.h */,
+				181B157121CA121B00449B5D /* IncomeHeader.m */,
+				181B157321CA122F00449B5D /* IncomeHeader.xib */,
+				181B157821CA21B600449B5D /* IncomeRankView.h */,
+				181B157921CA21B600449B5D /* IncomeRankView.m */,
+				181B159C21CA374100449B5D /* IncomeRankView.xib */,
+				181B15BB21CB2F8100449B5D /* DiamondListView.h */,
+				181B15BC21CB2F8100449B5D /* DiamondListView.m */,
+				181B15BE21CB2F9100449B5D /* DiamondListView.xib */,
+				181B15C521CB4CD100449B5D /* DepositView.h */,
+				181B15C621CB4CD100449B5D /* DepositView.m */,
+				181B15C821CB4CE200449B5D /* DepositView.xib */,
+				1867957D21CC82BD00F3BA84 /* DepositDetailView.h */,
+				1867957E21CC82BE00F3BA84 /* DepositDetailView.m */,
+				1867958021CC82CA00F3BA84 /* DepositDetailView.xib */,
+				1867958221CC888400F3BA84 /* DepositLogView.h */,
+				1867958321CC888400F3BA84 /* DepositLogView.m */,
+				1867958521CC888F00F3BA84 /* DepositLogView.xib */,
+				18994D2B21CE10F300811893 /* LogView.h */,
+				18994D2C21CE10F300811893 /* LogView.m */,
+				18994D3121CE119100811893 /* LogView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -451,6 +730,8 @@
 		1837AE2821BA756600554879 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1867959721CCB81E00F3BA84 /* DepositModel.h */,
+				1867959821CCB81E00F3BA84 /* DepositModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,15 +745,30 @@
 				1837AE3521BA7E3800554879 /* MemberMenuCell.h */,
 				1837AE3621BA7E3800554879 /* MemberMenuCell.m */,
 				1837AE3721BA7E3800554879 /* MemberMenuCell.xib */,
-				1821546521C11212003DE6A4 /* FansCell.h */,
-				1821546621C11212003DE6A4 /* FansCell.m */,
-				1821546721C11212003DE6A4 /* FansCell.xib */,
 				182155AC21C389B4003DE6A4 /* SingleButtonCell.h */,
 				182155AD21C389B4003DE6A4 /* SingleButtonCell.m */,
 				182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */,
 				182155B121C39027003DE6A4 /* SwitchCell.h */,
 				182155B221C39027003DE6A4 /* SwitchCell.m */,
 				182155B321C39027003DE6A4 /* SwitchCell.xib */,
+				1821546521C11212003DE6A4 /* FansCell.h */,
+				1821546621C11212003DE6A4 /* FansCell.m */,
+				1821546721C11212003DE6A4 /* FansCell.xib */,
+				181B156B21CA0B6A00449B5D /* IncomeCell.h */,
+				181B156C21CA0B6A00449B5D /* IncomeCell.m */,
+				181B156D21CA0B6A00449B5D /* IncomeCell.xib */,
+				181B15C021CB317000449B5D /* RankCell.h */,
+				181B15C121CB317000449B5D /* RankCell.m */,
+				181B15C221CB317000449B5D /* RankCell.xib */,
+				1867958721CC8B1C00F3BA84 /* DepositCell.h */,
+				1867958821CC8B1C00F3BA84 /* DepositCell.m */,
+				1867958921CC8B1C00F3BA84 /* DepositCell.xib */,
+				18994D2021CCE76B00811893 /* DepositDetailCell.h */,
+				18994D2121CCE76B00811893 /* DepositDetailCell.m */,
+				18994D2221CCE76B00811893 /* DepositDetailCell.xib */,
+				1867958C21CC8CFC00F3BA84 /* DepositLogCell.h */,
+				1867958D21CC8CFC00F3BA84 /* DepositLogCell.m */,
+				1867958E21CC8CFC00F3BA84 /* DepositLogCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -480,11 +776,14 @@
 		18CA498E21B8B67D0019650C = {
 			isa = PBXGroup;
 			children = (
+				18282E9A21DDD28A0091A77D /* testImg */,
 				18CA49A321B8B67E0019650C /* Assets.xcassets */,
 				18CA499921B8B67D0019650C /* IME */,
 				18CA49B221B8B67E0019650C /* IMETests */,
 				18CA49BD21B8B67E0019650C /* IMEUITests */,
 				18CA499821B8B67D0019650C /* Products */,
+				18093E1721C8D27D00F6A5DA /* Frameworks */,
+				0B71D113F5A360B4D6139A28 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -502,6 +801,8 @@
 			isa = PBXGroup;
 			children = (
 				18CA49A821B8B67E0019650C /* Info.plist */,
+				18093E1021C8D10600F6A5DA /* PrefixHeader.pch */,
+				18093E1121C8D18D00F6A5DA /* Define */,
 				18CA4A8021B8D38D0019650C /* Supporting Files */,
 				18CA4A7F21B8D3850019650C /* Other */,
 				18CA4A7E21B8D3800019650C /* Class */,
@@ -614,9 +915,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CA49C321B8B67E0019650C /* Build configuration list for PBXNativeTarget "IME" */;
 			buildPhases = (
+				1DE566DE36F53B55740BC8BF /* [CP] Check Pods Manifest.lock */,
 				18CA499321B8B67D0019650C /* Sources */,
 				18CA499421B8B67D0019650C /* Frameworks */,
 				18CA499521B8B67D0019650C /* Resources */,
+				8D2FB5CA55929FFE7B9DC1FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,6 +934,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CA49C621B8B67E0019650C /* Build configuration list for PBXNativeTarget "IMETests" */;
 			buildPhases = (
+				0E505BA4C14142D430A0C3BB /* [CP] Check Pods Manifest.lock */,
 				18CA49AB21B8B67E0019650C /* Sources */,
 				18CA49AC21B8B67E0019650C /* Frameworks */,
 				18CA49AD21B8B67E0019650C /* Resources */,
@@ -649,6 +953,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CA49C921B8B67E0019650C /* Build configuration list for PBXNativeTarget "IMEUITests" */;
 			buildPhases = (
+				A01C8FD808D04C82E3E3E8CA /* [CP] Check Pods Manifest.lock */,
 				18CA49B621B8B67E0019650C /* Sources */,
 				18CA49B721B8B67E0019650C /* Frameworks */,
 				18CA49B821B8B67E0019650C /* Resources */,
@@ -711,35 +1016,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */,
+				181B159D21CA374100449B5D /* IncomeRankView.xib in Resources */,
 				041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */,
+				18282EA821DDD29E0091A77D /* IMG_6310.PNG in Resources */,
 				041DAF2721BD69330091424A /* PhotoCollectionViewCell.xib in Resources */,
 				1857E9A021B8F84B007ACC63 /* LoginVerifyView.xib in Resources */,
 				1837AE2021BA720B00554879 /* MemberBuyView.xib in Resources */,
 				180ADB4521BA08D7002D85DE /* MessageView.xib in Resources */,
+				18282EA421DDD29E0091A77D /* IMG_6313.PNG in Resources */,
+				181B15C921CB4CE200449B5D /* DepositView.xib in Resources */,
 				041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */,
+				18282E7821D4C6420091A77D /* MessageListView.xib in Resources */,
+				18282EA521DDD29E0091A77D /* IMG_6314.PNG in Resources */,
 				182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */,
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
 				1837AE2421BA722700554879 /* MemberMenuView.xib in Resources */,
 				181D791D21BE28EA00FE7E2C /* SearchAnchorCell.xib in Resources */,
+				18994D2421CCE76B00811893 /* DepositDetailCell.xib in Resources */,
+				1867958621CC888F00F3BA84 /* DepositLogView.xib in Resources */,
 				182155AB21C38590003DE6A4 /* MemberView.xib in Resources */,
+				181B157421CA122F00449B5D /* IncomeHeader.xib in Resources */,
+				181B15A721CA3EFA00449B5D /* IncomeView.xib in Resources */,
+				18282EA721DDD29E0091A77D /* IMG_6309.PNG in Resources */,
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
 				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
 				0406679C21C00943003FB675 /* MassMessageCell.xib in Resources */,
+				18994D3221CE119100811893 /* LogView.xib in Resources */,
 				18CA49A421B8B67E0019650C /* Assets.xcassets in Resources */,
 				040667A421C01DBC003FB675 /* PostView.xib in Resources */,
+				18093E2121C8E91B00F6A5DA /* ReplyPriceView.xib in Resources */,
 				18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */,
+				1867959021CC8CFC00F3BA84 /* DepositLogCell.xib in Resources */,
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
 				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
+				181B15BF21CB2F9100449B5D /* DiamondListView.xib in Resources */,
 				1821546421C1116C003DE6A4 /* FansView.xib in Resources */,
+				181B15C421CB317000449B5D /* RankCell.xib in Resources */,
+				181B156F21CA0B6A00449B5D /* IncomeCell.xib in Resources */,
 				18CA49A221B8B67D0019650C /* Main.storyboard in Resources */,
 				1837AE2221BA721D00554879 /* MemberPostView.xib in Resources */,
 				1851261E21BF59F00059E473 /* ReportView.xib in Resources */,
+				18282EA921DDD29E0091A77D /* IMG_6307.PNG in Resources */,
 				180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */,
+				1867958B21CC8B1C00F3BA84 /* DepositCell.xib in Resources */,
 				18CA4A8B21B8D5160019650C /* LoginMainView.xib in Resources */,
 				180ADB3821BA083D002D85DE /* MassMessageView.xib in Resources */,
 				183520F721C0B5EE0052F255 /* PostListView.xib in Resources */,
 				1821546921C11212003DE6A4 /* FansCell.xib in Resources */,
+				1867958121CC82CA00F3BA84 /* DepositDetailView.xib in Resources */,
+				18282EA321DDD29E0091A77D /* IMG_6308.PNG in Resources */,
+				181B156A21CA09C800449B5D /* MyIncomeView.xib in Resources */,
 				182155B521C39027003DE6A4 /* SwitchCell.xib in Resources */,
+				18282E7321D4612E0091A77D /* MessageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +1087,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E505BA4C14142D430A0C3BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMETests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DE566DE36F53B55740BC8BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IME-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2FB5CA55929FFE7B9DC1FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IME/Pods-IME-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@3x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full@3x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full_no@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full_no@3x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_pause@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_pause@3x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_play@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_play@3x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_progress@2x.png",
+				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_progress@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_full@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_full@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_full_no@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_full_no@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_pause@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_pause@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_play@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_play@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_progress@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_progress@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IME/Pods-IME-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01C8FD808D04C82E3E3E8CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMEUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18CA499321B8B67D0019650C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -767,15 +1210,20 @@
 				180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */,
 				180ADB2821BA06D1002D85DE /* SettingController.m in Sources */,
 				040667A221C01DAA003FB675 /* PostView.m in Sources */,
+				18093E1F21C8E90C00F6A5DA /* ReplyPriceView.m in Sources */,
 				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
 				183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */,
+				1867959921CCB81E00F3BA84 /* DepositModel.m in Sources */,
+				18282E7B21D4CBF10091A77D /* MessageListController.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				182155B421C39027003DE6A4 /* SwitchCell.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
+				181B15A121CA3BA300449B5D /* IncomeController.m in Sources */,
 				182155A921C38581003DE6A4 /* MemberView.m in Sources */,
 				183520F221C0AB360052F255 /* IMEBaseViewController.m in Sources */,
 				1821546221C1115D003DE6A4 /* FansView.m in Sources */,
 				1837AE1621BA716B00554879 /* MemberPostView.m in Sources */,
+				18282E7221D4612E0091A77D /* MessageCell.m in Sources */,
 				180ADB3E21BA087A002D85DE /* MessageController.m in Sources */,
 				18CA49AA21B8B67E0019650C /* main.m in Sources */,
 				180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */,
@@ -783,39 +1231,66 @@
 				182155AF21C389B4003DE6A4 /* SingleButtonCell.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
+				181B15BA21CB2F4C00449B5D /* DiamondListController.m in Sources */,
+				18994D2321CCE76B00811893 /* DepositDetailCell.m in Sources */,
 				1857EA0621B92457007ACC63 /* MainView.m in Sources */,
 				1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */,
 				1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */,
+				18282E7621D4C6350091A77D /* MessageListView.m in Sources */,
 				182155A621C3856C003DE6A4 /* MemberController.m in Sources */,
+				1867959621CCB70C00F3BA84 /* DepositDetailController.m in Sources */,
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
 				181D795B21BF59BD00FE7E2C /* ReportView.m in Sources */,
 				18CA4A8321B8D47D0019650C /* LoginMainView.m in Sources */,
 				183520F521C0B5CC0052F255 /* PostListView.m in Sources */,
+				181B157221CA121B00449B5D /* IncomeHeader.m in Sources */,
+				1867958421CC888400F3BA84 /* DepositLogView.m in Sources */,
 				1837AE1321BA715200554879 /* MemberBuyView.m in Sources */,
 				1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */,
 				1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */,
+				18994D2D21CE10F300811893 /* LogView.m in Sources */,
+				181B156821CA09B900449B5D /* MyIncomeView.m in Sources */,
+				181B15A421CA3BBA00449B5D /* IncomeView.m in Sources */,
 				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,
+				181B15C321CB317000449B5D /* RankCell.m in Sources */,
 				1821546821C11212003DE6A4 /* FansCell.m in Sources */,
 				18CA4A8921B8D4DC0019650C /* LoginAccountView.m in Sources */,
 				180ADB3B21BA0859002D85DE /* MessageView.m in Sources */,
 				1837AE2B21BA75BD00554879 /* MemberMenuController.m in Sources */,
+				18994D3021CE110700811893 /* LogController.m in Sources */,
+				1867958F21CC8CFC00F3BA84 /* DepositLogCell.m in Sources */,
 				041DAEE421BC227A0091424A /* MemberPostCell.m in Sources */,
 				1851268521BF9D7E0059E473 /* SpotLightMainController.m in Sources */,
 				180ADB2221BA0620002D85DE /* MassMessageController.m in Sources */,
+				18282E8721D624D40091A77D /* MediaPlayerView.m in Sources */,
 				1857EA0021B917D9007ACC63 /* LoginVerifyController.m in Sources */,
 				1837AE1C21BA71DC00554879 /* MemberFavoriteView.m in Sources */,
 				1821545F21C11142003DE6A4 /* FansController.m in Sources */,
+				181B157A21CA21B600449B5D /* IncomeRankView.m in Sources */,
+				181B15BD21CB2F8100449B5D /* DiamondListView.m in Sources */,
 				1857E9FD21B917BF007ACC63 /* LoginAccountController.m in Sources */,
 				041DAF2621BD69330091424A /* PhotoCollectionViewCell.m in Sources */,
+				181B15B721CA471600449B5D /* DiamondRankController.m in Sources */,
 				041DAF5721BEC2120091424A /* SpotLightView.m in Sources */,
+				181B159721CA26A500449B5D /* IncomeMainController.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
+				1867958A21CC8B1C00F3BA84 /* DepositCell.m in Sources */,
+				18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */,
+				181B15B421CA46D100449B5D /* DiamondMainController.m in Sources */,
 				183520FA21C0B8330052F255 /* PostListController.m in Sources */,
+				181B15C721CB4CD200449B5D /* DepositView.m in Sources */,
+				1867959321CC930E00F3BA84 /* DepositController.m in Sources */,
 				0406679F21C01D97003FB675 /* PostController.m in Sources */,
+				18282E9421DC4C540091A77D /* MediaPlayerController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,
+				1867957F21CC82BE00F3BA84 /* DepositDetailView.m in Sources */,
 				1837AE1921BA717F00554879 /* MemberMenuView.m in Sources */,
+				18994D2A21CDFEF500811893 /* DepositLogController.m in Sources */,
+				181B159A21CA27B500449B5D /* IncomeRankController.m in Sources */,
 				1837AE3121BA75DE00554879 /* MemberBuyController.m in Sources */,
+				181B156E21CA0B6A00449B5D /* IncomeCell.m in Sources */,
 				180ADB2B21BA0722002D85DE /* SearchAnchorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -985,10 +1460,12 @@
 		};
 		18CA49C421B8B67E0019650C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 885EE917D0861165EB8D06D4 /* Pods-IME.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28Q4D37JZZ;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IME/PrefixHeader.pch";
 				INFOPLIST_FILE = IME/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1003,10 +1480,12 @@
 		};
 		18CA49C521B8B67E0019650C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA813167F918F6865A441A71 /* Pods-IME.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28Q4D37JZZ;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IME/PrefixHeader.pch";
 				INFOPLIST_FILE = IME/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1021,6 +1500,7 @@
 		};
 		18CA49C721B8B67E0019650C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBAD6951710008C54F4DBB4 /* Pods-IMETests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1039,6 +1519,7 @@
 		};
 		18CA49C821B8B67E0019650C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A85081179AE8119BD5EEDBB7 /* Pods-IMETests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1057,6 +1538,7 @@
 		};
 		18CA49CA21B8B67E0019650C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420711A9D2CED4D9A36023B6 /* Pods-IMEUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IMEUITests/Info.plist;
@@ -1074,6 +1556,7 @@
 		};
 		18CA49CB21B8B67E0019650C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45DDC2709D3CAADE72908ABA /* Pods-IMEUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IMEUITests/Info.plist;

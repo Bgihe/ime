@@ -21,8 +21,13 @@
     
 }
 - (IBAction)clickTestBtn:(id)sender {
+    
+    KPostNotification(KNotificationLoginStateChange, @YES);
+    
+    /*
     LoginMainController * loginMainController = [[LoginMainController alloc] init];
-    [self presentViewController:loginMainController animated:YES completion:NULL];
+    [self presentViewController:loginMainController animated:YES completion:NULL];*/
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

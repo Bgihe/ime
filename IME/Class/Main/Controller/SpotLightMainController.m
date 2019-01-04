@@ -8,7 +8,7 @@
 
 #import "SpotLightMainController.h"
 #import "SpotLightController.h"
-@interface SpotLightMainController ()
+@interface SpotLightMainController ()<SpotLightControllerDelegate>
 @property (nonatomic) CAPSPageMenu *pageMenu;
 @end
 
@@ -19,18 +19,27 @@
     [self addPageView];
    
 }
-- (void) addPageView{
+- (IBAction)clickBackBtn:(id)sender {
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
+-(void)removeController{
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) addPageView{
     NSMutableArray * arr = [[NSMutableArray alloc] init];
     for (int i = 0; i < [_dataArr count]; i++) {
-        NSLog(@"%d",i);
-        NSLog(@"%@",[_dataArr objectAtIndex:i]);
         SpotLightController * memberMenuController = [[SpotLightController alloc] init];
+        memberMenuController.delegate = self;
         memberMenuController.nameStr = [_dataArr objectAtIndex:i];
+        memberMenuController.isPageView = true;
         [arr addObject:memberMenuController];
-        
     }
-
     NSDictionary *parameters = @{
                                  CAPSPageMenuOptionScrollMenuBackgroundColor: [UIColor whiteColor],//標題底色
                                  CAPSPageMenuOptionViewBackgroundColor: [UIColor whiteColor],

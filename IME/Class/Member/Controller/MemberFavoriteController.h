@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MemberFavoriteView.h"
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MemberFavoriteController : UIViewController<MemberFavoriteViewDelegate>{
     MemberFavoriteView * _memberFavoriteView;
@@ -16,4 +15,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

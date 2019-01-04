@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class MassMessageView;
 
 @protocol MassMessageViewDelegate
--(void)addChild;
+-(void)pushPostListController;
 @end
 
 @interface MassMessageView : UIView<MassMessageCellDelegate>

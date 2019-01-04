@@ -16,7 +16,7 @@
 #import "IMEBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MemberController : IMEBaseViewController <MemberViewDelegate>{
+@interface MemberController : IMEBaseViewController <MemberViewDelegate,MemberMenuControllerDelegate>{
     MemberView * _memberView;
 }
 

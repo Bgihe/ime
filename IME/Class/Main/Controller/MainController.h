@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MainView.h"
 #import "MassMessageController.h"
-#import "MessageController.h"
+#import "MessageListController.h"
 #import "CameraController.h"
 #import "SearchAnchorController.h"
-//#import "SettingController.h"
 #import "MemberController.h"
-//#import "PostController.h"
 #import "IMEBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 

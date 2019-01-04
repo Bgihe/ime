@@ -19,7 +19,7 @@
         self->_headImg.layer.cornerRadius = CGRectGetHeight(self->_headImg.frame)/2;
         self->_headImg.clipsToBounds = YES;
         //self->_postStatusImg.backgroundColor = [UIColor whiteColor];
-        self->_headImg.layer.borderWidth = 3;
+        self->_headImg.layer.borderWidth = 2;
         self->_headImg.layer.borderColor = [UIColor whiteColor].CGColor;
         self->_headImg.contentMode=UIViewContentModeScaleAspectFill;
         self->_headImg.layer.masksToBounds = YES;

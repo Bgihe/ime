@@ -22,6 +22,7 @@
         [self gotoPage:_pageNumber];
     }
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -46,7 +47,7 @@
     _controllerList = [[NSArray alloc] init];
     
     
-    _controllerList = @[massMessageController, [[MessageController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[MemberController alloc]init]];
+    _controllerList = @[massMessageController, [[MessageListController alloc] init],[[CameraController alloc] init],[[SearchAnchorController alloc]init],[[MemberController alloc]init]];
     
     [self performSelector:@selector(refreshRect) withObject:nil afterDelay:0.05];
     [self gotoPage:1];

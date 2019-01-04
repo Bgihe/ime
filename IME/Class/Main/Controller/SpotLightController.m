@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //_isPageView = false;
     _spotLightView = [[SpotLightView alloc] init];
     _spotLightView.delegate = self;
     _spotLightView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -28,10 +29,17 @@
     [_spotLightView updateIdLabel:_nameStr];
 }
 
+
 - (IBAction)clickBackBtn:(id)sender {
-    MainController * mainController = [[MainController alloc] init];
-    mainController.pageNumber = 2;
-    [self presentViewController:mainController animated:YES completion:NULL];
+    //self.tabBarController.tabBar.hidden = NO;
+    //self.navigationController.navigationBarHidden=NO;
+    if (_isPageView) {
+        //[self removeFromParentViewController];
+        //[self.view removeFromSuperview];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:NO];
+    }
 }
 - (IBAction)clickMoreBtn:(id)sender {
     /* 動畫 1

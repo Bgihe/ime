@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface FansController : UIViewController
-
+#import "FansView.h"
+@interface FansController : UIViewController<FansViewDelegate>{
+    FansView * _fansView;
+}
+@property long btnTag;
 @end
-
-NS_ASSUME_NONNULL_END

@@ -15,6 +15,7 @@
     if(self)
     {
         [self commonInit];
+        
     }
     return self;
 }

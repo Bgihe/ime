@@ -124,7 +124,7 @@
                     <state key="normal" image="camera_main"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.86592042446136475" green="0.95951014757156372" blue="0.96245437860488892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="GT1-og-7EB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0Qq-kS-c7I"/>
                 <constraint firstItem="5IE-1o-0R7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="99e-oZ-Qlc"/>
@@ -149,9 +149,9 @@
         <image name="camera_main" width="700" height="700"/>
         <image name="header_back" width="180" height="180"/>
         <image name="header_search" width="180" height="180"/>
-        <image name="navi_person" width="250" height="250"/>
-        <image name="navi_search" width="250" height="250"/>
-        <image name="navi_status" width="250" height="250"/>
-        <image name="navi_talk" width="250" height="250"/>
+        <image name="navi_person" width="30" height="30"/>
+        <image name="navi_search" width="30" height="30"/>
+        <image name="navi_status" width="21.600000381469727" height="21.600000381469727"/>
+        <image name="navi_talk" width="30" height="30"/>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 
 #import "MemberMenuController.h"
 #import "SettingController.h"
+
 @interface MemberMenuController ()
 
 @end
@@ -25,16 +26,7 @@
 
 - (void)presentController :(long)indexRow {
     
-    if (indexRow == 5) {
-        
-        
-        
-        SettingController * settingController = [[SettingController alloc] init];
-        //[self addChildViewController:settingController];
-    
-        /*
-        [self presentViewController:settingController animated:YES completion:NULL];*/
-    }
+    [_delegate presentController:indexRow];
     
 }
 

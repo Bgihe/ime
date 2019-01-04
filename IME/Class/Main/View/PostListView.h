@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class PostListView;
 
 @protocol PostListViewDelegate
--(void)addPostView;
+-(void)pushPostController;
 @end
 @interface PostListView : UIView<MemberPostCellDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;

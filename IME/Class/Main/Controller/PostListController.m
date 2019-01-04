@@ -25,12 +25,27 @@
     [_postListView.backBtn addTarget:self action:@selector(clicBackBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
 - (IBAction)clicBackBtn:(id)sender {
-    [self removeChild:self];
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
+    [self.navigationController popViewControllerAnimated:YES];
 }
--(void)addPostView{
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"PostListView show");
+}
+/*
+-(void)viewDidDisappear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBarHidden=NO;
+    [self.navigationController popViewControllerAnimated:NO];
+
+}*/
+-(void)pushPostController{
     NSLog(@"Success");
     
     PostController * postController = [[PostController alloc] init];
-    [self presentViewController:postController animated:YES completion:NULL];
+    self.navigationController.navigationBarHidden=YES;
+    [self.navigationController pushViewController: postController animated:YES];
+    self.tabBarController.tabBar.hidden = YES;
 }
 @end

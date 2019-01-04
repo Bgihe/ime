@@ -11,7 +11,7 @@
 #import "MainController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MessageController : UIViewController<MessageViewDelegate>{
+@interface MessageController : UIViewController<MessageViewDelegate,CAAnimationDelegate>{
     MessageView * _messageView;
 }
 

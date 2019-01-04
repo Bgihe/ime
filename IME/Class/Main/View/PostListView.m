@@ -38,11 +38,7 @@
 
 // tableview cell 高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    CGFloat screenHeight = screenSize.height;
-    
-    return tableView.frame.size.height/9;
+    return tableView.frame.size.height/10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -74,7 +70,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     NSLog(@"success");
-    [_delegate addPostView];
+    [_delegate pushPostController];
 }
 
 @end

@@ -21,14 +21,14 @@
         [_dataArr addObject:@"我的收益"];
         [_dataArr addObject:@"我的鑽石"];
         [_dataArr addObject:@"使用紀錄"];
-        [_dataArr addObject:@"邀請好友"];
+        //[_dataArr addObject:@"邀請好友"];
         [_dataArr addObject:@"設定"];
         
         _iconArr = [[NSMutableArray alloc] init];
         [_iconArr addObject:@"person_list_call"];
         [_iconArr addObject:@"person_list_daimond"];
         [_iconArr addObject:@"person_list_income"];
-        [_iconArr addObject:@"person_list_invite"];
+        //[_iconArr addObject:@"person_list_invite"];
         [_iconArr addObject:@"person_list_record"];
         [_iconArr addObject:@"person_list_setting"];
     }
@@ -88,6 +88,8 @@
     cell.leftLabel.text = [_dataArr objectAtIndex:indexPath.row];
     cell.leftIconImg.image = [UIImage imageNamed:[_iconArr objectAtIndex:indexPath.row]];
     
+    cell.tintColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:231.0/255.0 blue:234.0/255.0 alpha:1];
     if (indexPath.row == 1) {
         cell.rightLabel.text = @"今日收益 0 USD";
         cell.rightLabel.textColor = [UIColor orangeColor];
@@ -103,6 +105,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     [_delegate presentController:indexPath.row];
+    //[_delegate addController];
 }
 
 @end

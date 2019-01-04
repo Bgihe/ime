@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface FansCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *headImg;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
+@property (weak, nonatomic) IBOutlet UIButton *followBtn;
+@property (weak, nonatomic) IBOutlet UIButton *msgBtn;
 
 @end
 
-NS_ASSUME_NONNULL_END

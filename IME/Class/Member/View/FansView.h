@@ -12,13 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 @class FansView;
 
 @protocol FansViewDelegate
-
+- (void) pushSpotLightView;
 @end
 
 @interface FansView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray   *dataArr;
 @property (nonatomic, weak) id<FansViewDelegate> delegate;
+@property long btnTag;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="backBtn" destination="sNp-VP-IWU" id="jQR-9h-Wxs"/>
                 <outlet property="dateLabel" destination="YJh-kb-k71" id="4zG-ax-Sdb"/>
-                <outlet property="headImg" destination="iDK-pS-100" id="aUY-8f-Zzb"/>
+                <outlet property="headBtn" destination="iDK-pS-100" id="nA9-UX-Sgw"/>
                 <outlet property="lockView" destination="rCK-43-BCo" id="0PG-50-GtD"/>
                 <outlet property="textLabel" destination="xSB-R8-Yql" id="Z0e-2C-AnU"/>
                 <outlet property="textView" destination="SPj-MC-f0w" id="cag-cT-7cC"/>
