@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVerifyView">
             <connections>
                 <outlet property="backBtn" destination="xdf-x4-6op" id="pfG-1e-Lty"/>
+                <outlet property="codeMsgLabel" destination="NRo-gL-tI4" id="3Dt-zO-Sdi"/>
                 <outlet property="nextBtn" destination="B7E-RU-nn9" id="ex3-AA-tQQ"/>
                 <outlet property="verify1Label" destination="YGM-Co-n53" id="X6N-Ep-U9Z"/>
                 <outlet property="verify2Label" destination="f5M-Sy-XZg" id="rJC-G0-CKs"/>
@@ -202,7 +203,7 @@
     </objects>
     <resources>
         <image name="header_back" width="180" height="180"/>
-        <image name="login_icon" width="105" height="106"/>
+        <image name="login_icon" width="210" height="212"/>
         <image name="register_alert" width="180" height="180"/>
         <image name="register_verify" width="180" height="180"/>
     </resources>

@@ -35,4 +35,15 @@
     [self addSubview:self.view];
     self.view.frame=self.bounds;
 }
+
+- (void) refreshMsgLabel :(NSUInteger) msg{
+    
+    if (DevelopSever) {
+        _codeMsgLabel.text = [[NSString alloc] initWithFormat:@"請在 %d 秒內輸入認證碼",(int)msg];
+    }else{
+        _codeMsgLabel.text = [[NSString alloc] initWithFormat:@"此為測試環境，請在 %d 秒內隨意輸入數字",(int)msg];
+    }
+    
+    
+}
 @end

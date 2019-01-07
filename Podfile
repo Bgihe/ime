@@ -27,6 +27,7 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'Masonry'
 #pod 'NIMSDK', '~> 3.7.0'
 pod 'YTKNetwork'
-#pod 'SDWebImage', '~>3.8'
-pod 'YWVideoPlayer', '~> 1.0.3'
+ 
+pod 'YWVideoPlayer' 
+pod 'MJExtension'
 end

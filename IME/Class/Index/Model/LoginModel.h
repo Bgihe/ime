@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^SuccessBlock)(NSDictionary *responseJson);
-typedef void (^FailureBlock)(NSError *error);
-
+ 
 @interface LoginModel : NSObject
 
-@property (nonatomic, copy) NSString              * success;                 //
-@property (nonatomic, copy) NSString              * msg;                     //
-@property (nonatomic, copy) NSString              * valid_seconds;           //
+@property (nonatomic, copy) NSString              * account;                 //
+@property (nonatomic, copy) NSString              * no;                     //
+@property (nonatomic, copy) NSString              * phone_no;           //
+
+
+
 
 + (LoginModel *) instance;
-- (void) postSendAuthCode : (NSMutableDictionary*) paramDict;
+
 @end

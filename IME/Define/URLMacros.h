@@ -32,7 +32,7 @@
 
 /**开发服务器*/
 #define URL_main @"http://api.i-me.live/api-v1"
-//#define URL_main @"http://192.168.11.122:8090" //展鹏
+//#define URL_main @"http://api.ga8877.com/api-v1"
 
 #elif TestSever
 

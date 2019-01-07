@@ -31,14 +31,8 @@
 
 
 - (IBAction)clickPhoneBtn:(id)sender {
-  
-    
-    
     LoginPhoneController * loginPhoneController = [[LoginPhoneController alloc] init];
     [self presentViewController:loginPhoneController animated:YES completion:NULL];
-    
-    
-    
 }
 
 - (IBAction)clickAccountBtn:(id)sender {

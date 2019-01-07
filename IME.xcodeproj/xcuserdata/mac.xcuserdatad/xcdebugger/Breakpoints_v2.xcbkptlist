@@ -42,11 +42,11 @@
                   moduleName = "IME"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/git/IME/IME/Class/Main/View/SpotLightView.h"
-                  timestampString = "566242793.541211"
+                  timestampString = "568569953.421085"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -57,11 +57,11 @@
                   moduleName = "IME"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mac/Desktop/git/IME/IME/Class/Main/View/SpotLightView.h"
-                  timestampString = "566242793.544035"
+                  timestampString = "568569953.423943"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
                   offsetFromSymbolStart = "49">
                </Location>
             </Locations>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "-addChild"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IME/Class/Main/Controller/MainController.m"
-            timestampString = "566242978.265197"
+            timestampString = "568566882.407562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "-addChild:inRect:"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *verify4Label;
 @property (weak, nonatomic) IBOutlet UITextField *verify5Label;
 @property (weak, nonatomic) IBOutlet UITextField *verify6Label;
+@property (weak, nonatomic) IBOutlet UILabel *codeMsgLabel;
+
+- (void) refreshMsgLabel :(NSUInteger) msg;
 @end
 
 NS_ASSUME_NONNULL_END

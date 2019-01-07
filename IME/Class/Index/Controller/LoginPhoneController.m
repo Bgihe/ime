@@ -94,11 +94,7 @@
             }else{
                 NSLog(@"Success Fail!!");
             }
-            LoginModel * loginModel = [LoginModel instance];
-            loginModel.success = [[NSString alloc] init];
-            loginModel.success = [responseObject objectForKey:@"success"];
-            loginModel.msg = [responseObject objectForKey:@"msg"];
-            
+ 
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DLog(@"Http Fail!!");
         }];

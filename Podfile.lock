@@ -24,13 +24,14 @@ PODS:
   - JKVValue (1.3.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
   - RMQClient (0.10.0):
     - CocoaAsyncSocket (~> 7.4.0)
     - JKVValue
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YWVideoPlayer (1.0.3):
@@ -45,10 +46,11 @@ DEPENDENCIES:
   - JKVValue (~> 1.3.0)
   - Masonry
   - MBProgressHUD (~> 1.0.0)
+  - MJExtension
   - MJRefresh
   - RMQClient (~> 0.10.0)
   - YTKNetwork
-  - YWVideoPlayer (~> 1.0.3)
+  - YWVideoPlayer
   - YYKit
 
 SPEC REPOS:
@@ -58,6 +60,7 @@ SPEC REPOS:
     - JKVValue
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - RMQClient
     - SDWebImage
@@ -71,13 +74,14 @@ SPEC CHECKSUMS:
   JKVValue: d7941071b1cf9ba35c194fd40bcf4c4d9b5462e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   RMQClient: e9bfea2d08f151b6b12df82ad115c78bd8de2106
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YWVideoPlayer: 0a57cea82e20987be3c326c76374679041fad576
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 47c690ee14e33b090bc0bb3d5ead8989175e6184
+PODFILE CHECKSUM: 64af11621780deb1453fc1880244d1c69d6bbc00
 
 COCOAPODS: 1.5.3
