@@ -23,13 +23,22 @@
     
     [_loginMainView.phoneBtn addTarget:self action:@selector(clickPhoneBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_loginMainView.accountBtn addTarget:self action:@selector(clickAccountBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 
+
+
+
 - (IBAction)clickPhoneBtn:(id)sender {
-    NSLog(@"phone");
+  
+    
+    
     LoginPhoneController * loginPhoneController = [[LoginPhoneController alloc] init];
     [self presentViewController:loginPhoneController animated:YES completion:NULL];
+    
+    
+    
 }
 
 - (IBAction)clickAccountBtn:(id)sender {

@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *ATMBtn;
 @property (weak, nonatomic) IBOutlet UIButton *CVSBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cardBtn;
+
+@property (weak, nonatomic) IBOutlet UIView *customerServiceView;
+
 - (void)updateBtnColor :(long) tag;
 
 @end

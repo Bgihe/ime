@@ -15,7 +15,32 @@
     if(self)
     {
         [self commonInit];
-     
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0;
+            transition.type = kCATransitionFromLeft;//kCATransitionFromBottom
+            transition.subtype = kCATransitionFromLeft;
+            [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+            
+            [self->_customerServiceView.layer addAnimation:transition forKey:nil];
+            self->_customerServiceView.clipsToBounds = YES;
+            self->_customerServiceView.layer.masksToBounds = YES;
+            //漸層光澤
+            CAGradientLayer *gradient = [CAGradientLayer layer];
+            
+            gradient.frame = self->_customerServiceView.bounds;
+            gradient.startPoint = CGPointMake(0.0, 0.5);
+            gradient.endPoint = CGPointMake(1.0, 0.5);
+            
+            gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:255.0/255.0 green:181.0/255.0 blue:102.0/255.0 alpha:1] CGColor], (id)[[UIColor colorWithRed:223.0/255.0 green:81.0/255.0 blue:83.0/255.0 alpha:1] CGColor], nil]; // 由上到下的漸層顏色
+            
+            [self->_customerServiceView.layer insertSublayer:gradient atIndex:0];
+            [self->_customerServiceView.layer addAnimation:transition forKey:nil];
+        });
+        
+        
+  
     }
     return self;
 }

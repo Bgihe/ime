@@ -26,17 +26,22 @@
     
     [_spotLightView.backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_spotLightView.moreBtn addTarget:self action:@selector(clickMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_spotLightView.moreMsgBtn addTarget:self action:@selector(clickMoreMsgBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
     [_spotLightView updateIdLabel:_nameStr];
 }
 
-
+- (IBAction)clickMoreMsgBtn:(id)sender{
+    [_spotLightView refreshMsgRect];
+}
 - (IBAction)clickBackBtn:(id)sender {
     //self.tabBarController.tabBar.hidden = NO;
     //self.navigationController.navigationBarHidden=NO;
     if (_isPageView) {
         //[self removeFromParentViewController];
         //[self.view removeFromSuperview];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        [_delegate removeController];
     }else{
         [self.navigationController popViewControllerAnimated:NO];
     }

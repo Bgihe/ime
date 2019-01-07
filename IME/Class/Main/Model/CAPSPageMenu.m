@@ -455,8 +455,8 @@ NSString * const CAPSPageMenuOptionHideTopMenuImg                       = @"hide
 #pragma mark - Scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%f",scrollView.contentOffset.x);
-    NSLog(@"%f",scrollView.contentOffset.y);
+    //NSLog(@"%f",scrollView.contentOffset.x); //偵測X
+    //NSLog(@"%f",scrollView.contentOffset.y); //偵測Y
     if (!_didLayoutSubviewsAfterRotation) {
         if ([scrollView isEqual:_controllerScrollView]) {
             if (scrollView.contentOffset.x >= 0.0 && scrollView.contentOffset.x <= ((CGFloat)(_controllerArray.count - 1) * self.view.frame.size.width)) {

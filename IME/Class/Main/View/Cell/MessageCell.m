@@ -101,7 +101,6 @@
             height = [self heightForString:str andWidth:KScreenWidth - _headBtn.frame.size.width - 30 :_msgTextView].height + 16.0;
             frame.size.height = height;
             frame.size.width = [self heightForString:str andWidth:KScreenWidth - _headBtn.frame.size.width - 30 :_msgTextView].width+16.0;\
-            
             _msgTextView.frame = frame;
 
             [UIView animateWithDuration:0.5 animations:^{

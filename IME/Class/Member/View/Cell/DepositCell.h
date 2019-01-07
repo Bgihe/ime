@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *bonusALabel;
 @property (weak, nonatomic) IBOutlet UILabel *bonusBLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leftTriangle;
+@property (weak, nonatomic) IBOutlet UIStackView *testStack;
 
 @end

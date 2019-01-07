@@ -29,9 +29,11 @@
     self.navigationController.navigationBarHidden=NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+-(void)viewWillLayoutSubviews{
+    NSLog(@"PostListView viewWillLayoutSubviews");
+}
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"PostListView show");
+    NSLog(@"PostListView viewWillAppear");
 }
 /*
 -(void)viewDidDisappear:(BOOL)animated{

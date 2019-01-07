@@ -110,26 +110,37 @@
                             <constraint firstItem="HsM-6h-UDz" firstAttribute="width" secondItem="221-MI-jHX" secondAttribute="width" multiplier="0.3" id="hsg-iO-WU9"/>
                         </constraints>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_photo" translatesAutoresizingMaskIntoConstraints="NO" id="VVr-Za-DlY">
-                        <rect key="frame" x="30" y="83.5" width="26.5" height="26.5"/>
-                        <color key="backgroundColor" red="0.74563965430000001" green="0.77375413049999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSv-NC-N5J">
+                        <rect key="frame" x="30" y="70" width="40" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status_photo" translatesAutoresizingMaskIntoConstraints="NO" id="7Pg-Ld-LmK">
+                                <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7Pg-Ld-LmK" secondAttribute="height" multiplier="1:1" id="VCb-x5-Xrc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56544357540000001" green="0.7525299191" blue="0.99994653460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="VVr-Za-DlY" secondAttribute="height" multiplier="1:1" id="0F9-K6-SpW"/>
+                            <constraint firstItem="7Pg-Ld-LmK" firstAttribute="centerX" secondItem="pSv-NC-N5J" secondAttribute="centerX" id="ZMX-hY-fK4"/>
+                            <constraint firstItem="7Pg-Ld-LmK" firstAttribute="height" secondItem="pSv-NC-N5J" secondAttribute="height" multiplier="0.5" id="aq7-fk-gQs"/>
+                            <constraint firstAttribute="width" secondItem="pSv-NC-N5J" secondAttribute="height" multiplier="1:1" id="msr-4l-mEe"/>
+                            <constraint firstItem="7Pg-Ld-LmK" firstAttribute="centerY" secondItem="pSv-NC-N5J" secondAttribute="centerY" id="nH5-Ov-aja"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="VVr-Za-DlY" secondAttribute="bottom" constant="10" id="2Sq-xI-AQC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="7U4-KM-vkV" secondAttribute="trailing" constant="10" id="4QF-J2-4l1"/>
+                    <constraint firstItem="pSv-NC-N5J" firstAttribute="height" secondItem="HDK-Tn-ydY" secondAttribute="height" multiplier="0.45" id="6dH-sg-js9"/>
                     <constraint firstAttribute="bottomMargin" secondItem="HDK-Tn-ydY" secondAttribute="bottom" constant="10" id="7ZE-mJ-cL4"/>
                     <constraint firstItem="HDK-Tn-ydY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="7hX-aJ-KPJ"/>
                     <constraint firstItem="7U4-KM-vkV" firstAttribute="height" secondItem="HDK-Tn-ydY" secondAttribute="height" multiplier="0.8" id="LAh-qk-PM1"/>
                     <constraint firstItem="HDK-Tn-ydY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Q0E-jg-ckI"/>
-                    <constraint firstItem="VVr-Za-DlY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="UI7-nx-T2S"/>
                     <constraint firstItem="7U4-KM-vkV" firstAttribute="centerY" secondItem="HDK-Tn-ydY" secondAttribute="centerY" id="Uqd-s6-dMC"/>
-                    <constraint firstItem="VVr-Za-DlY" firstAttribute="height" secondItem="HDK-Tn-ydY" secondAttribute="height" multiplier="0.3" id="ZHD-4D-mlL"/>
+                    <constraint firstItem="pSv-NC-N5J" firstAttribute="bottom" secondItem="HDK-Tn-ydY" secondAttribute="bottom" id="iwu-Lk-9Mn"/>
                     <constraint firstItem="7U4-KM-vkV" firstAttribute="leading" secondItem="HDK-Tn-ydY" secondAttribute="trailing" constant="10" id="psI-oU-tjO"/>
+                    <constraint firstItem="pSv-NC-N5J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="tNl-TS-ixK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
@@ -139,7 +150,8 @@
                 <outlet property="headImgBtn" destination="HDK-Tn-ydY" id="aXr-DD-pCh"/>
                 <outlet property="idLabel" destination="LPF-Ws-irg" id="GwM-BN-v2F"/>
                 <outlet property="msgBtn" destination="4XP-bV-zJM" id="vnO-JD-WrI"/>
-                <outlet property="postStatusImg" destination="VVr-Za-DlY" id="Cs2-kP-CDI"/>
+                <outlet property="postStatusImg" destination="7Pg-Ld-LmK" id="gdU-dQ-DVQ"/>
+                <outlet property="postStatusView" destination="pSv-NC-N5J" id="EHl-ix-Ps8"/>
                 <outlet property="rightLabel" destination="Qis-rm-ov9" id="ESZ-Fg-XEq"/>
                 <outlet property="titleLabel" destination="mpm-ed-7ju" id="v55-Ik-4o4"/>
             </connections>
@@ -153,7 +165,7 @@
     </objects>
     <resources>
         <image name="IMG_6311.PNG" width="828" height="171"/>
-        <image name="icon_daimond" width="200" height="200"/>
+        <image name="icon_daimond" width="50" height="50"/>
         <image name="msgnumbg" width="512" height="512"/>
         <image name="register_verify" width="180" height="180"/>
         <image name="status_photo" width="120" height="120"/>

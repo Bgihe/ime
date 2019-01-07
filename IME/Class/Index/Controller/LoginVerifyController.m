@@ -25,6 +25,18 @@
     [_loginVerifyView.backBtn addTarget:self action:@selector(clickBackBtnBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_loginVerifyView.nextBtn addTarget:self action:@selector(clickNextBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    _countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(authCodeTimeGo) userInfo:nil repeats:YES];
+}
+-(void)authCodeTimeGo{
+    NSLog(@"ping");
+    if (_countdownTime <= 0) {
+        NSLog(@"Out");
+    }
+    _countdownTime = _countdownTime - 1;
+}
+
 - (IBAction)clickBackBtnBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -32,5 +44,6 @@
     MainController * mainController = [[MainController alloc] init];
     [self presentViewController:mainController animated:YES completion:NULL];
 }
+
 
 @end

@@ -17,16 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-
+    LoginMainController * loginMainController = [[LoginMainController alloc] init];
+    [self presentViewController:loginMainController animated:NO completion:NULL];
     
 }
 - (IBAction)clickTestBtn:(id)sender {
     
-    KPostNotification(KNotificationLoginStateChange, @YES);
+    //KPostNotification(KNotificationLoginStateChange, @YES);
     
-    /*
+    
     LoginMainController * loginMainController = [[LoginMainController alloc] init];
-    [self presentViewController:loginMainController animated:YES completion:NULL];*/
+    [self presentViewController:loginMainController animated:YES completion:NULL];
     
 }
 

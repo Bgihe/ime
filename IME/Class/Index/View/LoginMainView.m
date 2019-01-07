@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
     {
         [self commonInit];
         NSLog(@"456");
-        
+        /*
         dispatch_async(dispatch_get_main_queue(), ^{
             self->_phoneView.clipsToBounds = YES;
             self->_phoneView.layer.borderWidth = 1;
@@ -31,8 +31,18 @@ NS_ASSUME_NONNULL_BEGIN
             self->_memberView.layer.borderWidth = 1;
             self->_memberView.layer.borderColor = [UIColor whiteColor].CGColor;
             self->_memberView.layer.masksToBounds = YES;
-            self->_memberView.layer.cornerRadius = CGRectGetHeight(self->_phoneView.frame)/2;
+            self->_memberView.layer.cornerRadius = CGRectGetHeight(self->_memberView.frame)/2;
 
+        });*/
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->_phoneView.contentMode=UIViewContentModeScaleAspectFill;
+            self->_phoneView.layer.cornerRadius = CGRectGetHeight(self->_phoneView.frame)/2;
+            self->_phoneView.clipsToBounds = YES;
+            self->_phoneView.layer.borderWidth = 1;
+            self->_phoneView.layer.borderColor = [UIColor whiteColor].CGColor;
+            self->_phoneView.contentMode = UIViewContentModeScaleAspectFill;
+            self->_phoneView.layer.masksToBounds = YES;
         });
         
     }

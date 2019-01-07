@@ -8,6 +8,7 @@
 
 #import "MassMessageController.h"
 #import "PostListController.h"
+#import "DepositController.h"
 @interface MassMessageController ()
 
 @end
@@ -20,9 +21,28 @@
         statusBarView.backgroundColor = color;
     }
 }
-
+-(IBAction)clickDaimondBtn:(id)sender{
+    DepositController * depositController = [[DepositController alloc] init];
+    self.navigationController.navigationBarHidden=NO;
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController: depositController animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    UIImage *faceImage = [UIImage imageNamed:@"icon_daimond"];
+    UIButton *daimondBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [daimondBtn setTitle:@" 0" forState:UIControlStateNormal];
+    daimondBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [daimondBtn addTarget:self action:@selector(clickDaimondBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [daimondBtn setImage:faceImage forState:UIControlStateNormal];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithCustomView:daimondBtn];
+    self.navigationItem.leftBarButtonItem = leftButton;
+    self.navigationItem.leftBarButtonItem.width = 20;
+
+
+    
     _massMessageView = [[MassMessageView alloc] init];
     _massMessageView.delegate = self;
     _massMessageView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);

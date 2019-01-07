@@ -10,13 +10,16 @@
 #import "LoginMainView.h"
 #import "LoginPhoneController.h"
 #import "LoginAccountController.h"
+//#import "NetHttpsManager.h"
+#import "LoginModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void (^SuccessBlock)(NSDictionary *responseJson);
+typedef void (^FailureBlock)(NSError *error);
 
 @interface LoginMainController : UIViewController<LoginMainViewDelegate>{
     LoginMainView * _loginMainView;
+    //NetHttpsManager * _netHttpsManager;
 }
 
 @end
 
-NS_ASSUME_NONNULL_END

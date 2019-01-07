@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon_daimond.png",
+      "filename" : "deposit_left_bg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_daimond-1.png",
       "scale" : "2x"
     },
     {

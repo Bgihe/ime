@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="57Z-Aa-2K6">
-                        <rect key="frame" x="20" y="21.5" width="144" height="28.5"/>
+                        <rect key="frame" x="20" y="21.5" width="184" height="28.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_daimond" translatesAutoresizingMaskIntoConstraints="NO" id="pL3-Wn-WPu">
                                 <rect key="frame" x="0.0" y="0.0" width="28.5" height="28.5"/>
@@ -35,20 +35,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-ZP-7Nf">
-                                <rect key="frame" x="80.5" y="4" width="63.5" height="20.5"/>
+                                <rect key="frame" x="80.5" y="0.0" width="103.5" height="28.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-jD-74k">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="28.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="dgz-Cf-vIx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-UL-CXp">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="20.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="39" height="28.5"/>
                                         <color key="backgroundColor" red="0.85372141451415617" green="0.44343876651763009" blue="0.40601046582870687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="us7-lK-hX4">
-                                        <rect key="frame" x="39" y="0.0" width="24.5" height="20.5"/>
+                                        <rect key="frame" x="59" y="0.0" width="24.5" height="28.5"/>
                                         <color key="backgroundColor" red="0.85372141451415617" green="0.54990695907265175" blue="0.57830993676213294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZn-Qc-Z4p">
+                                        <rect key="frame" x="83.5" y="0.0" width="20" height="28.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="g3p-2k-0yC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -76,11 +94,13 @@
                 <outlet property="bonusALabel" destination="E6c-UL-CXp" id="z7E-xi-3OD"/>
                 <outlet property="bonusBLabel" destination="us7-lK-hX4" id="9vf-c8-NJv"/>
                 <outlet property="daimondLabel" destination="GY8-3f-bJL" id="bqy-wm-gXK"/>
+                <outlet property="leftTriangle" destination="TT0-jD-74k" id="vJJ-If-VP4"/>
+                <outlet property="testStack" destination="JZL-ZP-7Nf" id="n3m-Y3-Sd6"/>
             </connections>
             <point key="canvasLocation" x="296.80000000000001" y="193.4032983508246"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_daimond" width="200" height="200"/>
+        <image name="icon_daimond" width="50" height="50"/>
     </resources>
 </document>

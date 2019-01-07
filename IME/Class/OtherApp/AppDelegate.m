@@ -66,24 +66,17 @@
     BOOL loginSuccess = [notification.object boolValue];
     
     if (loginSuccess) {//登陆成功加载主窗口控制器
-        NSLog(@"Test Success");
-        
+
         controllerList = [[NSMutableArray alloc] init];
     
         MassMessageController * massMessageController= [[MassMessageController alloc] init];
         [self setupChildViewController:massMessageController title:@"訊息" imageName:@"navi_talk" seleceImageName:@"navi_talk"];
-        
         MessageListController * messageListController= [[MessageListController alloc] init];
         [self setupChildViewController:messageListController title:@"群發" imageName:@"navi_status" seleceImageName:@"navi_status"];
-        
-        //----相機
         CameraController * cameraController= [[CameraController alloc] init];
         [self setupChildViewController:cameraController title:@"相機" imageName:@"navi_camera" seleceImageName:@"navi_camera"];
-        
-        
         SearchAnchorController * searchAnchorController= [[SearchAnchorController alloc] init];
         [self setupChildViewController:searchAnchorController title:@"收尋" imageName:@"navi_search" seleceImageName:@"navi_search"];
-        
         MemberController * memberController= [[MemberController alloc] init];
         [self setupChildViewController:memberController title:@"個人" imageName:@"navi_person" seleceImageName:@"navi_person"];
         
@@ -93,7 +86,7 @@
         self->tabBarController.viewControllers = controllerList;
         self.window.rootViewController = self->tabBarController;
     }else{
-        NSLog(@"Test Fail");
+        DLog(@"Login Fail");
     }
 }
 

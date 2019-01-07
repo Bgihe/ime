@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginVerifyController : UIViewController<LoginVerifyViewDelegate>{
     LoginVerifyView * _loginVerifyView;
+    NSTimer * _countdownTimer;
 }
+@property NSUInteger countdownTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

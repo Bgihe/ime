@@ -15,6 +15,7 @@
                 <outlet property="ATMBtn" destination="S9O-je-FHJ" id="0Ic-jM-YHr"/>
                 <outlet property="CVSBtn" destination="dGZ-5W-qBy" id="imx-h0-2xG"/>
                 <outlet property="cardBtn" destination="0ca-FJ-YL8" id="Jd6-pd-05c"/>
+                <outlet property="customerServiceView" destination="6hS-Hp-luy" id="WQm-tW-GjK"/>
                 <outlet property="tableView" destination="l1k-Qr-Alg" id="1rZ-76-Vub"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Yti-Yx-neI"/>
             </connections>
@@ -115,7 +116,7 @@
                             <state key="normal" image="icon_arrow"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.31992280092179981" blue="0.077933555180825009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="0.70980392156862748" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="en5-BH-4NF" firstAttribute="leading" secondItem="6hS-Hp-luy" secondAttribute="leading" constant="10" id="IG4-Xc-Arw"/>
                         <constraint firstAttribute="bottom" secondItem="en5-BH-4NF" secondAttribute="bottom" id="KLg-kU-PWv"/>
@@ -159,6 +160,6 @@
     </objects>
     <resources>
         <image name="icon_arrow" width="180" height="180"/>
-        <image name="icon_daimond" width="200" height="200"/>
+        <image name="icon_daimond" width="50" height="50"/>
     </resources>
 </document>

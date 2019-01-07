@@ -39,7 +39,7 @@
                                 <state key="normal" image="iconfavorite1"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.22666778746552801" green="0.64052585659898476" blue="0.53993657623198843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.31281659007072449" green="0.7598450779914856" blue="0.89391368627548218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ODB-rk-pqc" secondAttribute="bottom" id="BjZ-MJ-uwI"/>
                             <constraint firstItem="6uy-xG-CSB" firstAttribute="height" secondItem="1VP-BA-Zwi" secondAttribute="height" multiplier="0.6" id="Btp-I6-tM8"/>

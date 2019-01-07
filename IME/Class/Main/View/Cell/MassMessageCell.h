@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *headImgBtn;
 
 @property (weak, nonatomic) IBOutlet UIImageView *postStatusImg;
+@property (weak, nonatomic) IBOutlet UIView *postStatusView;
+
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;

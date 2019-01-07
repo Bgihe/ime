@@ -81,6 +81,7 @@
     }
 
     cell.postStatusImg.hidden = YES;
+    cell.postStatusView.hidden = YES;
     cell.daimondImg.hidden = YES;
     cell.countdownImg.hidden = YES;
     cell.delegate = self;

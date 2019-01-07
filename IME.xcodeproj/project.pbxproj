@@ -36,6 +36,8 @@
 		180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB4721BA0904002D85DE /* SearchAnchorView.m */; };
 		180ADB4A21BA090B002D85DE /* SearchAnchorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180ADB4921BA090B002D85DE /* SearchAnchorView.xib */; };
 		180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB5521BA1DE6002D85DE /* CameraController.m */; };
+		180DC49321E32E4500022C65 /* NetHttpsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49221E32E4500022C65 /* NetHttpsManager.m */; };
+		180DC49621E33DE500022C65 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49521E33DE500022C65 /* LoginModel.m */; };
 		181B156821CA09B900449B5D /* MyIncomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156721CA09B900449B5D /* MyIncomeView.m */; };
 		181B156A21CA09C800449B5D /* MyIncomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B156921CA09C800449B5D /* MyIncomeView.xib */; };
 		181B156E21CA0B6A00449B5D /* IncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156C21CA0B6A00449B5D /* IncomeCell.m */; };
@@ -224,6 +226,10 @@
 		180ADB4921BA090B002D85DE /* SearchAnchorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAnchorView.xib; sourceTree = "<group>"; };
 		180ADB5421BA1DE6002D85DE /* CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
 		180ADB5521BA1DE6002D85DE /* CameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraController.m; sourceTree = "<group>"; };
+		180DC49121E32E4500022C65 /* NetHttpsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetHttpsManager.h; sourceTree = "<group>"; };
+		180DC49221E32E4500022C65 /* NetHttpsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetHttpsManager.m; sourceTree = "<group>"; };
+		180DC49421E33DE500022C65 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		180DC49521E33DE500022C65 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		181B156621CA09B900449B5D /* MyIncomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyIncomeView.h; sourceTree = "<group>"; };
 		181B156721CA09B900449B5D /* MyIncomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyIncomeView.m; sourceTree = "<group>"; };
 		181B156921CA09C800449B5D /* MyIncomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIncomeView.xib; sourceTree = "<group>"; };
@@ -836,10 +842,10 @@
 				18CA49A021B8B67D0019650C /* Main.storyboard */,
 				1857E9F521B9120F007ACC63 /* LoginMainController.h */,
 				1857E9F621B9120F007ACC63 /* LoginMainController.m */,
-				1857E9FB21B917BF007ACC63 /* LoginAccountController.h */,
-				1857E9FC21B917BF007ACC63 /* LoginAccountController.m */,
 				1857E9F821B917A2007ACC63 /* LoginPhoneController.h */,
 				1857E9F921B917A2007ACC63 /* LoginPhoneController.m */,
+				1857E9FB21B917BF007ACC63 /* LoginAccountController.h */,
+				1857E9FC21B917BF007ACC63 /* LoginAccountController.m */,
 				1857E9FE21B917D9007ACC63 /* LoginVerifyController.h */,
 				1857E9FF21B917D9007ACC63 /* LoginVerifyController.m */,
 			);
@@ -852,12 +858,12 @@
 				18CA4A8721B8D4DC0019650C /* LoginAccountView.h */,
 				18CA4A8821B8D4DC0019650C /* LoginAccountView.m */,
 				18CA4A8E21B8D5370019650C /* LoginAccountView.xib */,
-				18CA4A8421B8D4A80019650C /* LoginPhoneView.h */,
-				18CA4A8521B8D4A80019650C /* LoginPhoneView.m */,
-				18CA4A8C21B8D5240019650C /* LoginPhoneView.xib */,
 				18CA4A8121B8D47D0019650C /* LoginMainView.h */,
 				18CA4A8221B8D47D0019650C /* LoginMainView.m */,
 				18CA4A8A21B8D5160019650C /* LoginMainView.xib */,
+				18CA4A8421B8D4A80019650C /* LoginPhoneView.h */,
+				18CA4A8521B8D4A80019650C /* LoginPhoneView.m */,
+				18CA4A8C21B8D5240019650C /* LoginPhoneView.xib */,
 				1857E99C21B8F841007ACC63 /* LoginVerifyView.h */,
 				1857E99D21B8F841007ACC63 /* LoginVerifyView.m */,
 				1857E99F21B8F84B007ACC63 /* LoginVerifyView.xib */,
@@ -868,6 +874,10 @@
 		18CA4A6821B8D0D10019650C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180DC49121E32E4500022C65 /* NetHttpsManager.h */,
+				180DC49221E32E4500022C65 /* NetHttpsManager.m */,
+				180DC49421E33DE500022C65 /* LoginModel.h */,
+				180DC49521E33DE500022C65 /* LoginModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1230,6 +1240,7 @@
 				041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */,
 				182155AF21C389B4003DE6A4 /* SingleButtonCell.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
+				180DC49321E32E4500022C65 /* NetHttpsManager.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
 				181B15BA21CB2F4C00449B5D /* DiamondListController.m in Sources */,
 				18994D2321CCE76B00811893 /* DepositDetailCell.m in Sources */,
@@ -1250,6 +1261,7 @@
 				1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */,
 				18994D2D21CE10F300811893 /* LogView.m in Sources */,
 				181B156821CA09B900449B5D /* MyIncomeView.m in Sources */,
+				180DC49621E33DE500022C65 /* LoginModel.m in Sources */,
 				181B15A421CA3BBA00449B5D /* IncomeView.m in Sources */,
 				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,

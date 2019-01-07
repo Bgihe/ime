@@ -24,25 +24,25 @@
  这样做切换方便,不用来回每个网络请求修改请求域名,降低出错事件
  */
 
-#define DevelopSever    1
-#define TestSever       0
+#define DevelopSever    0
+#define TestSever       1
 #define ProductSever    0
 
 #if DevelopSever
 
 /**开发服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
+#define URL_main @"http://api.i-me.live/api-v1"
 //#define URL_main @"http://192.168.11.122:8090" //展鹏
 
 #elif TestSever
 
 /**测试服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
+#define URL_main @"http://api.ga8877.com/api-v1"
 
 #elif ProductSever
 
 /**生产服务器*/
-#define URL_main @"http://192.168.20.31:20000/shark-miai-service"
+#define URL_main @"http://192.168.20.31:20000/shark-miai-service2"
 #endif
 
 
@@ -55,16 +55,26 @@
 
 
 #pragma mark - ——————— 用户相关 ————————
-//自动登录
-#define URL_user_auto_login @"/api/autoLogin"
-//登录
-#define URL_user_login @"/api/login"
-//用户详情
-#define URL_user_info_detail @"/api/user/info/detail"
-//修改头像
-#define URL_user_info_change_photo @"/api/user/info/changephoto"
-//注释
-#define URL_user_info_change @"/api/user/info/change"
+
+
+//系統config
+#define URL_config @"/config"
+//登入與認證碼
+#define URL_send_auth_code @"/auth/send-auth-code"
+//手機號碼登入
+#define URL_phone_login @"/auth/phone-login"
+//檢查認證碼
+#define URL_check @"/auth/check"
+//註冊
+#define URL_set_account @"/member/set-account"
+//登出
+#define URL_logout @"/auth/logout"
+//取得個人的完整資料
+#define URL_get_my_data @"/member/get-my-data"
+//取得會員的簡介檔案
+#define URL_get_profile @"/member/get-profile"
+
+
 
 
 #endif /* URLMacros_h */

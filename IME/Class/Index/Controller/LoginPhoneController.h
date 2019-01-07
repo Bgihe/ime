@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LoginPhoneView.h"
 #import "LoginVerifyController.h"
-NS_ASSUME_NONNULL_BEGIN
+#import "LoginModel.h"
 
 @interface LoginPhoneController : UIViewController<LoginPhoneViewDelegate>{
     LoginPhoneView * _loginPhoneView;
 }
 
 @end
-
-NS_ASSUME_NONNULL_END
+ 

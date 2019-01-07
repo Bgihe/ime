@@ -28,23 +28,23 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="F0p-s5-dA7">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-Wf-thu">
-                    <rect key="frame" x="20" y="547" width="335" height="100"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-Wf-thu">
+                    <rect key="frame" x="20" y="587" width="335" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIS-oI-C7l">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="37"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-0P-vYE">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="37"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_phone" translatesAutoresizingMaskIntoConstraints="NO" id="qFz-kd-kVz">
-                                            <rect key="frame" x="20" y="7.5" width="22" height="22"/>
+                                            <rect key="frame" x="20" y="6" width="18" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="qFz-kd-kVz" secondAttribute="height" multiplier="1:1" id="yQf-Ew-yQl"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-9V-G6O">
-                                            <rect key="frame" x="121.5" y="0.0" width="92" height="37"/>
+                                            <rect key="frame" x="121.5" y="0.0" width="92" height="30"/>
                                             <state key="normal" title="手機號碼登入">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -63,20 +63,20 @@
                             </subviews>
                             <color key="tintColor" red="0.23326477139999999" green="0.55013822720000005" blue="0.60326262949999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-H6-9Fh">
-                            <rect key="frame" x="0.0" y="40" width="335" height="37"/>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-H6-9Fh">
+                            <rect key="frame" x="0.0" y="35" width="335" height="30"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehU-LQ-Ns9">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="37"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-0K-FAK">
-                                            <rect key="frame" x="121.5" y="0.0" width="92" height="37"/>
+                                            <rect key="frame" x="121.5" y="0.0" width="92" height="30"/>
                                             <state key="normal" title="會員帳號登入">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navi_person2_active" translatesAutoresizingMaskIntoConstraints="NO" id="6PB-df-PRZ">
-                                            <rect key="frame" x="20" y="7.5" width="22" height="22"/>
+                                            <rect key="frame" x="20" y="6" width="18" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="6PB-df-PRZ" secondAttribute="height" multiplier="1:1" id="I3k-oA-KlW"/>
                                             </constraints>
@@ -95,7 +95,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="tum-Rl-yXf">
-                            <rect key="frame" x="0.0" y="80" width="335" height="20"/>
+                            <rect key="frame" x="0.0" y="40" width="335" height="20"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ii-1o-7TC">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="20"/>
@@ -170,7 +170,7 @@
                 <constraint firstItem="II0-EX-qmA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="5Px-AZ-DFO"/>
                 <constraint firstItem="F0p-s5-dA7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AeC-VC-FNF"/>
                 <constraint firstAttribute="trailing" secondItem="F0p-s5-dA7" secondAttribute="trailing" id="FTm-Qq-ncs"/>
-                <constraint firstItem="L1T-Wf-thu" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="I7t-U2-d0S"/>
+                <constraint firstItem="L1T-Wf-thu" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.09" id="I7t-U2-d0S"/>
                 <constraint firstItem="F0p-s5-dA7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J9g-lE-pk6"/>
                 <constraint firstItem="II0-EX-qmA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KeJ-b8-Yu5"/>
                 <constraint firstAttribute="bottom" secondItem="F0p-s5-dA7" secondAttribute="bottom" id="McC-eQ-5gH"/>
