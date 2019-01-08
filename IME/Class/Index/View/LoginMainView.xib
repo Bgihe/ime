@@ -140,13 +140,13 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="267"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tah-8K-y54">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sqZ-XC-RJR">
-                            <rect key="frame" x="0.0" y="85" width="375" height="157"/>
+                            <rect key="frame" x="0.0" y="151.5" width="375" height="90.5"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ime全球最好約的APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Dd-9lF">
                             <rect key="frame" x="0.0" y="247" width="375" height="20"/>
@@ -159,7 +159,7 @@
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Tah-8K-y54" firstAttribute="height" secondItem="II0-EX-qmA" secondAttribute="height" multiplier="0.3" id="UmS-zy-tzP"/>
+                        <constraint firstItem="Tah-8K-y54" firstAttribute="height" secondItem="II0-EX-qmA" secondAttribute="height" multiplier="0.55" id="UmS-zy-tzP"/>
                     </constraints>
                 </stackView>
             </subviews>

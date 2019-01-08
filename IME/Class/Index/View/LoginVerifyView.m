@@ -16,13 +16,7 @@
     {
         [self commonInit];
         dispatch_async(dispatch_get_main_queue(), ^{
-            self->_verify1Label.layer.cornerRadius = 5;
-            self->_verify2Label.layer.cornerRadius = 5;
-            self->_verify3Label.layer.cornerRadius = 5;
-            self->_verify4Label.layer.cornerRadius = 5;
-            self->_verify5Label.layer.cornerRadius = 5;
-            self->_verify6Label.layer.cornerRadius = 5;
-            
+            self->_verifyTextField.layer.cornerRadius = 5;
             self->_nextBtn.layer.cornerRadius = 5;
         });
         
@@ -35,11 +29,13 @@
     [self addSubview:self.view];
     self.view.frame=self.bounds;
 }
-
+- (void) refreshPhoneLabel:(NSString *)phone{
+    _phoneLabel.text = [[NSString alloc] initWithFormat:@"+886 %@",phone];
+}
 - (void) refreshMsgLabel :(NSUInteger) msg{
     
     if (DevelopSever) {
-        _codeMsgLabel.text = [[NSString alloc] initWithFormat:@"請在 %d 秒內輸入認證碼",(int)msg];
+        _codeMsgLabel.text = [[NSString alloc] initWithFormat:@"請在 %d 秒以內輸入認證碼",(int)msg];
     }else{
         _codeMsgLabel.text = [[NSString alloc] initWithFormat:@"此為測試環境，請在 %d 秒內隨意輸入數字",(int)msg];
     }

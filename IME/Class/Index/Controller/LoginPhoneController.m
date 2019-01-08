@@ -31,11 +31,43 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)clickNextBtn:(id)sender {
+ 
     
-    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
-    paramDict[@"phone_no"] = @"886932106246";
-
-    [self postSendAuthCode:paramDict];
+    NSString *phoneNumber = _loginPhoneView.phoneTextField.text;
+    NSString *phoneRegex = [[NSString alloc] init];
+    if (phoneNumber.length == 10) {
+        phoneRegex = @"^[09]{2}[0-9]{8}$";
+        //[str substringFromIndex:n];
+        
+    }else if(phoneNumber.length == 9){
+        phoneRegex = @"^[9]{1}[0-9]{8}$";
+    }else{
+        
+    }
+ 
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+    BOOL matches = [predicate evaluateWithObject:phoneNumber];
+    if (matches) {
+        if (phoneNumber.length == 10) {
+            phoneNumber = [phoneNumber substringFromIndex:1];
+        }
+        NSLog(@"%@",phoneNumber);
+        
+        NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+        //paramDict[@"phone_no"] = @"886932106246";
+        paramDict[@"phone_no"] = [[NSString alloc] initWithFormat:@"886%@",phoneNumber];
+        [self postSendAuthCode:paramDict :phoneNumber];
+    }else{
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"訊息"
+                                      message:@"請輸入正確的手機號碼"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+   
+    
+    
     
 
     
@@ -72,7 +104,7 @@
     
     return isExistenceNetwork;
 }
-- (void) postSendAuthCode : (NSMutableDictionary*) paramDict{
+- (void) postSendAuthCode : (NSMutableDictionary*) paramDict :(NSString*) phone{
     
     if (![self isExistenceNetwork])
     {
@@ -90,6 +122,7 @@
             if ([[[responseObject objectForKey:@"success"] stringValue]isEqualToString:@"1"]) {
                 LoginVerifyController * loginVerifyController = [[LoginVerifyController alloc] init];
                 loginVerifyController.countdownTime = [[[responseObject objectForKey:@"data"] objectForKey:@"valid_seconds"] integerValue];
+                loginVerifyController.phoneNo = phone;
                 [self presentViewController:loginVerifyController animated:YES completion:NULL];
             }else{
                 NSLog(@"Success Fail!!");

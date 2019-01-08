@@ -14,12 +14,13 @@
 
 @implementation ViewController
 
+- (void) viewDidAppear:(BOOL)animated{
+    LoginMainController * loginMainController = [[LoginMainController alloc] init];
+    [self presentViewController:loginMainController animated:NO completion:NULL];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    LoginMainController * loginMainController = [[LoginMainController alloc] init];
-    [self presentViewController:loginMainController animated:NO completion:NULL];
-    
 }
 - (IBAction)clickTestBtn:(id)sender {
     
@@ -31,8 +32,4 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-
-    
-}
 @end

@@ -38,6 +38,12 @@
 		180ADB5621BA1DE6002D85DE /* CameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180ADB5521BA1DE6002D85DE /* CameraController.m */; };
 		180DC49321E32E4500022C65 /* NetHttpsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49221E32E4500022C65 /* NetHttpsManager.m */; };
 		180DC49621E33DE500022C65 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49521E33DE500022C65 /* LoginModel.m */; };
+		180DC49921E468DA00022C65 /* PermissionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49821E468DA00022C65 /* PermissionsModel.m */; };
+		180DC49C21E46FAF00022C65 /* SignupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49B21E46FAF00022C65 /* SignupController.m */; };
+		180DC49F21E46FD100022C65 /* SignupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC49E21E46FD100022C65 /* SignupView.m */; };
+		180DC4A121E46FDF00022C65 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180DC4A021E46FDF00022C65 /* SignupView.xib */; };
+		180DC4A421E472D200022C65 /* ConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DC4A321E472D200022C65 /* ConfigModel.m */; };
+		180DC4A621E47F8F00022C65 /* IMG_6402.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 180DC4A521E47F8E00022C65 /* IMG_6402.PNG */; };
 		181B156821CA09B900449B5D /* MyIncomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156721CA09B900449B5D /* MyIncomeView.m */; };
 		181B156A21CA09C800449B5D /* MyIncomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181B156921CA09C800449B5D /* MyIncomeView.xib */; };
 		181B156E21CA0B6A00449B5D /* IncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181B156C21CA0B6A00449B5D /* IncomeCell.m */; };
@@ -230,6 +236,16 @@
 		180DC49221E32E4500022C65 /* NetHttpsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetHttpsManager.m; sourceTree = "<group>"; };
 		180DC49421E33DE500022C65 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		180DC49521E33DE500022C65 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		180DC49721E468DA00022C65 /* PermissionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermissionsModel.h; sourceTree = "<group>"; };
+		180DC49821E468DA00022C65 /* PermissionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionsModel.m; sourceTree = "<group>"; };
+		180DC49A21E46FAF00022C65 /* SignupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupController.h; sourceTree = "<group>"; };
+		180DC49B21E46FAF00022C65 /* SignupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupController.m; sourceTree = "<group>"; };
+		180DC49D21E46FD100022C65 /* SignupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupView.h; sourceTree = "<group>"; };
+		180DC49E21E46FD100022C65 /* SignupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupView.m; sourceTree = "<group>"; };
+		180DC4A021E46FDF00022C65 /* SignupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
+		180DC4A221E472D200022C65 /* ConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigModel.h; sourceTree = "<group>"; };
+		180DC4A321E472D200022C65 /* ConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigModel.m; sourceTree = "<group>"; };
+		180DC4A521E47F8E00022C65 /* IMG_6402.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6402.PNG; sourceTree = "<group>"; };
 		181B156621CA09B900449B5D /* MyIncomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyIncomeView.h; sourceTree = "<group>"; };
 		181B156721CA09B900449B5D /* MyIncomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyIncomeView.m; sourceTree = "<group>"; };
 		181B156921CA09C800449B5D /* MyIncomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIncomeView.xib; sourceTree = "<group>"; };
@@ -617,6 +633,7 @@
 				18282EA021DDD29D0091A77D /* IMG_6310.PNG */,
 				18282E9C21DDD29C0091A77D /* IMG_6313.PNG */,
 				18282E9D21DDD29C0091A77D /* IMG_6314.PNG */,
+				180DC4A521E47F8E00022C65 /* IMG_6402.PNG */,
 			);
 			path = testImg;
 			sourceTree = "<group>";
@@ -848,6 +865,8 @@
 				1857E9FC21B917BF007ACC63 /* LoginAccountController.m */,
 				1857E9FE21B917D9007ACC63 /* LoginVerifyController.h */,
 				1857E9FF21B917D9007ACC63 /* LoginVerifyController.m */,
+				180DC49A21E46FAF00022C65 /* SignupController.h */,
+				180DC49B21E46FAF00022C65 /* SignupController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -855,18 +874,21 @@
 		18CA4A6721B8D0CB0019650C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18CA4A8721B8D4DC0019650C /* LoginAccountView.h */,
-				18CA4A8821B8D4DC0019650C /* LoginAccountView.m */,
-				18CA4A8E21B8D5370019650C /* LoginAccountView.xib */,
 				18CA4A8121B8D47D0019650C /* LoginMainView.h */,
 				18CA4A8221B8D47D0019650C /* LoginMainView.m */,
 				18CA4A8A21B8D5160019650C /* LoginMainView.xib */,
 				18CA4A8421B8D4A80019650C /* LoginPhoneView.h */,
 				18CA4A8521B8D4A80019650C /* LoginPhoneView.m */,
 				18CA4A8C21B8D5240019650C /* LoginPhoneView.xib */,
+				18CA4A8721B8D4DC0019650C /* LoginAccountView.h */,
+				18CA4A8821B8D4DC0019650C /* LoginAccountView.m */,
+				18CA4A8E21B8D5370019650C /* LoginAccountView.xib */,
 				1857E99C21B8F841007ACC63 /* LoginVerifyView.h */,
 				1857E99D21B8F841007ACC63 /* LoginVerifyView.m */,
 				1857E99F21B8F84B007ACC63 /* LoginVerifyView.xib */,
+				180DC49D21E46FD100022C65 /* SignupView.h */,
+				180DC49E21E46FD100022C65 /* SignupView.m */,
+				180DC4A021E46FDF00022C65 /* SignupView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -878,6 +900,8 @@
 				180DC49221E32E4500022C65 /* NetHttpsManager.m */,
 				180DC49421E33DE500022C65 /* LoginModel.h */,
 				180DC49521E33DE500022C65 /* LoginModel.m */,
+				180DC49721E468DA00022C65 /* PermissionsModel.h */,
+				180DC49821E468DA00022C65 /* PermissionsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -914,6 +938,8 @@
 			children = (
 				18CA499A21B8B67D0019650C /* AppDelegate.h */,
 				18CA499B21B8B67D0019650C /* AppDelegate.m */,
+				180DC4A221E472D200022C65 /* ConfigModel.h */,
+				180DC4A321E472D200022C65 /* ConfigModel.m */,
 			);
 			path = OtherApp;
 			sourceTree = "<group>";
@@ -1026,6 +1052,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */,
+				180DC4A621E47F8F00022C65 /* IMG_6402.PNG in Resources */,
 				181B159D21CA374100449B5D /* IncomeRankView.xib in Resources */,
 				041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */,
 				18282EA821DDD29E0091A77D /* IMG_6310.PNG in Resources */,
@@ -1057,6 +1084,7 @@
 				18093E2121C8E91B00F6A5DA /* ReplyPriceView.xib in Resources */,
 				18CA4A8D21B8D5240019650C /* LoginPhoneView.xib in Resources */,
 				1867959021CC8CFC00F3BA84 /* DepositLogCell.xib in Resources */,
+				180DC4A121E46FDF00022C65 /* SignupView.xib in Resources */,
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
 				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
 				181B15BF21CB2F9100449B5D /* DiamondListView.xib in Resources */,
@@ -1227,6 +1255,7 @@
 				18282E7B21D4CBF10091A77D /* MessageListController.m in Sources */,
 				18CA4A8621B8D4A80019650C /* LoginPhoneView.m in Sources */,
 				182155B421C39027003DE6A4 /* SwitchCell.m in Sources */,
+				180DC49921E468DA00022C65 /* PermissionsModel.m in Sources */,
 				18CA499F21B8B67D0019650C /* ViewController.m in Sources */,
 				181B15A121CA3BA300449B5D /* IncomeController.m in Sources */,
 				182155A921C38581003DE6A4 /* MemberView.m in Sources */,
@@ -1248,6 +1277,7 @@
 				1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */,
 				1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */,
 				18282E7621D4C6350091A77D /* MessageListView.m in Sources */,
+				180DC49F21E46FD100022C65 /* SignupView.m in Sources */,
 				182155A621C3856C003DE6A4 /* MemberController.m in Sources */,
 				1867959621CCB70C00F3BA84 /* DepositDetailController.m in Sources */,
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
@@ -1293,6 +1323,7 @@
 				183520FA21C0B8330052F255 /* PostListController.m in Sources */,
 				181B15C721CB4CD200449B5D /* DepositView.m in Sources */,
 				1867959321CC930E00F3BA84 /* DepositController.m in Sources */,
+				180DC49C21E46FAF00022C65 /* SignupController.m in Sources */,
 				0406679F21C01D97003FB675 /* PostController.m in Sources */,
 				18282E9421DC4C540091A77D /* MediaPlayerController.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
@@ -1302,6 +1333,7 @@
 				18994D2A21CDFEF500811893 /* DepositLogController.m in Sources */,
 				181B159A21CA27B500449B5D /* IncomeRankController.m in Sources */,
 				1837AE3121BA75DE00554879 /* MemberBuyController.m in Sources */,
+				180DC4A421E472D200022C65 /* ConfigModel.m in Sources */,
 				181B156E21CA0B6A00449B5D /* IncomeCell.m in Sources */,
 				180ADB2B21BA0722002D85DE /* SearchAnchorController.m in Sources */,
 			);

@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "LoginVerifyView.h"
 #import "MainController.h"
-NS_ASSUME_NONNULL_BEGIN
+#import "SignupController.h"
 
 @interface LoginVerifyController : UIViewController<LoginVerifyViewDelegate>{
     LoginVerifyView * _loginVerifyView;
     NSTimer * _countdownTimer;
+    BOOL _isViewLive;
 }
 @property NSUInteger countdownTime;
-
+@property (strong, nonatomic) NSString * phoneNo;
 @end
-
-NS_ASSUME_NONNULL_END

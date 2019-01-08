@@ -9,12 +9,26 @@
 #import "LoginVerifyController.h"
 #import "AFNetworking.h"
 #import "LoginModel.h"
+#import "PermissionsModel.h"
 #import "MJExtension.h"
 @interface LoginVerifyController ()
 
 @end
 
 @implementation LoginVerifyController
+
+- (void)viewWillAppear:(BOOL)animated{
+    _countdownTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(authCodeTimeGo) userInfo:nil repeats:YES];
+    [_loginVerifyView refreshPhoneLabel:_phoneNo];
+    NSLog(@"我又進來了");
+    _isViewLive = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    NSLog(@"我又出去了");
+    _isViewLive = NO;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +42,7 @@
     [_loginVerifyView.nextBtn addTarget:self action:@selector(clickNextBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    _countdownTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(authCodeTimeGo) userInfo:nil repeats:YES];
-}
+
 -(void)authCodeTimeGo{
     NSLog(@"ping");
     [_loginVerifyView refreshMsgLabel:_countdownTime];
@@ -38,15 +50,17 @@
         NSLog(@"Out");
         [_countdownTimer invalidate];
         _countdownTimer = nil;
-        UIAlertController * alert=   [UIAlertController
-                                      alertControllerWithTitle:@"提示"
-                                      message:@"已超過認證時，請重新認證"
-                                      preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }]];
+        if (_isViewLive) {
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"訊息"
+                                          message:@"已超過輸入認證碼的期限，請重新認證"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
         
-        [self presentViewController:alert animated:YES completion:nil];
     }
     _countdownTime = _countdownTime - 1;
 }
@@ -57,16 +71,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)clickNextBtn:(id)sender {
-    [_countdownTimer invalidate];
-    _countdownTimer = nil;
     
     
-    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
-    paramDict[@"phone_no"] = @"886932106246";
-    paramDict[@"code"] = @"123456";
+    if (_loginVerifyView.verifyTextField.text.length >= 6) {
+        NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+        paramDict[@"phone_no"] = [[NSString alloc] initWithFormat:@"886%@",_phoneNo];
+        paramDict[@"code"] = _loginVerifyView.verifyTextField.text;
+        [self postPhoneLogin:paramDict];
+ 
+    }else{
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"訊息"
+                                      message:@"認證碼格式錯誤"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
     
-    //KPostNotification(KNotificationLoginStateChange, @YES);
-    [self postPhoneLogin:paramDict];
+    
     
 //    MainController * mainController = [[MainController alloc] init];
 //    [self presentViewController:mainController animated:YES completion:NULL];
@@ -83,35 +105,62 @@
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DLog(@"Http Success!!");
-            NSLog(@"%@",responseObject);
-            NSLog(@"%@",[[responseObject objectForKey:@"data"] objectForKey:@"valid_seconds"]);
-            if ([[[responseObject objectForKey:@"success"] stringValue]isEqualToString:@"1"]) {
-                KPostNotification(KNotificationLoginStateChange, @YES);
-            }else{
-              
-            }
-            
-            
-            
-            LoginModel * model = [LoginModel mj_objectWithKeyValues:[responseObject objectForKey:@"data"]];
-            
-            NSLog(@"%@",model.phone_no);
-            
-            /*
-            for (NSDictionary * bankerDic in responseObject)
-            {
-                NSLog(@"%@",bankerDic);
-                LoginModel * model = [LoginModel mj_objectWithKeyValues:bankerDic];
-                //model.isSelect = NO;
+            DLog(@"%@",responseObject);
+            NSLog(@"%@",[[responseObject objectForKey:@"data"] objectForKey:@"new"]);
+            if ([responseObject objectForKey:@"success"]) {
+                [self->_countdownTimer invalidate];
+                self->_countdownTimer = nil;
                 
-            }*/
-            
-            
-//            LoginModel * loginModel = [LoginModel instance];
-//            loginModel.success = [[NSString alloc] init];
-//            loginModel.success = [responseObject objectForKey:@"success"];
-//            loginModel.msg = [responseObject objectForKey:@"msg"];
-            
+                //---- member
+                LoginModel * loginModel = [LoginModel instance];
+                NSDictionary *loginDict = [responseObject objectForKey:@"data"];
+                for(NSString *key in [loginDict allKeys]) {
+                    NSString *value = [loginDict objectForKey:key];
+                    if([value isKindOfClass:[NSNumber class]]){
+                        value = [NSString stringWithFormat:@"%@",value];
+                        DLog(@"Value:%@",value);
+                    }else if([value isKindOfClass:[NSNull class]])
+                        value = @"";
+                    @try {
+                        [loginModel setValue:value forKey:key];
+                    }
+                    @catch (NSException *exception) {
+                        DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                    }
+                }
+                
+                
+                //---- Permissions
+                PermissionsModel * permissionsModel = [PermissionsModel instance];
+                NSDictionary *permissionsDict = [[responseObject objectForKey:@"data"] objectForKey:@"permissions"];
+                
+                for(NSString *key in [permissionsDict allKeys]) {
+                    NSString *value = [permissionsDict objectForKey:key];
+                    if([value isKindOfClass:[NSNumber class]]){
+                        value = [NSString stringWithFormat:@"%@",value];
+                        DLog(@"Value%@",value);
+                    }else if([value isKindOfClass:[NSNull class]])
+                        value = @"";
+                    @try {
+                        [permissionsModel setValue:value forKey:key];
+                    }
+                    @catch (NSException *exception) {
+                        DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                    }
+                }
+                
+                if ([[responseObject objectForKey:@"data"] objectForKey:@"new"]) { 
+                    SignupController * signupController = [[SignupController alloc] init];
+                    [self presentViewController:signupController animated:YES completion:NULL];
+                    
+                }else {
+                    KPostNotification(KNotificationLoginStateChange, @YES);
+                }
+            }else{
+        
+            }
+
+
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DLog(@"Http Fail!!");
         }];

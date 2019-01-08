@@ -10,11 +10,12 @@
  
 @interface LoginModel : NSObject
 
-@property (nonatomic, copy) NSString              * account;                 //
-@property (nonatomic, copy) NSString              * no;                     //
-@property (nonatomic, copy) NSString              * phone_no;           //
-
-
+@property (nonatomic, copy) NSString                *token;                //認證copy
+@property (nonatomic, assign) NSInteger             no;                    //編號
+@property (nonatomic, copy) NSString                * account;             //帳號
+@property (nonatomic, copy) NSString                * phone_no;            //電話
+@property (nonatomic, assign) NSInteger             role;                  //身份 1會員 2主播 3ㄍ經濟
+ 
 
 
 + (LoginModel *) instance;

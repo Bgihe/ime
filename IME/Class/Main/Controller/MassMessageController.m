@@ -9,11 +9,17 @@
 #import "MassMessageController.h"
 #import "PostListController.h"
 #import "DepositController.h"
+#import "LoginModel.h"
 @interface MassMessageController ()
 
 @end
 
 @implementation MassMessageController
+- (void)viewDidAppear:(BOOL)animated{
+
+}
+
+
 //改狀態bar 顏色
 - (void) setStatuBar :(UIColor *)color {
     UIView * statusBarView =[[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"]  valueForKey:@"statusBar"];
@@ -22,10 +28,14 @@
     }
 }
 -(IBAction)clickDaimondBtn:(id)sender{
+    LoginModel * model = [LoginModel instance];
+    NSLog(@"test:%@",model.phone_no);
+    NSLog(@"test:%ld",(long)model.no);
+    /* 暫時測試註解
     DepositController * depositController = [[DepositController alloc] init];
     self.navigationController.navigationBarHidden=NO;
     self.tabBarController.tabBar.hidden = YES;
-    [self.navigationController pushViewController: depositController animated:YES];
+    [self.navigationController pushViewController: depositController animated:YES];*/
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

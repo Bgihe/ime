@@ -22,15 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (nonatomic, weak) id<LoginVerifyViewDelegate> delegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *verify1Label;
-@property (weak, nonatomic) IBOutlet UITextField *verify2Label;
-@property (weak, nonatomic) IBOutlet UITextField *verify3Label;
-@property (weak, nonatomic) IBOutlet UITextField *verify4Label;
-@property (weak, nonatomic) IBOutlet UITextField *verify5Label;
-@property (weak, nonatomic) IBOutlet UITextField *verify6Label;
+@property (weak, nonatomic) IBOutlet UITextField *verifyTextField;
+
 @property (weak, nonatomic) IBOutlet UILabel *codeMsgLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
 - (void) refreshMsgLabel :(NSUInteger) msg;
+- (void) refreshPhoneLabel:(NSString *)phone;
 @end
 
 NS_ASSUME_NONNULL_END

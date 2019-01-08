@@ -13,6 +13,8 @@
 #import "SearchAnchorController.h"
 #import "MemberController.h"
 
+#import "AFNetworking.h"
+#import "ConfigModel.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +24,43 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:[URL_main stringByAppendingString:URL_config] parameters:paramDict progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        DLog(@"URL_config Success");
+        if ([[[responseObject objectForKey:@"success"] stringValue]isEqualToString:@"1"]) {
+            
+            //---- member
+            ConfigModel * configModel = [ConfigModel instance];
+            NSDictionary *loginDict = [responseObject objectForKey:@"data"];
+            for(NSString *key in [loginDict allKeys]) {
+                NSString *value = [loginDict objectForKey:key];
+                if([value isKindOfClass:[NSNumber class]]){
+                    value = [NSString stringWithFormat:@"%@",value];
+                    DLog(@"Value:%@",value);
+                }else if([value isKindOfClass:[NSNull class]])
+                    value = @"";
+                @try {
+                    [configModel setValue:value forKey:key];
+                }
+                @catch (NSException *exception) {
+                    DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                }
+            }
+ 
+        }else{
+            DLog(@"URL_config Fail");
+        }
+ 
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DLog(@"Http Fail!!");
+    }];
+    
+    
     [self initService];
     return YES;
 }
