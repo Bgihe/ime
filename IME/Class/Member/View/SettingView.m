@@ -70,7 +70,7 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,tableView.bounds.size.width, 30)];
     if (section) {
         //headerView.layer.cornerRadius = 8;
-        [headerView setBackgroundColor:[UIColor grayColor]];
+        [headerView setBackgroundColor:[UIColor colorWithRed:(212/255.0) green:(231/255.0) blue:(234/255.0) alpha:0]];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30*0.6+15, 5, tableView.bounds.size.width - 10, 18)] ;
         NSString *header = [[NSString alloc] init];
   
@@ -98,7 +98,7 @@
         }
         label.text = header;
         //label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1];
-        label.backgroundColor = [UIColor colorWithRed:(22/255.0) green:(73/255.0) blue:(77/255.0) alpha:0];
+        label.backgroundColor = [UIColor colorWithRed:(212/255.0) green:(231/255.0) blue:(234/255.0) alpha:0];
         [headerView addSubview:label];
     }
 
@@ -137,6 +137,8 @@
                 }
             }
         }
+        
+        [cell.centerBtn addTarget:self action:@selector(clickLogoutBtn:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }else{
         static NSString *CellIdentifier = @"Cell";
@@ -164,6 +166,12 @@
         return cell;
     }
     
+}
+- (IBAction)clickLogoutBtn:(UIButton *)sender {
+    [_delegate memberLogout];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+   
 }
 
 @end

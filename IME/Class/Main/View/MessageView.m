@@ -190,7 +190,6 @@
     /*
     [UIView animateWithDuration:0.01 animations:^{
         self->_sendView.frame = rect;
-
     }];*/
     
 }

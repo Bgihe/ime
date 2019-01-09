@@ -104,7 +104,11 @@
             DLog(@"Http Success!!");
             DLog(@"%@",responseObject);
             if ([responseObject objectForKey:@"success"]) {
+                
+                [self.view removeFromSuperview];;
                 KPostNotification(KNotificationLoginStateChange, @YES);
+                
+                
             }else if(![responseObject objectForKey:@"success"]){
                 UIAlertController * alert=   [UIAlertController
                                               alertControllerWithTitle:@"訊息"

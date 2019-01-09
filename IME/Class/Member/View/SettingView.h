@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class SettingView;
 
 @protocol SettingViewDelegate
-
+- (void) memberLogout;
 @end
 @interface SettingView : UIView
 

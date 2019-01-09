@@ -12,9 +12,12 @@
 #import "CameraController.h"
 #import "SearchAnchorController.h"
 #import "MemberController.h"
+#import "LoginMainController.h"
+
 
 #import "AFNetworking.h"
 #import "ConfigModel.h"
+#import "LoginModel.h"
 
 @interface AppDelegate ()
 
@@ -112,8 +115,13 @@
         [self setupChildViewController:massMessageController title:@"訊息" imageName:@"navi_talk" seleceImageName:@"navi_talk"];
         MessageListController * messageListController= [[MessageListController alloc] init];
         [self setupChildViewController:messageListController title:@"群發" imageName:@"navi_status" seleceImageName:@"navi_status"];
-        CameraController * cameraController= [[CameraController alloc] init];
-        [self setupChildViewController:cameraController title:@"相機" imageName:@"navi_camera" seleceImageName:@"navi_camera"];
+        
+        LoginModel * loginModel = [LoginModel instance];
+        if (loginModel.role == 2) {
+            CameraController * cameraController= [[CameraController alloc] init];
+            [self setupChildViewController:cameraController title:@"相機" imageName:@"navi_camera" seleceImageName:@"navi_camera"];
+        }
+        
         SearchAnchorController * searchAnchorController= [[SearchAnchorController alloc] init];
         [self setupChildViewController:searchAnchorController title:@"收尋" imageName:@"navi_search" seleceImageName:@"navi_search"];
         MemberController * memberController= [[MemberController alloc] init];
@@ -125,7 +133,25 @@
         self->tabBarController.viewControllers = controllerList;
         self.window.rootViewController = self->tabBarController;
     }else{
-        DLog(@"Login Fail");
+        
+        /*
+        UIViewController * viewController = [[UIViewController alloc] init];
+        UIViewController *previousRootViewController = self.window.rootViewController;
+        
+        self.window.rootViewController = viewController;
+        
+        // Nasty hack to fix https://stackoverflow.com/questions/26763020/leaking-views-when-changing-rootviewcontroller-inside-transitionwithview
+        // The presenting view controllers view doesn't get removed from the window as its currently transistioning and presenting a view controller
+        for (UIView *subview in self.window.subviews) {
+            if ([subview isKindOfClass:NSClassFromString(@"UITransitionView")]) {
+                [subview removeFromSuperview];
+            }
+        }
+        // Allow the view controller to be deallocated
+        [previousRootViewController dismissViewControllerAnimated:NO completion:^{
+            // Remove the root view in case its still showing
+            [previousRootViewController.view removeFromSuperview];
+        }];*/
     }
 }
 

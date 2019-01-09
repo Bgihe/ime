@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "UIViewController+ChildViewController.h"
-NS_ASSUME_NONNULL_BEGIN
 
+#import "AFNetworking.h"
+#import "LoginModel.h"
+#import "NetHttpsManager.h"
 @interface IMEBaseViewController : UIViewController
 
 @end
 
-NS_ASSUME_NONNULL_END

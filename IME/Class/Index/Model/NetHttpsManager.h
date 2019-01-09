@@ -16,4 +16,6 @@ typedef void (^FailureBlock)(NSError *error);
 
 - (void)POSTWithUrl:(NSString *)urlStr paramDict:(NSMutableDictionary *)paramDict SuccessBlock:(SuccessBlock)PostSuccess FailureBlock:(FailureBlock)PostFailure;
 
+
+- (BOOL)isExistenceNetwork;
 @end

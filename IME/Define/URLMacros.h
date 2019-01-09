@@ -71,8 +71,23 @@
 #define URL_logout @"/auth/logout"
 //取得個人的完整資料
 #define URL_get_my_data @"/member/get-my-data"
+//----
+
 //取得會員的簡介檔案
 #define URL_get_profile @"/member/get-profile"
+//更新活動時間與上線
+#define URL_update_active_time @"/member/update-active-time"
+//更新活動時間與上線
+#define URL_get_setting @"/member/get-setting"
+//更新會員資料
+#define URL_member_update @"/member/update"
+//更新喜好資料
+#define URL_update_setting @"/member/update-setting"
+//上傳大頭照
+#define URL_upload_picture @"/member/upload-picture"
+//預設大頭照
+#define URL_set_default_picture @"/member/set-default-picture"
+
 
 
 

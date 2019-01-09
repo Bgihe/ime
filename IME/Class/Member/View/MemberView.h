@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 @class MemberView;
 
 @protocol MemberViewDelegate
@@ -23,7 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *followBtn;
 @property (weak, nonatomic) IBOutlet UIButton *fanBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) id<MemberViewDelegate> delegate;
+
+- (void)reloadMemberUI;
 @end
 
-NS_ASSUME_NONNULL_END
+

@@ -154,6 +154,8 @@
                     [self presentViewController:signupController animated:YES completion:NULL];
                     
                 }else {
+                    [self removeFromParentViewController];
+                    [self.view removeFromSuperview];
                     KPostNotification(KNotificationLoginStateChange, @YES);
                 }
             }else{

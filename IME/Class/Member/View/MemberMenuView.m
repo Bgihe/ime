@@ -8,6 +8,8 @@
 
 #import "MemberMenuView.h"
 #import "MemberMenuCell.h"
+
+#import "MemberModel.h"
 @implementation MemberMenuView
 
 - (id)initWithFrame:(CGRect)frame
@@ -87,15 +89,19 @@
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     cell.leftLabel.text = [_dataArr objectAtIndex:indexPath.row];
     cell.leftIconImg.image = [UIImage imageNamed:[_iconArr objectAtIndex:indexPath.row]];
-    
     cell.tintColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:231.0/255.0 blue:234.0/255.0 alpha:1];
+    
+    
+    MemberModel * memberMode = [MemberModel instance];
+    
     if (indexPath.row == 1) {
-        cell.rightLabel.text = @"今日收益 0 USD";
+        cell.rightLabel.text = @"今日收益 0 ";
         cell.rightLabel.textColor = [UIColor orangeColor];
         cell.rightIconImg.hidden = YES;
     }else if(indexPath.row == 2){
-        cell.rightLabel.text = @"17,532";
+        cell.rightLabel.text = [[NSString alloc] initWithFormat:@"%ld",(long)memberMode.credits];
+        
         cell.rightIconImg.image = [UIImage imageNamed:@"person_list_daimond"];
     }else{
         cell.rightLabel.hidden = YES;

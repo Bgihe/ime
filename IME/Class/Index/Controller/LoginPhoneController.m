@@ -65,17 +65,7 @@
         [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
     }
-   
-    
-    
-    
-
-    
-    
-    /*
-    LoginVerifyController * loginVerifyController = [[LoginVerifyController alloc] init];
-    [self presentViewController:loginVerifyController animated:YES completion:NULL];
-  */
+ 
 }
 
 
@@ -120,6 +110,10 @@
             NSLog(@"%@",responseObject);
             NSLog(@"%@",[[responseObject objectForKey:@"data"] objectForKey:@"valid_seconds"]);
             if ([[[responseObject objectForKey:@"success"] stringValue]isEqualToString:@"1"]) {
+                
+                [self->_loginPhoneView removeFromSuperview];
+                
+                
                 LoginVerifyController * loginVerifyController = [[LoginVerifyController alloc] init];
                 loginVerifyController.countdownTime = [[[responseObject objectForKey:@"data"] objectForKey:@"valid_seconds"] integerValue];
                 loginVerifyController.phoneNo = phone;

@@ -114,6 +114,10 @@
 		1837AE3421BA75ED00554879 /* MemberFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3321BA75ED00554879 /* MemberFavoriteController.m */; };
 		1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3621BA7E3800554879 /* MemberMenuCell.m */; };
 		1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE3721BA7E3800554879 /* MemberMenuCell.xib */; };
+		183ED8EC21E5C7F700E7F472 /* MemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8EB21E5C7F700E7F472 /* MemberModel.m */; };
+		183ED8EF21E5F26100E7F472 /* MemberEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8EE21E5F26100E7F472 /* MemberEdit.m */; };
+		183ED8F121E5F26E00E7F472 /* MemberEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183ED8F021E5F26E00E7F472 /* MemberEdit.xib */; };
+		183ED8F321E5F42F00E7F472 /* IMG_6563.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 183ED8F221E5F42F00E7F472 /* IMG_6563.PNG */; };
 		1851261E21BF59F00059E473 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851261D21BF59F00059E473 /* ReportView.xib */; };
 		1851268521BF9D7E0059E473 /* SpotLightMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851268421BF9D7D0059E473 /* SpotLightMainController.m */; };
 		1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857E99D21B8F841007ACC63 /* LoginVerifyView.m */; };
@@ -358,6 +362,12 @@
 		1837AE3521BA7E3800554879 /* MemberMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberMenuCell.h; sourceTree = "<group>"; };
 		1837AE3621BA7E3800554879 /* MemberMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberMenuCell.m; sourceTree = "<group>"; };
 		1837AE3721BA7E3800554879 /* MemberMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberMenuCell.xib; sourceTree = "<group>"; };
+		183ED8EA21E5C7F700E7F472 /* MemberModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberModel.h; sourceTree = "<group>"; };
+		183ED8EB21E5C7F700E7F472 /* MemberModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberModel.m; sourceTree = "<group>"; };
+		183ED8ED21E5F26100E7F472 /* MemberEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberEdit.h; sourceTree = "<group>"; };
+		183ED8EE21E5F26100E7F472 /* MemberEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberEdit.m; sourceTree = "<group>"; };
+		183ED8F021E5F26E00E7F472 /* MemberEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberEdit.xib; sourceTree = "<group>"; };
+		183ED8F221E5F42F00E7F472 /* IMG_6563.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6563.PNG; sourceTree = "<group>"; };
 		1851261D21BF59F00059E473 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
 		1851268321BF9D7D0059E473 /* SpotLightMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightMainController.h; sourceTree = "<group>"; };
 		1851268421BF9D7D0059E473 /* SpotLightMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightMainController.m; sourceTree = "<group>"; };
@@ -632,6 +642,7 @@
 				18282E9F21DDD29D0091A77D /* IMG_6309.PNG */,
 				18282EA021DDD29D0091A77D /* IMG_6310.PNG */,
 				18282E9C21DDD29C0091A77D /* IMG_6313.PNG */,
+				183ED8F221E5F42F00E7F472 /* IMG_6563.PNG */,
 				18282E9D21DDD29C0091A77D /* IMG_6314.PNG */,
 				180DC4A521E47F8E00022C65 /* IMG_6402.PNG */,
 			);
@@ -746,6 +757,9 @@
 				18994D2B21CE10F300811893 /* LogView.h */,
 				18994D2C21CE10F300811893 /* LogView.m */,
 				18994D3121CE119100811893 /* LogView.xib */,
+				183ED8ED21E5F26100E7F472 /* MemberEdit.h */,
+				183ED8EE21E5F26100E7F472 /* MemberEdit.m */,
+				183ED8F021E5F26E00E7F472 /* MemberEdit.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -755,6 +769,8 @@
 			children = (
 				1867959721CCB81E00F3BA84 /* DepositModel.h */,
 				1867959821CCB81E00F3BA84 /* DepositModel.m */,
+				183ED8EA21E5C7F700E7F472 /* MemberModel.h */,
+				183ED8EB21E5C7F700E7F472 /* MemberModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1064,6 +1080,7 @@
 				181B15C921CB4CE200449B5D /* DepositView.xib in Resources */,
 				041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */,
 				18282E7821D4C6420091A77D /* MessageListView.xib in Resources */,
+				183ED8F121E5F26E00E7F472 /* MemberEdit.xib in Resources */,
 				18282EA521DDD29E0091A77D /* IMG_6314.PNG in Resources */,
 				182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */,
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
@@ -1088,6 +1105,7 @@
 				1857EA0821B92470007ACC63 /* MainView.xib in Resources */,
 				1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */,
 				181B15BF21CB2F9100449B5D /* DiamondListView.xib in Resources */,
+				183ED8F321E5F42F00E7F472 /* IMG_6563.PNG in Resources */,
 				1821546421C1116C003DE6A4 /* FansView.xib in Resources */,
 				181B15C421CB317000449B5D /* RankCell.xib in Resources */,
 				181B156F21CA0B6A00449B5D /* IncomeCell.xib in Resources */,
@@ -1278,6 +1296,7 @@
 				1837ADF421BA587500554879 /* CAPSPageMenu.m in Sources */,
 				18282E7621D4C6350091A77D /* MessageListView.m in Sources */,
 				180DC49F21E46FD100022C65 /* SignupView.m in Sources */,
+				183ED8EC21E5C7F700E7F472 /* MemberModel.m in Sources */,
 				182155A621C3856C003DE6A4 /* MemberController.m in Sources */,
 				1867959621CCB70C00F3BA84 /* DepositDetailController.m in Sources */,
 				180ADB4121BA08B6002D85DE /* SettingView.m in Sources */,
@@ -1318,6 +1337,7 @@
 				181B159721CA26A500449B5D /* IncomeMainController.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
 				1867958A21CC8B1C00F3BA84 /* DepositCell.m in Sources */,
+				183ED8EF21E5F26100E7F472 /* MemberEdit.m in Sources */,
 				18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */,
 				181B15B421CA46D100449B5D /* DiamondMainController.m in Sources */,
 				183520FA21C0B8330052F255 /* PostListController.m in Sources */,
