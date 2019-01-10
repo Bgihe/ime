@@ -23,7 +23,7 @@
 @property (nonatomic, assign) NSInteger               block_num;    //封鎖人數
 @property (nonatomic, assign) NSInteger               credits;      //鑽石數
 @property (nonatomic, copy)   NSDictionary            *setting;     //會員喜好設定
-@property (nonatomic, copy)   NSDictionary            *pictures;    //會員上傳的圖片
+@property (nonatomic, copy)   NSMutableArray          *pictures;    //會員上傳的圖片
 
 + (MemberModel *) instance;
 @end

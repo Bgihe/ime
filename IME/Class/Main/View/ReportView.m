@@ -17,12 +17,12 @@
         [self commonInit];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            self->_unfollowBtn.layer.cornerRadius = CGRectGetHeight(self->_unfollowBtn.frame)/2;
-            self->_unfollowBtn.clipsToBounds = YES;
-            self->_unfollowBtn.layer.masksToBounds = YES;
-            self->_reportBtn.layer.cornerRadius = CGRectGetHeight(self->_reportBtn.frame)/2;
-            self->_reportBtn.clipsToBounds = YES;
-            self->_reportBtn.layer.masksToBounds = YES;
+            self->_firstBtn.layer.cornerRadius = CGRectGetHeight(self->_firstBtn.frame)/2;
+            self->_firstBtn.clipsToBounds = YES;
+            self->_firstBtn.layer.masksToBounds = YES;
+            self->_secondBtn.layer.cornerRadius = CGRectGetHeight(self->_secondBtn.frame)/2;
+            self->_secondBtn.clipsToBounds = YES;
+            self->_secondBtn.layer.masksToBounds = YES;
             self->_cancelBtn.layer.cornerRadius = CGRectGetHeight(self->_cancelBtn.frame)/2;
             self->_cancelBtn.clipsToBounds = YES;
             self->_cancelBtn.layer.masksToBounds = YES;
@@ -40,4 +40,7 @@
 -(void) removeReportView{
     [self.view removeFromSuperview];
 }
+
+
+
 @end

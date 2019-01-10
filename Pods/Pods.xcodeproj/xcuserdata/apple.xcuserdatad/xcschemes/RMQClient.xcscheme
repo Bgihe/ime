@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3427C93A898920DC02EF774BC350F96"
+               BlueprintIdentifier = "995B75A9058CFD274B030149F8CE8086"
                BlueprintName = "RMQClient"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libRMQClient.a">

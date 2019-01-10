@@ -115,9 +115,10 @@
 		1837AE3821BA7E3800554879 /* MemberMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837AE3621BA7E3800554879 /* MemberMenuCell.m */; };
 		1837AE3921BA7E3800554879 /* MemberMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1837AE3721BA7E3800554879 /* MemberMenuCell.xib */; };
 		183ED8EC21E5C7F700E7F472 /* MemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8EB21E5C7F700E7F472 /* MemberModel.m */; };
-		183ED8EF21E5F26100E7F472 /* MemberEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8EE21E5F26100E7F472 /* MemberEdit.m */; };
-		183ED8F121E5F26E00E7F472 /* MemberEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183ED8F021E5F26E00E7F472 /* MemberEdit.xib */; };
 		183ED8F321E5F42F00E7F472 /* IMG_6563.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 183ED8F221E5F42F00E7F472 /* IMG_6563.PNG */; };
+		183ED8F621E6DD2000E7F472 /* MemberEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8F521E6DD1F00E7F472 /* MemberEditController.m */; };
+		183ED8F921E6DD8300E7F472 /* MemberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED8F821E6DD8300E7F472 /* MemberEditView.m */; };
+		183ED8FB21E6DD9000E7F472 /* MemberEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183ED8FA21E6DD9000E7F472 /* MemberEditView.xib */; };
 		1851261E21BF59F00059E473 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851261D21BF59F00059E473 /* ReportView.xib */; };
 		1851268521BF9D7E0059E473 /* SpotLightMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851268421BF9D7D0059E473 /* SpotLightMainController.m */; };
 		1857E99E21B8F841007ACC63 /* LoginVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857E99D21B8F841007ACC63 /* LoginVerifyView.m */; };
@@ -146,6 +147,8 @@
 		18994D2D21CE10F300811893 /* LogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2C21CE10F300811893 /* LogView.m */; };
 		18994D3021CE110700811893 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2F21CE110700811893 /* LogController.m */; };
 		18994D3221CE119100811893 /* LogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18994D3121CE119100811893 /* LogView.xib */; };
+		18A3A5FB21E6E4C900DDF16C /* HeadShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3A5F921E6E4C900DDF16C /* HeadShotCell.m */; };
+		18A3A5FC21E6E4C900DDF16C /* HeadShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A3A5FA21E6E4C900DDF16C /* HeadShotCell.xib */; };
 		18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA499B21B8B67D0019650C /* AppDelegate.m */; };
 		18CA499F21B8B67D0019650C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA499E21B8B67D0019650C /* ViewController.m */; };
 		18CA49A221B8B67D0019650C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CA49A021B8B67D0019650C /* Main.storyboard */; };
@@ -364,10 +367,12 @@
 		1837AE3721BA7E3800554879 /* MemberMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberMenuCell.xib; sourceTree = "<group>"; };
 		183ED8EA21E5C7F700E7F472 /* MemberModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberModel.h; sourceTree = "<group>"; };
 		183ED8EB21E5C7F700E7F472 /* MemberModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberModel.m; sourceTree = "<group>"; };
-		183ED8ED21E5F26100E7F472 /* MemberEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberEdit.h; sourceTree = "<group>"; };
-		183ED8EE21E5F26100E7F472 /* MemberEdit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberEdit.m; sourceTree = "<group>"; };
-		183ED8F021E5F26E00E7F472 /* MemberEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberEdit.xib; sourceTree = "<group>"; };
 		183ED8F221E5F42F00E7F472 /* IMG_6563.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_6563.PNG; sourceTree = "<group>"; };
+		183ED8F421E6DD1F00E7F472 /* MemberEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberEditController.h; sourceTree = "<group>"; };
+		183ED8F521E6DD1F00E7F472 /* MemberEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberEditController.m; sourceTree = "<group>"; };
+		183ED8F721E6DD8300E7F472 /* MemberEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberEditView.h; sourceTree = "<group>"; };
+		183ED8F821E6DD8300E7F472 /* MemberEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberEditView.m; sourceTree = "<group>"; };
+		183ED8FA21E6DD9000E7F472 /* MemberEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberEditView.xib; sourceTree = "<group>"; };
 		1851261D21BF59F00059E473 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportView.xib; sourceTree = "<group>"; };
 		1851268321BF9D7D0059E473 /* SpotLightMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightMainController.h; sourceTree = "<group>"; };
 		1851268421BF9D7D0059E473 /* SpotLightMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightMainController.m; sourceTree = "<group>"; };
@@ -415,6 +420,9 @@
 		18994D2E21CE110700811893 /* LogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		18994D2F21CE110700811893 /* LogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
 		18994D3121CE119100811893 /* LogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogView.xib; sourceTree = "<group>"; };
+		18A3A5F821E6E4C900DDF16C /* HeadShotCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadShotCell.h; sourceTree = "<group>"; };
+		18A3A5F921E6E4C900DDF16C /* HeadShotCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadShotCell.m; sourceTree = "<group>"; };
+		18A3A5FA21E6E4C900DDF16C /* HeadShotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadShotCell.xib; sourceTree = "<group>"; };
 		18CA499721B8B67D0019650C /* IME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA499A21B8B67D0019650C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CA499B21B8B67D0019650C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -664,6 +672,8 @@
 			children = (
 				182155A421C3856C003DE6A4 /* MemberController.h */,
 				182155A521C3856C003DE6A4 /* MemberController.m */,
+				183ED8F421E6DD1F00E7F472 /* MemberEditController.h */,
+				183ED8F521E6DD1F00E7F472 /* MemberEditController.m */,
 				1837AE2921BA75BD00554879 /* MemberMenuController.h */,
 				1837AE2A21BA75BD00554879 /* MemberMenuController.m */,
 				1837AE2C21BA75CE00554879 /* MemberPostController.h */,
@@ -709,6 +719,9 @@
 				182155A721C38581003DE6A4 /* MemberView.h */,
 				182155A821C38581003DE6A4 /* MemberView.m */,
 				182155AA21C38590003DE6A4 /* MemberView.xib */,
+				183ED8F721E6DD8300E7F472 /* MemberEditView.h */,
+				183ED8F821E6DD8300E7F472 /* MemberEditView.m */,
+				183ED8FA21E6DD9000E7F472 /* MemberEditView.xib */,
 				1837AE1721BA717F00554879 /* MemberMenuView.h */,
 				1837AE1821BA717F00554879 /* MemberMenuView.m */,
 				1837AE2321BA722700554879 /* MemberMenuView.xib */,
@@ -757,9 +770,6 @@
 				18994D2B21CE10F300811893 /* LogView.h */,
 				18994D2C21CE10F300811893 /* LogView.m */,
 				18994D3121CE119100811893 /* LogView.xib */,
-				183ED8ED21E5F26100E7F472 /* MemberEdit.h */,
-				183ED8EE21E5F26100E7F472 /* MemberEdit.m */,
-				183ED8F021E5F26E00E7F472 /* MemberEdit.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -808,6 +818,9 @@
 				1867958C21CC8CFC00F3BA84 /* DepositLogCell.h */,
 				1867958D21CC8CFC00F3BA84 /* DepositLogCell.m */,
 				1867958E21CC8CFC00F3BA84 /* DepositLogCell.xib */,
+				18A3A5F821E6E4C900DDF16C /* HeadShotCell.h */,
+				18A3A5F921E6E4C900DDF16C /* HeadShotCell.m */,
+				18A3A5FA21E6E4C900DDF16C /* HeadShotCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1070,6 +1083,7 @@
 				18CA4A8F21B8D5370019650C /* LoginAccountView.xib in Resources */,
 				180DC4A621E47F8F00022C65 /* IMG_6402.PNG in Resources */,
 				181B159D21CA374100449B5D /* IncomeRankView.xib in Resources */,
+				18A3A5FC21E6E4C900DDF16C /* HeadShotCell.xib in Resources */,
 				041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */,
 				18282EA821DDD29E0091A77D /* IMG_6310.PNG in Resources */,
 				041DAF2721BD69330091424A /* PhotoCollectionViewCell.xib in Resources */,
@@ -1080,7 +1094,6 @@
 				181B15C921CB4CE200449B5D /* DepositView.xib in Resources */,
 				041DAEE521BC227A0091424A /* MemberPostCell.xib in Resources */,
 				18282E7821D4C6420091A77D /* MessageListView.xib in Resources */,
-				183ED8F121E5F26E00E7F472 /* MemberEdit.xib in Resources */,
 				18282EA521DDD29E0091A77D /* IMG_6314.PNG in Resources */,
 				182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */,
 				18CA49A721B8B67E0019650C /* LaunchScreen.storyboard in Resources */,
@@ -1095,6 +1108,7 @@
 				180ADB4321BA08C6002D85DE /* SettingView.xib in Resources */,
 				1837AE1E21BA71FF00554879 /* MemberFavoriteView.xib in Resources */,
 				0406679C21C00943003FB675 /* MassMessageCell.xib in Resources */,
+				183ED8FB21E6DD9000E7F472 /* MemberEditView.xib in Resources */,
 				18994D3221CE119100811893 /* LogView.xib in Resources */,
 				18CA49A421B8B67E0019650C /* Assets.xcassets in Resources */,
 				040667A421C01DBC003FB675 /* PostView.xib in Resources */,
@@ -1268,6 +1282,7 @@
 				040667A221C01DAA003FB675 /* PostView.m in Sources */,
 				18093E1F21C8E90C00F6A5DA /* ReplyPriceView.m in Sources */,
 				181D791C21BE28EA00FE7E2C /* SearchAnchorCell.m in Sources */,
+				183ED8F621E6DD2000E7F472 /* MemberEditController.m in Sources */,
 				183520EF21C0A7F90052F255 /* UIViewController+ChildViewController.m in Sources */,
 				1867959921CCB81E00F3BA84 /* DepositModel.m in Sources */,
 				18282E7B21D4CBF10091A77D /* MessageListController.m in Sources */,
@@ -1315,7 +1330,9 @@
 				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,
 				181B15C321CB317000449B5D /* RankCell.m in Sources */,
+				183ED8F921E6DD8300E7F472 /* MemberEditView.m in Sources */,
 				1821546821C11212003DE6A4 /* FansCell.m in Sources */,
+				18A3A5FB21E6E4C900DDF16C /* HeadShotCell.m in Sources */,
 				18CA4A8921B8D4DC0019650C /* LoginAccountView.m in Sources */,
 				180ADB3B21BA0859002D85DE /* MessageView.m in Sources */,
 				1837AE2B21BA75BD00554879 /* MemberMenuController.m in Sources */,
@@ -1337,7 +1354,6 @@
 				181B159721CA26A500449B5D /* IncomeMainController.m in Sources */,
 				1837AE2E21BA75CE00554879 /* MemberPostController.m in Sources */,
 				1867958A21CC8B1C00F3BA84 /* DepositCell.m in Sources */,
-				183ED8EF21E5F26100E7F472 /* MemberEdit.m in Sources */,
 				18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */,
 				181B15B421CA46D100449B5D /* DiamondMainController.m in Sources */,
 				183520FA21C0B8330052F255 /* PostListController.m in Sources */,

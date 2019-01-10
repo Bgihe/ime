@@ -14,8 +14,8 @@
             <connections>
                 <outlet property="btnStack" destination="j7x-0h-Jsm" id="HEt-MM-iQb"/>
                 <outlet property="cancelBtn" destination="MSz-ED-ZrO" id="ig1-La-nL9"/>
-                <outlet property="reportBtn" destination="ABZ-mj-YWP" id="rIn-yl-WDI"/>
-                <outlet property="unfollowBtn" destination="lU4-a3-YRW" id="aOg-Yn-YFm"/>
+                <outlet property="firstBtn" destination="lU4-a3-YRW" id="bNA-b9-49k"/>
+                <outlet property="secondBtn" destination="ABZ-mj-YWP" id="20K-WH-n7Z"/>
                 <outlet property="view" destination="iN0-l3-epB" id="oCb-ll-wi6"/>
             </connections>
         </placeholder>
@@ -51,7 +51,6 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.082678918389999995" green="0.082678918389999995" blue="0.082678918389999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="j7x-0h-Jsm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="8xS-fG-WIz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j7x-0h-Jsm" secondAttribute="bottom" constant="5" id="GqD-hG-tfE"/>

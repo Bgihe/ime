@@ -14,6 +14,7 @@
 #import "IncomeMainController.h"
 #import "DepositController.h"
 #import "LogController.h"
+#import "MemberEditController.h"
 
 #import "PermissionsModel.h"
 #import "MemberModel.h"
@@ -70,7 +71,6 @@
     {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         [manager POST:[URL_main stringByAppendingString:URL_get_my_data] parameters:paramDict progress:^(NSProgress * _Nonnull uploadProgress) {
-            
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             DLog(@"Http Success!!");
             NSLog(@"%@",responseObject);
@@ -97,6 +97,9 @@
                         DLog(@"欄位%@不再model裡面",key);
                     }
                 }
+                memberModel = [MemberModel instance];
+                NSLog(@"%@",memberModel.pictures);
+                
  
                 //---- Permissions
                 PermissionsModel * permissionsModel = [PermissionsModel instance];
@@ -146,6 +149,10 @@
     LoginModel * loginModel = [LoginModel instance];
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
     paramDict[@"token"] = loginModel.token;
+    paramDict[@"setting"] = @"0";
+    paramDict[@"pictures"] = @"1";
+    
+    
     [self postGetMyData:paramDict];
 
     
@@ -154,11 +161,20 @@
     _memberView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [_memberView.followBtn addTarget:self action:@selector(clickFollowBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_memberView.fanBtn addTarget:self action:@selector(clickFollowBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_memberView.editBtn addTarget:self action:@selector(clickEditBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_memberView.view];
     
     [_memberView reloadMemberUI];
     [self performSelector:@selector(addPageView) withObject:nil afterDelay:0.0];
 }
+- (IBAction)clickEditBtn:(UIButton *)sender {
+    MemberEditController * memberEditController = [[MemberEditController alloc] init];
+    self.navigationController.navigationBarHidden=NO;
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController: memberEditController animated:YES];
+}
+
+
 - (IBAction)clickFollowBtn:(UIButton *)sender {
     FansController * fansController = [[FansController alloc] init];
     fansController.btnTag = sender.tag;

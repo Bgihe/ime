@@ -62,8 +62,8 @@
     _reportView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_reportView.view];
 
-    [_reportView.unfollowBtn addTarget:self action:@selector(clickUnfollowBtnBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [_reportView.reportBtn addTarget:self action:@selector(clickReportBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_reportView.firstBtn addTarget:self action:@selector(clickUnfollowBtnBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_reportView.secondBtn addTarget:self action:@selector(clickReportBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_reportView.cancelBtn addTarget:self action:@selector(clickCancelBtn:) forControlEvents:UIControlEventTouchUpInside];
     
 }

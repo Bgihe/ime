@@ -36,7 +36,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DLog(@"URL_config Success");
         if ([[[responseObject objectForKey:@"success"] stringValue]isEqualToString:@"1"]) {
-            
+            NSLog(@"%@",responseObject);
             //---- member
             ConfigModel * configModel = [ConfigModel instance];
             NSDictionary *loginDict = [responseObject objectForKey:@"data"];

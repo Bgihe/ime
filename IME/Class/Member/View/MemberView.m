@@ -48,16 +48,11 @@
         [_fanBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [_followBtn setTitle:@"追蹤 \n 1" forState:UIControlStateNormal];
         [_fanBtn setTitle:@"粉絲 \n 1" forState:UIControlStateNormal];
-        
-       
-        
     }
     return self;
 }
 
 - (void)reloadMemberUI{
-    
-    
     MemberModel * memberModel = [MemberModel instance];
   
     [_fanBtn setTitle:[[NSString alloc]initWithFormat:@"粉絲\n%ld",(long)memberModel.fans_num] forState:UIControlStateNormal];
@@ -75,9 +70,6 @@
         [_headBgImg setImage:decodedImage];
 
     }
-    
-    
-    
 }
 - (void)commonInit
 {

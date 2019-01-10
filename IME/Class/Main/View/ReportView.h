@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface ReportView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIButton *unfollowBtn;
-@property (weak, nonatomic) IBOutlet UIButton *reportBtn;
+@property (weak, nonatomic) IBOutlet UIButton *firstBtn;
+@property (weak, nonatomic) IBOutlet UIButton *secondBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (weak, nonatomic) IBOutlet UIStackView *btnStack;
 @property (nonatomic, weak) id<ReportViewDelegate> delegate;

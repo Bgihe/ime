@@ -118,7 +118,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    return CGSizeMake(kScreenWidth, kScreenHeight*0.15);
+    return CGSizeMake(KScreenWidth, KScreenHeight*0.15);
 }
 
 ///尾部高度
@@ -131,7 +131,7 @@
 {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView * header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"hederview" forIndexPath:indexPath];
-        IncomeHeader * incomeHeader = [[IncomeHeader alloc] initWithFrame:CGRectMake(0, 0, _collectionView.frame.size.width, kScreenHeight*0.15-10)];
+        IncomeHeader * incomeHeader = [[IncomeHeader alloc] initWithFrame:CGRectMake(0, 0, _collectionView.frame.size.width, KScreenHeight*0.15-10)];
         [header addSubview:incomeHeader];
         return header;
     }else{

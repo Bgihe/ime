@@ -15,7 +15,7 @@
 @property (nonatomic, assign) BOOL          chat_with_anchor;           //是否可和主播聊天
 @property (nonatomic, assign) BOOL          chat_with_member;           //是否可和會員聊天
 @property (nonatomic, assign) BOOL          credits_setting;            //設定收的讚數
-@property (nonatomic, assign) BOOL          deposit;                    //是否可除直
+@property (nonatomic, assign) BOOL          deposit;                    //是否可儲值
 @property (nonatomic, assign) BOOL          member_edit_picture;        //是否可編輯頭像
 @property (nonatomic, assign) BOOL          member_set_default_pic;     //是否可設定預設頭像
 @property (nonatomic, assign) BOOL          post;                       //貼文
