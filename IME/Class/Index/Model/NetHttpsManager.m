@@ -126,4 +126,40 @@
     
     return isExistenceNetwork;
 }
+
+
+
+- (NSDictionary *)postSynchMehtod:(NSString*)method ctl:(NSString*)ctl param:(NSDictionary*)param
+{
+
+    __block NSDictionary* itret = nil;
+    
+    [self postMethod:method ctl:ctl param:param successBlock:^(NSDictionary *jsonData) {
+        
+        itret = jsonData;
+
+        
+    } failBlock:^(NSError *error) {
+        
+        NSLog(@"postSynchMehtod eror:%@",error);
+
+    }];
+  
+    return  itret;
+}
+- (void)postMethod:(NSString*)method ctl:(NSString*)ctl param:(NSDictionary*)param successBlock:(SuccessBlock)successBlock failBlock:(FailureBlock)failBlock
+{
+    NSMutableDictionary* postdir = NSMutableDictionary.new;
+    if(param)
+    {
+        [postdir setDictionary:param];
+    }
+    
+    [postdir setObject:method forKey:@"act"];
+    [postdir setObject:ctl forKey:@"ctl"];
+    
+    [self POSTWithParameters:postdir SuccessBlock:successBlock FailureBlock:failBlock];
+}
+
+
 @end

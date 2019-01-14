@@ -30,4 +30,5 @@ pod 'YTKNetwork'
  
 pod 'YWVideoPlayer' 
 pod 'MJExtension'
+pod 'SVProgressHUD'
 end

@@ -17,13 +17,13 @@
     if(self)
     {
         [self commonInit];
-        _dataArr = [[NSMutableArray alloc] init];
-        [_dataArr addObject:@""];
-        [_dataArr addObject:@""];
-        [_dataArr addObject:@""];
-        [_dataArr addObject:@""];
-        [_dataArr addObject:@""];
-        [_dataArr addObject:@""];
+//        _dataArr = [[NSMutableArray alloc] init];
+//        [_dataArr addObject:@""];
+//        [_dataArr addObject:@""];
+//        [_dataArr addObject:@""];
+//        [_dataArr addObject:@""];
+//        [_dataArr addObject:@""];
+//        [_dataArr addObject:@""];
     }
     return self;
 }
@@ -76,12 +76,54 @@
     }else{
         cell.followBtn.hidden = NO;
     }
+ 
+    
+    if (![[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"]  isKindOfClass:[NSNull class]]) {
+        if ([[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"] isKindOfClass:[NSNumber class]]) {
+            cell.idLabel.text = [[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"] stringValue];
+        }else{
+            cell.idLabel.text = [[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"];
+        }
+    }
+    
+    if (![[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"introduction"]  isKindOfClass:[NSNull class]]) {
+        cell.msgLabel.text = [[_dataArr objectAtIndex:indexPath.row]objectForKey:@"introduction"];
+    }
+    
+ 
+    if ([[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"gender"] isEqualToString:@"F"]) {
+        [cell.headImg setImage:[UIImage imageNamed:@"default_avatar2"] forState:UIControlStateNormal];
+        //default_avatar2
+    }else{
+        [cell.headImg setImage:[UIImage imageNamed:@"default_avatar_m2"] forState:UIControlStateNormal];
+        //default_avatar_m2
+    }
+    
+    if (![[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"thumbnail"] isKindOfClass:[NSNull class]]) {
+        NSArray * partitionArr =[[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"thumbnail"] componentsSeparatedByString:@","];
+        NSData *decodedImageData = [[NSData alloc]
+                                    initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        
+        //cell.headImg.image = [UIImage imageWithData:decodedImageData];
+        
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationSlide];
+        UIImage *image=[UIImage imageWithData:decodedImageData];
+        CGFloat fixelW = CGImageGetWidth(image.CGImage);
+        CGRect rect = CGRectMake(0, 0, fixelW, fixelW);//创建矩形框
+        
+        [cell.headImg setImage:[UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], rect)] forState:UIControlStateNormal];
+ 
+    }
+    
+  
     [cell.followBtn addTarget:self action:@selector(followBtClicked:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     [_delegate pushSpotLightView];
+    [_delegate addSpotLightView:<#(nonnull NSMutableArray *)#>]
+    
 }
 
 - (void)followBtClicked:(UIButton*)sender{

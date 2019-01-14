@@ -18,7 +18,9 @@
 
 #import "PermissionsModel.h"
 #import "MemberModel.h"
-@interface MemberController ()
+#import "NetHttpsModel.h"
+
+@interface MemberController ()<NetHttpsModelDelegate>
 @property (nonatomic) CAPSPageMenu *pageMenu;
 @end
 
@@ -57,94 +59,65 @@
     [self.view addSubview:_pageMenu.view];
 }
 
+- (void)httpResult: (NSDictionary*) responseObject :(NSString *) url {
+    if ([[responseObject objectForKey:@"success"] boolValue]) {
+        //---- Member
+        
+        MemberModel * memberModel = [[MemberModel alloc] init];
+        memberModel = [MemberModel instance];
+        NSDictionary *memberDict = [responseObject objectForKey:@"data"];
+        //thumbnail
+        for(NSString *key in [memberDict allKeys]) {
+            NSString *value = [memberDict objectForKey:key];
+            if([value isKindOfClass:[NSNumber class]]){
+                value = [NSString stringWithFormat:@"%@",value];
+            }else if([value isKindOfClass:[NSNull class]])
+                value = @"";
+            @try {
+                [memberModel setValue:value forKey:key];
+            }
+            @catch (NSException *exception) {
+                //DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                DLog(@"欄位%@不再model裡面",key);
+            }
+        }
+        memberModel = [MemberModel instance];
+        NSLog(@"%@",memberModel.pictures);
+        
+        //---- Permissions
+        PermissionsModel * permissionsModel = [PermissionsModel instance];
+        NSDictionary *permissionsDict = [[responseObject objectForKey:@"data"] objectForKey:@"permissions"];
+        
+        for(NSString *key in [permissionsDict allKeys]) {
+            NSString *value = [permissionsDict objectForKey:key];
+            if([value isKindOfClass:[NSNumber class]]){
+                value = [NSString stringWithFormat:@"%@",value];
+                DLog(@"Value%@",value);
+            }else if([value isKindOfClass:[NSNull class]])
+                value = @"";
+            @try {
+                [permissionsModel setValue:value forKey:key];
+            }
+            @catch (NSException *exception) {
+                DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+            }
+        }
+        
+        [_memberView reloadMemberUI];
+    }else{
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"訊息"
+                                      message:[responseObject objectForKey:@"error"]
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+    
+}
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
-}
-
-- (void) postGetMyData : (NSMutableDictionary*) paramDict{
-    NetHttpsManager * netHttpsManager = [[NetHttpsManager alloc] init];
-    if (![netHttpsManager isExistenceNetwork])
-    {
-        DLog(@"請檢查網路");
-    }
-    else
-    {
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager POST:[URL_main stringByAppendingString:URL_get_my_data] parameters:paramDict progress:^(NSProgress * _Nonnull uploadProgress) {
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            DLog(@"Http Success!!");
-            NSLog(@"%@",responseObject);
-            
-            if ([responseObject objectForKey:@"success"]) {
-               //---- Member
-                MemberModel * memberModel = [MemberModel instance];
-                NSDictionary *memberDict = [responseObject objectForKey:@"data"];
-                //thumbnail
-                for(NSString *key in [memberDict allKeys]) {
-                    NSString *value = [memberDict objectForKey:key];
-                    
-                    
-                    if([value isKindOfClass:[NSNumber class]]){
-                        value = [NSString stringWithFormat:@"%@",value];
-                    }else if([value isKindOfClass:[NSNull class]])
-                        value = @"";
-                    
-                    @try {
-                        [memberModel setValue:value forKey:key];
-                    }
-                    @catch (NSException *exception) {
-                        //DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
-                        DLog(@"欄位%@不再model裡面",key);
-                    }
-                }
-                memberModel = [MemberModel instance];
-                NSLog(@"%@",memberModel.pictures);
-                
- 
-                //---- Permissions
-                PermissionsModel * permissionsModel = [PermissionsModel instance];
-                NSDictionary *permissionsDict = [[responseObject objectForKey:@"data"] objectForKey:@"permissions"];
-                
-                for(NSString *key in [permissionsDict allKeys]) {
-                    NSString *value = [permissionsDict objectForKey:key];
-                    if([value isKindOfClass:[NSNumber class]]){
-                        value = [NSString stringWithFormat:@"%@",value];
-                        DLog(@"Value%@",value);
-                    }else if([value isKindOfClass:[NSNull class]])
-                        value = @"";
-                    @try {
-                        [permissionsModel setValue:value forKey:key];
-                    }
-                    @catch (NSException *exception) {
-                        DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
-                    }
-                }
-                
-                [_memberView reloadMemberUI];
-                /*
-                memberModel = [MemberModel instance];
-                NSLog(@"%@",memberModel.account);
-                NSLog(@"%@",memberModel.introduction);
-                
-                */
-                
-            }else{
-                UIAlertController * alert=   [UIAlertController
-                                              alertControllerWithTitle:@"訊息"
-                                              message:[responseObject objectForKey:@"error"]
-                                              preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
-                [self presentViewController:alert animated:YES completion:nil];
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            DLog(@"Http Fail!!");
-        }];
-    }
-}
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
+    
     
     LoginModel * loginModel = [LoginModel instance];
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
@@ -152,19 +125,38 @@
     paramDict[@"setting"] = @"0";
     paramDict[@"pictures"] = @"1";
     
+    //[self postGetMyData:paramDict];
     
-    [self postGetMyData:paramDict];
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_get_my_data paramDict:paramDict];
+    
+    [_memberView reloadMemberUI];
+    /*
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:@"" paramDict:nil];
+    */
+    
+}
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    
     
     _memberView = [[MemberView alloc] init];
     _memberView.delegate = self;
     _memberView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [_memberView.followBtn addTarget:self action:@selector(clickFollowBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
     [_memberView.fanBtn addTarget:self action:@selector(clickFollowBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_memberView.traceBtn addTarget:self action:@selector(clickTraceBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
     [_memberView.editBtn addTarget:self action:@selector(clickEditBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_memberView.view];
     
-    [_memberView reloadMemberUI];
+    
     [self performSelector:@selector(addPageView) withObject:nil afterDelay:0.0];
 }
 - (IBAction)clickEditBtn:(UIButton *)sender {
@@ -174,7 +166,6 @@
     [self.navigationController pushViewController: memberEditController animated:YES];
 }
 
-
 - (IBAction)clickFollowBtn:(UIButton *)sender {
     FansController * fansController = [[FansController alloc] init];
     fansController.btnTag = sender.tag;
@@ -182,7 +173,13 @@
     self.tabBarController.tabBar.hidden = YES;
     [self.navigationController pushViewController: fansController animated:YES];
 }
-
+- (IBAction)clickTraceBtn:(UIButton *)sender {
+    FansController * fansController = [[FansController alloc] init];
+    fansController.btnTag = sender.tag;
+    self.navigationController.navigationBarHidden=NO;
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController: fansController animated:YES];
+}
 
 - (void)didTapGoToRight {
     NSInteger currentIndex = self.pageMenu.currentPageIndex;

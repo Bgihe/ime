@@ -38,7 +38,9 @@
 
 
 @property (nonatomic, weak) id<SpotLightViewDelegate> delegate;
-- (void)updateIdLabel :(NSString *) name;
+- (void) updateIdLabel :(NSString *) name;
 - (void) refreshMsgRect;
-@end
+
+-(void) refreshUI : (UIImage*) headImg :(NSString*) msgStr :(NSString*) memberAccount;
+    @end
 

@@ -22,24 +22,13 @@
             self->_previewBtn.layer.cornerRadius = CGRectGetHeight(self->_previewBtn.frame)/2;
             self->_previewBtn.clipsToBounds = YES;
         });
-        
-        
+
         MemberModel * memberModel = [MemberModel instance];
-        
         _dataArr = [[NSMutableArray alloc] init];
-        
         _dataArr = memberModel.pictures;
-        
-        NSLog(@"%@",_dataArr);
+   
         NSLog(@"%@",[_dataArr valueForKey:@"no"]);
 
-        /*
-        if ([_dataArr count] < 6) {
-            for (int i = [_dataArr count]; i < 6; i++) {
-                [_dataArr addObject:@""];
-            }
-        }*/
-        
         [_collectionView registerNib:[UINib nibWithNibName:@"HeadShotCell" bundle:nil] forCellWithReuseIdentifier:@"HeadShotCell"];
         
         [self updateIntroduction];
@@ -47,6 +36,17 @@
     }
     return self;
 }
+
+- (void) reloadCollectionView{
+    MemberModel * memberModel = [MemberModel instance];
+    _dataArr = [[NSMutableArray alloc] init];
+    _dataArr = memberModel.pictures;
+    
+    
+    
+    [_collectionView reloadData];
+}
+
 - (void)updateIntroduction{
     MemberModel * memberModel = [MemberModel instance];
     NSLog(@"%@",memberModel.introduction);
@@ -59,9 +59,6 @@
     }else if([memberModel.gender isEqualToString:@"M"]){
         _genderLabel.text = @"男";
     }
-    
-    
-    
 }
     
 - (void)commonInit
@@ -109,11 +106,17 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     HeadShotCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HeadShotCell" forIndexPath:indexPath];
     if(indexPath.row < [_dataArr count]){
+        cell.headImg.hidden = NO;
         NSArray *partitionArr = [[NSArray alloc]init];
         MemberModel * memberModel = [MemberModel instance];
-    
+        NSMutableArray * arr = [[ NSMutableArray alloc] init];
+        arr = memberModel.pictures;
+        
+        
         if ([[[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"default_pic"] boolValue]) {
             cell.checkBtn.hidden = NO;
+        }else{
+            cell.checkBtn.hidden = YES;
         }
         if ([[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"thumbnail"]) {
             partitionArr =[[[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"thumbnail"] componentsSeparatedByString:@","];
@@ -124,9 +127,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
             
             [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationSlide];
             UIImage *image=[UIImage imageWithData:decodedImageData];
-            
             CGFloat fixelW = CGImageGetWidth(image.CGImage);
-    
             CGRect rect = CGRectMake(0, 0, fixelW, fixelW);//创建矩形框
             cell.headImg.image=[UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], rect)];
             
@@ -135,7 +136,13 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
         PermissionsModel * permissionsModel = [PermissionsModel instance];
         if (permissionsModel.member_edit_picture) {
             cell.editBtn.hidden = NO;
+        }else{
+            cell.editBtn.hidden = YES;
         }
+    }else{
+        cell.editBtn.hidden = YES;
+        cell.headImg.hidden = YES;
+        cell.checkBtn.hidden = YES;
     }
     return cell;
 }
@@ -143,13 +150,14 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%ld",(long)indexPath.row);
     
-    if (indexPath.row >= [_dataArr count])  return;
-    
-    MemberModel * memberModel = [MemberModel instance];
-    if ([[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"no"]) {
-        [_delegate addReportView:[[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"no"]];
+    if (indexPath.row >= [_dataArr count])  {
+        [_delegate addPicture];
+    }else{
+        MemberModel * memberModel = [MemberModel instance];
+        if ([[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"no"]) {
+            [_delegate addReportView:[[memberModel.pictures objectAtIndex:indexPath.row] objectForKey:@"no"]];
+        }
     }
-    
 }
 
 /*

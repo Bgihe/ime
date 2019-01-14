@@ -56,7 +56,7 @@
 
 #pragma mark - ——————— 用户相关 ————————
 
-
+//0107
 //系統config
 #define URL_config @"/config"
 //登入與認證碼
@@ -71,8 +71,6 @@
 #define URL_logout @"/auth/logout"
 //取得個人的完整資料
 #define URL_get_my_data @"/member/get-my-data"
-//----
-
 //取得會員的簡介檔案
 #define URL_get_profile @"/member/get-profile"
 //更新活動時間與上線
@@ -87,8 +85,26 @@
 #define URL_upload_picture @"/member/upload-picture"
 //預設大頭照
 #define URL_set_default_picture @"/member/set-default-picture"
+//刪除大頭照
+#define URL_del_picture @"/member/del-picture"
 
-
+//0113
+//追蹤
+#define URL_trace_add @"/member-trace/add"
+//移除追蹤
+#define URL_trace_remove @"/member-trace/remove"
+//取得粉絲清單
+#define URL_get_fans_data @"/member-trace/get-fans-data"
+//取得追蹤清單
+#define URL_get_trace_data @"/member-trace/get-member-data"
+//取得追蹤主播的最新貼文
+#define URL_get_trace_new_post @"/member-trace/get-new-post"
+//新增封鎖
+#define URL_block_add @"/member-block/add"
+//解除封鎖
+#define URL_block_remove @"/member-block/remove"
+//取得封鎖清單
+#define URL_get_block_data @"/member-block/get-member-data"
 
 
 

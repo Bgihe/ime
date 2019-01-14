@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MemberController : IMEBaseViewController <MemberViewDelegate,MemberMenuControllerDelegate>{
     MemberView * _memberView;
 }
-
+- (void) postGetMyData : (NSMutableDictionary*) paramDict;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -40,7 +40,7 @@
         _bottomBgView = [[UIView alloc] initWithFrame:CGRectMake(0, KScreenHeight-KScreenHeight*0.06 -safeBottomPadding, KScreenWidth, KScreenHeight*0.06 + safeBottomPadding)];
         _bottomBgView.backgroundColor =[UIColor colorWithRed:40.0/255.0 green:158.0/255.0 blue:163.0/255.0 alpha:0.5];
         [self.view addSubview:_bottomBgView];
-        _bottomBgMask = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomBgView.frame) - KScreenHeight/2, KScreenWidth , KScreenHeight/2)];
+        _bottomBgMask = [[UILabel alloc] initWithFrame:CGRectMake(0, KScreenHeight - KScreenHeight/2, KScreenWidth , KScreenHeight/2)];//CGRectGetMinY(_bottomBgView.frame) - KScreenHeight/2
         [self.view addSubview:_bottomBgMask];
         
         
@@ -151,7 +151,10 @@
     _msgTextView.frame = frame;
     [_idLabel setFrame:CGRectMake(CGRectGetMaxX(_headImg.frame)+10, CGRectGetMinY(_msgTextView.frame) -20, CGRectGetMinX(_moreMsgBtn.frame) - CGRectGetMaxX(_headImg.frame)-20, 20)];
     
+    
     _moreMsgBtn.hidden = YES;
+    _bottomBgView.hidden = YES;
+ 
 }
 
 - (CGSize) heightForString:(NSString *)value andWidth:(float)width :(UITextView*) textView{
@@ -211,12 +214,30 @@
     [self addSubview:self.view];
     self.view.frame=self.bounds;
 }
-- (void)updateIdLabel :(NSString *) name{
+- (void) updateIdLabel :(NSString *) name{
     _idLabel.text = name;
 }
 
-- (void)updateMsgTextHeight :(float) height{
+- (void) updateMsgTextHeight :(float) height{
     
     [_msgTextView setFrame:CGRectMake(0, 0, 0, 0)];
+}
+
+
+-(void) refreshUI : (UIImage*) headImg :(NSString*) msgStr :(NSString*) memberAccount{
+    
+    NSLog(@"%@:%@:%@",headImg,msgStr,memberAccount);
+    
+    
+    [_headImg setImage:headImg forState:UIControlStateNormal];
+    [_headBgImg setImage:headImg];
+    _msgTextView.text = msgStr;
+    _idLabel.text = memberAccount;
+    
+    _moreMsgBtn.hidden = YES;
+    _bottomBgView.hidden = YES;
+    _moreMsgBtn.hidden = NO;
+    //[self refreshMsgRect];
+    //[dataArr valueForKey:@""]
 }
 @end

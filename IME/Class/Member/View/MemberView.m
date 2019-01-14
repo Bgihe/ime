@@ -42,11 +42,11 @@
             [self->_headBgImg addSubview:lightView];
         });
  
-        _followBtn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        _traceBtn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _fanBtn.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        [_followBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
+        [_traceBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [_fanBtn.titleLabel setTextAlignment:NSTextAlignmentCenter];
-        [_followBtn setTitle:@"追蹤 \n 1" forState:UIControlStateNormal];
+        [_traceBtn setTitle:@"追蹤 \n 1" forState:UIControlStateNormal];
         [_fanBtn setTitle:@"粉絲 \n 1" forState:UIControlStateNormal];
     }
     return self;
@@ -56,7 +56,7 @@
     MemberModel * memberModel = [MemberModel instance];
   
     [_fanBtn setTitle:[[NSString alloc]initWithFormat:@"粉絲\n%ld",(long)memberModel.fans_num] forState:UIControlStateNormal];
-    [_followBtn setTitle:[[NSString alloc]initWithFormat:@"追蹤\n%ld",(long)memberModel.trace_num] forState:UIControlStateNormal];
+    [_traceBtn setTitle:[[NSString alloc]initWithFormat:@"追蹤\n%ld",(long)memberModel.trace_num] forState:UIControlStateNormal];
     [_nameLabel setText:memberModel.account];
 
     if (memberModel.thumbnail) {
@@ -65,10 +65,14 @@
         NSData *decodedImageData = [[NSData alloc]
                                     initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
         
-        UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
-        [_headImg setImage:decodedImage];
-        [_headBgImg setImage:decodedImage];
-
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationSlide];
+        UIImage *image=[UIImage imageWithData:decodedImageData];
+        CGFloat fixelW = CGImageGetWidth(image.CGImage);
+        CGRect rect = CGRectMake(0, 0, fixelW, fixelW);//创建矩形框
+ 
+        [_headImg setImage:[UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], rect)]];
+        [_headBgImg setImage:[UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], rect)]];
+ 
     }
 }
 - (void)commonInit

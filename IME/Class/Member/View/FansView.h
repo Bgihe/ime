@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class FansView;
 
 @protocol FansViewDelegate
-- (void) pushSpotLightView;
+- (void) addSpotLightView : (NSMutableArray *) userData ;
 @end
 
 @interface FansView : UIView

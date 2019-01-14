@@ -7,8 +7,14 @@
 //
 
 #import "MemberEditController.h"
+#import "MemberController.h"
+#import "NetHttpsModel.h"
+#import "MemberModel.h"
+#import "PermissionsModel.h"
+#import <SVProgressHUD.h>
 
-@interface MemberEditController ()
+
+@interface MemberEditController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate,NetHttpsModelDelegate>
 
 @end
 
@@ -21,89 +27,18 @@
     _memberEditView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_memberEditView.view];
     
-    [_memberEditView.previewBtn addTarget:self action:@selector(testBTn:) forControlEvents:UIControlEventTouchUpInside];
+    [_memberEditView.previewBtn addTarget:self action:@selector(clickPreviewBtn:) forControlEvents:UIControlEventTouchUpInside];
     
-   //previewBtn
-}
--(void) addReportView : (NSString*) no{
-    NSLog(@"%@",_imgNo);
-    _imgNo = no;
-    if (!_reportView) {
-        _reportView = [[ReportView alloc] init];
-        _reportView.delegate = self;
-        _reportView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        [self.view addSubview:_reportView.view];
-        
-        [_reportView.firstBtn setTitle:@"設為大頭照" forState:UIControlStateNormal];
-        [_reportView.secondBtn setTitle:@"刪除" forState:UIControlStateNormal];
-   
-        [_reportView.firstBtn addTarget:self action:@selector(clickFirstBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [_reportView.secondBtn addTarget:self action:@selector(clickSecondBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [_reportView.cancelBtn addTarget:self action:@selector(clickCancelBtn:) forControlEvents:UIControlEventTouchUpInside];
-        //self.navigationController.navigationBarHidden=YES;
-    }
-}
--(void)clickFirstBtn:(UIButton*)sender {
-    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    UIBarButtonItem *saveItem = [[UIBarButtonItem alloc] initWithTitle:@"儲存" style:UIBarButtonItemStylePlain target:self action:@selector(clickSaveBtn:)];
+    self.navigationItem.rightBarButtonItem = saveItem;
 
-    LoginModel * loginModel = [LoginModel instance];
-    paramDict[@"token"] = loginModel.token;
-    paramDict[@"no"] = [[NSString alloc] initWithFormat:@"%@",_imgNo];
-    
-    [self postSetDefaultPicture:paramDict];
-}
--(void)clickSecondBtn:(id)sender {
-    
-}
--(void)clickCancelBtn:(id)sender {
-    //self.navigationController.navigationBarHidden=NO;
-    [_reportView.view removeFromSuperview];
-    _reportView = nil;
-}
-- (void) postSetDefaultPicture : (NSMutableDictionary*) paramDict{
-    NetHttpsManager * netHttpsManager = [[NetHttpsManager alloc] init];
-    if (![netHttpsManager isExistenceNetwork])
-    {
-        DLog(@"請檢查網路");
-    }
-    else
-    {
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        [manager POST:[URL_main stringByAppendingString:URL_set_default_picture] parameters:paramDict progress:^(NSProgress * _Nonnull uploadProgress) {
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            DLog(@"Http Success!!");
-            NSLog(@"%@",responseObject);
-            
-            if ([responseObject objectForKey:@"success"]) {
-                
-                
-            }else{
-                UIAlertController * alert=   [UIAlertController
-                                              alertControllerWithTitle:@"訊息"
-                                              message:[responseObject objectForKey:@"error"]
-                                              preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
-                [self presentViewController:alert animated:YES completion:nil];
-            }
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            DLog(@"Http Fail!!");
-        }];
-    }
 }
 
 
 
 
--(IBAction) testBTn:(id)sender {
-    NSLog(@"%@",_memberEditView.introTextView.text);
-    NSString * str =[[ NSString alloc] init];
-    str = _memberEditView.introTextView. text;
-    
-    
-}
-
-
--(IBAction) void_image_choose:(id)sender {
+-(void) addPicture {
+  
     if ([self.imagePickerPopover isPopoverVisible]) {
         [self.imagePickerPopover dismissPopoverAnimated:YES];
         self.imagePickerPopover = nil;
@@ -113,41 +48,24 @@
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.editing = YES;
     imagePicker.delegate = self;
-
-    //允许编辑图片
-    imagePicker.allowsEditing = NO;
-
-    
-    /*
-     这里以弹出选择框的形式让用户选择是打开照相机还是图库
-     */
-    //初始化提示框；
+    imagePicker.allowsEditing = YES;
+ 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"請選擇打開方式" message:nil preferredStyle:  UIAlertControllerStyleActionSheet];
     [alert addAction:[UIAlertAction actionWithTitle:@"相機" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        //创建UIPopoverController对象前先检查当前设备是不是ipad
+ 
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-            self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
-            self.imagePickerPopover.delegate = self;
-            [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
-                                            permittedArrowDirections:UIPopoverArrowDirectionAny
-                                                            animated:YES];
+ 
         }else{
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
     }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"相簿" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        //创建UIPopoverController对象前先检查当前设备是不是ipad
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-            self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
-            self.imagePickerPopover.delegate = self;
-            [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
-                                            permittedArrowDirections:UIPopoverArrowDirectionAny
-                                                            animated:YES];
+ 
         }else{
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
@@ -158,21 +76,268 @@
     //弹出提示框；
     [self presentViewController:alert animated:true completion:nil];
 }
+-(void) addReportView : (NSString*) no{
+    NSLog(@"%@",_imgNo);
+    _imgNo = no;
+    if (!_reportView) {
+        _reportView = [[ReportView alloc] init];
+        _reportView.delegate = self;
+        _reportView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
+        //[self.view addSubview:_reportView.view];
+        
+        [self.navigationController.view addSubview:_reportView.view];
+        
+        
+        [_reportView.firstBtn setTitle:@"設為大頭照" forState:UIControlStateNormal];
+        [_reportView.secondBtn setTitle:@"刪除" forState:UIControlStateNormal];
+   
+        [_reportView.firstBtn addTarget:self action:@selector(clickFirstBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [_reportView.secondBtn addTarget:self action:@selector(clickSecondBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [_reportView.cancelBtn addTarget:self action:@selector(clickCancelBtn:) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+-(void)clickFirstBtn:(UIButton*)sender {
+    [SVProgressHUD showWithStatus:@"loadding"];
+ 
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+
+    LoginModel * loginModel = [LoginModel instance];
+    paramDict[@"token"] = loginModel.token;
+    paramDict[@"no"] = [[NSString alloc] initWithFormat:@"%@",_imgNo];
+    
+    //[self postSetDefaultPicture:paramDict];
+    
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_set_default_picture paramDict:paramDict];
+    
+    
+    [_reportView.view removeFromSuperview];
+    _reportView = nil;
+}
+-(void)clickSecondBtn:(id)sender {
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    LoginModel * loginModel = [LoginModel instance];
+    paramDict[@"token"] = loginModel.token;
+    paramDict[@"no"] = [[NSString alloc] initWithFormat:@"%@",_imgNo];
+    
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_del_picture paramDict:paramDict];
+    
+    [_reportView.view removeFromSuperview];
+    _reportView = nil;
+    
+}
+-(void)clickSaveBtn:(id)sender {
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    
+    LoginModel * loginModel = [LoginModel instance];
+    paramDict[@"token"] = loginModel.token;
+    paramDict[@"introduction"] = _memberEditView.introTextView.text;
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_member_update paramDict:paramDict];
+}
+-(void)clickCancelBtn:(id)sender {
+    [_reportView.view removeFromSuperview];
+    _reportView = nil;
+}
+
+- (void)httpResult: (NSDictionary*) responseObject :(NSString *) url {
+    
+    if ([url isEqualToString:URL_get_my_data]) {
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            //---- Member
+            
+            MemberModel * memberModel = [[MemberModel alloc] init];
+            memberModel = [MemberModel instance];
+            NSDictionary *memberDict = [responseObject objectForKey:@"data"];
+            //thumbnail
+            for(NSString *key in [memberDict allKeys]) {
+                NSString *value = [memberDict objectForKey:key];
+                if([value isKindOfClass:[NSNumber class]]){
+                    value = [NSString stringWithFormat:@"%@",value];
+                }else if([value isKindOfClass:[NSNull class]])
+                    value = @"";
+                @try {
+                    [memberModel setValue:value forKey:key];
+                }
+                @catch (NSException *exception) {
+                    //DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                    DLog(@"欄位%@不再model裡面",key);
+                }
+            }
+            //---- Permissions
+            PermissionsModel * permissionsModel = [PermissionsModel instance];
+            NSDictionary *permissionsDict = [[responseObject objectForKey:@"data"] objectForKey:@"permissions"];
+            
+            for(NSString *key in [permissionsDict allKeys]) {
+                NSString *value = [permissionsDict objectForKey:key];
+                if([value isKindOfClass:[NSNumber class]]){
+                    value = [NSString stringWithFormat:@"%@",value];
+                    DLog(@"Value%@",value);
+                }else if([value isKindOfClass:[NSNull class]])
+                    value = @"";
+                @try {
+                    [permissionsModel setValue:value forKey:key];
+                }
+                @catch (NSException *exception) {
+                    DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
+                }
+            }
+            
+            
+            _memberEditView.dataArr =  memberModel.pictures;
+            [_memberEditView.collectionView reloadData];
+            [SVProgressHUD dismiss];
+            
+        }else{
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"訊息"
+                                          message:[responseObject objectForKey:@"error"]
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }else if([url isEqualToString:URL_set_default_picture]){
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            
+            LoginModel * loginModel = [LoginModel instance];
+            NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+            paramDict[@"token"] = loginModel.token;
+            paramDict[@"setting"] = @"0";
+            paramDict[@"pictures"] = @"1";
+            
+            NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+            netHttpsModel.delegate = self;
+            [netHttpsModel POSTWithUrl:URL_get_my_data paramDict:paramDict];
+        }else{
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"訊息"
+                                          message:[responseObject objectForKey:@"error"]
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }else if([url isEqualToString:URL_del_picture]){
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            
+            LoginModel * loginModel = [LoginModel instance];
+            NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+            paramDict[@"token"] = loginModel.token;
+            paramDict[@"setting"] = @"0";
+            paramDict[@"pictures"] = @"1";
+            
+            NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+            netHttpsModel.delegate = self;
+            [netHttpsModel POSTWithUrl:URL_get_my_data paramDict:paramDict];
+        }else{
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"訊息"
+                                          message:[responseObject objectForKey:@"error"]
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }else if([url isEqualToString:URL_upload_picture]){
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            
+            LoginModel * loginModel = [LoginModel instance];
+            NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+            paramDict[@"token"] = loginModel.token;
+            paramDict[@"setting"] = @"0";
+            paramDict[@"pictures"] = @"1";
+            
+            NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+            netHttpsModel.delegate = self;
+            [netHttpsModel POSTWithUrl:URL_get_my_data paramDict:paramDict];
+            
+        }else{
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"訊息"
+                                          message:[responseObject objectForKey:@"error"]
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }else if([url isEqualToString:URL_member_update]){
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            NSLog(@"Success");
+            NSLog(@"%@",responseObject);
+            
+            [SVProgressHUD showSuccessWithStatus:@"儲存成功"];
+            
+            self.tabBarController.tabBar.hidden = NO;
+            self.navigationController.navigationBarHidden=NO;
+            [self.navigationController popViewControllerAnimated:NO];
+            
+        }
+    }
+ 
+}
+
+
+
+-(IBAction) clickPreviewBtn:(id)sender {
+    //SpotLightView.h
+ 
+    _spotLightView = [[SpotLightView alloc] init];
+    _spotLightView.delegate = self;
+    _spotLightView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
+    [self.navigationController.view addSubview:_spotLightView.view];
+    
+    
+    [_spotLightView.backBtn addTarget:self action:@selector(clickSpotLightBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_spotLightView.moreMsgBtn addTarget:self action:@selector(clickSpotLightMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    MemberModel * memberModel = [MemberModel instance];
+ 
+    if (memberModel.thumbnail) {
+        NSArray *partitionArr = [[NSArray alloc]init];
+        partitionArr =[memberModel.thumbnail componentsSeparatedByString:@","];
+        NSData *decodedImageData = [[NSData alloc]
+                                    initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        
+        UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
+        [_spotLightView refreshUI:decodedImage :_memberEditView.introTextView.text :memberModel.account ];
+    }
+ 
+}
+-(void)clickSpotLightMoreBtn:(UIButton*)sender {
+    [_spotLightView refreshMsgRect];
+}
+-(void)clickSpotLightBackBtn:(UIButton*)sender {
+    [_spotLightView.view removeFromSuperview];
+    _spotLightView = nil;
+}
+
+// 選取照片以後
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    //通过info字典获取选择的照片
-    UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
-    //以itemKey为键，将照片存入ImageStore对象中
-    //[[MyImageStore sharedStore] setImage:image forKey:@"CYFStore"];
-    //将照片放入UIImageView对象
-    //self.avatarImage.image = image;
-    //把一张照片保存到图库中，此时无论是这张照片是照相机拍的还是本身从图库中取出的，都会保存到图库中；
+    UIImage *image = [self fixOrientation:[info valueForKey:UIImagePickerControllerEditedImage]];//UIImagePickerControllerOriginalImage
+    
     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
     
     //压缩图片,如果图片要上传到服务器或者网络，则需要执行该步骤（压缩），第二个参数是压缩比例，转化为NSData类型；
-    NSData *fileData = UIImageJPEGRepresentation(image, 1.0);
+    NSData *data = UIImageJPEGRepresentation(image, 0.1f);
+    NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+   
+    NSLog(@"data:image/jpeg;base64,%@",encodedImageStr);
+    
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    LoginModel * loginModel = [LoginModel instance];
+    paramDict[@"token"] = loginModel.token;
+    paramDict[@"picture"] = [[NSString alloc] initWithFormat:@"data:image/jpeg;base64,%@",encodedImageStr];
+    
+    [SVProgressHUD showWithStatus:@"loadding"];
+    //[self postUploadPicture:paramDict];
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_upload_picture paramDict:paramDict];
+    
+    
     //判断UIPopoverController对象是否存在
     if (self.imagePickerPopover) {
-        
         [self.imagePickerPopover dismissPopoverAnimated:YES];
         self.imagePickerPopover = nil;
     }else{
@@ -181,5 +346,83 @@
     }
 }
 
+
+// 圖片轉正
+- (UIImage *)fixOrientation:(UIImage *)aImage {
+    
+    // No-op if the orientation is already correct
+    if (aImage.imageOrientation == UIImageOrientationUp)
+        return aImage;
+    
+    // We need to calculate the proper transformation to make the image upright.
+    // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, aImage.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, aImage.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+        default:
+            break;
+    }
+    
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, aImage.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+        default:
+            break;
+    }
+    
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
+    CGContextRef ctx = CGBitmapContextCreate(NULL, aImage.size.width, aImage.size.height,
+                                             CGImageGetBitsPerComponent(aImage.CGImage), 0,
+                                             CGImageGetColorSpace(aImage.CGImage),
+                                             CGImageGetBitmapInfo(aImage.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (aImage.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            // Grr...
+            CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.height,aImage.size.width), aImage.CGImage);
+            break;
+            
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.width,aImage.size.height), aImage.CGImage);
+            break;
+    }
+    
+    // And now we just create a new UIImage from the drawing context
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    return img;
+}
 
 @end

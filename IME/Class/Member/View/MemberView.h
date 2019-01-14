@@ -19,8 +19,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImg;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;
-@property (weak, nonatomic) IBOutlet UIButton *followBtn;
+
+ 
+@property (weak, nonatomic) IBOutlet UIButton *traceBtn;
 @property (weak, nonatomic) IBOutlet UIButton *fanBtn;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) id<MemberViewDelegate> delegate;

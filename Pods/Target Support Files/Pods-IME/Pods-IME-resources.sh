@@ -93,6 +93,7 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@2x.png"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@3x.png"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full@2x.png"
@@ -108,6 +109,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@2x.png"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@3x.png"
   install_resource "${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full@2x.png"

@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberView">
             <connections>
                 <outlet property="editBtn" destination="5Sx-Uz-9Gx" id="hiO-GL-dWH"/>
-                <outlet property="fanBtn" destination="BgQ-cf-i8N" id="tEz-Xa-lVO"/>
-                <outlet property="followBtn" destination="uqV-Qy-wv3" id="g9C-v5-ZHa"/>
+                <outlet property="fanBtn" destination="BgQ-cf-i8N" id="S4O-pO-0Ky"/>
                 <outlet property="headBgImg" destination="xlP-m7-tuw" id="fE3-XA-W84"/>
                 <outlet property="headImg" destination="0In-iY-sp0" id="68E-Vc-VJo"/>
                 <outlet property="nameLabel" destination="Dmu-cv-ZeZ" id="KKJ-m6-Dk5"/>
+                <outlet property="traceBtn" destination="uqV-Qy-wv3" id="5BX-Db-rLR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="a1o-HB-GGB"/>
             </connections>
         </placeholder>

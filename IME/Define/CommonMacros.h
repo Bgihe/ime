@@ -27,7 +27,7 @@
 //用户model缓存
 #define KUserModelCache @"KUserModelCache"
 
-
+#define addBlackBgView @"addBlackBgView"
 
 #pragma mark - ——————— 网络状态相关 ————————
 

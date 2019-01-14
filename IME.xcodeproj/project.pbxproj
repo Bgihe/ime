@@ -19,6 +19,7 @@
 		041DAF5721BEC2120091424A /* SpotLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5621BEC2120091424A /* SpotLightView.m */; };
 		041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5921BEC2630091424A /* SpotLightController.m */; };
 		041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAF5B21BEC2730091424A /* SpotLightView.xib */; };
+		042B696521E90B10004AD76B /* NetHttpsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B696321E90B10004AD76B /* NetHttpsModel.m */; };
 		18093E1921C8D27D00F6A5DA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18093E1821C8D27D00F6A5DA /* libsqlite3.tbd */; };
 		18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1B21C8E8F600F6A5DA /* ReplyPriceController.m */; };
 		18093E1F21C8E90C00F6A5DA /* ReplyPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1E21C8E90C00F6A5DA /* ReplyPriceView.m */; };
@@ -205,6 +206,8 @@
 		041DAF5821BEC2630091424A /* SpotLightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotLightController.h; sourceTree = "<group>"; };
 		041DAF5921BEC2630091424A /* SpotLightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotLightController.m; sourceTree = "<group>"; };
 		041DAF5B21BEC2730091424A /* SpotLightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotLightView.xib; sourceTree = "<group>"; };
+		042B696321E90B10004AD76B /* NetHttpsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetHttpsModel.m; sourceTree = "<group>"; };
+		042B696421E90B10004AD76B /* NetHttpsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetHttpsModel.h; sourceTree = "<group>"; };
 		18093E1021C8D10600F6A5DA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18093E1221C8D18D00F6A5DA /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
 		18093E1321C8D18D00F6A5DA /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
@@ -781,6 +784,8 @@
 				1867959821CCB81E00F3BA84 /* DepositModel.m */,
 				183ED8EA21E5C7F700E7F472 /* MemberModel.h */,
 				183ED8EB21E5C7F700E7F472 /* MemberModel.m */,
+				042B696421E90B10004AD76B /* NetHttpsModel.h */,
+				042B696321E90B10004AD76B /* NetHttpsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1212,6 +1217,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IME/Pods-IME-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@2x.png",
 				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_back@3x.png",
 				"${PODS_ROOT}/YWVideoPlayer/YWVideoPlayerDemo/YWVideoPlayer/Resources/icon_full@2x.png",
@@ -1230,6 +1236,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_full@2x.png",
@@ -1362,6 +1369,7 @@
 				180DC49C21E46FAF00022C65 /* SignupController.m in Sources */,
 				0406679F21C01D97003FB675 /* PostController.m in Sources */,
 				18282E9421DC4C540091A77D /* MediaPlayerController.m in Sources */,
+				042B696521E90B10004AD76B /* NetHttpsModel.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,
 				1867957F21CC82BE00F3BA84 /* DepositDetailView.m in Sources */,

@@ -25,20 +25,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_img" translatesAutoresizingMaskIntoConstraints="NO" id="SOI-Xq-dT6">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqo-0a-Mwm">
-                    <rect key="frame" x="0.0" y="628" width="375" height="39"/>
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uP2-om-PW0">
-                            <rect key="frame" x="75" y="8" width="225" height="23"/>
+                            <rect key="frame" x="75" y="8" width="225" height="24"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCz-lQ-sYB">
-                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="112.5" height="24"/>
                                     <state key="normal" title="貼文" image="streamer_post2"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqy-IV-Wrm">
-                                    <rect key="frame" x="112.5" y="0.0" width="112.5" height="23"/>
+                                    <rect key="frame" x="112.5" y="0.0" width="112.5" height="24"/>
                                     <state key="normal" title="聊天" image="streamer_chat2"/>
                                 </button>
                             </subviews>
@@ -95,7 +95,6 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="SOI-Xq-dT6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0bV-S3-uT1"/>
                 <constraint firstItem="ptX-J4-P9Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1oP-NJ-mDh"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="height" secondItem="SOI-Xq-dT6" secondAttribute="height" multiplier="0.06" id="4Dp-YL-dGO"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OxM-fU-0iN"/>
@@ -108,6 +107,7 @@
                 <constraint firstItem="5J3-aZ-bcg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="jTR-ds-XkP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SOI-Xq-dT6" secondAttribute="trailing" id="lT6-8X-jdd"/>
                 <constraint firstItem="5J3-aZ-bcg" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.025" id="mQR-wh-ccL"/>
+                <constraint firstItem="SOI-Xq-dT6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pFH-pI-yt5"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tjl-tl-hHB"/>
                 <constraint firstAttribute="trailing" secondItem="5J3-aZ-bcg" secondAttribute="trailing" constant="20" id="vyK-Sh-tzH"/>
             </constraints>

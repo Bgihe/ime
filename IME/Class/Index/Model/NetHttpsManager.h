@@ -10,6 +10,8 @@
 typedef void (^SuccessBlock)(NSDictionary *responseJson);
 typedef void (^FailureBlock)(NSError *error);
 
+
+
 @interface NetHttpsManager : NSObject
 - (void)POSTWithParameters:(NSMutableDictionary *)paramDict SuccessBlock:(SuccessBlock)PostSuccess FailureBlock:(FailureBlock)PostFailure;
 

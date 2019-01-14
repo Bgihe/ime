@@ -11,6 +11,7 @@
 
 @protocol MemberEditViewDelegate
 -(void) addReportView : (NSString*) no;
+-(void) addPicture;
 @end
 @interface MemberEditView : UIView
 @property (nonatomic, weak) id<MemberEditViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource> delegate;
@@ -27,4 +28,5 @@
 @property (nonatomic, strong) NSMutableArray   *dataArr;
 
 -(void) testVoid;
+- (void) reloadCollectionView;
 @end

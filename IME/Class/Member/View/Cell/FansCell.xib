@@ -20,37 +20,38 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ww-gB-glq">
-                        <rect key="frame" x="10" y="12" width="94" height="94"/>
+                        <rect key="frame" x="15" y="17.5" width="82.5" height="82.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="7ww-gB-glq" secondAttribute="height" multiplier="1:1" id="6Ve-g7-h8W"/>
                         </constraints>
                         <state key="normal" image="test_img"/>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-YJ-L2F">
-                        <rect key="frame" x="114" y="33.5" width="328.5" height="51"/>
+                        <rect key="frame" x="107.5" y="34.5" width="329" height="48.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="achor1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="01v-eg-dxH">
-                                <rect key="frame" x="0.0" y="0.0" width="328.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.2085655961" green="0.4918869944" blue="0.53938633420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這是聊天內容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="12c-aQ-cWX">
-                                <rect key="frame" x="0.0" y="30.5" width="328.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這是聊天內容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12c-aQ-cWX">
+                                <rect key="frame" x="0.0" y="30.5" width="329" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WV-rF-wdN">
-                        <rect key="frame" x="452.5" y="44" width="82" height="30"/>
+                        <rect key="frame" x="446.5" y="44" width="82.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <state key="normal" title="追蹤中">
                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-yt-nVN">
-                        <rect key="frame" x="544.5" y="40" width="37.5" height="37.5"/>
+                        <rect key="frame" x="544" y="42.5" width="33" height="32.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="yaK-yt-nVN" secondAttribute="height" multiplier="1:1" id="BTu-Bs-QvB"/>
                         </constraints>
@@ -60,23 +61,24 @@
                 <constraints>
                     <constraint firstItem="sUF-YJ-L2F" firstAttribute="centerY" secondItem="7ww-gB-glq" secondAttribute="centerY" id="Bl3-V0-AQF"/>
                     <constraint firstItem="sUF-YJ-L2F" firstAttribute="leading" secondItem="7ww-gB-glq" secondAttribute="trailing" constant="10" id="Kfm-RE-f7R"/>
-                    <constraint firstAttribute="trailing" secondItem="yaK-yt-nVN" secondAttribute="trailing" constant="10" id="M8s-Za-pCO"/>
+                    <constraint firstAttribute="trailing" secondItem="yaK-yt-nVN" secondAttribute="trailing" constant="15" id="M8s-Za-pCO"/>
                     <constraint firstItem="7ww-gB-glq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="P70-On-tWk"/>
-                    <constraint firstItem="7ww-gB-glq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="YZm-lZ-qLS"/>
+                    <constraint firstItem="7ww-gB-glq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="YZm-lZ-qLS"/>
                     <constraint firstItem="yaK-yt-nVN" firstAttribute="centerY" secondItem="7ww-gB-glq" secondAttribute="centerY" id="ais-r3-2Qx"/>
                     <constraint firstItem="8WV-rF-wdN" firstAttribute="centerY" secondItem="7ww-gB-glq" secondAttribute="centerY" id="b2u-1G-fOk"/>
                     <constraint firstItem="sUF-YJ-L2F" firstAttribute="width" secondItem="8WV-rF-wdN" secondAttribute="width" multiplier="4" id="byd-QG-drV"/>
                     <constraint firstItem="yaK-yt-nVN" firstAttribute="height" secondItem="7ww-gB-glq" secondAttribute="height" multiplier="0.4" id="gS4-k3-B1v"/>
-                    <constraint firstItem="yaK-yt-nVN" firstAttribute="leading" secondItem="8WV-rF-wdN" secondAttribute="trailing" constant="10" id="gnE-WH-nYJ"/>
+                    <constraint firstItem="yaK-yt-nVN" firstAttribute="leading" secondItem="8WV-rF-wdN" secondAttribute="trailing" constant="15" id="gnE-WH-nYJ"/>
                     <constraint firstItem="8WV-rF-wdN" firstAttribute="leading" secondItem="sUF-YJ-L2F" secondAttribute="trailing" constant="10" id="hTq-qL-O3c"/>
-                    <constraint firstItem="7ww-gB-glq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tvy-86-bjK"/>
+                    <constraint firstItem="7ww-gB-glq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tvy-86-bjK"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.792156862745098" green="0.8784313725490196" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="followBtn" destination="8WV-rF-wdN" id="HYd-oG-X6d"/>
                 <outlet property="headImg" destination="7ww-gB-glq" id="3dg-0k-LF1"/>
-                <outlet property="idLabel" destination="01v-eg-dxH" id="3M4-KM-PWK"/>
+                <outlet property="idLabel" destination="01v-eg-dxH" id="VCe-o0-ubz"/>
                 <outlet property="msgBtn" destination="yaK-yt-nVN" id="XTa-dM-OlN"/>
                 <outlet property="msgLabel" destination="12c-aQ-cWX" id="7HY-ZE-cuZ"/>
             </connections>

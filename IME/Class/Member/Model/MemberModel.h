@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
+@class MemberModel;
+
+@protocol MemberModelDelegate <NSObject>
+@optional
+
+@end
+
 @interface MemberModel : NSObject
+@property (nonatomic, weak) id<MemberModelDelegate> delegate;
+
+typedef void (^SuccessBlock)(NSDictionary *responseJson);
+typedef void (^FailureBlock)(NSError *error);
 
 @property (nonatomic, assign) NSInteger               *no;          //會員編號
 @property (nonatomic, copy)   NSString                *account;     //會員帳號
@@ -26,5 +38,6 @@
 @property (nonatomic, copy)   NSMutableArray          *pictures;    //會員上傳的圖片
 
 + (MemberModel *) instance;
+- (NSDictionary *)postSynchMehtod:(NSString*)method ctl:(NSString*)ctl param:(NSDictionary*)param;
 @end
 

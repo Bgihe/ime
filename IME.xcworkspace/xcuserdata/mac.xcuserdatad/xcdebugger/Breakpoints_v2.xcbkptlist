@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IME/Class/Index/Controller/LoginVerifyController.m"
-            timestampString = "568569953.232438"
+            filePath = "IME/Class/Main/View/SpotLightView.m"
+            timestampString = "568992222.158071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-postPhoneLogin:"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "-refreshUI:::"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IME/Class/Member/Controller/MemberEditController.m"
+            timestampString = "569074238.341078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "-clickSpotLightMoreBtn:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

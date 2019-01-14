@@ -7,7 +7,7 @@
 //
 
 #import "MemberModel.h"
-
+#import "AFNetworking.h"
 @implementation MemberModel
 + (MemberModel *) instance
 {
@@ -18,4 +18,7 @@
     }
     return _default;
 }
+
+
 @end
+

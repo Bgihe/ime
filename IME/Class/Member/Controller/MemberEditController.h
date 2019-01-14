@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MemberEditView.h"
 #import "ReportView.h"
+#import "SpotLightView.h"
 
 #import "IMEBaseViewController.h"
-@interface MemberEditController : IMEBaseViewController <MemberEditViewDelegate,UIPopoverControllerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,ReportViewDelegate>{
+@interface MemberEditController : IMEBaseViewController <MemberEditViewDelegate,UIPopoverControllerDelegate,ReportViewDelegate,SpotLightViewDelegate>{
     MemberEditView * _memberEditView;
+    SpotLightView *_spotLightView;
     ReportView * _reportView;
     NSString * _imgNo;
 }

@@ -23,7 +23,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LuG-UF-Kgr">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.79607843137254897" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ltU-k6-zxd"/>
                         <outlet property="delegate" destination="-1" id="ow9-Wf-9gb"/>
@@ -33,8 +33,8 @@
             <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LuG-UF-Kgr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0YT-oR-HFY"/>
+                <constraint firstAttribute="bottom" secondItem="LuG-UF-Kgr" secondAttribute="bottom" id="5oI-o3-Bik"/>
                 <constraint firstItem="LuG-UF-Kgr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="duM-OX-GNw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LuG-UF-Kgr" secondAttribute="bottom" id="eWM-yA-MBR"/>
                 <constraint firstItem="LuG-UF-Kgr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="oe1-8J-Fbe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

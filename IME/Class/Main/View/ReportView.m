@@ -37,6 +37,9 @@
     [self addSubview:self.view];
     self.view.frame=self.bounds;
 }
+
+
+
 -(void) removeReportView{
     [self.view removeFromSuperview];
 }

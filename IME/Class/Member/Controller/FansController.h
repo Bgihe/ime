@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "FansView.h"
-@interface FansController : UIViewController<FansViewDelegate>{
+#import "SpotLightView.h"
+@interface FansController : UIViewController<FansViewDelegate,SpotLightViewDelegate>{
     FansView * _fansView;
+    SpotLightView * _spotLightView;
 }
 @property long btnTag;
 @end
