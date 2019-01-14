@@ -12,8 +12,7 @@
 @class MemberMenuController;
 
 @protocol MemberMenuControllerDelegate<MemberMenuViewDelegate>
-//-(void)addController;
-- (void)presentController :(long)indexRow;
+- (void)presentController :(NSString*) cellTitle;
 @end
 @interface MemberMenuController : UIViewController<MemberMenuViewDelegate>{
     MemberMenuView * _memberMenuView;

@@ -25,24 +25,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j7x-0h-Jsm">
-                    <rect key="frame" x="10" y="528.5" width="355" height="133.5"/>
+                    <rect key="frame" x="10" y="562" width="355" height="100"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-a3-YRW">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="38"/>
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="26.5"/>
                             <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="取消追蹤">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-mj-YWP">
-                            <rect key="frame" x="0.0" y="48" width="355" height="37.5"/>
+                            <rect key="frame" x="0.0" y="36.5" width="355" height="27"/>
                             <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="檢舉">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSz-ED-ZrO">
-                            <rect key="frame" x="0.0" y="95.5" width="355" height="38"/>
+                            <rect key="frame" x="0.0" y="73.5" width="355" height="26.5"/>
                             <color key="backgroundColor" red="1" green="0.55313111827386707" blue="0.49258229627105632" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="取消">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +56,7 @@
                 <constraint firstItem="j7x-0h-Jsm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="8xS-fG-WIz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j7x-0h-Jsm" secondAttribute="bottom" constant="5" id="GqD-hG-tfE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j7x-0h-Jsm" secondAttribute="trailing" constant="10" id="n99-gO-1dL"/>
-                <constraint firstItem="j7x-0h-Jsm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="zcG-zm-4bp"/>
+                <constraint firstItem="j7x-0h-Jsm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="zcG-zm-4bp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

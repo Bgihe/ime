@@ -8,12 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MemberPostView.h"
-NS_ASSUME_NONNULL_BEGIN
-
 @interface MemberPostController : UIViewController<MemberPostViewDelegate>{
     MemberPostView * _memberPostView;
 }
-
 @end
-
-NS_ASSUME_NONNULL_END

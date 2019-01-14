@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class MemberMenuView;
 
 @protocol MemberMenuViewDelegate
-- (void)presentController :(long)indexRow ;
+- (void)presentController :(NSString*) cellTitle;
 - (void)addController;
 @end
 @interface MemberMenuView : UIView

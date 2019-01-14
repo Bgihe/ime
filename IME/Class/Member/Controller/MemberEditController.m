@@ -76,6 +76,7 @@
     //弹出提示框；
     [self presentViewController:alert animated:true completion:nil];
 }
+#pragma mark - void
 -(void) addReportView : (NSString*) no{
     NSLog(@"%@",_imgNo);
     _imgNo = no;
@@ -83,11 +84,8 @@
         _reportView = [[ReportView alloc] init];
         _reportView.delegate = self;
         _reportView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
-        //[self.view addSubview:_reportView.view];
-        
+
         [self.navigationController.view addSubview:_reportView.view];
-        
-        
         [_reportView.firstBtn setTitle:@"設為大頭照" forState:UIControlStateNormal];
         [_reportView.secondBtn setTitle:@"刪除" forState:UIControlStateNormal];
    
@@ -96,22 +94,16 @@
         [_reportView.cancelBtn addTarget:self action:@selector(clickCancelBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
 }
+#pragma mark - button
 -(void)clickFirstBtn:(UIButton*)sender {
     [SVProgressHUD showWithStatus:@"loadding"];
- 
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
-
     LoginModel * loginModel = [LoginModel instance];
     paramDict[@"token"] = loginModel.token;
     paramDict[@"no"] = [[NSString alloc] initWithFormat:@"%@",_imgNo];
-    
-    //[self postSetDefaultPicture:paramDict];
-    
     NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
     netHttpsModel.delegate = self;
     [netHttpsModel POSTWithUrl:URL_set_default_picture paramDict:paramDict];
-    
-    
     [_reportView.view removeFromSuperview];
     _reportView = nil;
 }
@@ -120,18 +112,14 @@
     LoginModel * loginModel = [LoginModel instance];
     paramDict[@"token"] = loginModel.token;
     paramDict[@"no"] = [[NSString alloc] initWithFormat:@"%@",_imgNo];
-    
     NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
     netHttpsModel.delegate = self;
     [netHttpsModel POSTWithUrl:URL_del_picture paramDict:paramDict];
-    
     [_reportView.view removeFromSuperview];
     _reportView = nil;
-    
 }
 -(void)clickSaveBtn:(id)sender {
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
-    
     LoginModel * loginModel = [LoginModel instance];
     paramDict[@"token"] = loginModel.token;
     paramDict[@"introduction"] = _memberEditView.introTextView.text;
@@ -144,6 +132,36 @@
     _reportView = nil;
 }
 
+-(IBAction) clickPreviewBtn:(id)sender {
+    _spotLightView = [[SpotLightView alloc] init];
+    _spotLightView.delegate = self;
+    _spotLightView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
+    [self.navigationController.view addSubview:_spotLightView.view];
+
+    [_spotLightView.backBtn addTarget:self action:@selector(clickSpotLightBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [_spotLightView.moreMsgBtn addTarget:self action:@selector(clickSpotLightMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    MemberModel * memberModel = [MemberModel instance];
+    
+    if (memberModel.thumbnail) {
+        NSArray *partitionArr = [[NSArray alloc]init];
+        partitionArr =[memberModel.thumbnail componentsSeparatedByString:@","];
+        NSData *decodedImageData = [[NSData alloc]
+                                    initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        
+        UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
+        [_spotLightView refreshUI:decodedImage :decodedImage :_memberEditView.introTextView.text :memberModel.account :NO];
+    }
+    
+}
+-(void)clickSpotLightMoreBtn:(UIButton*)sender {
+    [_spotLightView refreshMsgRect];
+}
+-(void)clickSpotLightBackBtn:(UIButton*)sender {
+    [_spotLightView.view removeFromSuperview];
+    _spotLightView = nil;
+}
+#pragma mark - http api
 - (void)httpResult: (NSDictionary*) responseObject :(NSString *) url {
     
     if ([url isEqualToString:URL_get_my_data]) {
@@ -277,47 +295,10 @@
  
 }
 
-
-
--(IBAction) clickPreviewBtn:(id)sender {
-    //SpotLightView.h
- 
-    _spotLightView = [[SpotLightView alloc] init];
-    _spotLightView.delegate = self;
-    _spotLightView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
-    [self.navigationController.view addSubview:_spotLightView.view];
-    
-    
-    [_spotLightView.backBtn addTarget:self action:@selector(clickSpotLightBackBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [_spotLightView.moreMsgBtn addTarget:self action:@selector(clickSpotLightMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
-    MemberModel * memberModel = [MemberModel instance];
- 
-    if (memberModel.thumbnail) {
-        NSArray *partitionArr = [[NSArray alloc]init];
-        partitionArr =[memberModel.thumbnail componentsSeparatedByString:@","];
-        NSData *decodedImageData = [[NSData alloc]
-                                    initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
-        
-        UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
-        [_spotLightView refreshUI:decodedImage :_memberEditView.introTextView.text :memberModel.account ];
-    }
- 
-}
--(void)clickSpotLightMoreBtn:(UIButton*)sender {
-    [_spotLightView refreshMsgRect];
-}
--(void)clickSpotLightBackBtn:(UIButton*)sender {
-    [_spotLightView.view removeFromSuperview];
-    _spotLightView = nil;
-}
-
-// 選取照片以後
+#pragma mark - photo
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = [self fixOrientation:[info valueForKey:UIImagePickerControllerEditedImage]];//UIImagePickerControllerOriginalImage
-    
     UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
-    
     //压缩图片,如果图片要上传到服务器或者网络，则需要执行该步骤（压缩），第二个参数是压缩比例，转化为NSData类型；
     NSData *data = UIImageJPEGRepresentation(image, 0.1f);
     NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
@@ -349,13 +330,8 @@
 
 // 圖片轉正
 - (UIImage *)fixOrientation:(UIImage *)aImage {
-    
-    // No-op if the orientation is already correct
     if (aImage.imageOrientation == UIImageOrientationUp)
         return aImage;
-    
-    // We need to calculate the proper transformation to make the image upright.
-    // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
     CGAffineTransform transform = CGAffineTransformIdentity;
     
     switch (aImage.imageOrientation) {
@@ -395,9 +371,7 @@
         default:
             break;
     }
-    
-    // Now we draw the underlying CGImage into a new context, applying the transform
-    // calculated above.
+
     CGContextRef ctx = CGBitmapContextCreate(NULL, aImage.size.width, aImage.size.height,
                                              CGImageGetBitsPerComponent(aImage.CGImage), 0,
                                              CGImageGetColorSpace(aImage.CGImage),
@@ -408,16 +382,12 @@
         case UIImageOrientationLeftMirrored:
         case UIImageOrientationRight:
         case UIImageOrientationRightMirrored:
-            // Grr...
             CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.height,aImage.size.width), aImage.CGImage);
             break;
-            
         default:
             CGContextDrawImage(ctx, CGRectMake(0,0,aImage.size.width,aImage.size.height), aImage.CGImage);
             break;
     }
-    
-    // And now we just create a new UIImage from the drawing context
     CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
     UIImage *img = [UIImage imageWithCGImage:cgimg];
     CGContextRelease(ctx);

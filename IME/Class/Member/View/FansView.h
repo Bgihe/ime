@@ -8,19 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 @class FansView;
 
 @protocol FansViewDelegate
 - (void) addSpotLightView : (NSMutableArray *) userData ;
+- (void) removeTrace : (NSString*) memberNo;
+- (void) addTrace : (NSString*) memberNo;
 @end
 
 @interface FansView : UIView
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UIView *view;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray   *dataArr;
 @property (nonatomic, weak) id<FansViewDelegate> delegate;
 @property long btnTag;
 @end
-
-NS_ASSUME_NONNULL_END

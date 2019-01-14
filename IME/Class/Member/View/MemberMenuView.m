@@ -18,10 +18,11 @@
     if(self)
     {
         [self commonInit];
+        
         _dataArr =[[NSMutableArray alloc] init];
         [_dataArr addObject:@"回覆/通話設定"];
-        [_dataArr addObject:@"我的收益"];
         [_dataArr addObject:@"我的鑽石"];
+        [_dataArr addObject:@"我的收益"];
         [_dataArr addObject:@"使用紀錄"];
         //[_dataArr addObject:@"邀請好友"];
         [_dataArr addObject:@"設定"];
@@ -33,6 +34,7 @@
         //[_iconArr addObject:@"person_list_invite"];
         [_iconArr addObject:@"person_list_record"];
         [_iconArr addObject:@"person_list_setting"];
+        
     }
     return self;
 }
@@ -92,26 +94,26 @@
     cell.tintColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:231.0/255.0 blue:234.0/255.0 alpha:1];
     
-    
     MemberModel * memberMode = [MemberModel instance];
-    
-    if (indexPath.row == 1) {
+    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"回覆/通話設定"]) {
         cell.rightLabel.text = @"今日收益 0 ";
         cell.rightLabel.textColor = [UIColor orangeColor];
         cell.rightIconImg.hidden = YES;
-    }else if(indexPath.row == 2){
-        cell.rightLabel.text = [[NSString alloc] initWithFormat:@"%ld",(long)memberMode.credits];
-        
-        cell.rightIconImg.image = [UIImage imageNamed:@"person_list_daimond"];
-    }else{
-        cell.rightLabel.hidden = YES;
-        cell.rightIconImg.hidden = YES;
     }
+    
+    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"我的鑽石"]) {
+        cell.rightLabel.text = [[NSString alloc] initWithFormat:@"%ld",(long)memberMode.credits];
+        cell.rightIconImg.image = [UIImage imageNamed:@"person_list_daimond"];
+    }
+    
+    cell.rightLabel.hidden = YES;
+    cell.rightIconImg.hidden = YES;
+    
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    [_delegate presentController:indexPath.row];
-    //[_delegate addController];
+    [_delegate presentController:[_dataArr objectAtIndex:indexPath.row]];
 }
+
 
 @end

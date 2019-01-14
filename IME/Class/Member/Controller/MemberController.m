@@ -20,7 +20,7 @@
 #import "MemberModel.h"
 #import "NetHttpsModel.h"
 
-@interface MemberController ()<NetHttpsModelDelegate>
+@interface MemberController ()<NetHttpsModelDelegate,MemberMenuViewDelegate>
 @property (nonatomic) CAPSPageMenu *pageMenu;
 @end
 
@@ -77,7 +77,6 @@
                 [memberModel setValue:value forKey:key];
             }
             @catch (NSException *exception) {
-                //DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
                 DLog(@"欄位%@不再model裡面",key);
             }
         }
@@ -102,7 +101,6 @@
                 DLog(@"试图添加不存在的key:%@到实例:%@中.",key,NSStringFromClass([self class]));
             }
         }
-        
         [_memberView reloadMemberUI];
     }else{
         UIAlertController * alert=   [UIAlertController
@@ -117,35 +115,20 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
-    
-    
     LoginModel * loginModel = [LoginModel instance];
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
     paramDict[@"token"] = loginModel.token;
     paramDict[@"setting"] = @"0";
     paramDict[@"pictures"] = @"1";
-    
-    //[self postGetMyData:paramDict];
-    
+
     NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
     netHttpsModel.delegate = self;
     [netHttpsModel POSTWithUrl:URL_get_my_data paramDict:paramDict];
-    
     [_memberView reloadMemberUI];
-    /*
-    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
-    netHttpsModel.delegate = self;
-    [netHttpsModel POSTWithUrl:@"" paramDict:nil];
-    */
-    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
     _memberView = [[MemberView alloc] init];
     _memberView.delegate = self;
     _memberView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -189,34 +172,27 @@
     }
 }
 
-- (void)presentController :(long)indexRow {
-    
-    if (indexRow == 0) {
+- (void)presentController :(NSString*) cellTitle{
+    self.navigationController.navigationBarHidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
+    if ([cellTitle isEqualToString:@"回覆/通話設定"]) {
         ReplyPriceController * replyPriceController = [[ReplyPriceController alloc] init];
-        self.navigationController.navigationBarHidden = NO;
-        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController: replyPriceController animated:YES];
-    }else if(indexRow == 1){
+        
+    }else if([cellTitle isEqualToString:@"我的鑽石"]){
         IncomeMainController * incomeMainController = [[IncomeMainController alloc] init];
-        self.navigationController.navigationBarHidden = NO;
-        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController: incomeMainController animated:YES];
-    }else if(indexRow == 2){
+    }else if([cellTitle isEqualToString:@"我的收益"]){
         DepositController * depositController = [[DepositController alloc] init];
-        self.navigationController.navigationBarHidden = NO;
-        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController: depositController animated:YES];
-    }else if(indexRow == 3){
+    }else if([cellTitle isEqualToString:@"使用紀錄"]){
         LogController * logController = [[LogController alloc] init];
-        self.navigationController.navigationBarHidden = NO;
-        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController: logController animated:YES];
-    }else if(indexRow == 4){
+    }else if([cellTitle isEqualToString:@"設定"]){
         SettingController * settingController = [[SettingController alloc] init];
-        self.navigationController.navigationBarHidden=NO;
-        self.tabBarController.tabBar.hidden = YES;
         [self.navigationController pushViewController: settingController animated:YES];
     }
+    
 }
 
 - (IBAction)test1:(id)sender {

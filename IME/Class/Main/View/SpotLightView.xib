@@ -12,9 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotLightView">
             <connections>
-                <outlet property="backBtn" destination="PuO-ru-Q51" id="akn-za-IjP"/>
                 <outlet property="headBgImg" destination="SOI-Xq-dT6" id="nIp-Vh-zS8"/>
-                <outlet property="moreBtn" destination="Eib-bI-LP1" id="4rd-Iq-5dX"/>
                 <outlet property="statusView" destination="ptX-J4-P9Y" id="pyq-dv-OCl"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZeW-W7-TRA"/>
             </connections>
@@ -52,20 +50,7 @@
                         <constraint firstItem="uP2-om-PW0" firstAttribute="centerX" secondItem="uqo-0a-Mwm" secondAttribute="centerX" id="v02-mD-u8i"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5J3-aZ-bcg">
-                    <rect key="frame" x="280" y="70" width="75" height="16.5"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eib-bI-LP1">
-                            <rect key="frame" x="0.0" y="0.0" width="37.5" height="16.5"/>
-                            <state key="normal" image="icon_more"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuO-ru-Q51">
-                            <rect key="frame" x="37.5" y="0.0" width="37.5" height="16.5"/>
-                            <state key="normal" title=" " image="message_close"/>
-                        </button>
-                    </subviews>
-                </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-J4-P9Y">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-J4-P9Y">
                     <rect key="frame" x="20" y="70" width="75" height="30"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="streamer_tag_hot2" translatesAutoresizingMaskIntoConstraints="NO" id="dBU-kd-6Yk">
@@ -98,26 +83,20 @@
                 <constraint firstItem="ptX-J4-P9Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1oP-NJ-mDh"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="height" secondItem="SOI-Xq-dT6" secondAttribute="height" multiplier="0.06" id="4Dp-YL-dGO"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OxM-fU-0iN"/>
-                <constraint firstItem="5J3-aZ-bcg" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="QuH-it-jur"/>
                 <constraint firstItem="ptX-J4-P9Y" firstAttribute="width" secondItem="SOI-Xq-dT6" secondAttribute="width" multiplier="0.2" id="WKC-0E-bYi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uqo-0a-Mwm" secondAttribute="trailing" id="XPV-HM-POS"/>
                 <constraint firstItem="ptX-J4-P9Y" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="f3L-LQ-IoP"/>
                 <constraint firstItem="SOI-Xq-dT6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fgl-Rj-GjM"/>
                 <constraint firstAttribute="bottom" secondItem="SOI-Xq-dT6" secondAttribute="bottom" id="inS-do-dRn"/>
-                <constraint firstItem="5J3-aZ-bcg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="jTR-ds-XkP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SOI-Xq-dT6" secondAttribute="trailing" id="lT6-8X-jdd"/>
-                <constraint firstItem="5J3-aZ-bcg" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.025" id="mQR-wh-ccL"/>
                 <constraint firstItem="SOI-Xq-dT6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pFH-pI-yt5"/>
                 <constraint firstItem="uqo-0a-Mwm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tjl-tl-hHB"/>
-                <constraint firstAttribute="trailing" secondItem="5J3-aZ-bcg" secondAttribute="trailing" constant="20" id="vyK-Sh-tzH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="50.399999999999999" y="63.418290854572717"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_more" width="250" height="220"/>
-        <image name="message_close" width="250" height="220"/>
         <image name="streamer_chat2" width="60" height="56"/>
         <image name="streamer_post2" width="53" height="53"/>
         <image name="streamer_tag_hot2" width="39" height="39"/>

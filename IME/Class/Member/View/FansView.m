@@ -17,13 +17,6 @@
     if(self)
     {
         [self commonInit];
-//        _dataArr = [[NSMutableArray alloc] init];
-//        [_dataArr addObject:@""];
-//        [_dataArr addObject:@""];
-//        [_dataArr addObject:@""];
-//        [_dataArr addObject:@""];
-//        [_dataArr addObject:@""];
-//        [_dataArr addObject:@""];
     }
     return self;
 }
@@ -38,12 +31,12 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-//----改tableview header
+//tableview header
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     return 0;
 }
-//-----Header 高度
+//Header 高度
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0;
@@ -53,7 +46,6 @@
     return [_dataArr count];
 }
 
-
 // tableview cell 高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return tableView.frame.size.height/10.5;
@@ -61,7 +53,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    //----Setting_soundslider_TableViewCell
     FansCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell ==nil) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"FansCell" owner:nil options:nil];
@@ -76,7 +67,15 @@
     }else{
         cell.followBtn.hidden = NO;
     }
- 
+   
+    if (![[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"]  isKindOfClass:[NSNull class]]) {
+        if ([[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"has_trace"] boolValue]) {
+            [cell.followBtn setTitle:@"追蹤中" forState:UIControlStateNormal];
+        }else{
+            [cell.followBtn setTitle:@"+追蹤" forState:UIControlStateNormal];
+        }
+    }
+    
     
     if (![[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"]  isKindOfClass:[NSNull class]]) {
         if ([[[_dataArr objectAtIndex:indexPath.row]objectForKey:@"account"] isKindOfClass:[NSNumber class]]) {
@@ -93,43 +92,44 @@
  
     if ([[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"gender"] isEqualToString:@"F"]) {
         [cell.headImg setImage:[UIImage imageNamed:@"default_avatar2"] forState:UIControlStateNormal];
-        //default_avatar2
     }else{
         [cell.headImg setImage:[UIImage imageNamed:@"default_avatar_m2"] forState:UIControlStateNormal];
-        //default_avatar_m2
     }
     
     if (![[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"thumbnail"] isKindOfClass:[NSNull class]]) {
         NSArray * partitionArr =[[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"thumbnail"] componentsSeparatedByString:@","];
         NSData *decodedImageData = [[NSData alloc]
                                     initWithBase64EncodedString:[partitionArr objectAtIndex:1] options:NSDataBase64DecodingIgnoreUnknownCharacters];
-        
-        //cell.headImg.image = [UIImage imageWithData:decodedImageData];
-        
+
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation: UIStatusBarAnimationSlide];
         UIImage *image=[UIImage imageWithData:decodedImageData];
         CGFloat fixelW = CGImageGetWidth(image.CGImage);
-        CGRect rect = CGRectMake(0, 0, fixelW, fixelW);//创建矩形框
+        CGRect rect = CGRectMake(0, 0, fixelW, fixelW);
         
         [cell.headImg setImage:[UIImage imageWithCGImage:CGImageCreateWithImageInRect([image CGImage], rect)] forState:UIControlStateNormal];
  
     }
     
   
-    [cell.followBtn addTarget:self action:@selector(followBtClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.followBtn addTarget:self action:@selector(clickfollowBtn:) forControlEvents:UIControlEventTouchUpInside];
+    cell.followBtn.tag = [[[_dataArr objectAtIndex:indexPath.row] objectForKey:@"no"] intValue];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    [_delegate pushSpotLightView];
-    [_delegate addSpotLightView:<#(nonnull NSMutableArray *)#>]
+    [_delegate addSpotLightView:[_dataArr objectAtIndex:indexPath.row]];
     
 }
 
-- (void)followBtClicked:(UIButton*)sender{
-    NSLog(@"work!");
-    //[sender setImage:[UIImage imageNamed:@"followed.png"] forState:UIControlStateNormal];
-    //sender.backgroundColor = [UIColor grayColor];
-    [sender setTitle:@"+追蹤" forState:UIControlStateNormal];
+- (void)clickfollowBtn:(UIButton*)sender{
+    if ([sender.titleLabel.text isEqualToString:@"追蹤中"]) {
+        [sender setTitle:@"+追蹤" forState:UIControlStateNormal];
+        [_delegate removeTrace:[[NSString alloc]initWithFormat:@"%ld",(long)sender.tag]];
+    }else if([sender.titleLabel.text isEqualToString:@"+追蹤"]){
+        [sender setTitle:@"追蹤中" forState:UIControlStateNormal];
+        [_delegate addTrace:[[NSString alloc]initWithFormat:@"%ld",(long)sender.tag]];
+    }
+    
+    
 }
 @end

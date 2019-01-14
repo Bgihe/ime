@@ -73,9 +73,9 @@
 #define URL_get_my_data @"/member/get-my-data"
 //取得會員的簡介檔案
 #define URL_get_profile @"/member/get-profile"
-//更新活動時間與上線
+//更新活動時間與上線 (暫時不用)
 #define URL_update_active_time @"/member/update-active-time"
-//更新活動時間與上線
+//更新活動時間與上線 (暫時不用)
 #define URL_get_setting @"/member/get-setting"
 //更新會員資料
 #define URL_member_update @"/member/update"
@@ -97,15 +97,40 @@
 #define URL_get_fans_data @"/member-trace/get-fans-data"
 //取得追蹤清單
 #define URL_get_trace_data @"/member-trace/get-member-data"
-//取得追蹤主播的最新貼文
+//取得追蹤主播的最新貼文 (main的全部訊息)
 #define URL_get_trace_new_post @"/member-trace/get-new-post"
-//新增封鎖
+//新增封鎖 (暫時不用)
 #define URL_block_add @"/member-block/add"
-//解除封鎖
+//解除封鎖 (暫時不用)
 #define URL_block_remove @"/member-block/remove"
-//取得封鎖清單
+//取得封鎖清單 (暫時不用)
 #define URL_get_block_data @"/member-block/get-member-data"
-
-
+//----紀錄點
+//鑽石紀錄
+#define URL_get_credits @"/credits/get-credits"
+//取得點數的使用歷程
+#define URL_get_credits_log @"/credits/get-logs"
+//儲值
+#define URL_deposit_query @"/deposit/query"
+//取得封鎖清單
+#define URL_explore_search_anchor @"/explore/search-anchor"
+//取得搜尋的推薦清單
+#define URL_explore_promo_search @"/explore/get-promo-search"
+//貼文
+#define URL_post_publish @"/post/publish"
+//取得貼文的資料
+#define URL_get_post_data @"/post/get-post-data"
+//解鎖文章
+#define URL_post_unlock @"/post/unlock"
+//取得自己的文章
+#define URL_post_get_my_record @"/post/get-my-record"
+//取得主播的文章
+#define URL_post_get_record @"/post/get-record"
+//取得已解鎖的文章
+#define URL_post_get_unlock @"/post/get-unlock"
+//將已解鎖文章加入收藏
+#define URL_post_add_favorite @"/post/add-favorite"
+//取消收藏的解鎖文章
+#define URL_post_remove_favorite @"/post/remove-favorite"
 
 #endif /* URLMacros_h */
