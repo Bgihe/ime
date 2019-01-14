@@ -10,7 +10,8 @@
 #import "SettingController.h"
 #import "LoginModel.h"
 #import "PermissionsModel.h"
-@interface MemberMenuController ()
+#import "NetHttpsModel.h"
+@interface MemberMenuController ()<NetHttpsModelDelegate>
 
 @end
 
@@ -24,7 +25,7 @@
     [self.view addSubview:_memberMenuView.view];
     
     
-    //LoginModel * loginModel = [LoginModel instance];.
+    LoginModel * loginModel = [LoginModel instance];
     
     PermissionsModel * permissionsModel = [PermissionsModel instance];
     NSMutableArray * titleArr = [[NSMutableArray alloc] init];
@@ -38,17 +39,28 @@
         [titleArr addObject:@"我的鑽石"];
         [iconArr addObject:@"person_list_daimond"];
     }
-    [titleArr addObject:@"我的收益"];
+    //role
+    if (loginModel.role == 2) {
+        [titleArr addObject:@"我的收益"];
+        [iconArr addObject:@"person_list_income"];
+    }
+    
     [titleArr addObject:@"使用紀錄"];
     [titleArr addObject:@"設定"];
-
-    [iconArr addObject:@"person_list_income"];
+ 
     [iconArr addObject:@"person_list_record"];
     [iconArr addObject:@"person_list_setting"];
     
     _memberMenuView.dataArr = titleArr;
     _memberMenuView.iconArr = iconArr;
     [_memberMenuView.tableView reloadData];
+    
+    
+    NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
+    paramDict[@"token"] = loginModel.token;
+    NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
+    netHttpsModel.delegate = self;
+    [netHttpsModel POSTWithUrl:URL_get_credits paramDict:paramDict];
 }
 
 - (void)presentController :(NSString*) cellTitle{
@@ -59,7 +71,10 @@
 - (void)httpResult: (NSDictionary*) responseObject :(NSString *) url {
     if ([url isEqualToString:URL_get_credits]) {
         if ([[responseObject objectForKey:@"success"] boolValue]) {
-            NSLog(@"%@",responseObject);
+            NSLog(@"%@",[[responseObject objectForKey:@"data"]objectForKey:@"credits"]);
+            
+            _memberMenuView.credits = [[[responseObject objectForKey:@"data"]objectForKey:@"credits"] intValue];
+            [_memberMenuView.tableView reloadData];
         }
     }
 }

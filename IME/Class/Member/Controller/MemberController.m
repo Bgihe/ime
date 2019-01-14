@@ -179,10 +179,10 @@
         ReplyPriceController * replyPriceController = [[ReplyPriceController alloc] init];
         [self.navigationController pushViewController: replyPriceController animated:YES];
         
-    }else if([cellTitle isEqualToString:@"我的鑽石"]){
+    }else if([cellTitle isEqualToString:@"我的收益"]){
         IncomeMainController * incomeMainController = [[IncomeMainController alloc] init];
         [self.navigationController pushViewController: incomeMainController animated:YES];
-    }else if([cellTitle isEqualToString:@"我的收益"]){
+    }else if([cellTitle isEqualToString:@"我的鑽石"]){
         DepositController * depositController = [[DepositController alloc] init];
         [self.navigationController pushViewController: depositController animated:YES];
     }else if([cellTitle isEqualToString:@"使用紀錄"]){

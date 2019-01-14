@@ -91,18 +91,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[_dataArr objectAtIndex:0] count];
 }
-
-
+ 
 // tableview cell 高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return _tableView.frame.size.height/10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
-    
     static NSString *CellIdentifier = @"Cell";
-    //----Setting_soundslider_TableViewCell
     DepositCell * cell =[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell ==nil) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"DepositCell" owner:nil options:nil];

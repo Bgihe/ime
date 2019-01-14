@@ -110,6 +110,8 @@
 #define URL_get_credits @"/credits/get-credits"
 //取得點數的使用歷程
 #define URL_get_credits_log @"/credits/get-logs"
+//取得所有付款方式和點數資料
+#define URL_deposit_get_all_plan @"/deposit/get-all-deposit-plan"
 //儲值
 #define URL_deposit_query @"/deposit/query"
 //取得封鎖清單

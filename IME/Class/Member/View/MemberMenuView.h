@@ -16,10 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addController;
 @end
 @interface MemberMenuView : UIView
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UIView *view;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray   *dataArr;
 @property (nonatomic, strong) NSMutableArray   *iconArr;
+@property (nonatomic, assign) int              credits;
 @property (nonatomic, weak) id<MemberMenuViewDelegate> delegate;
 @end
 

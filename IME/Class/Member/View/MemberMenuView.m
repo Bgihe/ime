@@ -94,21 +94,27 @@
     cell.tintColor = [UIColor whiteColor];
     cell.backgroundColor = [UIColor colorWithRed:212.0/255.0 green:231.0/255.0 blue:234.0/255.0 alpha:1];
     
-    MemberModel * memberMode = [MemberModel instance];
-    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"回覆/通話設定"]) {
-        cell.rightLabel.text = @"今日收益 0 ";
-        cell.rightLabel.textColor = [UIColor orangeColor];
-        cell.rightIconImg.hidden = YES;
-    }
     
-    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"我的鑽石"]) {
-        cell.rightLabel.text = [[NSString alloc] initWithFormat:@"%ld",(long)memberMode.credits];
-        cell.rightIconImg.image = [UIImage imageNamed:@"person_list_daimond"];
-    }
-    
+  
     cell.rightLabel.hidden = YES;
     cell.rightIconImg.hidden = YES;
     
+    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"我的收益"]) {
+        cell.rightLabel.text = @"今日收益 0 ";
+        cell.rightLabel.textColor = [UIColor orangeColor];
+        cell.rightLabel.hidden = NO;
+        cell.rightIconImg.hidden = NO;
+    }
+    
+    if ([[_dataArr objectAtIndex:indexPath.row] isEqualToString:@"我的鑽石"]) {
+        cell.rightLabel.text = [NSNumberFormatter localizedStringFromNumber:@(_credits)
+                                                                numberStyle:NSNumberFormatterDecimalStyle];
+        cell.rightIconImg.image = [UIImage imageNamed:@"person_list_daimond"];
+        cell.rightLabel.hidden = NO;
+        cell.rightIconImg.hidden = NO;
+    }
+    
+ 
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{

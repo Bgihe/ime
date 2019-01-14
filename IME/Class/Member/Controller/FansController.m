@@ -144,6 +144,7 @@
 }
 #pragma mark - button
 -(void)clickSpotLightfollowBtn:(UIButton*)sender {
+    _hasTrace = true;
     [self addTrace:_fansNo];
 }
 -(void)clickSpotLightMoreMsgBtn:(UIButton*)sender {
@@ -160,10 +161,10 @@
         _reportView.view.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight);
         [self.navigationController.view addSubview:_reportView.view];
         if (!_hasTrace) {
-            _hasTrace = true;
+            //_hasTrace = true;
             _reportView.firstBtn.alpha = 0;
         }else{
-            _hasTrace = false;
+            //_hasTrace = false;
             _reportView.firstBtn.alpha = 1;
             [_reportView.firstBtn setTitle:@"取消追蹤" forState:UIControlStateNormal];
             [_reportView.firstBtn addTarget:self action:@selector(clickFirstBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -182,6 +183,7 @@
 
 
 -(void)clickFirstBtn:(UIButton*)sender {
+    _hasTrace = false;
     [self removeTrace:_fansNo];
 }
 -(void)clickSecondBtn:(id)sender {

@@ -281,18 +281,12 @@
         }
     }else if([url isEqualToString:URL_member_update]){
         if ([[responseObject objectForKey:@"success"] boolValue]) {
-            NSLog(@"Success");
-            NSLog(@"%@",responseObject);
-            
             [SVProgressHUD showSuccessWithStatus:@"儲存成功"];
-            
             self.tabBarController.tabBar.hidden = NO;
             self.navigationController.navigationBarHidden=NO;
             [self.navigationController popViewControllerAnimated:NO];
-            
         }
     }
- 
 }
 
 #pragma mark - photo

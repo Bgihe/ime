@@ -22,6 +22,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *CVSBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cardBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *creditName1Label;
+@property (weak, nonatomic) IBOutlet UIButton *creditName2Label;
+@property (weak, nonatomic) IBOutlet UIButton *creditName3Label;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *creditsLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *customerServiceView;
 
 - (void)updateBtnColor :(long) tag;
