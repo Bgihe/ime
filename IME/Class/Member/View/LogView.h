@@ -14,7 +14,9 @@
 @end
 @interface LogView : UIView
 @property (nonatomic, weak) id<LogViewDelegate> delegate;
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray   *dataArr;
+@property (strong, nonatomic) IBOutlet UIView       *view;
+@property (weak, nonatomic) IBOutlet UITableView    *tableView;
+@property (weak, nonatomic) IBOutlet UIButton       *selectBtn;
+@property (weak, nonatomic) IBOutlet UIStackView    *noDataAlert;
+@property (nonatomic, strong) NSMutableArray        *dataArr;
 @end

@@ -13,7 +13,7 @@
 #import "ReplyPriceController.h"
 #import "IncomeMainController.h"
 #import "DepositController.h"
-#import "LogController.h"
+#import "CreditLogController.h"
 #import "MemberEditController.h"
 
 #import "PermissionsModel.h"
@@ -186,8 +186,10 @@
         DepositController * depositController = [[DepositController alloc] init];
         [self.navigationController pushViewController: depositController animated:YES];
     }else if([cellTitle isEqualToString:@"使用紀錄"]){
-        LogController * logController = [[LogController alloc] init];
-        [self.navigationController pushViewController: logController animated:YES];
+        CreditLogController * creditLogController = [[CreditLogController alloc] init];
+        creditLogController.selectStr = @"D";
+        creditLogController.actionStr = @"4";
+        [self.navigationController pushViewController: creditLogController animated:YES];
     }else if([cellTitle isEqualToString:@"設定"]){
         SettingController * settingController = [[SettingController alloc] init];
         [self.navigationController pushViewController: settingController animated:YES];

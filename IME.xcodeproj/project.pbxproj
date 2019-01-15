@@ -142,6 +142,7 @@
 		1867959321CC930E00F3BA84 /* DepositController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959221CC930E00F3BA84 /* DepositController.m */; };
 		1867959621CCB70C00F3BA84 /* DepositDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959521CCB70C00F3BA84 /* DepositDetailController.m */; };
 		1867959921CCB81E00F3BA84 /* DepositModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867959821CCB81E00F3BA84 /* DepositModel.m */; };
+		1891D6DB21EDC07B009364E4 /* CreditLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891D6DA21EDC07B009364E4 /* CreditLogController.m */; };
 		18994D2321CCE76B00811893 /* DepositDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2121CCE76B00811893 /* DepositDetailCell.m */; };
 		18994D2421CCE76B00811893 /* DepositDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18994D2221CCE76B00811893 /* DepositDetailCell.xib */; };
 		18994D2A21CDFEF500811893 /* DepositLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18994D2921CDFEF500811893 /* DepositLogController.m */; };
@@ -413,6 +414,8 @@
 		1867959521CCB70C00F3BA84 /* DepositDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositDetailController.m; sourceTree = "<group>"; };
 		1867959721CCB81E00F3BA84 /* DepositModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositModel.h; sourceTree = "<group>"; };
 		1867959821CCB81E00F3BA84 /* DepositModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositModel.m; sourceTree = "<group>"; };
+		1891D6D921EDC07B009364E4 /* CreditLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditLogController.h; sourceTree = "<group>"; };
+		1891D6DA21EDC07B009364E4 /* CreditLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditLogController.m; sourceTree = "<group>"; };
 		18994D2021CCE76B00811893 /* DepositDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DepositDetailCell.h; sourceTree = "<group>"; };
 		18994D2121CCE76B00811893 /* DepositDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DepositDetailCell.m; sourceTree = "<group>"; };
 		18994D2221CCE76B00811893 /* DepositDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepositDetailCell.xib; sourceTree = "<group>"; };
@@ -711,6 +714,8 @@
 				18994D2921CDFEF500811893 /* DepositLogController.m */,
 				18994D2E21CE110700811893 /* LogController.h */,
 				18994D2F21CE110700811893 /* LogController.m */,
+				1891D6D921EDC07B009364E4 /* CreditLogController.h */,
+				1891D6DA21EDC07B009364E4 /* CreditLogController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1333,6 +1338,7 @@
 				18994D2D21CE10F300811893 /* LogView.m in Sources */,
 				181B156821CA09B900449B5D /* MyIncomeView.m in Sources */,
 				180DC49621E33DE500022C65 /* LoginModel.m in Sources */,
+				1891D6DB21EDC07B009364E4 /* CreditLogController.m in Sources */,
 				181B15A421CA3BBA00449B5D /* IncomeView.m in Sources */,
 				0406679B21C00943003FB675 /* MassMessageCell.m in Sources */,
 				180ADB3621BA0835002D85DE /* MassMessageView.m in Sources */,

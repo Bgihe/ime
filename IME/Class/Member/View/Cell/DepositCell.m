@@ -28,6 +28,17 @@
     });
     */
     
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self->_amountLabel.contentMode=UIViewContentModeScaleAspectFill;
+        self->_amountLabel.layer.cornerRadius = 3;
+        self->_amountLabel.clipsToBounds = YES;
+        self->_amountLabel.layer.borderWidth = 1;
+        self->_amountLabel.layer.borderColor = [UIColor colorWithRed:53.0/255.0 green:125.0/255.0 blue:138.0/255.0 alpha:1].CGColor;
+        self->_amountLabel.contentMode=UIViewContentModeScaleAspectFill;
+        self->_amountLabel.layer.masksToBounds = YES;
+    });
+    //amountLabel
 
 }
 /*

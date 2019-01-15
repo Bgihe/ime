@@ -19,8 +19,7 @@
         [_dataArr addObject:@""];
         [_dataArr addObject:@""];
         [_dataArr addObject:@""];
-        
-        
+
     }
     return self;
 }

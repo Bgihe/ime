@@ -14,10 +14,24 @@
 
 @implementation DepositDetailController
 
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"%@",_creditsData);
+    NSLog(@"%@",_creditsName);
+    NSLog(@"%@",_subpaymentsList);
+    
+    _depositDetailView.dataArr = _subpaymentsList;
+    [_depositDetailView.tableView reloadData];
+    
+    [_depositDetailView refreshRect];
+    [_depositDetailView refreshCreditData:_creditsData :_creditsName];
+  
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"儲值付款";
-    _depositModel = [DepositModel instance];
+    //_depositModel = [DepositModel instance];
     _depositDetailView = [[DepositDetailView alloc] init];
     _depositDetailView.delegate = self;
     _depositDetailView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -25,28 +39,17 @@
     
     [_depositDetailView.confirmBtn addTarget:self action:@selector(clickConfirmBtn:) forControlEvents:UIControlEventTouchUpInside];
     
+    /*
     _depositDetailView.payStatus = _depositModel.amountRow ;
-    if (_depositModel.payStatus == 400) {
-        NSLog(@"0");
-        _depositDetailView.payStatus = 400;
-        _depositDetailView.dataArr = _depositModel.ATMList;
-    }else if(_depositModel.payStatus == 401){
-        NSLog(@"1");
-        _depositDetailView.payStatus = 401;
-        _depositDetailView.dataArr = _depositModel.CVSList;
-    }else if(_depositModel.payStatus == 402){
-        NSLog(@"2");
-        _depositDetailView.payStatus = 402;
-    }else{
-        NSLog(@"0");
-        _depositDetailView.payStatus = 400;
-        _depositDetailView.dataArr = _depositModel.ATMList;
-    }
- 
+
     _depositDetailView.diamond = [_depositModel.diamondList objectAtIndex:(int)_depositModel.amountRow];
     _depositDetailView.amount = [_depositModel.amountList objectAtIndex:(int)_depositModel.amountRow];
-    [_depositDetailView reloadAmountLabel];
+    */
     
+    //[_depositDetailView reloadAmountLabel];
+    
+    
+    /*
     if (_isConfirm) {
         [_depositDetailView showPaymentInfo];
         _depositDetailView.isConfirm = YES;
@@ -86,7 +89,7 @@
             _depositDetailView.dataArr = arr;
             [_depositDetailView.tableView reloadData];
         }
-    }
+    }*/
 }
  
 - (IBAction)clickConfirmBtn:(UIButton*)sender {

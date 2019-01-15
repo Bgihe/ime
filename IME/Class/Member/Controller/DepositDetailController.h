@@ -13,5 +13,8 @@
     DepositDetailView * _depositDetailView;
 }
 @property (nonatomic, strong) DepositModel    * depositModel;
+@property (nonatomic, strong) NSMutableArray  * creditsData;     //儲值資訊
+@property (nonatomic, strong) NSMutableArray  * subpaymentsList; //繳款地點
+@property (nonatomic, strong) NSString        * creditsName;     //儲值類型
 @property (nonatomic, assign) BOOL isConfirm;
 @end

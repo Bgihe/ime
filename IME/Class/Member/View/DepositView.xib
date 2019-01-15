@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepositView">
             <connections>
-                <outlet property="creditName1Label" destination="S9O-je-FHJ" id="JAQ-Fg-scN"/>
-                <outlet property="creditName2Label" destination="dGZ-5W-qBy" id="bhP-ZK-n79"/>
-                <outlet property="creditName3Label" destination="0ca-FJ-YL8" id="8TD-BW-k5w"/>
+                <outlet property="ATMBtn" destination="0ca-FJ-YL8" id="BSA-YF-drn"/>
+                <outlet property="CVSBtn" destination="dGZ-5W-qBy" id="4vH-5b-yNV"/>
+                <outlet property="creditBtn" destination="S9O-je-FHJ" id="OfB-Je-OtZ"/>
                 <outlet property="creditsLabel" destination="Oco-92-eQK" id="1a9-cN-F4u"/>
                 <outlet property="customerServiceView" destination="6hS-Hp-luy" id="WQm-tW-GjK"/>
                 <outlet property="tableView" destination="l1k-Qr-Alg" id="1rZ-76-Vub"/>
@@ -71,9 +71,9 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9Nm-mc-Qiu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="33.5"/>
                             <subviews>
-                                <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9O-je-FHJ">
+                                <button opaque="NO" tag="402" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9O-je-FHJ">
                                     <rect key="frame" x="0.0" y="0.0" width="103.5" height="33.5"/>
-                                    <state key="normal" title="自動櫃員機">
+                                    <state key="normal" title="信用卡">
                                         <color key="titleColor" red="1" green="0.26088027159999999" blue="0.26891812520000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
@@ -83,9 +83,9 @@
                                         <color key="titleColor" red="0.2085655961" green="0.4918869944" blue="0.53938633420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" tag="402" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-FJ-YL8">
+                                <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-FJ-YL8">
                                     <rect key="frame" x="271.5" y="0.0" width="103.5" height="33.5"/>
-                                    <state key="normal" title="信用卡">
+                                    <state key="normal" title="自動櫃員機">
                                         <color key="titleColor" red="0.2085655961" green="0.4918869944" blue="0.53938633420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
@@ -104,7 +104,7 @@
                     <rect key="frame" x="0.0" y="628.5" width="375" height="33.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="儲值遇到問題?聯絡客服" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en5-BH-4NF">
-                            <rect key="frame" x="10" y="0.0" width="139.5" height="33.5"/>
+                            <rect key="frame" x="10" y="9" width="139.5" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -120,10 +120,9 @@
                     <color key="backgroundColor" red="1" green="0.70980392156862748" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="en5-BH-4NF" firstAttribute="leading" secondItem="6hS-Hp-luy" secondAttribute="leading" constant="10" id="IG4-Xc-Arw"/>
-                        <constraint firstAttribute="bottom" secondItem="en5-BH-4NF" secondAttribute="bottom" id="KLg-kU-PWv"/>
                         <constraint firstItem="h3S-00-8Py" firstAttribute="height" secondItem="6hS-Hp-luy" secondAttribute="height" multiplier="0.5" id="NFW-Zx-qSY"/>
                         <constraint firstItem="h3S-00-8Py" firstAttribute="centerY" secondItem="6hS-Hp-luy" secondAttribute="centerY" id="T9I-Xm-fHw"/>
-                        <constraint firstItem="en5-BH-4NF" firstAttribute="top" secondItem="6hS-Hp-luy" secondAttribute="top" id="fg4-Xp-LzQ"/>
+                        <constraint firstItem="en5-BH-4NF" firstAttribute="centerY" secondItem="6hS-Hp-luy" secondAttribute="centerY" id="luM-o6-W2M"/>
                         <constraint firstAttribute="trailing" secondItem="h3S-00-8Py" secondAttribute="trailing" constant="10" id="sRT-Fr-Rrj"/>
                     </constraints>
                 </view>
@@ -142,10 +141,11 @@
                 <constraint firstItem="g0r-BS-cab" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7xS-d4-j72"/>
                 <constraint firstItem="8fc-H8-OYd" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="Dgc-iE-1bN"/>
                 <constraint firstItem="6hS-Hp-luy" firstAttribute="height" secondItem="g0r-BS-cab" secondAttribute="height" id="FYC-qL-H4O"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6hS-Hp-luy" secondAttribute="bottom" constant="5" id="QZ2-Gp-7UL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8fc-H8-OYd" secondAttribute="trailing" id="Rxf-8Q-y4I"/>
+                <constraint firstItem="6hS-Hp-luy" firstAttribute="trailing" secondItem="l1k-Qr-Alg" secondAttribute="trailing" id="X06-Bu-Z0O"/>
                 <constraint firstItem="l1k-Qr-Alg" firstAttribute="top" secondItem="g0r-BS-cab" secondAttribute="bottom" id="Xbq-D0-St2"/>
                 <constraint firstItem="6hS-Hp-luy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Zb1-C1-dWc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6hS-Hp-luy" secondAttribute="bottom" constant="5" id="a7o-dl-TXb"/>
                 <constraint firstItem="8fc-H8-OYd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="bLe-6X-VUw"/>
                 <constraint firstItem="8fc-H8-OYd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dmu-Sp-fbR"/>
                 <constraint firstItem="6hS-Hp-luy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kUH-JN-nF8"/>
@@ -161,6 +161,6 @@
     </objects>
     <resources>
         <image name="icon_arrow" width="180" height="180"/>
-        <image name="icon_daimond" width="25" height="25"/>
+        <image name="icon_daimond" width="50" height="50"/>
     </resources>
 </document>

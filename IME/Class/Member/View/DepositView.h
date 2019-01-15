@@ -18,14 +18,15 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray   *dataArr;
 
-@property (weak, nonatomic) IBOutlet UIButton *ATMBtn;
+@property (weak, nonatomic) IBOutlet UIButton *creditBtn;
 @property (weak, nonatomic) IBOutlet UIButton *CVSBtn;
-@property (weak, nonatomic) IBOutlet UIButton *cardBtn;
+@property (weak, nonatomic) IBOutlet UIButton *ATMBtn;
 
-@property (weak, nonatomic) IBOutlet UIButton *creditName1Label;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *CreditBTn;
 @property (weak, nonatomic) IBOutlet UIButton *creditName2Label;
 @property (weak, nonatomic) IBOutlet UIButton *creditName3Label;
-
 
 
 @property (weak, nonatomic) IBOutlet UILabel *creditsLabel;

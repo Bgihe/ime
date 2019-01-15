@@ -11,7 +11,9 @@
 #import "DepositModel.h"
 #import "DepositDetailController.h"
 @interface DepositController : UIViewController<DepositViewDelegate>{
-    DepositView * _depositView;
+    DepositView         * _depositView;
+    NSMutableArray      * _creditData;
+    NSString            * _creditName;
 }
 @property (nonatomic, strong) DepositModel    * depositModel;
 @end
