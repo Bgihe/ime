@@ -8,18 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "LogView.h"
-@interface CreditLogController : UIViewController<LogViewDelegate>{
-    LogView     * _logView;
-    UIView      * _bgView;
-    UIView      * _bottomLine;
-    UIButton    * _postBtn;
-    UIButton    * _msgBtn;
-    UIButton    * _otherBtn;
+#import "DepositDetailView.h"
+@interface CreditLogController : UIViewController<LogViewDelegate,DepositDetailViewDelegate>{
+    LogView              * _logView;
+    DepositDetailView    * _depositDetailView;
+    UIView               * _bgView;
+    UIView               * _bottomLine;
+    UIButton             * _postBtn;
+    UIButton             * _msgBtn;
+    UIButton             * _otherBtn;
 }
 
 
 @property (nonatomic, strong) NSString        * selectStr;
 @property (nonatomic, strong) NSString        * actionStr;
+@property (nonatomic, strong) NSMutableArray  * dataArr;
+@property                     BOOL              isQuery;
 -(void)refreshRect :(int)hight;
 @end
 

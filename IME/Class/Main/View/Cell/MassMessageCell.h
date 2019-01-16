@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *countdownImg;
 @property (weak, nonatomic) IBOutlet UIImageView *daimondImg;
 @property (weak, nonatomic) IBOutlet UIButton *msgBtn;
+@property (weak, nonatomic) IBOutlet UIStackView *daimondStack;
+
 @property (nonatomic, weak) id<MassMessageCellDelegate> delegate;
 @end
 

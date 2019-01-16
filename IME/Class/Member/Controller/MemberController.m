@@ -189,7 +189,7 @@
         CreditLogController * creditLogController = [[CreditLogController alloc] init];
         creditLogController.selectStr = @"D";
         creditLogController.actionStr = @"4";
-        //[creditLogController refreshRect:KScreenHeight * 0.05];
+        creditLogController.isQuery = false;
         [self.navigationController pushViewController: creditLogController animated:YES];
     }else if([cellTitle isEqualToString:@"設定"]){
         SettingController * settingController = [[SettingController alloc] init];

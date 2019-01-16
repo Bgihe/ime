@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 @class SearchView;
 
-@protocol SearchViewDelegate
+@protocol SearchViewDelegate <UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
 
 @end
 @interface SearchView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (nonatomic, weak) id<SearchViewDelegate> delegate;
+
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) IBOutlet UITableView *resultTableView;
+@property (nonatomic, strong) IBOutlet UITableView *promoTableView;
+
+@property (nonatomic, strong) NSMutableArray   *searchLogArr;
+@property (nonatomic) IBOutlet UIView                       *searchLogView;
+@property (nonatomic) IBOutlet UIView                       *searchResultView;
+//Search Results
 @end
 

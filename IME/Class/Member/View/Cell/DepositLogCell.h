@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DepositLogCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *payMentLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *logTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *paymentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *daimondAmountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creditsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 
 @end

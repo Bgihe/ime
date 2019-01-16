@@ -9,6 +9,7 @@
 #import "SearchAnchorController.h"
 #import "SpotLightController.h"
 #import "SpotLightMainController.h"
+#import "SearchController.h"
 @interface SearchAnchorController ()
 
 @end
@@ -17,13 +18,13 @@
 -(IBAction)clickSearchBtn:(id)sender
 {
     NSLog(@"123");
+    SearchController * searchController = [[SearchController alloc] init];
+    self.navigationController.navigationBarHidden=YES;
+    [self.navigationController pushViewController: searchController animated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     UIImage *faceImage = [UIImage imageNamed:@"navi_search3"];
-    
     UIButton *face = [UIButton buttonWithType:UIButtonTypeCustom];
     face.bounds = CGRectMake( 0, 0, 20, 20 );
     [face setImage:faceImage forState:UIControlStateNormal];
@@ -33,8 +34,7 @@
     
     UIBarButtonItem *faceBtn = [[UIBarButtonItem alloc] initWithCustomView:face];
     self.navigationItem.rightBarButtonItem = faceBtn;
-    
-    
+
     _searchAnchorView = [[SearchAnchorView alloc] init];
     _searchAnchorView.delegate = self;
     _searchAnchorView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
@@ -78,8 +78,7 @@
     [arrF addObject:@"主播F4"];
     [arrF addObject:@"主播F5"];
     [arrF addObject:@"主播F6"];
-  
-    
+
     _dataArr = [[NSMutableArray alloc] init];
     [_dataArr addObject:arrA];
     [_dataArr addObject:arrB];
@@ -88,9 +87,6 @@
     [_dataArr addObject:arrE];
     [_dataArr addObject:arrF];
     _searchAnchorView.dataArr =_dataArr;
-   
-    
-     NSLog(@"SearchAnchorController viewDidLoad");
 }
 
 - (void)viewWillAppear:(BOOL)animated{

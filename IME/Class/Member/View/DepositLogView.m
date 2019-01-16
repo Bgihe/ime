@@ -69,12 +69,13 @@
             }
         }
     }
+    /*
     cell.dateLabel.text          = [[_dataArr objectAtIndex:0] objectAtIndex:indexPath.row];
     cell.payMentLabel.text       = [[_dataArr objectAtIndex:1] objectAtIndex:indexPath.row];
     cell.amountLabel.text        = [[_dataArr objectAtIndex:2] objectAtIndex:indexPath.row];
     cell.daimondAmountLabel.text = [[_dataArr objectAtIndex:3] objectAtIndex:indexPath.row];
     cell.statusLabel.text        = [[_dataArr objectAtIndex:4] objectAtIndex:indexPath.row];
- 
+ */
     return cell;
 }
 

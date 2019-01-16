@@ -85,6 +85,8 @@
 		182155B021C389B4003DE6A4 /* SingleButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155AE21C389B4003DE6A4 /* SingleButtonCell.xib */; };
 		182155B421C39027003DE6A4 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182155B221C39027003DE6A4 /* SwitchCell.m */; };
 		182155B521C39027003DE6A4 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182155B321C39027003DE6A4 /* SwitchCell.xib */; };
+		1822182121EF1BAF004F3EEC /* SearchLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822181F21EF1BAF004F3EEC /* SearchLogCell.m */; };
+		1822182221EF1BAF004F3EEC /* SearchLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1822182021EF1BAF004F3EEC /* SearchLogCell.xib */; };
 		18282E7221D4612E0091A77D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E7021D4612E0091A77D /* MessageCell.m */; };
 		18282E7321D4612E0091A77D /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18282E7121D4612E0091A77D /* MessageCell.xib */; };
 		18282E7621D4C6350091A77D /* MessageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18282E7521D4C6350091A77D /* MessageListView.m */; };
@@ -325,6 +327,9 @@
 		182155B121C39027003DE6A4 /* SwitchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
 		182155B221C39027003DE6A4 /* SwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
 		182155B321C39027003DE6A4 /* SwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		1822181E21EF1BAF004F3EEC /* SearchLogCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchLogCell.h; sourceTree = "<group>"; };
+		1822181F21EF1BAF004F3EEC /* SearchLogCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchLogCell.m; sourceTree = "<group>"; };
+		1822182021EF1BAF004F3EEC /* SearchLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLogCell.xib; sourceTree = "<group>"; };
 		18282E6F21D4612E0091A77D /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		18282E7021D4612E0091A77D /* MessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		18282E7121D4612E0091A77D /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -657,6 +662,9 @@
 				18282E6F21D4612E0091A77D /* MessageCell.h */,
 				18282E7021D4612E0091A77D /* MessageCell.m */,
 				18282E7121D4612E0091A77D /* MessageCell.xib */,
+				1822181E21EF1BAF004F3EEC /* SearchLogCell.h */,
+				1822181F21EF1BAF004F3EEC /* SearchLogCell.m */,
+				1822182021EF1BAF004F3EEC /* SearchLogCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1157,6 +1165,7 @@
 				180ADB3821BA083D002D85DE /* MassMessageView.xib in Resources */,
 				183520F721C0B5EE0052F255 /* PostListView.xib in Resources */,
 				1821546921C11212003DE6A4 /* FansCell.xib in Resources */,
+				1822182221EF1BAF004F3EEC /* SearchLogCell.xib in Resources */,
 				1867958121CC82CA00F3BA84 /* DepositDetailView.xib in Resources */,
 				18282EA321DDD29E0091A77D /* IMG_6308.PNG in Resources */,
 				181B156A21CA09C800449B5D /* MyIncomeView.xib in Resources */,
@@ -1397,6 +1406,7 @@
 				1867957F21CC82BE00F3BA84 /* DepositDetailView.m in Sources */,
 				1837AE1921BA717F00554879 /* MemberMenuView.m in Sources */,
 				18994D2A21CDFEF500811893 /* DepositLogController.m in Sources */,
+				1822182121EF1BAF004F3EEC /* SearchLogCell.m in Sources */,
 				181B159A21CA27B500449B5D /* IncomeRankController.m in Sources */,
 				1837AE3121BA75DE00554879 /* MemberBuyController.m in Sources */,
 				180DC4A421E472D200022C65 /* ConfigModel.m in Sources */,

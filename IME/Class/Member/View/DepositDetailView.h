@@ -7,38 +7,49 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class DepositDetailView;
 
 @protocol DepositDetailViewDelegate
 
 @end
 @interface DepositDetailView : UIView <UITableViewDataSource,UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (nonatomic) IBOutlet UIView *subView;
-@property (nonatomic, weak) id<DepositDetailViewDelegate> delegate;
-@property (nonatomic, strong) NSArray   *dataArr;
+@property (strong, nonatomic) IBOutlet UIView               *view;
+@property (nonatomic) IBOutlet UIView                       *subView;
+@property (nonatomic, weak) id<DepositDetailViewDelegate>    delegate;
+@property (nonatomic, strong) NSArray                       *dataArr;
 
-@property (nonatomic) IBOutlet UILabel *daimondTopLabel; //上面右邊
-@property (nonatomic) IBOutlet UIImageView *daimondTopImg;
-@property (nonatomic) IBOutlet UILabel *amountTopLabel; //上面做邊
-@property (nonatomic) IBOutlet UILabel *creditNameLabel;
-@property (nonatomic) IBOutlet UILabel *daimondBottomLabel; //下面鑽石
-@property (nonatomic) IBOutlet UIImageView *daimondBottomImg;
-@property (nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) IBOutlet UILabel *amountBottomLabel; //上面做邊
-@property (nonatomic) IBOutlet UIView *confirmView;
-@property (nonatomic) IBOutlet UIButton *confirmBtn;
-@property (nonatomic) IBOutlet UILabel *payStatusLabel;
+@property (nonatomic) IBOutlet UILabel                      *daimondTopLabel; //上面右邊
+@property (nonatomic) IBOutlet UIImageView                  *daimondTopImg;
+@property (nonatomic) IBOutlet UILabel                      *amountTopLabel; //上面做邊
+@property (nonatomic) IBOutlet UILabel                      *creditNameLabel;
+@property (nonatomic) IBOutlet UILabel                      *daimondBottomLabel; //下面鑽石
+@property (nonatomic) IBOutlet UIImageView                  *daimondBottomImg;
+@property (nonatomic) IBOutlet UITableView                  *tableView;
+@property (nonatomic) IBOutlet UILabel                      *amountBottomLabel; //上面做邊
+@property (nonatomic) IBOutlet UIView                       *confirmView;
+@property (nonatomic) IBOutlet UIButton                     *confirmBtn;
+@property (nonatomic) IBOutlet UILabel                      *payStatusLabel;
+@property (nonatomic) IBOutlet UILabel                      *titleTopLabel;
+@property (nonatomic) IBOutlet UIImageView                  *titleTopImg;
+@property (nonatomic) IBOutlet UILabel                      *titleBottomLabel;
+@property (nonatomic) IBOutlet UIImageView                  *titleBottomImg;
+@property (nonatomic) IBOutlet UIImageView                  *confirmImg;
+@property (nonatomic) IBOutlet UILabel                      *confirmLabel;
+@property (nonatomic) IBOutlet UIView                       *subBgView;
 
-@property (nonatomic) IBOutlet UILabel *titleTopLabel;
-@property (nonatomic) IBOutlet UIImageView *titleTopImg;
-@property (nonatomic) IBOutlet UILabel *titleBottomLabel;
-@property (nonatomic) IBOutlet UIImageView *titleBottomImg;
-
-@property (nonatomic) IBOutlet UIImageView *confirmImg;
-@property (nonatomic) IBOutlet UILabel *confirmLabel;
-
-@property (nonatomic) IBOutlet UIView *subBgView;
+@property (nonatomic) IBOutlet UIView                       *subSaveView;
+@property (nonatomic) IBOutlet UIView                       *subInfoView;
+@property (nonatomic) IBOutlet UIImageView                  *queryTitleImg;
+@property (nonatomic) IBOutlet UILabel                      *queryTitleLabel;
+@property (nonatomic) IBOutlet UILabel                      *payInfoTitle1Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfo1Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfoTitle2Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfo2Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfoTitle3Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfo3Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfoTitle4Label;
+@property (nonatomic) IBOutlet UILabel                      *payInfo4Label;
 
 
 @property (nonatomic, strong) NSString   *diamond;
@@ -51,6 +62,8 @@
 
 - (void)reloadAmountLabel;
 - (void)showPaymentInfo;
-- (void)refreshRect;
+
+- (void)refreshInfoView : (NSMutableArray *) infoArr;
+- (void)refreshRect : (BOOL) isInfo;
 - (void)refreshCreditData : (NSMutableArray *)creditData :(NSString*) creditName;
 @end

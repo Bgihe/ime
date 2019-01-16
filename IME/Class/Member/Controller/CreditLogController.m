@@ -15,7 +15,9 @@
 @end
 
 @implementation CreditLogController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [self reloadCreditsLog];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -51,23 +53,10 @@
     _logView.view.frame = CGRectMake(0, _bgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-_bgView.frame.size.height);
     [self.view addSubview:_logView.view];
     [_logView.selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
-    //----
-    /*
-    _selectStr = [[NSString alloc] init];
-    _selectStr = @"D";
-    _actionStr = [[NSString alloc] init];
-    _actionStr = @"4";
-    
-    [self reloadCreditsLog];
-     */
+ 
 }
 -(void)refreshRect :(int)hight{
-    //_bgView.frame = CGRectMake(0, 0, KScreenWidth, hight);
     _logView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-hight);
-}
--(void) viewWillAppear:(BOOL)animated{
-    [self reloadCreditsLog];
-    //_bgView.hidden = YES;
 }
 - (IBAction)clickSelectBtn:(UIButton*)sender {
     
@@ -131,6 +120,13 @@
     [_otherBtn setTitleColor:[UIColor colorWithRed:33.0/255.0 green:186.0/255.0 blue:186.0/255.0 alpha:1] forState:UIControlStateNormal];
 }
 - (void) reloadCreditsLog{
+    NSString * apiUrl = [[NSString alloc] init];
+    if (!_isQuery) {
+        apiUrl = URL_get_credits_log;
+    }else{
+        apiUrl = URL_deposit_query;
+    }
+    
     LoginModel * loginModel = [LoginModel instance];
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionary];
     paramDict[@"token"] = loginModel.token;
@@ -138,24 +134,50 @@
     paramDict[@"date"] = _selectStr;
     NetHttpsModel * netHttpsModel = [[NetHttpsModel alloc] init];
     netHttpsModel.delegate = self;
-    [netHttpsModel POSTWithUrl:URL_get_credits_log paramDict:paramDict];
+    [netHttpsModel POSTWithUrl:apiUrl paramDict:paramDict];
 }
 #pragma mark - http api
 - (void)httpResult: (NSDictionary*) responseObject :(NSString *) url {
     if ([url isEqualToString:URL_get_credits_log]) {
         if ([[responseObject objectForKey:@"success"] boolValue]) {
-            NSLog(@"%@",responseObject);
-            NSLog(@"%@",[[responseObject objectForKey:@"data"]objectForKey:@"data"]);
-            
             if ([[[responseObject objectForKey:@"data"]objectForKey:@"data"] count] <= 0) {
                 _logView.noDataAlert.hidden = NO;
             }else{
                 _logView.noDataAlert.hidden = YES;
             }
-            
+            _dataArr = [[responseObject objectForKey:@"data"]objectForKey:@"data"];
+            _logView.isQuery = false;
             _logView.dataArr = [[responseObject objectForKey:@"data"]objectForKey:@"data"];
             [_logView.tableView reloadData];
-       }        
+        }
+    }else if ([url isEqualToString:URL_deposit_query]){
+        if ([[responseObject objectForKey:@"success"] boolValue]) {
+            if ([[[responseObject objectForKey:@"data"]objectForKey:@"data"] count] <= 0) {
+                _logView.noDataAlert.hidden = NO;
+            }else{
+                _logView.noDataAlert.hidden = YES;
+            }
+            _dataArr = [[responseObject objectForKey:@"data"]objectForKey:@"data"];
+            _logView.isQuery = true;
+            _logView.dataArr = [[responseObject objectForKey:@"data"]objectForKey:@"data"];
+            [_logView.tableView reloadData];
+        }
+    }
+}
+-(void)presentController :(NSInteger) indexRow {
+    if (_isQuery) {
+        UIViewController * controller = [[UIViewController alloc] init];
+        controller.title = @"付款資訊";
+        self.navigationController.navigationBarHidden=NO;
+        [self.navigationController pushViewController: controller animated:YES];
+        
+        _depositDetailView = [[DepositDetailView alloc] init];
+        _depositDetailView.delegate = self;
+        _depositDetailView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        [controller.view addSubview:_depositDetailView.view];
+        
+        [_depositDetailView refreshRect:YES];
+        [_depositDetailView refreshInfoView:[_dataArr objectAtIndex:indexRow]];
     }
 }
 @end

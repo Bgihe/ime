@@ -85,16 +85,16 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="amountLabel" destination="gTs-G8-c1j" id="9r5-rM-gIX"/>
-                <outlet property="daimondAmountLabel" destination="n5h-DY-dUA" id="m0p-dx-rDn"/>
-                <outlet property="dateLabel" destination="uKA-XU-Ugl" id="fqz-BL-zcm"/>
-                <outlet property="payMentLabel" destination="U0a-kB-Tyj" id="l30-Wb-t5W"/>
-                <outlet property="statusLabel" destination="snv-uO-3cb" id="qrw-Sz-o5m"/>
+                <outlet property="amountLabel" destination="gTs-G8-c1j" id="kdT-Rf-Uze"/>
+                <outlet property="creditsLabel" destination="n5h-DY-dUA" id="Eea-KS-wDs"/>
+                <outlet property="logTimeLabel" destination="uKA-XU-Ugl" id="Okg-Q1-Ahc"/>
+                <outlet property="paymentLabel" destination="U0a-kB-Tyj" id="87H-sU-afv"/>
+                <outlet property="stateLabel" destination="snv-uO-3cb" id="edv-eM-AtU"/>
             </connections>
             <point key="canvasLocation" x="219" y="136"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_daimond" width="200" height="200"/>
+        <image name="icon_daimond" width="50" height="50"/>
     </resources>
 </document>
