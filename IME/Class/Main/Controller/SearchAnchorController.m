@@ -14,9 +14,27 @@
 @end
 
 @implementation SearchAnchorController
-
+-(IBAction)clickSearchBtn:(id)sender
+{
+    NSLog(@"123");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIImage *faceImage = [UIImage imageNamed:@"navi_search3"];
+    
+    UIButton *face = [UIButton buttonWithType:UIButtonTypeCustom];
+    face.bounds = CGRectMake( 0, 0, 20, 20 );
+    [face setImage:faceImage forState:UIControlStateNormal];
+    face.clipsToBounds = true;
+    face.contentMode = UIViewContentModeScaleAspectFit;
+    [face addTarget:self action:@selector(clickSearchBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *faceBtn = [[UIBarButtonItem alloc] initWithCustomView:face];
+    self.navigationItem.rightBarButtonItem = faceBtn;
+    
+    
     _searchAnchorView = [[SearchAnchorView alloc] init];
     _searchAnchorView.delegate = self;
     _searchAnchorView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);

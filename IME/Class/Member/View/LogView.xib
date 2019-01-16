@@ -37,14 +37,14 @@
                         <outlet property="delegate" destination="-1" id="mBT-pH-SWe"/>
                     </connections>
                 </tableView>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-yy-dt6">
-                    <rect key="frame" x="77.5" y="75" width="220" height="133.5"/>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-yy-dt6">
+                    <rect key="frame" x="77.5" y="75" width="220" height="106.5"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata_icon" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-M4-cVN">
-                            <rect key="frame" x="0.0" y="0.0" width="220" height="88.5"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata2_icon" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-M4-cVN">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="76.5"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前沒有主播的消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryz-CM-LtS">
-                            <rect key="frame" x="32" y="113.5" width="156" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沒有資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryz-CM-LtS">
+                            <rect key="frame" x="75.5" y="86.5" width="69.5" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="Nzd-mI-o72"/>
                             </constraints>
@@ -58,7 +58,7 @@
             <color key="backgroundColor" red="0.83094769719999995" green="0.90458756689999997" blue="0.917945385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="MMe-Gl-xy0" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="18P-1Q-dN9"/>
-                <constraint firstItem="xTE-yy-dt6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="3cF-nA-RUQ"/>
+                <constraint firstItem="xTE-yy-dt6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.16" id="3cF-nA-RUQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gu6-jc-1OH" secondAttribute="trailing" id="6bb-v8-dLl"/>
                 <constraint firstItem="xTE-yy-dt6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FpO-fa-eR6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gu6-jc-1OH" secondAttribute="bottom" constant="10" id="O3C-tO-Zdy"/>
@@ -73,6 +73,6 @@
         </view>
     </objects>
     <resources>
-        <image name="nodata_icon" width="220" height="200"/>
+        <image name="nodata2_icon" width="220" height="200"/>
     </resources>
 </document>

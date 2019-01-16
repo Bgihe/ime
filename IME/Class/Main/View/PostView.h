@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MemberPostCell.h"
-NS_ASSUME_NONNULL_BEGIN
+
 @class PostView;
 
 @protocol PostViewDelegate
@@ -35,4 +35,4 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) unlockPost;
 @end
 
-NS_ASSUME_NONNULL_END
+ 

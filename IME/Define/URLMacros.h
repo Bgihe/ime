@@ -87,7 +87,6 @@
 #define URL_set_default_picture @"/member/set-default-picture"
 //刪除大頭照
 #define URL_del_picture @"/member/del-picture"
-
 //0113
 //追蹤
 #define URL_trace_add @"/member-trace/add"
@@ -105,7 +104,6 @@
 #define URL_block_remove @"/member-block/remove"
 //取得封鎖清單 (暫時不用)
 #define URL_get_block_data @"/member-block/get-member-data"
-//----紀錄點
 //鑽石紀錄
 #define URL_get_credits @"/credits/get-credits"
 //取得點數的使用歷程

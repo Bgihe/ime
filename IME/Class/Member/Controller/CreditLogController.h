@@ -20,6 +20,6 @@
 
 @property (nonatomic, strong) NSString        * selectStr;
 @property (nonatomic, strong) NSString        * actionStr;
-
+-(void)refreshRect :(int)hight;
 @end
 

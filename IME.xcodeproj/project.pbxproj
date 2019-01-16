@@ -20,6 +20,9 @@
 		041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041DAF5921BEC2630091424A /* SpotLightController.m */; };
 		041DAF5C21BEC2730091424A /* SpotLightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041DAF5B21BEC2730091424A /* SpotLightView.xib */; };
 		042B696521E90B10004AD76B /* NetHttpsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B696321E90B10004AD76B /* NetHttpsModel.m */; };
+		04BB7BAB21EE326D00105419 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB7BAA21EE326D00105419 /* SearchView.m */; };
+		04BB7BAD21EE327900105419 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BB7BAC21EE327900105419 /* SearchView.xib */; };
+		04BB7BB021EE381F00105419 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB7BAF21EE381F00105419 /* SearchController.m */; };
 		18093E1921C8D27D00F6A5DA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18093E1821C8D27D00F6A5DA /* libsqlite3.tbd */; };
 		18093E1C21C8E8F600F6A5DA /* ReplyPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1B21C8E8F600F6A5DA /* ReplyPriceController.m */; };
 		18093E1F21C8E90C00F6A5DA /* ReplyPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093E1E21C8E90C00F6A5DA /* ReplyPriceView.m */; };
@@ -209,6 +212,11 @@
 		041DAF5B21BEC2730091424A /* SpotLightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotLightView.xib; sourceTree = "<group>"; };
 		042B696321E90B10004AD76B /* NetHttpsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetHttpsModel.m; sourceTree = "<group>"; };
 		042B696421E90B10004AD76B /* NetHttpsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetHttpsModel.h; sourceTree = "<group>"; };
+		04BB7BA921EE326D00105419 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		04BB7BAA21EE326D00105419 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		04BB7BAC21EE327900105419 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		04BB7BAE21EE381F00105419 /* SearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		04BB7BAF21EE381F00105419 /* SearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		18093E1021C8D10600F6A5DA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18093E1221C8D18D00F6A5DA /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
 		18093E1321C8D18D00F6A5DA /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
@@ -579,6 +587,8 @@
 				183520EE21C0A7F90052F255 /* UIViewController+ChildViewController.m */,
 				183520F021C0AB360052F255 /* IMEBaseViewController.h */,
 				183520F121C0AB360052F255 /* IMEBaseViewController.m */,
+				04BB7BAE21EE381F00105419 /* SearchController.h */,
+				04BB7BAF21EE381F00105419 /* SearchController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,6 +626,9 @@
 				040667A021C01DAA003FB675 /* PostView.h */,
 				040667A121C01DAA003FB675 /* PostView.m */,
 				040667A321C01DBC003FB675 /* PostView.xib */,
+				04BB7BA921EE326D00105419 /* SearchView.h */,
+				04BB7BAA21EE326D00105419 /* SearchView.m */,
+				04BB7BAC21EE327900105419 /* SearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1134,6 +1147,7 @@
 				181B15C421CB317000449B5D /* RankCell.xib in Resources */,
 				181B156F21CA0B6A00449B5D /* IncomeCell.xib in Resources */,
 				18CA49A221B8B67D0019650C /* Main.storyboard in Resources */,
+				04BB7BAD21EE327900105419 /* SearchView.xib in Resources */,
 				1837AE2221BA721D00554879 /* MemberPostView.xib in Resources */,
 				1851261E21BF59F00059E473 /* ReportView.xib in Resources */,
 				18282EA921DDD29E0091A77D /* IMG_6307.PNG in Resources */,
@@ -1313,6 +1327,7 @@
 				180ADB4821BA0904002D85DE /* SearchAnchorView.m in Sources */,
 				041DAF5A21BEC2630091424A /* SpotLightController.m in Sources */,
 				182155AF21C389B4003DE6A4 /* SingleButtonCell.m in Sources */,
+				04BB7BAB21EE326D00105419 /* SearchView.m in Sources */,
 				1857E9FA21B917A2007ACC63 /* LoginPhoneController.m in Sources */,
 				180DC49321E32E4500022C65 /* NetHttpsManager.m in Sources */,
 				1857EA0321B92440007ACC63 /* MainController.m in Sources */,
@@ -1375,6 +1390,7 @@
 				180DC49C21E46FAF00022C65 /* SignupController.m in Sources */,
 				0406679F21C01D97003FB675 /* PostController.m in Sources */,
 				18282E9421DC4C540091A77D /* MediaPlayerController.m in Sources */,
+				04BB7BB021EE381F00105419 /* SearchController.m in Sources */,
 				042B696521E90B10004AD76B /* NetHttpsModel.m in Sources */,
 				18CA499C21B8B67D0019650C /* AppDelegate.m in Sources */,
 				1857E9F721B9120F007ACC63 /* LoginMainController.m in Sources */,

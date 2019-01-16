@@ -21,7 +21,6 @@
     
     _depositDetailView.dataArr = _subpaymentsList;
     [_depositDetailView.tableView reloadData];
-    
     [_depositDetailView refreshRect];
     [_depositDetailView refreshCreditData:_creditsData :_creditsName];
   

@@ -61,9 +61,13 @@
     [self reloadCreditsLog];
      */
 }
+-(void)refreshRect :(int)hight{
+    //_bgView.frame = CGRectMake(0, 0, KScreenWidth, hight);
+    _logView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-hight);
+}
 -(void) viewWillAppear:(BOOL)animated{
     [self reloadCreditsLog];
-    _bgView.hidden = YES;
+    //_bgView.hidden = YES;
 }
 - (IBAction)clickSelectBtn:(UIButton*)sender {
     
@@ -92,7 +96,7 @@
          [self reloadCreditsLog];
      }];
      [monthAction setValue:[UIColor colorWithRed:33.0/255.0 green:186.0/255.0 blue:186.0/255.0 alpha:1] forKey:@"titleTextColor"];
-     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel
+     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel
      handler:^(UIAlertAction * action) {
      
      }];

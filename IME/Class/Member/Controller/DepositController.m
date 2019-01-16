@@ -21,6 +21,7 @@
     CreditLogController * creditLogController = [[CreditLogController alloc] init];
     creditLogController.selectStr = @"D";
     creditLogController.actionStr = @"1";
+    [creditLogController refreshRect: 0];
     [self.navigationController pushViewController: creditLogController animated:YES];
 }
 - (void)viewDidLoad {
