@@ -10,6 +10,7 @@
 #import "SearchView.h"
 @interface SearchController : UIViewController<SearchViewDelegate>{
     SearchView * _searchView;
+    NSMutableArray * _traceArr;
 }
 
 @end

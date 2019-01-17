@@ -9,6 +9,7 @@
 #import "SearchView.h"
 #import "SearchLogCell.h"
 #import "MassMessageCell.h"
+#import "ConfigModel.h"
 @implementation SearchView 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -140,7 +141,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [_searchLogArr count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -154,6 +155,44 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
             }
         }
     }
+    cell.postStatusView.hidden = YES;
+    cell.countdownImg.hidden = YES;
+    cell.daimondStack.hidden = YES;
+    cell.msgBtn.hidden = NO;
+   
+    cell.idLabel.text = [[_searchLogArr objectAtIndex:indexPath.row] valueForKey:@"account"];
+    cell.titleLabel.text = [[_searchLogArr objectAtIndex:indexPath.row] valueForKey:@"introduction"];
+    
+    
+    NSString * followImgName = [[NSString alloc] init];
+    if ([_delegate traceCheck:(long)[[_searchLogArr objectAtIndex:indexPath.row] valueForKey:@"no"]]) {
+        NSLog(@"已追隨");
+        followImgName = @"iconfavorite2";
+    }else{
+        NSLog(@"沒追隨");
+        followImgName = @"iconfavorite1";
+    }
+    /*
+    ConfigModel * configModel = [ConfigModel instance];
+    NSURL *url = [NSURL URLWithString:[[NSString alloc]initWithFormat:@"%@/%@",configModel.member_thumbnail_url,[[_searchLogArr objectAtIndex:indexPath.row] valueForKey:@"no"]]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    [cell.headImgBtn setImage:[[UIImage alloc] initWithData:data] forState:UIControlStateNormal];
+     */
+    
+    /*
+     "no": 187,
+     "account": "Icy5ic",
+     "nickname": "",
+     "introduction": "🌸艾希👉此處最愛吸也最會吸😏\n\n可愛也可壞🌶️會吸也懂搖\n\n👅火辣指數150%😈\n\n💋江湖上傳說的一夜七次女94我\n\n❤️誠徵長期戰友 回覆《666》來報名\n\n🈲禁其他平台認親，一律封鎖\n\n🈲照片影片嚴禁翻拍外流，外流一律提告\n\n\n",
+     "hot_mark": "",
+     "online": 0,
+     "role": 2
+     */
+    [UIButton buttonWithType:UIButtonTypeSystem];
+    [cell.msgBtn setBackgroundImage:nil forState:UIControlStateNormal];
+    [cell.msgBtn setImage:[UIImage imageNamed:followImgName] forState:UIControlStateNormal];
+    [cell.msgBtn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{

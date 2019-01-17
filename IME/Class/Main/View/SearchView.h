@@ -10,7 +10,7 @@
 @class SearchView;
 
 @protocol SearchViewDelegate <UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
-
+-(BOOL) traceCheck : (long)accountNo;
 @end
 @interface SearchView : UIView
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -20,7 +20,7 @@
 @property (nonatomic, strong) IBOutlet UITableView *resultTableView;
 @property (nonatomic, strong) IBOutlet UITableView *promoTableView;
 
-@property (nonatomic, strong) NSMutableArray   *searchLogArr;
+@property (nonatomic, strong) NSMutableArray                *searchLogArr;
 @property (nonatomic) IBOutlet UIView                       *searchLogView;
 @property (nonatomic) IBOutlet UIView                       *searchResultView;
 //Search Results
